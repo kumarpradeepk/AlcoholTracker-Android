@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/tr-TR.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">Günlük</string>
+    <string name="tab_statistics">İstatistik</string>
+    <string name="tab_settings">Ayarlar</string>
+    <string name="lock_tap_to_unlock">Kilitli. Açmak için dokunun.</string>
+    <string name="applock_prompt_title">Alcohol Tracker kilitli</string>
+    <string name="applock_prompt_sub">Hiçbir şey gösterilmeden önce kilidi açın.</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">Alcohol Tracker\'a\nhoş geldiniz</string>
+    <string name="ob_welcome_sub">Bilinçli içmenin yol arkadaşı.</string>
+    <string name="ob_welcome_body">Yargısız takip. Bir içkiyi saniyeler içinde kaydedin, tahmini kandaki alkol değerinizin düşüşünü izleyin — bileğinizden bile.</string>
+    <string name="ob_welcome_quick_caption">Cebinizden hızlı kayıt</string>
+    <string name="ob_welcome_bac_example" formatted="false">Tahmini kandaki alkol %0,032</string>
+    <string name="ob_welcome_sober_example">Tahmin yaklaşık 2 sa içinde sıfırlanır</string>
+    <string name="ob_get_started">Başlayın</string>
+    <string name="ob_step_indicator">ADIM %1$d / 3</string>
+    <string name="ob_skip">Atla</string>
+    <string name="ob_goals_title">Sizi buraya ne getirdi?</string>
+    <string name="ob_goals_sub">Doğru gelenlerin hepsini seçin. Bu, sizinle uygulama arasında kalır.</string>
+    <string name="ob_goal_less">Daha az içmek</string>
+    <string name="ob_goal_awareness">Ne kadar içtiğimi bilmek</string>
+    <string name="ob_goal_break">Vücuduma ara vermek</string>
+    <string name="ob_goal_free_days">Daha çok alkolsüz gün</string>
+    <string name="ob_goal_conscious">Bilinçli içmek</string>
+    <string name="ob_goal_reset">Alışkanlıklarımı sıfırlamak</string>
+    <string name="ob_goal_social">Sosyal ortamlarla baş etmek</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="one">%1$d hedefle devam et</item>
+        <item quantity="other">%1$d hedefle devam et</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">En az bir hedef seçin</string>
+    <string name="ob_base_title">Ortalama bir haftada kaç içki?</string>
+    <string name="ob_base_sub">Ritminize hızlı bir bakış — yargı değil, yalnızca bir başlangıç noktası.</string>
+    <string name="ob_base_0_4">0–4 içki</string>
+    <string name="ob_base_5_9">5–9 içki</string>
+    <string name="ob_base_10_14">10–14 içki</string>
+    <string name="ob_base_15_19">15–19 içki</string>
+    <string name="ob_base_20_plus">20 veya daha fazla</string>
+    <string name="ob_continue">Devam et</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">Bugün</string>
+    <string name="diary_yesterday">Dün</string>
+    <string name="diary_pro_banner_title">Tablonun tamamını açın</string>
+    <string name="diary_pro_banner_sub">Hızlı kayıt kartları · Kandaki alkol · Otomatik alkolsüz günler · Hatırlatıcılar</string>
+    <string name="diary_usual">Her zamanki mi?</string>
+    <string name="units_abbrev_value">%1$.1f %2$s</string>
+    <string name="diary_intake_today">Bugünün Tüketimi</string>
+    <string name="diary_intake">Tüketim</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="one">hedef %1$d %2$s</item>
+        <item quantity="other">hedef %1$d %2$s</item>
+    </plurals>
+    <string name="diary_this_week">Bu hafta</string>
+    <string name="diary_this_month">Bu ay</string>
+    <string name="diary_mini_value">%1$.1f / %2$d</string>
+    <string name="diary_remaining_numbers">Bugün: %1$.1f / %2$d %3$s.</string>
+    <string name="diary_remaining_zero_neutral">Bugünkü hedefiniz olduğu gibi duruyor; belki de bugün gerekmedi.</string>
+    <string name="diary_remaining_left_neutral">Bugünkü hedefin içinde %1$.1f %2$s kaldı.</string>
+    <string name="diary_remaining_at_target_neutral">Tam hedefinizdesiniz; sırada bir bardak su var mı?</string>
+    <string name="diary_remaining_over_neutral">Bugünkü hedef %2$d; şu an %1$.1f %3$s üzerinde.</string>
+    <string name="diary_adjust_guideline">Alkol rehberini ayarla</string>
+    <string name="bac_monitor">Kandaki Alkol</string>
+    <string name="bac_status_waiting">BEKLEMEDE</string>
+    <string name="bac_free_body">Pro\'yu açın, bir içki kaydedin; tahmini kandaki alkol değeriniz burada belirir.</string>
+    <string name="bac_how_estimated">Kandaki alkol nasıl tahmin edilir</string>
+    <string name="bac_trends">Eğilimler</string>
+    <string name="bac_setup_title">Kandaki alkol profilinizi oluşturun</string>
+    <string name="bac_setup_body">Tahminlerin gerçekten bir anlam taşıması için ağırlığınızı ve cinsiyetinizi ekleyin; on saniye sürer.</string>
+    <string name="bac_setup_cta">Profili oluştur</string>
+    <string name="bac_status_rising">YÜKSELİYOR</string>
+    <string name="bac_status_settling">DÜŞÜYOR</string>
+    <string name="bac_status_clear">SIFIR</string>
+    <string name="bac_value_percent">%%%1$.3f</string>
+    <string name="bac_value_permille">‰%1$.2f</string>
+    <string name="bac_sober_in">Tahmin yaklaşık %1$s içinde sıfırlanır</string>
+    <string name="bac_all_clear">Tahmin sıfırda — hesapta kalan yok.</string>
+    <string name="bac_disclaimer_short">Tahminler yalnızca bilgi içindir, asla araç kullanma izni değildir.</string>
+    <string name="diary_dry_marked">Alkolsüz gün, işaretlendi.</string>
+    <string name="diary_dry_remembered">Alkolsüz bir gün, kayıtlarda.</string>
+    <string name="diary_dry_body">Vücudunuz kendine sessiz bir teşekkür dolduruyor.</string>
+    <string name="diary_dry_unmark">İşareti kaldır</string>
+    <string name="diary_logged_today">BUGÜN KAYDEDİLENLER</string>
+    <string name="diary_logged_this_day">O GÜN KAYDEDİLENLER</string>
+    <string name="diary_entry_meta">%1$d ml · %%%2$s</string>
+    <string name="diary_empty_title_today">Şimdilik boş bir bardak.</string>
+    <string name="diary_empty_title_other">O gün için kayıt yok.</string>
+    <string name="diary_empty_body_today">Doldurduğunuzda birkaç dokunuşla kaydedin ya da bugünü alkolsüz işaretleyip seriyi başlatın.</string>
+    <string name="diary_empty_body_other">Hatırlıyorsanız ekleyin; geriye dönük kayıt, tablonuzu dürüst tutar.</string>
+    <string name="action_log_drink">İçki Kaydet</string>
+    <string name="action_mark_dry_day">Alkolsüz Gün İşaretle</string>
+    <string name="diary_add_previous_dry">Geçmiş bir alkolsüz gün ekle</string>
+    <string name="action_dry_day">Alkolsüz</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">Ayrıntılarda ince ayar</string>
+    <string name="log_title_review">Gözden geçir ve kaydet</string>
+    <string name="log_cta_next">İleri</string>
+    <string name="log_cta_save">İçkiyi kaydet</string>
+    <string name="log_pick_intro">Ne içtiniz? Yakın olan bir şey seçin; sonraki adımda her şeye ince ayar yapabilirsiniz.</string>
+    <string name="log_search_placeholder">İçki ara</string>
+    <string name="log_custom_title">Özel içki oluştur</string>
+    <string name="log_custom_sub">İstediğiniz hacim, istediğiniz alkol oranı — hiçbir zaman ücretli değil.</string>
+    <string name="log_section_your_drinks">İÇKİLERİNİZ</string>
+    <string name="log_section_popular">POPÜLER</string>
+    <string name="log_grid_meta">%%%1$s · %2$d ml</string>
+    <string name="log_tune_intro">Masadaki gerçek ölçüye uyacak şekilde ayarlayın.</string>
+    <string name="log_abv_label">Alkol oranı</string>
+    <string name="log_abv_value">%%%1$.1f</string>
+    <string name="log_serving_label">Porsiyon miktarı</string>
+    <string name="log_unit_ml">ml</string>
+    <string name="log_unit_floz">fl oz</string>
+    <string name="log_serving_ml_value">%1$d ml</string>
+    <string name="log_serving_oz_value">%1$.1f oz</string>
+    <string name="log_quantity_label">Adet</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈ %1$.1f %3$s · %2$d kcal</string>
+    <string name="log_working_line">%1$d ml × %%%2$s × 0,789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_half">½ × %1$d ml × %%%2$s × 0,789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_qty">%1$d × %2$d ml × %%%3$s × 0,789 ÷ 1000 = %4$.1f %5$s</string>
+    <string name="log_review_meta">%1$d ml · %%%2$s alkol</string>
+    <string name="log_review_meta_half">×½ · %1$d ml · %%%2$s alkol</string>
+    <string name="log_review_meta_qty">×%1$d · %2$d ml · %%%3$s alkol</string>
+    <string name="log_when_label">Ne zaman</string>
+    <string name="log_when_now">Şimdi</string>
+    <string name="log_when_1h">−1 sa</string>
+    <string name="log_when_2h">−2 sa</string>
+    <string name="log_cost_label">Ne kadar tuttu?</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">Kalori</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">Bugüne kaydedildi. İstediğiniz zaman kaldırabilirsiniz.</string>
+    <string name="log_saved_to_day">Kaydedildi: %1$s. İstediğiniz zaman kaldırabilirsiniz.</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">Pt / Sa / Ça / Pe / Cu / Ct / Pa</string>
+    <string name="sheet_cal_hint_select">Mavi noktalar kayıt yapılan günler, yeşil noktalar alkolsüz günler. Açmak için birine dokunun.</string>
+    <string name="sheet_cal_hint_dry">Geçmiş bir güne dokunup alkolsüz işaretleyin, tekrar dokunup kaldırın. İçki kaydı olan günler olduğu gibi kalır.</string>
+    <string name="action_done">Bitti</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d ml · %%%2$s · %3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">harcanan</string>
+    <string name="sheet_entry_relog">Aynısından bir tane daha</string>
+    <string name="sheet_entry_remove">Günlükten kaldır</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_title__us">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_title__gb">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_title__au">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_title__ca">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_title__jp">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_title__dk">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_title__vn">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_title__who">%1$s tam olarak nedir?</string>
+    <string name="sheet_units_body">10 g saf alkol — DSÖ\'nün kullandığı ölçü. Her bardak farklı miktarda barındırır; hesabı biz yapıyoruz.</string>
+    <string name="sheet_units_chip_pour">150 ml</string>
+    <string name="sheet_units_chip_abv" formatted="false">%13 alkol</string>
+    <string name="sheet_units_chip_density">0,789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__us">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__gb">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__au">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__ca">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__jp">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__dk">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__vn">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__who">1,5 %1$s</string>
+    <string name="sheet_units_density_note">0,789 yalnızca alkolün yoğunluğu. Gizemli bir yanı yok.</string>
+    <string name="sheet_units_targets">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+    <string name="sheet_units_targets__us">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+    <string name="sheet_units_targets__gb">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+    <string name="sheet_units_targets__au">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+    <string name="sheet_units_targets__ca">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+    <string name="sheet_units_targets__jp">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+    <string name="sheet_units_targets__dk">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+    <string name="sheet_units_targets__vn">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+    <string name="sheet_units_targets__who">Bir margarita, sessizce bir buçuk %1$s eder. Günlük ve haftalık hedefleriniz DSÖ\'nün düşük riskli rehberinden başlar; dilediğiniz gibi değiştirebilirsiniz.</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">Widmark yöntemini kullanıyoruz: kaydettiğiniz alkol, vücut suyunuza (ağırlık ve cinsiyetten hesaplanır) dağılır; vücudunuzun temizlediği miktar düşülür — saatte yaklaşık %0,015.</string>
+    <string name="sheet_bac_not_measurement">Bu bir tahmindir, ölçüm değildir. Yemek, ilaçlar ve kendi biyolojiniz gerçek sayıyı değiştirir.</string>
+    <string name="sheet_bac_never_drive">Araç kullanıp kullanamayacağınıza karar vermek için asla bir tahmine dayanmayın. Şüphe varsa: kullanmayın.</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">Yeni kayıtlı içki</string>
+    <string name="sheet_custom_name_placeholder">Ad — hızlı bulunsun diye</string>
+    <string name="sheet_custom_base_caption">TEMEL TÜR</string>
+    <string name="sheet_custom_abv_label" formatted="false">Alkol (%)</string>
+    <string name="sheet_custom_ml_label">Porsiyon (ml)</string>
+    <string name="sheet_custom_notes_placeholder">İçindekiler veya notlar (isteğe bağlı)</string>
+    <string name="action_save">Kaydet</string>
+    <string name="action_cancel">İptal</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7G</string>
+    <string name="stats_period_30d">30G</string>
+    <string name="stats_period_90d">90G</string>
+    <string name="stats_period_1y">1Y</string>
+    <string name="stats_period_custom">Özel</string>
+    <string name="action_export">Dışa aktar</string>
+    <string name="stats_edit_range">Özel aralığı düzenle</string>
+    <string name="stats_verdict_numbers">Bu dönem %1$.1f %3$s · önceki %2$.1f %3$s</string>
+    <string name="stats_verdict_level_neutral">Önceki dönemle aynı düzeyde.</string>
+    <string name="stats_verdict_less_neutral">Önceki döneme göre %%%1$d daha az</string>
+    <string name="stats_verdict_more_neutral">Önceki döneme göre %%%1$d daha fazla</string>
+    <string name="stats_verdict_first_numbers">Bu dönem %1$.1f %2$s.</string>
+    <string name="stats_verdict_first_neutral">Veriyle geçen ilk döneminiz; karşılaştırma önümüzdeki dönemde başlar.</string>
+    <string name="stats_tile_drunk">İçilen</string>
+    <string name="stats_tile_alcohol">Alkol</string>
+    <string name="stats_tile_spending">Harcama</string>
+    <string name="stats_tile_calories">Kalori</string>
+    <string name="stats_unit_ml">ml</string>
+    <plurals name="stats_unit_units">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="one">≈ %1$d çizburger</item>
+        <item quantity="other">≈ %1$d çizburger</item>
+    </plurals>
+    <string name="stats_units_chart_title">Tüketilen %1$s</string>
+    <string name="stats_units_chart_title__us">Tüketilen %1$s</string>
+    <string name="stats_units_chart_title__gb">Tüketilen %1$s</string>
+    <string name="stats_units_chart_title__au">Tüketilen %1$s</string>
+    <string name="stats_units_chart_title__ca">Tüketilen %1$s</string>
+    <string name="stats_units_chart_title__jp">Tüketilen %1$s</string>
+    <string name="stats_units_chart_title__dk">Tüketilen %1$s</string>
+    <string name="stats_units_chart_title__vn">Tüketilen %1$s</string>
+    <string name="stats_units_chart_title__who">Tüketilen %1$s</string>
+    <string name="stats_daily_average">Günlük ortalama</string>
+    <string name="stats_units_total">Toplam %1$.1f %2$s</string>
+    <string name="stats_units_per_day">%1$.2f / gün</string>
+    <string name="stats_units_empty">Deseniniz kendini burada çizecek.</string>
+    <string name="stats_spend_chart_title">Harcama Eğilimi</string>
+    <string name="stats_spend_total">Toplam %1$s</string>
+    <string name="stats_spend_per_day">%1$s / gün</string>
+    <string name="stats_spend_empty">Fiyatlı bir içki kaydettiğinizde maliyetler burada belirir.</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">Tasarruf</string>
+    <string name="stats_baseline_label">Haftalık ortalama (%1$s)</string>
+    <string name="stats_saved_unset">Her zamanki haftalık harcamanızı girin; buradaki rakam gerçek fiyatlarınızdan hesaplanan tasarrufa dönüşsün — ülke ortalamalarından değil.</string>
+    <string name="stats_saved_under">Bu dönemde her zamanki harcamanızın %1$s altında — ortalamalara değil, gerçekten ödediğinize göre.</string>
+    <string name="stats_saved_over">Bu dönemde her zamanki harcamanızın %1$s üstünde.</string>
+    <string name="stats_breakdown_title">İçki Dağılımı</string>
+    <string name="stats_breakdown_locked">Haftalarınıza hangi içkilerin yön verdiğini ve sessizce ne kadar tuttuğunu görün.</string>
+    <string name="stats_breakdown_empty">Birkaç içki kaydedin; sık tercihleriniz kendini gösterecek.</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="one">%1$s · %2$d kez</item>
+        <item quantity="other">%1$s · %2$d kez</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%%%1$d</string>
+    <string name="stats_breakdown_leader">Başı %1$s çekiyor — bu dönemdeki %3$s toplamının %%%2$d kadarı.</string>
+    <string name="stats_dry_title_positive">Alkolsüz günler iyi geldi.</string>
+    <string name="stats_dry_body_positive">Bu dönemde alkolsüz gün oranı %%%1$d. Her biri, vücudunuzun fark ettiği bir dinlenme.</string>
+    <string name="stats_dry_title_none">Henüz alkolsüz gün yok.</string>
+    <string name="stats_dry_body_none">İlki bir seri başlatır; bugünü Günlük\'ten alkolsüz işaretleyin.</string>
+    <string name="stats_dry_title_numbers">Alkolsüz günler</string>
+    <string name="stats_dry_body_numbers">%1$d / %2$d gün · %%%3$d</string>
+    <string name="stats_dry_ring_pct">%%%1$d</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">Özel aralık</string>
+    <string name="sheet_range_from">Başlangıç</string>
+    <string name="sheet_range_to">Bitiş</string>
+    <string name="sheet_range_last7">Son 7 gün</string>
+    <string name="sheet_range_last30">Son 30 gün</string>
+    <string name="action_apply">Uygula</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">İstatistikleri dışa aktar</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">İstatistik, %1$s.csv</string>
+    <string name="sheet_export_desc">Bu dönemin bütün sayıları, paylaşmaya hazır.</string>
+    <string name="sheet_export_cta">CSV\'yi paylaş</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">İçkileriniz eşitlenmiş kalsın</string>
+    <string name="sheet_health_body">Kaydettiğiniz içkiler otomatik olarak %1$s hizmetine yazılabilir; böylece tablonun tamamı tek yerde durur.</string>
+    <string name="sheet_health_data_title">Alkol verileri</string>
+    <string name="sheet_health_data_sub">Yalnızca alkol tüketimi kayıtları yazılır; hiçbir şey okunmaz.</string>
+    <string name="sheet_health_cta">%1$s ile bağlantı kur</string>
+    <string name="sheet_health_change_access">Erişimi daha sonra şuradan değiştirebilirsiniz: %1$s.</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">Kalıcı bildirim</string>
+    <string name="sheet_live_body">Tahmin düşerken sessiz bir kart gölgede durur; uygulamayı açmaya gerek yok.</string>
+    <string name="sheet_live_mock_status">Tahmini kandaki alkol, düşüyor</string>
+    <string name="sheet_live_mock_value" formatted="false">%0,065</string>
+    <string name="sheet_live_mock_tozero">Sıfıra 3 sa 42 dk</string>
+    <string name="sheet_live_note">Örnek sayılarla bir önizleme; çalışan bir şey yok.</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">Tüm tabloyu gör.</string>
+    <string name="pay_sub">Tüm içki geçmişin, anlık promil tahmini ve ağır bir ayın nerede başladığını gösteren haftalık eğilim.</string>
+    <string name="pay_no_ads">Reklam yok. Veri satışı yok. Hesap yok.</string>
+    <string name="pay_benefit_history">Şimdiye kadar kaydettiğin her içki, son 90 gün değil</string>
+    <string name="pay_benefit_bac">Anlık promil tahmini ve sıfıra dönüş süren</string>
+    <string name="pay_benefit_insights">Haftalık toplamın kılavuza göre durumu, eğilimiyle birlikte</string>
+    <string name="pay_benefit_streaks">Alkolsüz gün serileri, biriken para, alınmayan kalori</string>
+    <string name="pay_benefit_quicklog">Ana ekrandan tek dokunuşla aynı içkiyi kaydet</string>
+    <string name="pay_benefit_report">Doktoruna verebileceğin temiz bir PDF rapor</string>
+    <string name="pay_compare_caption">NELER VAR</string>
+    <string name="pay_compare_free">ÜCRETSİZ</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">Sınırsız kayıt ve kendi içkilerin</string>
+    <string name="pay_compare_export">Dışa aktarma, yedek ve widget\'lar</string>
+    <string name="pay_compare_darkmode">Koyu mod, uygulama kilidi ve hatırlatmalar</string>
+    <string name="pay_compare_history">90 günden eski geçmiş</string>
+    <string name="pay_compare_bac">Promil tahminleri ve hızlı kayıt kutuları</string>
+    <string name="pay_compare_insights">Gelişmiş analiz, PDF ve özel eşitleme</string>
+    <string name="pay_plan_weekly">Haftalık</string>
+    <string name="pay_plan_monthly">Aylık</string>
+    <string name="pay_plan_annual">Yıllık</string>
+    <string name="pay_plan_lifetime">Ömür boyu</string>
+    <string name="pay_price_line_weekly">Haftada %1$s</string>
+    <string name="pay_price_line_monthly">Ayda %1$s</string>
+    <string name="pay_price_line_annual">Yılda %1$s</string>
+    <string name="pay_price_line_lifetime">Tek seferde %1$s, sonsuza dek senin</string>
+    <string name="pay_badge_trial">%1$d GÜN ÜCRETSİZ</string>
+    <string name="pay_badge_save">YÜZDE %1$d TASARRUF</string>
+    <string name="pay_badge_best">EN İYİ FİYAT</string>
+    <string name="pay_loading">Bugünün fiyatları mağazadan alınıyor…</string>
+    <string name="pay_unavailable">Mağaza şu anda yanıt vermiyor. Kayıt, dışa aktarma ve yedek yine de çalışmaya devam ediyor.</string>
+    <string name="pay_retry">Yeniden dene</string>
+    <string name="pay_faq_caption">SORULAR, YANITLAR</string>
+    <string name="pay_faq_q_trial">Ücretsiz deneme nasıl işliyor?</string>
+    <string name="pay_faq_a_trial">Tüm Pro özellikleri %1$d gün boyunca senin. Bitmeden istediğin an iptal et, hiçbir ücret alınmaz.</string>
+    <string name="pay_faq_q_after">Bitince ne oluyor?</string>
+    <string name="pay_faq_a_after">Seçtiğin plan başlar, kartında yazan fiyattan, asla daha yükseğinden değil. 2 gün önce hatırlatırız, hiçbir şey sürpriz olmaz.</string>
+    <string name="pay_faq_q_logs">Kayıtlarım hiç kilitlenir mi?</string>
+    <string name="pay_faq_a_logs">Hayır. Kayıt, kendi içkilerin, bu haftanın istatistikleri, widget\'lar, CSV dışa aktarma, yedek, koyu mod, uygulama kilidi ve hatırlatmalar sonsuza dek ücretsiz. Ödemeyi bırakırsan yazdığın her şey senin kalır ve okunabilir kalır.</string>
+    <string name="pay_faq_q_cancel">İstediğim zaman iptal edebilir miyim?</string>
+    <string name="pay_faq_a_cancel">Her zaman. %1$s aboneliklerinden yönet ya da iptal et, verilerin burada, telefonunda kalır.</string>
+    <string name="pay_cta_trial">%1$d ücretsiz günümü başlat</string>
+    <string name="pay_cta_plan">Devam et, %1$s</string>
+    <string name="pay_cta_lifetime">Pro\'yu sonsuza dek aç</string>
+    <string name="pay_cta_default">Devam et</string>
+    <string name="pay_sub_trial">%1$d gün ücretsiz, sonra %2$s. Bugün hiçbir ücret alınmaz.</string>
+    <string name="pay_sub_recurring">İptal edene kadar %1$s üzerinden yenilenir. Ayarlar\'da tek dokunuş.</string>
+    <string name="pay_sub_lifetime">Tek ödeme. Asla aboneliğe dönüşmez.</string>
+    <string name="pay_restore">Geri yükle</string>
+    <string name="pay_terms">Koşullar</string>
+    <string name="pay_privacy">Gizlilik</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro — ışıkları yanık tuttuğunuz için teşekkürler.</string>
+    <string name="set_pro_banner_title">Daha çok içgörü, daha az uğraş.</string>
+    <string name="set_pro_banner_sub">Akıllı alkolsüz günler · Hızlı kayıt kartları · Kandaki alkol</string>
+    <string name="set_section_you">SİZ</string>
+    <string name="set_section_insights">İÇGÖRÜLER VE EŞİTLEME</string>
+    <string name="set_section_appearance">GÖRÜNÜM</string>
+    <string name="set_section_data">VERİLERİNİZ</string>
+    <string name="set_section_privacy">GİZLİLİK VE ÜSLUP</string>
+    <string name="set_section_support">DESTEK</string>
+    <string name="set_profile">Profil</string>
+    <string name="set_profile_not_set">Ayarlanmadı</string>
+    <string name="set_profile_summary">%1$s %2$s · %3$s</string>
+    <string name="set_units">Birimler</string>
+    <string name="set_units_summary">%1$s · %2$s</string>
+    <string name="set_guideline">Alkol rehberi</string>
+    <string name="set_guideline_value">%1$d / gün</string>
+    <string name="set_ask_cost">İçki fiyatını sor</string>
+    <string name="set_show_calories">Kalorileri göster</string>
+    <string name="set_auto_dry">Alkolsüz günleri otomatik algıla</string>
+    <string name="set_notifications">Bildirimler</string>
+    <string name="set_notif_none">Yok</string>
+    <plurals name="set_notif_count">
+        <item quantity="one">günde %1$d</item>
+        <item quantity="other">günde %1$d</item>
+    </plurals>
+    <string name="set_health_sync">Sağlık Eşitleme</string>
+    <string name="set_health_connected">Bağlı</string>
+    <string name="set_health_off">Kapalı</string>
+    <string name="set_quick_log">Hızlı kayıt kartları</string>
+    <string name="set_quick_log_setup">Ayarla</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="one">%1$d içki</item>
+        <item quantity="other">%1$d içki</item>
+    </plurals>
+    <string name="set_dark_mode">Koyu Mod</string>
+    <string name="set_app_icon">Uygulama Simgesi</string>
+    <string name="set_icon_default">Varsayılan</string>
+    <string name="set_icon_gift">Hediye</string>
+    <string name="set_icon_holiday">Bayram</string>
+    <string name="set_language">Dil</string>
+    <string name="set_language_value">Türkçe</string>
+    <string name="set_backup_title">Yedeklendi</string>
+    <string name="set_backup_title_none">Henüz yedeklenmedi</string>
+    <string name="set_backup_detail_never_android">Aşağıdan oluşturun · bu cihazda · dışa aktarma her zaman ücretsiz</string>
+    <string name="set_backup_detail_dated">%1$s · bu cihazda · dışa aktarma her zaman ücretsiz</string>
+    <string name="set_backup_row">Yedekleme, dışa ve içe aktarma</string>
+    <string name="set_backup_free">Ücretsiz</string>
+    <string name="set_app_lock">Uygulama Kilidi</string>
+    <string name="set_app_lock_sub">Hiçbir şey gösterilmeden önce kilidi açın.</string>
+    <string name="set_discreet">Gizli bildirimler</string>
+    <string name="set_discreet_sub">Kilit ekranındaki hatırlatmalar alkolden hiç söz etmez.</string>
+    <string name="set_day_ends">Gün bitişi</string>
+    <string name="set_day_ends_sub">Saat 01.00\'de içilen bir içki, bir önceki geceye sayılır.</string>
+    <string name="set_cutoff_midnight">Gece yarısı</string>
+    <string name="set_cutoff_2am">02.00</string>
+    <string name="set_cutoff_4am">04.00</string>
+    <string name="set_tone">Üslup</string>
+    <string name="set_tone_icon_sample">Aa</string>
+    <string name="set_tone_neutral">Nötr</string>
+    <string name="set_tone_push">Motive et</string>
+    <string name="set_tone_numbers">Sayılar</string>
+    <string name="set_tone_sub_neutral">Sayılar ve yumuşak bir onay; asla yargı yok.</string>
+    <string name="set_tone_sub_push">Seri odaklı; hedef aşıldığında daha belirgin vurgu.</string>
+    <string name="set_tone_sub_numbers">Saf defter; her değerlendirme sözcüğü ve renk yargısı kapalı.</string>
+    <string name="set_contact">Destek ile İletişim</string>
+    <string name="set_about">Alcohol Tracker Hakkında</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">Müşteri Kimliği</string>
+    <string name="set_copy">Kopyala</string>
+    <string name="set_footer">Ölçüyle yapıldı.\nVerileriniz bu telefondan çıkmaz.</string>
+    <string name="support_email_subject">Alcohol Tracker destek</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">Sizin vücudunuz, sizin sayılarınız.</string>
+    <string name="profile_body">Aynı içki her vücutta farklı sonuç verir. İki kısa bilgi, ve tahminleriniz ortalama olmaktan çıkıp size ait olur.</string>
+    <string name="profile_privacy_note">Bir kez, on saniye. Buradaki hiçbir şey bu telefondan çıkmaz.</string>
+    <string name="profile_sex_label">Cinsiyet</string>
+    <string name="profile_sex_female">Kadın</string>
+    <string name="profile_sex_male">Erkek</string>
+    <string name="profile_weight_label">Vücut ağırlığı</string>
+    <string name="profile_weight_kg">kg</string>
+    <string name="profile_weight_lb">lb</string>
+    <string name="profile_weight_placeholder">Tahmini bir değer yeter</string>
+    <string name="profile_cta">Bana göre ayarla</string>
+    <string name="profile_footer">İkisini de istediğiniz zaman değiştirebilirsiniz; tahminler anında güncellenir.</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">Enerji</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">Porsiyon miktarı</string>
+    <string name="units_millilitres">Mililitre</string>
+    <string name="units_ounces">Ons</string>
+    <string name="units_note">Bunlar yalnızca sayıların nasıl göründüğünü değiştirir, kaydettiklerinizi değil.</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">Planlanmış bir şey yok.</string>
+    <string name="notif_empty_body">Akşamlarınız size ait. Nazik bir günlük hatırlatma işinize yararsa aşağıdan ekleyin.</string>
+    <string name="notif_repeat_hint">Her hatırlatıcı günlük tekrarlanır. Kaldırmak için − işaretine dokunun.</string>
+    <string name="notif_reminder_sub">%1$s · %2$s</string>
+    <string name="notif_create_cta">Bildirim oluştur</string>
+    <string name="sheet_notif_title_placeholder">Başlık, örn. Gün sonu</string>
+    <string name="sheet_notif_time_label">Hatırlatma saati</string>
+    <string name="sheet_notif_message_placeholder">Mesaj (isteğe bağlı)</string>
+    <string name="sheet_notif_repeat_note">Her gün seçtiğiniz saatte tekrarlanır.</string>
+    <string name="sheet_notif_cta">Oluştur</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">Tahmini kandaki alkol, sıfıra kalan süre ve kalıcı durum kartı.</string>
+    <string name="set_bac_unit_label">Kandaki alkol birimi</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">Durum kartını önizle</string>
+    <string name="set_bac_preview_sub">Kandaki alkol düşerken duran sessiz kalıcı bildirim.</string>
+    <string name="set_bac_disclaimer">Tahminler yalnızca bilgi içindir. Araç kullanıp kullanamayacağınıza karar vermek için asla kullanmayın.</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">Hızlı kayıt kartları</string>
+    <string name="quicklog_mock_caption">HIZLI KAYIT</string>
+    <string name="quicklog_mock_footer">tek dokunuş · kaydedildi</string>
+    <string name="quicklog_section_caption">KART OLARAK KAYITLI İÇKİLER</string>
+    <string name="quicklog_selected_count">%1$d / %2$d seçildi</string>
+    <string name="quicklog_empty_title">Henüz kayıtlı içki yok.</string>
+    <string name="quicklog_empty_sub">Bir tane oluşturun, tek dokunuş uzağınızda dursun; dörde kadar sığıyor.</string>
+    <string name="quicklog_drink_meta">%1$d ml · %%%2$s</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">Yedekleme ve Geri Yükleme</string>
+    <string name="backup_status_dated">Yedeklendi: %1$s · bu cihazda.</string>
+    <string name="backup_status_none_android">Henüz yedek yok — aşağıdan oluşturun.</string>
+    <string name="backup_whats_here">Bu telefonda neler var</string>
+    <plurals name="backup_count_logs">
+        <item quantity="one">içki kaydı</item>
+        <item quantity="other">içki kaydı</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="one">alkolsüz gün</item>
+        <item quantity="other">alkolsüz gün</item>
+    </plurals>
+    <string name="backup_count_profile">profil</string>
+    <string name="backup_export">Verileri Dışa Aktar</string>
+    <string name="backup_import">Verileri İçe Aktar</string>
+    <string name="backup_create">Yedek Oluştur</string>
+    <string name="backup_restore">Yedekten Geri Yükle</string>
+    <string name="backup_merge_note">İçe aktarılanlar buradakilerle birleşir; tekrarlananlar sessizce atlanır.</string>
+    <string name="backup_danger_zone">TEHLİKELİ BÖLGE</string>
+    <string name="backup_clear_all">Tüm Verileri Sil</string>
+    <string name="backup_clear_note">Kalıcıdır ve geri alınamaz. Önemliyse önce bir kopyasını dışa aktarın.</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">Hakkında</string>
+    <string name="about_version">Sürüm %1$s · %2$s</string>
+    <string name="about_privacy">Gizlilik Politikası</string>
+    <string name="about_terms">Kullanım Koşulları</string>
+    <string name="about_ack_caption">TEŞEKKÜRLER</string>
+    <string name="about_ack_role_db">yerel veritabanı</string>
+    <string name="about_ack_role_ui_android">kullanıcı arayüzü</string>
+    <string name="about_ack_role_settings_android">ayarlar</string>
+    <string name="about_footer">Bardak ve damla çizimleri kodla yapıldı,\nölçüyle.</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">Aynı uygulama, farklı bir kılık. Ana Ekranınıza hangisi yakışıyorsa onu seçin.</string>
+    <string name="icon_relaunch_note">Değiştirdiğinizde, başlatıcı güncellenirken uygulama kısa süreliğine kapanabilir.</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">Kandaki Alkol Eğilimi</string>
+    <string name="trends_title">Tahmini en yüksek kandaki alkol</string>
+    <string name="trends_range">Son 7 gün</string>
+    <string name="trends_axis_start">6 gün önce</string>
+    <string name="trends_axis_end">bugün</string>
+    <string name="trends_note" formatted="false">Vücudunuz saatte kabaca %0,015 temizledikçe eğri düşer. Düz haftalar iyi haftalardır.</string>
+    <string name="trends_empty_title">Henüz bir eğri yok.</string>
+    <string name="trends_empty_body">Profilinizi ekleyip bir içki kaydedin; eğriniz ilk kayıtla başlar.</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">Alkol Rehberi</string>
+    <string name="guideline_intro">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_intro__us">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_intro__gb">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_intro__au">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_intro__ca">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_intro__jp">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_intro__dk">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_intro__vn">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_intro__who">DSÖ\'nün düşük riskli tüketim rehberi günde en çok 2 %1$s ve düzenli alkolsüz günler öneriyor. Size uygun olanı siz belirleyin.</string>
+    <string name="guideline_daily_target">Günlük hedef</string>
+    <string name="guideline_weekly_target">Haftalık hedef</string>
+    <plurals name="guideline_target_units">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="one">%1$d %2$s</item>
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="one">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+        <item quantity="other">Aylık hedefiniz otomatik olarak belirlenir: %1$d %2$s. DSÖ rehberi bir kaynaktır, bir hüküm değil.</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">Bu içki kaldırılsın mı?</string>
+    <string name="dialog_delete_body">Günlüğünüzden çıkar, sayılarınız da geri iner.</string>
+    <string name="dialog_delete_keep">Kalsın</string>
+    <string name="dialog_delete_remove">Kaldır</string>
+    <string name="dialog_clear_title">Tüm veriler silinsin mi?</string>
+    <string name="dialog_clear_body">Her kayıt, her alkolsüz gün ve her ayar temelli gider. İstiyorsanız önce bir kopyasını dışa aktarın.</string>
+    <string name="dialog_clear_delete">Sil</string>
+    <string name="dialog_health_title">“%1$s” uygulamasının alkol tüketimi verilerini %2$s hizmetine yazmasına izin verilsin mi?</string>
+    <string name="dialog_health_deny">İzin Verme</string>
+    <string name="dialog_health_allow">İzin Ver</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">%1$s kaydedildi, %2$.1f %3$s.</string>
+    <string name="toast_logged">Kaydedildi, %1$.1f %2$s.</string>
+    <string name="action_undo">Geri al</string>
+    <string name="toast_relogged">Aynısı bugüne kaydedildi.</string>
+    <string name="toast_entry_removed">Günlüğünüzden kaldırıldı.</string>
+    <string name="toast_dry_marked">Alkolsüz gün işaretlendi. Sessiz kazançlar iki kat sayılır.</string>
+    <string name="toast_day_has_drinks">Bu günde kayıtlı içkiler var.</string>
+    <string name="toast_day_has_drinks_cal">O günde kayıtlı içkiler var.</string>
+    <string name="toast_custom_saved">Kaydedildi, bir dahakine tek dokunuş.</string>
+    <string name="toast_profile_incomplete">Hem ağırlık hem cinsiyet gerekli; tahmin bunlarsız hesaplanamaz.</string>
+    <string name="toast_profile_saved">Kaydedildi, tahminleriniz artık size daha yakın.</string>
+    <string name="toast_reminder_scheduled">Planlandı — her gün nazik bir hatırlatma.</string>
+    <string name="toast_reminder_silent">Kaydedildi, ancak %1$s bunu sessizde tutacak.</string>
+    <string name="toast_icon_updated">Simge güncellendi, yakışmış.</string>
+    <string name="toast_customer_id_copied">Kopyalandı; herhangi bir destek e-postasına yapıştırabilirsiniz.</string>
+    <string name="toast_pro_welcome">Pro\'ya hoş geldiniz — her şey açık.</string>
+    <string name="toast_restore_success">Tekrar hoş geldiniz, her şey açık.</string>
+    <string name="toast_restore_none">Geri yüklenecek bir şey yok; her şey yolunda.</string>
+    <string name="toast_purchase_unavailable">Satın alma şu anda kullanılamıyor.</string>
+    <string name="toast_health_connected">İçkiler artık sessizce %1$s hizmetine akıyor.</string>
+    <string name="toast_backup_created">Bu cihazda yedek oluşturuldu.</string>
+    <string name="toast_backup_restored_android">Geri yüklendi; tekrarlananlar sessizce atlandı.</string>
+    <string name="toast_backup_none_android">Bu cihazda henüz yedek yok.</string>
+    <string name="toast_export_file_android">Yedek dosyası kaydedildi; güvenli bir yerde saklayın.</string>
+    <string name="toast_file_unreadable">Bu dosya okunamadı.</string>
+    <plurals name="toast_import_result">
+        <item quantity="one">%1$d içe aktarıldı, %2$d tekrar atlandı.</item>
+        <item quantity="other">%1$d içe aktarıldı, %2$d tekrar atlandı.</item>
+    </plurals>
+    <string name="toast_import_ok_android">İçe aktarıldı; tekrarlananlar sessizce atlandı.</string>
+    <string name="toast_import_invalid_android">Bu bir yedek dosyasına benzemiyor.</string>
+    <string name="toast_cleared">Yepyeni bir sayfa. Ona iyi davranın.</string>
+    <string name="toast_csv_ready_android">Paylaşmaya hazır.</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">Günlük hatırlatıcılar</string>
+    <string name="notif_channel_reminders_desc">Ayarlar\'da oluşturduğunuz günlük hatırlatmalar.</string>
+    <string name="notif_channel_bac">Tahmin durumu</string>
+    <string name="notif_channel_bac_desc">Bir tahmin düşerken duran sessiz bir kart.</string>
+    <string name="notif_discreet_title">Akşam notu</string>
+    <string name="notif_discreet_body">On saniyelik bir not, tabloyu dürüst tutar.</string>
+    <string name="notif_reminder_body_fallback">Kısa bir not, tabloyu dürüst tutar.</string>
+    <string name="notif_bac_discreet_title">Düşüyor</string>
+    <string name="notif_bac_discreet_body">Sıfıra yaklaşık %1$s.</string>
+    <string name="notif_bac_title">Tahmini kandaki alkol %1$s</string>
+    <string name="notif_bac_body">Asla araç kullanma izni değildir. Sıfıra %1$s.</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">Önceki gün</string>
+    <string name="a11y_open_calendar">Takvimi aç</string>
+    <string name="a11y_next_day">Sonraki gün</string>
+    <string name="a11y_log_quick">Kaydet: %1$s, %2$.1f %3$s</string>
+    <string name="a11y_units_info">%1$s nedir?</string>
+    <string name="a11y_units_info__us">%1$s nedir?</string>
+    <string name="a11y_units_info__gb">%1$s nedir?</string>
+    <string name="a11y_units_info__au">%1$s nedir?</string>
+    <string name="a11y_units_info__ca">%1$s nedir?</string>
+    <string name="a11y_units_info__jp">%1$s nedir?</string>
+    <string name="a11y_units_info__dk">%1$s nedir?</string>
+    <string name="a11y_units_info__vn">%1$s nedir?</string>
+    <string name="a11y_units_info__who">%1$s nedir?</string>
+    <string name="a11y_intake_ring">Bugün %1$.1f, hedef %2$d %3$s</string>
+    <string name="a11y_mini_progress">%1$s: %2$.1f, hedef %3$d %4$s</string>
+    <string name="a11y_back">Geri</string>
+    <string name="a11y_close">Kapat</string>
+    <string name="a11y_prev_month">Önceki ay</string>
+    <string name="a11y_next_month">Sonraki ay</string>
+    <string name="a11y_cal_day">Gün %1$d</string>
+    <string name="a11y_cal_day_logged">Gün %1$d, içki kaydı var</string>
+    <string name="a11y_cal_day_dry">Gün %1$d, alkolsüz gün</string>
+    <string name="a11y_cal_day_logged_dry">Gün %1$d, içki kaydı var, alkolsüz gün</string>
+    <string name="a11y_prev_period">Önceki dönem</string>
+    <string name="a11y_next_period">Sonraki dönem</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="one">%1$d alkolsüz gün, bu dönemin yüzde %2$d kadarı</item>
+        <item quantity="other">%1$d alkolsüz gün, bu dönemin yüzde %2$d kadarı</item>
+    </plurals>
+    <string name="a11y_remove_reminder">%1$s hatırlatıcısını kaldır</string>
+    <string name="a11y_toggle_on">Açık</string>
+    <string name="a11y_toggle_off">Kapalı</string>
+    <string name="a11y_fab_add">Ekle</string>
+    <string name="a11y_fab_close">İşlemleri kapat</string>
+    <string name="a11y_fab_hint">İçki kaydedin veya alkolsüz gün işaretleyin</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">birim</string>
+    <string name="units_noun_unit_pl">birim</string>
+    <string name="units_noun_unit_short">birim</string>
+    <string name="units_noun_unit_abbr">br</string>
+    <string name="units_noun_unit_indef">birim</string>
+    <string name="units_noun_std_sg">standart içki</string>
+    <string name="units_noun_std_pl">standart içki</string>
+    <string name="units_noun_std_short">içki</string>
+    <string name="units_noun_std_abbr">Sİ</string>
+    <string name="units_noun_std_indef">standart içki</string>
+    <string name="units_noun_local_sg">standart içki</string>
+    <string name="units_noun_local_pl">standart içki</string>
+    <string name="units_noun_local_short">içki</string>
+    <string name="units_noun_local_abbr">Sİ</string>
+    <string name="units_noun_local_indef">standart içki</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">Günlük</string>
+    <string name="tab_statistics_short">İstatistik</string>
+    <string name="tab_settings_short">Ayarlar</string>
+</resources>

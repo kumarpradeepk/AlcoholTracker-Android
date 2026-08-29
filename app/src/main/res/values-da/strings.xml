@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/da-DK.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">Dagbog</string>
+    <string name="tab_statistics">Statistik</string>
+    <string name="tab_settings">Indstillinger</string>
+    <string name="lock_tap_to_unlock">Låst. Tryk for at låse op.</string>
+    <string name="applock_prompt_title">Alcohol Tracker er låst</string>
+    <string name="applock_prompt_sub">Lås op, før noget vises.</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">Velkommen til\nAlcohol Tracker</string>
+    <string name="ob_welcome_sub">Din følgesvend til et bevidst alkoholforbrug.</string>
+    <string name="ob_welcome_body">Registrering uden løftet pegefinger. Notér en drink på få sekunder, og se dit estimat falde — også fra håndleddet.</string>
+    <string name="ob_welcome_quick_caption">Hurtig notering, fra lommen</string>
+    <string name="ob_welcome_bac_example" formatted="false">Estimeret blodalkohol 0,032&#160;%</string>
+    <string name="ob_welcome_sober_example">Estimatet er nul om ca. 2 t.</string>
+    <string name="ob_get_started">Kom i gang</string>
+    <string name="ob_step_indicator">TRIN&#160;%1$d AF 3</string>
+    <string name="ob_skip">Spring over</string>
+    <string name="ob_goals_title">Hvad bringer dig hertil?</string>
+    <string name="ob_goals_sub">Vælg så mange, der passer. Det bliver mellem dig og appen.</string>
+    <string name="ob_goal_less">At drikke mindre</string>
+    <string name="ob_goal_awareness">At vide, hvor meget jeg drikker</string>
+    <string name="ob_goal_break">At give kroppen en pause</string>
+    <string name="ob_goal_free_days">Flere alkoholfrie dage</string>
+    <string name="ob_goal_conscious">At drikke bevidst</string>
+    <string name="ob_goal_reset">At nulstille mine vaner</string>
+    <string name="ob_goal_social">At håndtere sociale situationer</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="one">Fortsæt med&#160;%1$d mål</item>
+        <item quantity="other">Fortsæt med&#160;%1$d mål</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">Vælg mindst ét mål</string>
+    <string name="ob_base_title">Hvor mange drinks i en gennemsnitlig uge?</string>
+    <string name="ob_base_sub">Bare en fornemmelse af din rytme — ingen dom, kun et udgangspunkt.</string>
+    <string name="ob_base_0_4">0–4 drinks</string>
+    <string name="ob_base_5_9">5–9 drinks</string>
+    <string name="ob_base_10_14">10–14 drinks</string>
+    <string name="ob_base_15_19">15–19 drinks</string>
+    <string name="ob_base_20_plus">20 eller flere</string>
+    <string name="ob_continue">Fortsæt</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">I dag</string>
+    <string name="diary_yesterday">I går</string>
+    <string name="diary_pro_banner_title">Lås hele billedet op</string>
+    <string name="diary_pro_banner_sub">Hurtigfelter · promilleindsigt · automatiske alkoholfrie dage · påmindelser</string>
+    <string name="diary_usual">Det sædvanlige?</string>
+    <string name="units_abbrev_value">%1$.1f&#160;%2$s</string>
+    <string name="diary_intake_today">Dagens indtag</string>
+    <string name="diary_intake">Indtag</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="one">af&#160;%1$d&#160;%2$s</item>
+        <item quantity="other">af&#160;%1$d&#160;%2$s</item>
+    </plurals>
+    <string name="diary_this_week">Denne uge</string>
+    <string name="diary_this_month">Denne måned</string>
+    <string name="diary_mini_value">%1$.1f /&#160;%2$d</string>
+    <string name="diary_remaining_numbers">%1$.1f af&#160;%2$d&#160;%3$s noteret i dag.</string>
+    <string name="diary_remaining_zero_neutral">Dagens ramme står urørt — eller er måske slet ikke nødvendig i dag.</string>
+    <string name="diary_remaining_left_neutral">%1$.1f&#160;%2$s tilbage inden for dagens mål.</string>
+    <string name="diary_remaining_at_target_neutral">Præcis på dagens mål — et glas vand som det næste?</string>
+    <string name="diary_remaining_over_neutral">%1$.1f&#160;%3$s over dagens mål på&#160;%2$d.</string>
+    <string name="diary_adjust_guideline">Juster din alkoholretningslinje</string>
+    <string name="bac_monitor">Promilleestimat</string>
+    <string name="bac_status_waiting">AFVENTER</string>
+    <string name="bac_free_body">Lås Pro op, notér en drink — så falder dit estimat på plads her.</string>
+    <string name="bac_how_estimated">Sådan estimeres promillen</string>
+    <string name="bac_trends">Tendenser</string>
+    <string name="bac_setup_title">Opret din promilleprofil</string>
+    <string name="bac_setup_body">Tilføj vægt og køn, så estimaterne rent faktisk betyder noget. Det tager ti sekunder.</string>
+    <string name="bac_setup_cta">Opret promilleprofil</string>
+    <string name="bac_status_rising">STIGER</string>
+    <string name="bac_status_settling">FALDER</string>
+    <string name="bac_status_clear">NUL</string>
+    <string name="bac_value_percent">%1$.3f&#160;%%</string>
+    <string name="bac_value_permille">%1$.2f&#160;‰</string>
+    <string name="bac_sober_in">Estimatet er nul om ca.&#160;%1$s</string>
+    <string name="bac_all_clear">Estimatet står på nul — der er intet tilbage i beregningen.</string>
+    <string name="bac_disclaimer_short">Estimater er kun til information — aldrig grønt lys til at køre.</string>
+    <string name="diary_dry_marked">En alkoholfri dag, noteret.</string>
+    <string name="diary_dry_remembered">En alkoholfri dag, husket.</string>
+    <string name="diary_dry_body">Kroppen skænker sig selv en stille tak.</string>
+    <string name="diary_dry_unmark">Fjern markering</string>
+    <string name="diary_logged_today">NOTERET I DAG</string>
+    <string name="diary_logged_this_day">NOTERET DENNE DAG</string>
+    <string name="diary_entry_meta">%1$d ml ·&#160;%2$s&#160;%%</string>
+    <string name="diary_empty_title_today">Glasset står tomt indtil videre.</string>
+    <string name="diary_empty_title_other">Intet noteret denne dag.</string>
+    <string name="diary_empty_body_today">Skænker du op, så notér det med et par tryk — eller marker i dag som alkoholfri og lad en stime begynde.</string>
+    <string name="diary_empty_body_other">Husker du det, så tilføj det. Tilbagedatering holder mønstrene ærlige.</string>
+    <string name="action_log_drink">Notér drink</string>
+    <string name="action_mark_dry_day">Marker en alkoholfri dag</string>
+    <string name="diary_add_previous_dry">Tilføj en tidligere alkoholfri dag</string>
+    <string name="action_dry_day">Alkoholfri dag</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">Finjuster detaljerne</string>
+    <string name="log_title_review">Se efter og gem</string>
+    <string name="log_cta_next">Næste</string>
+    <string name="log_cta_save">Gem drink</string>
+    <string name="log_pick_intro">Hvad fik du? Vælg noget, der er tæt nok på — du kan finjustere alt bagefter.</string>
+    <string name="log_search_placeholder">Søg i drinks</string>
+    <string name="log_custom_title">Opret egen drink</string>
+    <string name="log_custom_sub">Enhver mængde, enhver alkoholprocent — aldrig bag en betalingsmur.</string>
+    <string name="log_section_your_drinks">DINE DRINKS</string>
+    <string name="log_section_popular">POPULÆRE</string>
+    <string name="log_grid_meta">%1$s&#160;%% ·&#160;%2$d ml</string>
+    <string name="log_tune_intro">Juster mængden, så den passer med det, der faktisk stod på bordet.</string>
+    <string name="log_abv_label">Alkoholprocent</string>
+    <string name="log_abv_value">%1$.1f&#160;%%</string>
+    <string name="log_serving_label">Serveringsstørrelse</string>
+    <string name="log_unit_ml">ml</string>
+    <string name="log_unit_floz">fl oz</string>
+    <string name="log_serving_ml_value">%1$d ml</string>
+    <string name="log_serving_oz_value">%1$.1f oz</string>
+    <string name="log_quantity_label">Antal</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈&#160;%1$.1f&#160;%3$s ·&#160;%2$d kcal</string>
+    <string name="log_working_line">%1$d ml ×&#160;%2$s&#160;%% × 0,789 ÷ 1000 =&#160;%3$.1f&#160;%4$s</string>
+    <string name="log_working_line_half">½ ×&#160;%1$d ml ×&#160;%2$s&#160;%% × 0,789 ÷ 1000 =&#160;%3$.1f&#160;%4$s</string>
+    <string name="log_working_line_qty">%1$d ×&#160;%2$d ml ×&#160;%3$s&#160;%% × 0,789 ÷ 1000 =&#160;%4$.1f&#160;%5$s</string>
+    <string name="log_review_meta">%1$d ml ·&#160;%2$s&#160;%% vol.</string>
+    <string name="log_review_meta_half">×½ ·&#160;%1$d ml ·&#160;%2$s&#160;%% vol.</string>
+    <string name="log_review_meta_qty">×%1$d ·&#160;%2$d ml ·&#160;%3$s&#160;%% vol.</string>
+    <string name="log_when_label">Hvornår</string>
+    <string name="log_when_now">Nu</string>
+    <string name="log_when_1h">1 t. siden</string>
+    <string name="log_when_2h">2 t. siden</string>
+    <string name="log_cost_label">Hvad kostede den?</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">Kalorier</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">Gemt på i dag — du kan fjerne den når som helst.</string>
+    <string name="log_saved_to_day">Gemt:&#160;%1$s — du kan fjerne den når som helst.</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">M / T / O / T / F / L / S</string>
+    <string name="sheet_cal_hint_select">Blå prikker er dage med noteringer, grønne prikker er alkoholfrie dage. Tryk på en for at åbne den.</string>
+    <string name="sheet_cal_hint_dry">Tryk på en tidligere dag for at markere den alkoholfri, tryk igen for at fjerne markeringen. Dage med drinks bliver, som de er.</string>
+    <string name="action_done">Færdig</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d ml ·&#160;%2$s&#160;%% ·&#160;%3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">brugt</string>
+    <string name="sheet_entry_relog">Det samme igen — notér en mere</string>
+    <string name="sheet_entry_remove">Fjern fra dagbogen</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">Hvad er en genstand egentlig?</string>
+    <string name="sheet_units_title__us">Hvad er et standardglas egentlig?</string>
+    <string name="sheet_units_title__gb">Hvad er en enhed egentlig?</string>
+    <string name="sheet_units_title__au">Hvad er et standardglas egentlig?</string>
+    <string name="sheet_units_title__ca">Hvad er et standardglas egentlig?</string>
+    <string name="sheet_units_title__jp">Hvad er en genstand egentlig?</string>
+    <string name="sheet_units_title__dk">Hvad er en genstand egentlig?</string>
+    <string name="sheet_units_title__vn">Hvad er en genstand egentlig?</string>
+    <string name="sheet_units_title__who">Hvad er en genstand egentlig?</string>
+    <string name="sheet_units_body">10 g ren alkohol — den målestok, WHO bruger. Hvert glas gemmer på sin egen mængde, så vi regner den ud for dig.</string>
+    <string name="sheet_units_chip_pour">150 ml</string>
+    <string name="sheet_units_chip_abv" formatted="false">13&#160;% vol.</string>
+    <string name="sheet_units_chip_density">0,789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1,5 genstande</string>
+    <string name="sheet_units_chip_result__us">1,5 standardglas</string>
+    <string name="sheet_units_chip_result__gb">1,5 enheder</string>
+    <string name="sheet_units_chip_result__au">1,5 standardglas</string>
+    <string name="sheet_units_chip_result__ca">1,5 standardglas</string>
+    <string name="sheet_units_chip_result__jp">1,5 genstande</string>
+    <string name="sheet_units_chip_result__dk">1,5 genstande</string>
+    <string name="sheet_units_chip_result__vn">1,5 genstande</string>
+    <string name="sheet_units_chip_result__who">1,5 genstande</string>
+    <string name="sheet_units_density_note">0,789 er bare alkohols massefylde. Intet mystisk.</string>
+    <string name="sheet_units_targets">Det er én margarita — ganske stille halvanden genstand. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+    <string name="sheet_units_targets__us">Det er én margarita — ganske stille halvandet standardglas. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+    <string name="sheet_units_targets__gb">Det er én margarita — ganske stille halvanden enhed. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+    <string name="sheet_units_targets__au">Det er én margarita — ganske stille halvandet standardglas. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+    <string name="sheet_units_targets__ca">Det er én margarita — ganske stille halvandet standardglas. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+    <string name="sheet_units_targets__jp">Det er én margarita — ganske stille halvanden genstand. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+    <string name="sheet_units_targets__dk">Det er én margarita — ganske stille halvanden genstand. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+    <string name="sheet_units_targets__vn">Det er én margarita — ganske stille halvanden genstand. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+    <string name="sheet_units_targets__who">Det er én margarita — ganske stille halvanden genstand. Dine daglige og ugentlige mål starter ved WHO\'s retningslinje for lav risiko, og de er dine at flytte.</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">Vi bruger Widmarks metode: den alkohol, du har noteret, fordelt i din kropsvæske (ud fra vægt og køn), minus det, kroppen når at forbrænde — omkring 0,015&#160;% i timen.</string>
+    <string name="sheet_bac_not_measurement">Det er et estimat, ikke en måling. Mad, medicin og din egen biologi flytter alle det virkelige tal.</string>
+    <string name="sheet_bac_never_drive">Brug aldrig et estimat til at afgøre, om det er forsvarligt at køre. Er du i tvivl: lad være med at køre.</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">Ny gemt drink</string>
+    <string name="sheet_custom_name_placeholder">Navn, så den er hurtig at finde</string>
+    <string name="sheet_custom_base_caption">GRUNDTYPE</string>
+    <string name="sheet_custom_abv_label" formatted="false">Vol.&#160;%</string>
+    <string name="sheet_custom_ml_label">Servering (ml)</string>
+    <string name="sheet_custom_notes_placeholder">Ingredienser eller noter (valgfrit)</string>
+    <string name="action_save">Gem</string>
+    <string name="action_cancel">Annuller</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7 D</string>
+    <string name="stats_period_30d">30 D</string>
+    <string name="stats_period_90d">90 D</string>
+    <string name="stats_period_1y">1 Å</string>
+    <string name="stats_period_custom">Valgfri</string>
+    <string name="action_export">Eksporter</string>
+    <string name="stats_edit_range">Rediger det valgfrie interval</string>
+    <string name="stats_verdict_numbers">Denne periode&#160;%1$.1f&#160;%3$s · forrige&#160;%2$.1f&#160;%4$s</string>
+    <string name="stats_verdict_level_neutral">På niveau med forrige periode.</string>
+    <string name="stats_verdict_less_neutral">%1$d&#160;%% mindre end forrige periode</string>
+    <string name="stats_verdict_more_neutral">%1$d&#160;%% mere end forrige periode</string>
+    <string name="stats_verdict_first_numbers">%1$.1f&#160;%2$s denne periode.</string>
+    <string name="stats_verdict_first_neutral">Din første periode med data — sammenligningen begynder næste periode.</string>
+    <string name="stats_tile_drunk">Drukket</string>
+    <string name="stats_tile_alcohol">Alkohol</string>
+    <string name="stats_tile_spending">Udgifter</string>
+    <string name="stats_tile_calories">Kalorier</string>
+    <string name="stats_unit_ml">ml</string>
+    <plurals name="stats_unit_units">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="one">%1$s</item>
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="one">≈&#160;%1$d cheeseburger</item>
+        <item quantity="other">≈&#160;%1$d cheeseburgere</item>
+    </plurals>
+    <string name="stats_units_chart_title">Indtaget alkohol</string>
+    <string name="stats_units_chart_title__us">Indtaget alkohol</string>
+    <string name="stats_units_chart_title__gb">Indtaget alkohol</string>
+    <string name="stats_units_chart_title__au">Indtaget alkohol</string>
+    <string name="stats_units_chart_title__ca">Indtaget alkohol</string>
+    <string name="stats_units_chart_title__jp">Indtaget alkohol</string>
+    <string name="stats_units_chart_title__dk">Indtaget alkohol</string>
+    <string name="stats_units_chart_title__vn">Indtaget alkohol</string>
+    <string name="stats_units_chart_title__who">Indtaget alkohol</string>
+    <string name="stats_daily_average">Dagligt gennemsnit</string>
+    <string name="stats_units_total">I alt&#160;%1$.1f&#160;%2$s</string>
+    <string name="stats_units_per_day">%1$.2f / dag</string>
+    <string name="stats_units_empty">Dit mønster tegner sig selv her.</string>
+    <string name="stats_spend_chart_title">Udgifter over tid</string>
+    <string name="stats_spend_total">I alt&#160;%1$s</string>
+    <string name="stats_spend_per_day">%1$s / dag</string>
+    <string name="stats_spend_empty">Udgifter dukker op, når du noterer en drink med pris.</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">Penge sparet</string>
+    <string name="stats_baseline_label">Typisk uge (%1$s)</string>
+    <string name="stats_saved_unset">Angiv, hvad du typisk bruger på en uge, så bliver det her til penge sparet — ud fra dine egne priser, ikke landsgennemsnit.</string>
+    <string name="stats_saved_under">%1$s under dit typiske forbrug i perioden — ud fra det, du faktisk betaler, ikke gennemsnit.</string>
+    <string name="stats_saved_over">%1$s over dit typiske forbrug i perioden.</string>
+    <string name="stats_breakdown_title">Fordeling på drinks</string>
+    <string name="stats_breakdown_locked">Se hvilke drinks der fylder mest i dine uger, og hvad de stille og roligt løber op i.</string>
+    <string name="stats_breakdown_empty">Notér et par drinks, så viser favoritterne sig selv.</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="one">%1$s ·&#160;%2$d gang</item>
+        <item quantity="other">%1$s ·&#160;%2$d gange</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d&#160;%%</string>
+    <string name="stats_breakdown_leader">%1$s fører med&#160;%2$d&#160;%% af periodens&#160;%3$s.</string>
+    <string name="stats_dry_title_positive">Godt gået med de alkoholfrie dage.</string>
+    <string name="stats_dry_body_positive">Alkoholfrie dage udgjorde&#160;%1$d&#160;%% af perioden. Hver enkelt er hvile, kroppen mærker.</string>
+    <string name="stats_dry_title_none">Ingen alkoholfrie dage endnu.</string>
+    <string name="stats_dry_body_none">Den første starter en stime — marker i dag som alkoholfri fra dagbogen.</string>
+    <string name="stats_dry_title_numbers">Alkoholfrie dage</string>
+    <string name="stats_dry_body_numbers">%1$d af&#160;%2$d dage ·&#160;%3$d&#160;%% af perioden.</string>
+    <string name="stats_dry_ring_pct">%1$d&#160;%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">Valgfrit interval</string>
+    <string name="sheet_range_from">Fra</string>
+    <string name="sheet_range_to">Til</string>
+    <string name="sheet_range_last7">Seneste 7 dage</string>
+    <string name="sheet_range_last30">Seneste 30 dage</string>
+    <string name="action_apply">Anvend</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">Eksporter statistik</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">Statistik,&#160;%1$s.csv</string>
+    <string name="sheet_export_desc">Alle tal fra perioden, klar til at dele.</string>
+    <string name="sheet_export_cta">Del CSV</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">Hold dine drinks synkroniseret</string>
+    <string name="sheet_health_body">Noterede drinks kan gemmes automatisk i&#160;%1$s, så hele billedet samles ét sted.</string>
+    <string name="sheet_health_data_title">Alkoholdata</string>
+    <string name="sheet_health_data_sub">Der skrives kun poster om alkoholindtag, og der læses ingenting.</string>
+    <string name="sheet_health_cta">Forbind til&#160;%1$s</string>
+    <string name="sheet_health_change_access">Skift adgang senere i&#160;%1$s.</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">Vedvarende notifikation</string>
+    <string name="sheet_live_body">Mens estimatet falder, ligger et roligt kort i skyggen — du behøver ikke åbne appen.</string>
+    <string name="sheet_live_mock_status">Estimeret blodalkohol, falder</string>
+    <string name="sheet_live_mock_value" formatted="false">0,065&#160;%</string>
+    <string name="sheet_live_mock_tozero">3 t. 42 min. til nul</string>
+    <string name="sheet_live_note">Et eksempel med opdigtede tal — der kører ingenting.</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">Se hele billedet.</string>
+    <string name="pay_sub">Hele din drikkehistorik, et løbende promilleestimat og den ugentlige tendens, der viser, hvor en tung måned begynder.</string>
+    <string name="pay_no_ads">Ingen reklamer. Ingen data solgt. Ingen konto.</string>
+    <string name="pay_benefit_history">Hver genstand du nogensinde har noteret, ikke kun de sidste 90 dage</string>
+    <string name="pay_benefit_bac">Et løbende promilleestimat og din vej tilbage til nul</string>
+    <string name="pay_benefit_insights">Ugens total holdt op mod anbefalingen, med tendensen</string>
+    <string name="pay_benefit_streaks">Stimer af alkoholfrie dage, sparede penge, sparede kalorier</string>
+    <string name="pay_benefit_quicklog">Gentag en genstand med ét tryk, fra hjemmeskærmen</string>
+    <string name="pay_benefit_report">En ren PDF-rapport, du kan give lægen</string>
+    <string name="pay_compare_caption">DET FÅR DU</string>
+    <string name="pay_compare_free">GRATIS</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">Ubegrænset notering og egne drikkevarer</string>
+    <string name="pay_compare_export">Eksport, sikkerhedskopi og widgets</string>
+    <string name="pay_compare_darkmode">Mørk tilstand, app-lås og påmindelser</string>
+    <string name="pay_compare_history">Historik ud over 90 dage</string>
+    <string name="pay_compare_bac">Promilleestimater og hurtige felter</string>
+    <string name="pay_compare_insights">Avanceret indsigt, PDF og privat synk</string>
+    <string name="pay_plan_weekly">Ugentlig</string>
+    <string name="pay_plan_monthly">Månedlig</string>
+    <string name="pay_plan_annual">Årlig</string>
+    <string name="pay_plan_lifetime">Livstid</string>
+    <string name="pay_price_line_weekly">%1$s om ugen</string>
+    <string name="pay_price_line_monthly">%1$s om måneden</string>
+    <string name="pay_price_line_annual">%1$s om året</string>
+    <string name="pay_price_line_lifetime">%1$s én gang, dit for altid</string>
+    <string name="pay_badge_trial">%1$d DAGE GRATIS</string>
+    <string name="pay_badge_save">SPAR&#160;%1$d%%</string>
+    <string name="pay_badge_best">BEDSTE PRIS</string>
+    <string name="pay_loading">Henter dagens priser fra butikken…</string>
+    <string name="pay_unavailable">Butikken svarer ikke lige nu. Notering, eksport og sikkerhedskopi virker uanset hvad.</string>
+    <string name="pay_retry">Prøv igen</string>
+    <string name="pay_faq_caption">SPØRGSMÅL, BESVARET</string>
+    <string name="pay_faq_q_trial">Hvordan virker den gratis prøve?</string>
+    <string name="pay_faq_a_trial">Alle Pro-funktioner er dine i&#160;%1$d dage. Afmeld når som helst inden den slutter, så bliver der ikke trukket noget.</string>
+    <string name="pay_faq_q_after">Hvad sker der, når den slutter?</string>
+    <string name="pay_faq_a_after">Så starter netop det abonnement, du valgte, til prisen på dets kort, aldrig en højere. Vi minder dig om det 2 dage før, så intet kommer bag på dig.</string>
+    <string name="pay_faq_q_logs">Bliver mine noteringer nogensinde låst?</string>
+    <string name="pay_faq_a_logs">Nej. Notering, egne drikkevarer, denne uges statistik, widgets, CSV-eksport, sikkerhedskopi, mørk tilstand, app-lås og påmindelser er gratis for altid. Holder du op med at betale, bliver alt, du har skrevet, ved med at være dit og ved med at kunne læses.</string>
+    <string name="pay_faq_q_cancel">Kan jeg afmelde når som helst?</string>
+    <string name="pay_faq_a_cancel">Altid. Administrer eller afmeld under dine&#160;%1$s-abonnementer, og dine data bliver her på din telefon.</string>
+    <string name="pay_cta_trial">Start mine&#160;%1$d gratis dage</string>
+    <string name="pay_cta_plan">Fortsæt,&#160;%1$s</string>
+    <string name="pay_cta_lifetime">Lås Pro op for altid</string>
+    <string name="pay_cta_default">Fortsæt</string>
+    <string name="pay_sub_trial">%1$d dage gratis, derefter&#160;%2$s. Der trækkes ikke noget i dag.</string>
+    <string name="pay_sub_recurring">Fornyes til&#160;%1$s, indtil du afmelder. Ét tryk i Indstillinger.</string>
+    <string name="pay_sub_lifetime">Én betaling. Bliver aldrig til et abonnement.</string>
+    <string name="pay_restore">Gendan</string>
+    <string name="pay_terms">Vilkår</string>
+    <string name="pay_privacy">Privatliv</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro — tak, fordi du holder lyset tændt.</string>
+    <string name="set_pro_banner_title">Mere indsigt, mindre besvær.</string>
+    <string name="set_pro_banner_sub">Automatiske alkoholfrie dage · hurtigfelter · promilleestimat</string>
+    <string name="set_section_you">DIG</string>
+    <string name="set_section_insights">INDSIGT OG SYNKRONISERING</string>
+    <string name="set_section_appearance">UDSEENDE</string>
+    <string name="set_section_data">DINE DATA</string>
+    <string name="set_section_privacy">PRIVATLIV OG TONE</string>
+    <string name="set_section_support">SUPPORT</string>
+    <string name="set_profile">Profil</string>
+    <string name="set_profile_not_set">Ikke angivet</string>
+    <string name="set_profile_summary">%1$s&#160;%2$s ·&#160;%3$s</string>
+    <string name="set_units">Måleenheder</string>
+    <string name="set_units_summary">%1$s ·&#160;%2$s</string>
+    <string name="set_guideline">Alkoholretningslinje</string>
+    <string name="set_guideline_value">%1$d / dag</string>
+    <string name="set_ask_cost">Spørg om pris</string>
+    <string name="set_show_calories">Vis kalorier</string>
+    <string name="set_auto_dry">Find alkoholfrie dage automatisk</string>
+    <string name="set_notifications">Notifikationer</string>
+    <string name="set_notif_none">Ingen</string>
+    <plurals name="set_notif_count">
+        <item quantity="one">%1$d om dagen</item>
+        <item quantity="other">%1$d om dagen</item>
+    </plurals>
+    <string name="set_health_sync">Sundhedssynkronisering</string>
+    <string name="set_health_connected">Forbundet</string>
+    <string name="set_health_off">Fra</string>
+    <string name="set_quick_log">Hurtigfelter</string>
+    <string name="set_quick_log_setup">Konfigurer</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="one">%1$d drink</item>
+        <item quantity="other">%1$d drinks</item>
+    </plurals>
+    <string name="set_dark_mode">Mørk tilstand</string>
+    <string name="set_app_icon">Appikon</string>
+    <string name="set_icon_default">Standard</string>
+    <string name="set_icon_gift">Gave</string>
+    <string name="set_icon_holiday">Højtid</string>
+    <string name="set_language">Sprog</string>
+    <string name="set_language_value">Dansk</string>
+    <string name="set_backup_title">Sikkerhedskopieret</string>
+    <string name="set_backup_title_none">Ikke sikkerhedskopieret endnu</string>
+    <string name="set_backup_detail_never_android">Opret en nedenfor · på denne enhed · eksport er altid gratis</string>
+    <string name="set_backup_detail_dated">%1$s · på denne enhed · eksport er altid gratis</string>
+    <string name="set_backup_row">Sikkerhedskopi, eksport og import</string>
+    <string name="set_backup_free">Gratis</string>
+    <string name="set_app_lock">App-lås</string>
+    <string name="set_app_lock_sub">Lås op, før noget vises.</string>
+    <string name="set_discreet">Diskrete notifikationer</string>
+    <string name="set_discreet_sub">Beskeder på låseskærmen nævner aldrig alkohol.</string>
+    <string name="set_day_ends">Dagen slutter kl.</string>
+    <string name="set_day_ends_sub">En drink kl. 01.00 tæller med til aftenen før.</string>
+    <string name="set_cutoff_midnight">Midnat</string>
+    <string name="set_cutoff_2am">02.00</string>
+    <string name="set_cutoff_4am">04.00</string>
+    <string name="set_tone">Tone</string>
+    <string name="set_tone_icon_sample">Aa</string>
+    <string name="set_tone_neutral">Neutral</string>
+    <string name="set_tone_push">Skub på</string>
+    <string name="set_tone_numbers">Tal</string>
+    <string name="set_tone_sub_neutral">Tal og en stille anerkendelse, aldrig en dom.</string>
+    <string name="set_tone_sub_push">Fokus på stimer og tydeligere markering, når målet overskrides.</string>
+    <string name="set_tone_sub_numbers">Rent regnskab — hvert vurderende ord og hver farvedom er slået fra.</string>
+    <string name="set_contact">Kontakt support</string>
+    <string name="set_about">Om Alcohol Tracker</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">Kunde-id</string>
+    <string name="set_copy">Kopier</string>
+    <string name="set_footer">Lavet med tilbageholdenhed.\nDine data forlader aldrig denne telefon.</string>
+    <string name="support_email_subject">Alcohol Tracker support</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">Din krop, dine tal.</string>
+    <string name="profile_body">Den samme drink lander forskelligt i hver krop. To hurtige oplysninger, og estimaterne holder op med at være gennemsnit og begynder at være dine.</string>
+    <string name="profile_privacy_note">Ti sekunder, én gang. Intet herfra forlader nogensinde telefonen.</string>
+    <string name="profile_sex_label">Køn</string>
+    <string name="profile_sex_female">Kvinde</string>
+    <string name="profile_sex_male">Mand</string>
+    <string name="profile_weight_label">Kropsvægt</string>
+    <string name="profile_weight_kg">kg</string>
+    <string name="profile_weight_lb">lb</string>
+    <string name="profile_weight_placeholder">Dit bedste bud er fint</string>
+    <string name="profile_cta">Gør det til mit</string>
+    <string name="profile_footer">Skift begge dele når som helst — estimaterne justerer sig med det samme.</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">Energi</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">Serveringsstørrelse</string>
+    <string name="units_millilitres">Milliliter</string>
+    <string name="units_ounces">Ounces</string>
+    <string name="units_note">Det ændrer kun, hvordan tallene læses — aldrig det, du har noteret.</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">Intet planlagt.</string>
+    <string name="notif_empty_body">Dine aftener er dine egne. Hvis et stille dagligt skub hjælper, så tilføj et nedenfor.</string>
+    <string name="notif_repeat_hint">Hver påmindelse gentages dagligt. Tryk på − for at fjerne en.</string>
+    <string name="notif_reminder_sub">%1$s ·&#160;%2$s</string>
+    <string name="notif_create_cta">Opret notifikation</string>
+    <string name="sheet_notif_title_placeholder">Titel, f.eks. Aftentjek</string>
+    <string name="sheet_notif_time_label">Tidspunkt</string>
+    <string name="sheet_notif_message_placeholder">Besked (valgfri)</string>
+    <string name="sheet_notif_repeat_note">Gentages hver dag på det valgte tidspunkt.</string>
+    <string name="sheet_notif_cta">Opret</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">Estimeret promille, tid til nul og det vedvarende statuskort.</string>
+    <string name="set_bac_unit_label">Promilleenhed</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">Se statuskortet</string>
+    <string name="set_bac_preview_sub">Den stille vedvarende notifikation, mens estimatet falder.</string>
+    <string name="set_bac_disclaimer">Estimater er kun til information. Brug dem aldrig til at afgøre, om det er forsvarligt at køre.</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">Hurtigfelter</string>
+    <string name="quicklog_mock_caption">HURTIG NOTERING</string>
+    <string name="quicklog_mock_footer">ét tryk · noteret</string>
+    <string name="quicklog_section_caption">GEMTE DRINKS SOM FELTER</string>
+    <string name="quicklog_selected_count">%1$d af&#160;%2$d valgt</string>
+    <string name="quicklog_empty_title">Ingen gemte drinks endnu.</string>
+    <string name="quicklog_empty_sub">Opret en, så ligger den ét tryk væk — der er plads til fire.</string>
+    <string name="quicklog_drink_meta">%1$d ml ·&#160;%2$s&#160;%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">Sikkerhedskopi og gendannelse</string>
+    <string name="backup_status_dated">Sikkerhedskopieret&#160;%1$s, på denne enhed.</string>
+    <string name="backup_status_none_android">Ingen sikkerhedskopi endnu — opret en nedenfor.</string>
+    <string name="backup_whats_here">Det ligger på telefonen</string>
+    <plurals name="backup_count_logs">
+        <item quantity="one">notering</item>
+        <item quantity="other">noteringer</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="one">alkoholfri dag</item>
+        <item quantity="other">alkoholfrie dage</item>
+    </plurals>
+    <string name="backup_count_profile">profil</string>
+    <string name="backup_export">Eksporter data</string>
+    <string name="backup_import">Importer data</string>
+    <string name="backup_create">Opret sikkerhedskopi</string>
+    <string name="backup_restore">Gendan fra sikkerhedskopi</string>
+    <string name="backup_merge_note">Import flettes med det, der allerede er her — dubletter springes stille over.</string>
+    <string name="backup_danger_zone">FAREZONE</string>
+    <string name="backup_clear_all">Slet alle data</string>
+    <string name="backup_clear_note">Permanent, og det kan ikke fortrydes. Eksporter en kopi først, hvis det betyder noget.</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">Om</string>
+    <string name="about_version">Version&#160;%1$s ·&#160;%2$s</string>
+    <string name="about_privacy">Privatlivspolitik</string>
+    <string name="about_terms">Servicevilkår</string>
+    <string name="about_ack_caption">TAK TIL</string>
+    <string name="about_ack_role_db">lokal database</string>
+    <string name="about_ack_role_ui_android">brugerflade</string>
+    <string name="about_ack_role_settings_android">indstillinger</string>
+    <string name="about_footer">Glas og dråbe tegnet i kode,\nmed tilbageholdenhed.</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">Samme app, ny frakke. Vælg den, der passer til din hjemmeskærm.</string>
+    <string name="icon_relaunch_note">Appen lukker måske kortvarigt, mens launcheren opdaterer.</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">Promilletendens</string>
+    <string name="trends_title">Højeste estimerede promille</string>
+    <string name="trends_range">Seneste 7 dage</string>
+    <string name="trends_axis_start">for 6 dage siden</string>
+    <string name="trends_axis_end">i dag</string>
+    <string name="trends_note" formatted="false">Kurven falder, fordi kroppen forbrænder omkring 0,015&#160;% i timen. Flade uger er gode uger.</string>
+    <string name="trends_empty_title">Ingen kurve endnu.</string>
+    <string name="trends_empty_body">Tilføj din profil og notér en drink — kurven begynder med den første.</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">Alkoholretningslinje</string>
+    <string name="guideline_intro">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_intro__us">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_intro__gb">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_intro__au">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_intro__ca">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_intro__jp">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_intro__dk">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_intro__vn">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_intro__who">WHO\'s retningslinje for lav risiko peger på højst 2&#160;%1$s om dagen, med jævnlige alkoholfrie dage. Sæt det, der passer dig.</string>
+    <string name="guideline_daily_target">Dagligt mål</string>
+    <string name="guideline_weekly_target">Ugentligt mål</string>
+    <plurals name="guideline_target_units">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="one">%1$d&#160;%2$s</item>
+        <item quantity="other">%1$d&#160;%2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="one">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+        <item quantity="other">Dit månedlige mål følger automatisk med:&#160;%1$d&#160;%2$s. WHO\'s retningslinje er en kilde, ikke en dom.</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">Fjern denne drink?</string>
+    <string name="dialog_delete_body">Den forlader dagbogen, og tallene falder tilbage på plads.</string>
+    <string name="dialog_delete_keep">Behold</string>
+    <string name="dialog_delete_remove">Fjern</string>
+    <string name="dialog_clear_title">Slet alle data?</string>
+    <string name="dialog_clear_body">Hver notering, alkoholfri dag og indstilling — væk for altid. Eksporter en kopi først, hvis du vil have en.</string>
+    <string name="dialog_clear_delete">Slet</string>
+    <string name="dialog_health_title">Skal »%1$s« have lov til at skrive alkoholindtag til&#160;%2$s?</string>
+    <string name="dialog_health_deny">Tillad ikke</string>
+    <string name="dialog_health_allow">Tillad</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">%1$s noteret,&#160;%2$.1f&#160;%3$s.</string>
+    <string name="toast_logged">Noteret,&#160;%1$.1f&#160;%2$s.</string>
+    <string name="action_undo">Fortryd</string>
+    <string name="toast_relogged">Det samme igen, noteret på i dag.</string>
+    <string name="toast_entry_removed">Fjernet fra dagbogen.</string>
+    <string name="toast_dry_marked">Alkoholfri dag noteret. Stille sejre tæller dobbelt.</string>
+    <string name="toast_day_has_drinks">Denne dag har allerede drinks noteret.</string>
+    <string name="toast_day_has_drinks_cal">Den dag har drinks noteret.</string>
+    <string name="toast_custom_saved">Gemt — ét tryk næste gang.</string>
+    <string name="toast_profile_incomplete">Tilføj både vægt og køn — estimatet har brug for begge dele.</string>
+    <string name="toast_profile_saved">Gemt — dine promilleestimater blev lige skarpere.</string>
+    <string name="toast_reminder_scheduled">Planlagt — et stille skub, dagligt.</string>
+    <string name="toast_reminder_silent">Gemt, men&#160;%1$s holder den lydløs.</string>
+    <string name="toast_icon_updated">Ikonet er skiftet. Det klæder dig.</string>
+    <string name="toast_customer_id_copied">Kopieret — sæt det ind i en supportmail.</string>
+    <string name="toast_pro_welcome">Velkommen til Pro — alt er låst op.</string>
+    <string name="toast_restore_success">Velkommen tilbage — alt er låst op.</string>
+    <string name="toast_restore_none">Der er intet at gendanne endnu — alt er, som det skal være.</string>
+    <string name="toast_purchase_unavailable">Køb er ikke tilgængelige lige nu.</string>
+    <string name="toast_health_connected">Drinks flyder nu stille videre til&#160;%1$s.</string>
+    <string name="toast_backup_created">Sikkerhedskopi oprettet på denne enhed.</string>
+    <string name="toast_backup_restored_android">Gendannet — dubletter blev stille sprunget over.</string>
+    <string name="toast_backup_none_android">Ingen sikkerhedskopi på denne enhed endnu.</string>
+    <string name="toast_export_file_android">Sikkerhedskopien er gemt — læg den et sikkert sted.</string>
+    <string name="toast_file_unreadable">Filen kunne ikke læses.</string>
+    <plurals name="toast_import_result">
+        <item quantity="one">Importerede&#160;%1$d, sprang&#160;%2$d dublet over.</item>
+        <item quantity="other">Importerede&#160;%1$d, sprang&#160;%2$d dubletter over.</item>
+    </plurals>
+    <string name="toast_import_ok_android">Importeret — dubletter blev stille sprunget over.</string>
+    <string name="toast_import_invalid_android">Det lignede ikke en sikkerhedskopi.</string>
+    <string name="toast_cleared">En ren tavle. Vær god ved den.</string>
+    <string name="toast_csv_ready_android">Klar til at dele.</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">Daglige påmindelser</string>
+    <string name="notif_channel_reminders_desc">De daglige skub, du opretter i Indstillinger.</string>
+    <string name="notif_channel_bac">Estimatstatus</string>
+    <string name="notif_channel_bac_desc">Et roligt kort, mens et estimat falder.</string>
+    <string name="notif_discreet_title">Aftentjek</string>
+    <string name="notif_discreet_body">Ti sekunders notat holder billedet ærligt.</string>
+    <string name="notif_reminder_body_fallback">Et hurtigt notat holder billedet ærligt.</string>
+    <string name="notif_bac_discreet_title">Falder</string>
+    <string name="notif_bac_discreet_body">Ca.&#160;%1$s til nul.</string>
+    <string name="notif_bac_title">Estimeret blodalkohol&#160;%1$s</string>
+    <string name="notif_bac_body">Aldrig grønt lys til at køre.&#160;%1$s til nul.</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">Forrige dag</string>
+    <string name="a11y_open_calendar">Åbn kalender</string>
+    <string name="a11y_next_day">Næste dag</string>
+    <string name="a11y_log_quick">Notér&#160;%1$s,&#160;%2$.1f&#160;%3$s</string>
+    <string name="a11y_units_info">Hvad er en genstand?</string>
+    <string name="a11y_units_info__us">Hvad er et standardglas?</string>
+    <string name="a11y_units_info__gb">Hvad er en enhed?</string>
+    <string name="a11y_units_info__au">Hvad er et standardglas?</string>
+    <string name="a11y_units_info__ca">Hvad er et standardglas?</string>
+    <string name="a11y_units_info__jp">Hvad er en genstand?</string>
+    <string name="a11y_units_info__dk">Hvad er en genstand?</string>
+    <string name="a11y_units_info__vn">Hvad er en genstand?</string>
+    <string name="a11y_units_info__who">Hvad er en genstand?</string>
+    <string name="a11y_intake_ring">%1$.1f af&#160;%2$d&#160;%3$s i dag</string>
+    <string name="a11y_mini_progress">%1$s:&#160;%2$.1f af&#160;%3$d&#160;%4$s</string>
+    <string name="a11y_back">Tilbage</string>
+    <string name="a11y_close">Luk</string>
+    <string name="a11y_prev_month">Forrige måned</string>
+    <string name="a11y_next_month">Næste måned</string>
+    <string name="a11y_cal_day">Dag&#160;%1$d</string>
+    <string name="a11y_cal_day_logged">Dag&#160;%1$d, drinks noteret</string>
+    <string name="a11y_cal_day_dry">Dag&#160;%1$d, alkoholfri dag</string>
+    <string name="a11y_cal_day_logged_dry">Dag&#160;%1$d, drinks noteret, alkoholfri dag</string>
+    <string name="a11y_prev_period">Forrige periode</string>
+    <string name="a11y_next_period">Næste periode</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="one">%1$d alkoholfri dag,&#160;%2$d procent af perioden</item>
+        <item quantity="other">%1$d alkoholfrie dage,&#160;%2$d procent af perioden</item>
+    </plurals>
+    <string name="a11y_remove_reminder">Fjern&#160;%1$s</string>
+    <string name="a11y_toggle_on">Til</string>
+    <string name="a11y_toggle_off">Fra</string>
+    <string name="a11y_fab_add">Tilføj</string>
+    <string name="a11y_fab_close">Luk handlinger</string>
+    <string name="a11y_fab_hint">Notér en drink eller marker en alkoholfri dag</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">enhed</string>
+    <string name="units_noun_unit_pl">enheder</string>
+    <string name="units_noun_unit_short">enheder</string>
+    <string name="units_noun_unit_abbr">enh.</string>
+    <string name="units_noun_unit_indef">en enhed</string>
+    <string name="units_noun_std_sg">standardglas</string>
+    <string name="units_noun_std_pl">standardglas</string>
+    <string name="units_noun_std_short">standardglas</string>
+    <string name="units_noun_std_abbr">sg.</string>
+    <string name="units_noun_std_indef">et standardglas</string>
+    <string name="units_noun_local_sg">genstand</string>
+    <string name="units_noun_local_pl">genstande</string>
+    <string name="units_noun_local_short">genstande</string>
+    <string name="units_noun_local_abbr">gst.</string>
+    <string name="units_noun_local_indef">en genstand</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">Dagbog</string>
+    <string name="tab_statistics_short">Statistik</string>
+    <string name="tab_settings_short">Mere</string>
+</resources>

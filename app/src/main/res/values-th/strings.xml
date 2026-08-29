@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/th-TH.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">ไดอารี่</string>
+    <string name="tab_statistics">สถิติ</string>
+    <string name="tab_settings">ตั้งค่า</string>
+    <string name="lock_tap_to_unlock">ล็อกอยู่ แตะเพื่อปลดล็อก</string>
+    <string name="applock_prompt_title">Alcohol Tracker ถูกล็อกอยู่</string>
+    <string name="applock_prompt_sub">ปลดล็อกก่อน จึงจะแสดงข้อมูลใดๆ</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">ยินดีต้อนรับสู่\nAlcohol Tracker</string>
+    <string name="ob_welcome_sub">สมุดจดที่บอกตามจริงว่าดื่มไปเท่าไหร่</string>
+    <string name="ob_welcome_body">บันทึกโดยไม่ตัดสิน จดหนึ่งแก้วได้ในไม่กี่วินาที แล้วดูค่าประมาณระดับแอลกอฮอล์ในเลือดค่อยๆ ลดลง ดูจากข้อมือก็ได้</string>
+    <string name="ob_welcome_quick_caption">จดเร็วๆ จากในกระเป๋า</string>
+    <string name="ob_welcome_bac_example" formatted="false">ค่าประมาณแอลกอฮอล์ในเลือด 0.032%</string>
+    <string name="ob_welcome_sober_example">ค่าประมาณลดเหลือศูนย์ในราว 2 ชม.</string>
+    <string name="ob_get_started">เริ่มใช้งาน</string>
+    <string name="ob_step_indicator">ขั้นที่ %1$d จาก 3</string>
+    <string name="ob_skip">ข้าม</string>
+    <string name="ob_goals_title">อะไรพาคุณมาที่นี่</string>
+    <string name="ob_goals_sub">เลือกได้เท่าที่รู้สึกว่าใช่ คำตอบนี้อยู่ระหว่างคุณกับแอปเท่านั้น</string>
+    <string name="ob_goal_less">ดื่มให้น้อยลง</string>
+    <string name="ob_goal_awareness">รู้ว่าตัวเองดื่มไปเท่าไหร่</string>
+    <string name="ob_goal_break">ให้ร่างกายได้พัก</string>
+    <string name="ob_goal_free_days">มีวันไม่ดื่มมากขึ้น</string>
+    <string name="ob_goal_conscious">ดื่มอย่างรู้ตัว</string>
+    <string name="ob_goal_reset">ตั้งเกณฑ์ที่เคยชินใหม่</string>
+    <string name="ob_goal_social">รับมือกับวงสังคม</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="other">ไปต่อด้วย %1$d ข้อ</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">เลือกอย่างน้อย 1 ข้อ</string>
+    <string name="ob_base_title">สัปดาห์หนึ่งดื่มประมาณกี่แก้ว</string>
+    <string name="ob_base_sub">แค่จับจังหวะคร่าวๆ ไม่ได้ตัดสิน เป็นแค่จุดเริ่มต้น</string>
+    <string name="ob_base_0_4">0–4 แก้ว</string>
+    <string name="ob_base_5_9">5–9 แก้ว</string>
+    <string name="ob_base_10_14">10–14 แก้ว</string>
+    <string name="ob_base_15_19">15–19 แก้ว</string>
+    <string name="ob_base_20_plus">20 แก้วขึ้นไป</string>
+    <string name="ob_continue">ไปต่อ</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">วันนี้</string>
+    <string name="diary_yesterday">เมื่อวาน</string>
+    <string name="diary_pro_banner_title">ปลดล็อกภาพทั้งหมด</string>
+    <string name="diary_pro_banner_sub">ไทล์จดเร็ว · วิเคราะห์แอลกอฮอล์ในเลือด · ตรวจวันไม่ดื่มอัตโนมัติ · แจ้งเตือน</string>
+    <string name="diary_usual">เหมือนเดิมไหม</string>
+    <string name="units_abbrev_value">%1$.1f %2$s</string>
+    <string name="diary_intake_today">ที่ดื่มวันนี้</string>
+    <string name="diary_intake">ที่ดื่ม</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="other">จาก %1$d %2$s</item>
+    </plurals>
+    <string name="diary_this_week">สัปดาห์นี้</string>
+    <string name="diary_this_month">เดือนนี้</string>
+    <string name="diary_mini_value">%1$.1f / %2$d</string>
+    <string name="diary_remaining_numbers">วันนี้ %1$.1f จาก %2$d %3$s</string>
+    <string name="diary_remaining_zero_neutral">เป้าหมายวันนี้ยังไม่ถูกแตะเลย หรือวันนี้อาจไม่จำเป็นต้องใช้</string>
+    <string name="diary_remaining_left_neutral">เหลืออีก %1$.1f %2$s ในเป้าหมายวันนี้</string>
+    <string name="diary_remaining_at_target_neutral">พอดีเป้าหมายเลย ต่อด้วยน้ำเปล่าสักแก้วไหม</string>
+    <string name="diary_remaining_over_neutral">เกินเป้าหมายวันนี้ที่ %2$d %3$s อยู่ %1$.1f</string>
+    <string name="diary_adjust_guideline">ปรับแนวทางการดื่ม</string>
+    <string name="bac_monitor">ระดับแอลกอฮอล์ในเลือด</string>
+    <string name="bac_status_waiting">รอ</string>
+    <string name="bac_free_body">ปลดล็อก Pro จดสักแก้ว แล้วค่าประมาณระดับแอลกอฮอล์ในเลือดจะมาแสดงตรงนี้</string>
+    <string name="bac_how_estimated">ประมาณระดับแอลกอฮอล์ในเลือดอย่างไร</string>
+    <string name="bac_trends">แนวโน้ม</string>
+    <string name="bac_setup_title">ตั้งค่าโปรไฟล์แอลกอฮอล์ในเลือด</string>
+    <string name="bac_setup_body">ใส่น้ำหนักกับเพศ ค่าประมาณจึงจะมีความหมายจริงๆ ใช้เวลาสิบวินาที</string>
+    <string name="bac_setup_cta">ตั้งค่าโปรไฟล์</string>
+    <string name="bac_status_rising">ขึ้น</string>
+    <string name="bac_status_settling">ลดลง</string>
+    <string name="bac_status_clear">ศูนย์</string>
+    <string name="bac_value_percent">%1$.3f%%</string>
+    <string name="bac_value_permille">%1$.2f‰</string>
+    <string name="bac_sober_in">ค่าประมาณลดเหลือศูนย์ในราว %1$s</string>
+    <string name="bac_all_clear">ค่าประมาณเป็นศูนย์แล้ว ตามการคำนวณไม่มีแอลกอฮอล์เหลืออยู่</string>
+    <string name="bac_disclaimer_short">ค่าประมาณมีไว้ดูเท่านั้น ไม่ใช่สัญญาณว่าขับรถได้โดยเด็ดขาด</string>
+    <string name="diary_dry_marked">วันไม่ดื่ม บันทึกแล้ว</string>
+    <string name="diary_dry_remembered">วันไม่ดื่ม จำไว้แล้ว</string>
+    <string name="diary_dry_body">ร่างกายกำลังรินคำขอบคุณเงียบๆ ให้ตัวเอง</string>
+    <string name="diary_dry_unmark">เอาเครื่องหมายออก</string>
+    <string name="diary_logged_today">บันทึกวันนี้</string>
+    <string name="diary_logged_this_day">บันทึกของวันนี้</string>
+    <string name="diary_entry_meta">%1$d มล. · %2$s%%</string>
+    <string name="diary_empty_title_today">ยังเป็นแก้วเปล่าอยู่</string>
+    <string name="diary_empty_title_other">วันนี้ไม่มีบันทึก</string>
+    <string name="diary_empty_body_today">พอรินแล้วก็แตะสองสามครั้งเพื่อจด หรือทำวันนี้เป็นวันไม่ดื่ม แล้วเริ่มนับวันต่อเนื่อง</string>
+    <string name="diary_empty_body_other">ถ้าพอจำได้ก็เพิ่มเข้าไป ย้อนวันได้ แล้วรูปแบบการดื่มจะตรงตามจริง</string>
+    <string name="action_log_drink">บันทึกหนึ่งแก้ว</string>
+    <string name="action_mark_dry_day">ทำเป็นวันไม่ดื่ม</string>
+    <string name="diary_add_previous_dry">เพิ่มวันไม่ดื่มย้อนหลัง</string>
+    <string name="action_dry_day">ไม่ดื่ม</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">ปรับรายละเอียด</string>
+    <string name="log_title_review">ตรวจดูแล้วบันทึก</string>
+    <string name="log_cta_next">ถัดไป</string>
+    <string name="log_cta_save">บันทึกแก้วนี้</string>
+    <string name="log_pick_intro">ดื่มอะไรไป เลือกอันที่ใกล้เคียงก็พอ เดี๋ยวค่อยปรับละเอียดในขั้นถัดไป</string>
+    <string name="log_search_placeholder">ค้นหาเครื่องดื่ม</string>
+    <string name="log_custom_title">สร้างเครื่องดื่มของตัวเอง</string>
+    <string name="log_custom_sub">ปริมาณเท่าไหร่ก็ได้ ดีกรีเท่าไหร่ก็ได้ ไม่เคยต้องจ่ายเงิน</string>
+    <string name="log_section_your_drinks">เครื่องดื่มของคุณ</string>
+    <string name="log_section_popular">ยอดนิยม</string>
+    <string name="log_grid_meta">%1$s%% · %2$d มล.</string>
+    <string name="log_tune_intro">ปรับให้ตรงกับแก้วที่อยู่บนโต๊ะจริงๆ</string>
+    <string name="log_abv_label">ดีกรี</string>
+    <string name="log_abv_value">%1$.1f%%</string>
+    <string name="log_serving_label">ปริมาณต่อแก้ว</string>
+    <string name="log_unit_ml">มล.</string>
+    <string name="log_unit_floz">ออนซ์</string>
+    <string name="log_serving_ml_value">%1$d มล.</string>
+    <string name="log_serving_oz_value">%1$.1f ออนซ์</string>
+    <string name="log_quantity_label">จำนวนแก้ว</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈ %1$.1f %3$s · %2$d kcal</string>
+    <string name="log_working_line">%1$d มล. × %2$s%% × 0.789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_half">½ × %1$d มล. × %2$s%% × 0.789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_qty">%1$d × %2$d มล. × %3$s%% × 0.789 ÷ 1000 = %4$.1f %5$s</string>
+    <string name="log_review_meta">%1$d มล. · ดีกรี %2$s%%</string>
+    <string name="log_review_meta_half">×½ · %1$d มล. · ดีกรี %2$s%%</string>
+    <string name="log_review_meta_qty">×%1$d · %2$d มล. · ดีกรี %3$s%%</string>
+    <string name="log_when_label">เมื่อไหร่</string>
+    <string name="log_when_now">ตอนนี้</string>
+    <string name="log_when_1h">1 ชม.ก่อน</string>
+    <string name="log_when_2h">2 ชม.ก่อน</string>
+    <string name="log_cost_label">จ่ายไปเท่าไหร่</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">แคลอรี่</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">บันทึกไว้ที่วันนี้แล้ว ลบออกเมื่อไหร่ก็ได้</string>
+    <string name="log_saved_to_day">บันทึกไว้ที่ %1$s แล้ว ลบออกเมื่อไหร่ก็ได้</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">อา / จ / อ / พ / พฤ / ศ / ส</string>
+    <string name="sheet_cal_hint_select">จุดสีฟ้าคือวันที่มีบันทึก จุดสีเขียวคือวันไม่ดื่ม แตะเพื่อเปิดดู</string>
+    <string name="sheet_cal_hint_dry">แตะวันที่ผ่านมาเพื่อทำเป็นวันไม่ดื่ม แตะอีกครั้งเพื่อเอาออก วันที่มีบันทึกจะคงไว้ตามเดิม</string>
+    <string name="action_done">เสร็จ</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d มล. · %2$s%% · %3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">ใช้ไป</string>
+    <string name="sheet_entry_relog">เหมือนเดิม จดอีกแก้ว</string>
+    <string name="sheet_entry_remove">ลบออกจากไดอารี่</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_title__us">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_title__gb">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_title__au">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_title__ca">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_title__jp">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_title__dk">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_title__vn">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_title__who">1 %1$s คืออะไรกันแน่</string>
+    <string name="sheet_units_body">แอลกอฮอล์บริสุทธิ์ 10 กรัม คือไม้บรรทัดที่องค์การอนามัยโลกใช้ แต่ละแก้วซ่อนปริมาณไว้ไม่เท่ากัน เราจึงคำนวณให้</string>
+    <string name="sheet_units_chip_pour">150 มล. ต่อแก้ว</string>
+    <string name="sheet_units_chip_abv" formatted="false">ดีกรี 13%</string>
+    <string name="sheet_units_chip_density">0.789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__us">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__gb">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__au">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__ca">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__jp">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__dk">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__vn">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__who">1.5 %1$s</string>
+    <string name="sheet_units_density_note">0.789 ก็แค่ความหนาแน่นของแอลกอฮอล์ ไม่มีอะไรลึกลับ</string>
+    <string name="sheet_units_targets">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+    <string name="sheet_units_targets__us">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+    <string name="sheet_units_targets__gb">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+    <string name="sheet_units_targets__au">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+    <string name="sheet_units_targets__ca">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+    <string name="sheet_units_targets__jp">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+    <string name="sheet_units_targets__dk">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+    <string name="sheet_units_targets__vn">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+    <string name="sheet_units_targets__who">นั่นคือ Margarita หนึ่งแก้ว เท่ากับ 1.5 %1$s แบบเงียบๆ เป้าหมายรายวันและรายสัปดาห์เริ่มต้นจากแนวทางความเสี่ยงต่ำขององค์การอนามัยโลก และคุณขยับมันได้เสมอ</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">เราใช้สูตร Widmark คือเอาแอลกอฮอล์ที่คุณจดไว้ กระจายลงในน้ำในร่างกาย ซึ่งคำนวณจากน้ำหนักและเพศ แล้วหักส่วนที่ร่างกายกำจัดออก ราว 0.015% ต่อชั่วโมง</string>
+    <string name="sheet_bac_not_measurement">นี่คือค่าประมาณ ไม่ใช่ค่าที่วัดได้ อาหาร ยา และร่างกายของแต่ละคน ล้วนทำให้ตัวเลขจริงเปลี่ยนไป</string>
+    <string name="sheet_bac_never_drive">ห้ามใช้ค่าประมาณตัดสินว่าขับรถได้หรือไม่ โดยเด็ดขาด ถ้าลังเลแม้เพียงนิดเดียว อย่าขับ</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">เครื่องดื่มที่บันทึกใหม่</string>
+    <string name="sheet_custom_name_placeholder">ชื่อ เพื่อให้หาเจอเร็วๆ</string>
+    <string name="sheet_custom_base_caption">ประเภทพื้นฐาน</string>
+    <string name="sheet_custom_abv_label" formatted="false">ดีกรี %</string>
+    <string name="sheet_custom_ml_label">ปริมาณ (มล.)</string>
+    <string name="sheet_custom_notes_placeholder">ส่วนผสมหรือโน้ต (ไม่บังคับ)</string>
+    <string name="action_save">บันทึก</string>
+    <string name="action_cancel">ยกเลิก</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7 วัน</string>
+    <string name="stats_period_30d">30 วัน</string>
+    <string name="stats_period_90d">90 วัน</string>
+    <string name="stats_period_1y">1 ปี</string>
+    <string name="stats_period_custom">กำหนดเอง</string>
+    <string name="action_export">ส่งออก</string>
+    <string name="stats_edit_range">แก้ไขช่วงที่กำหนดเอง</string>
+    <string name="stats_verdict_numbers">ช่วงนี้ %1$.1f %3$s · ช่วงก่อน %2$.1f %3$s</string>
+    <string name="stats_verdict_level_neutral">เท่ากับช่วงก่อน</string>
+    <string name="stats_verdict_less_neutral">น้อยกว่าช่วงก่อน %1$d%%</string>
+    <string name="stats_verdict_more_neutral">มากกว่าช่วงก่อน %1$d%%</string>
+    <string name="stats_verdict_first_numbers">ช่วงนี้ %1$.1f %2$s</string>
+    <string name="stats_verdict_first_neutral">นี่คือช่วงแรกที่มีข้อมูล การเปรียบเทียบจะเริ่มในช่วงถัดไป</string>
+    <string name="stats_tile_drunk">ปริมาณ</string>
+    <string name="stats_tile_alcohol">แอลกอฮอล์</string>
+    <string name="stats_tile_spending">ค่าใช้จ่าย</string>
+    <string name="stats_tile_calories">แคลอรี่</string>
+    <string name="stats_unit_ml">มล.</string>
+    <plurals name="stats_unit_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="other">≈ ชีสเบอร์เกอร์ %1$d ชิ้น</item>
+    </plurals>
+    <string name="stats_units_chart_title">%1$sที่ดื่มไป</string>
+    <string name="stats_units_chart_title__us">%1$sที่ดื่มไป</string>
+    <string name="stats_units_chart_title__gb">%1$sที่ดื่มไป</string>
+    <string name="stats_units_chart_title__au">%1$sที่ดื่มไป</string>
+    <string name="stats_units_chart_title__ca">%1$sที่ดื่มไป</string>
+    <string name="stats_units_chart_title__jp">%1$sที่ดื่มไป</string>
+    <string name="stats_units_chart_title__dk">%1$sที่ดื่มไป</string>
+    <string name="stats_units_chart_title__vn">%1$sที่ดื่มไป</string>
+    <string name="stats_units_chart_title__who">%1$sที่ดื่มไป</string>
+    <string name="stats_daily_average">เฉลี่ยต่อวัน</string>
+    <string name="stats_units_total">รวม %1$.1f %2$s</string>
+    <string name="stats_units_per_day">%1$.2f ต่อวัน</string>
+    <string name="stats_units_empty">รูปแบบการดื่มของคุณจะค่อยๆ ปรากฏขึ้นตรงนี้</string>
+    <string name="stats_spend_chart_title">แนวโน้มค่าใช้จ่าย</string>
+    <string name="stats_spend_total">รวม %1$s</string>
+    <string name="stats_spend_per_day">%1$s ต่อวัน</string>
+    <string name="stats_spend_empty">ค่าใช้จ่ายจะขึ้นเมื่อคุณจดแก้วที่ใส่ราคาไว้</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">เงินที่ประหยัดได้</string>
+    <string name="stats_baseline_label">ปกติสัปดาห์ละ %1$s</string>
+    <string name="stats_saved_unset">ใส่ยอดที่ปกติใช้ต่อสัปดาห์ แล้วตรงนี้จะกลายเป็นเงินที่ประหยัดได้ คิดจากราคาที่คุณจ่ายจริง ไม่ใช่ค่าเฉลี่ยของประเทศ</string>
+    <string name="stats_saved_under">ช่วงนี้ต่ำกว่ายอดที่ปกติใช้อยู่ %1$s คิดจากราคาที่คุณจ่ายจริง ไม่ใช่ค่าเฉลี่ย</string>
+    <string name="stats_saved_over">ช่วงนี้สูงกว่ายอดที่ปกติใช้อยู่ %1$s</string>
+    <string name="stats_breakdown_title">สัดส่วนเครื่องดื่ม</string>
+    <string name="stats_breakdown_locked">ดูว่าเครื่องดื่มไหนนำในแต่ละสัปดาห์ และมันสะสมเป็นเท่าไหร่แบบเงียบๆ</string>
+    <string name="stats_breakdown_empty">จดสักสองสามแก้ว แล้วแก้วที่ดื่มบ่อยจะเผยตัวเอง</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="other">%1$s · %2$d ครั้ง</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d%%</string>
+    <string name="stats_breakdown_leader">%1$s มาเป็นอันดับหนึ่ง คิดเป็น %2$d%% ของ%3$sในช่วงนี้</string>
+    <string name="stats_dry_title_positive">รักษาวันไม่ดื่มไว้ได้ดี</string>
+    <string name="stats_dry_body_positive">ช่วงนี้มีวันไม่ดื่ม %1$d%% ทุกวันคือการพักที่ร่างกายรับรู้ได้</string>
+    <string name="stats_dry_title_none">ยังไม่มีวันไม่ดื่ม</string>
+    <string name="stats_dry_body_none">วันแรกคือจุดเริ่มของวันต่อเนื่อง ทำวันนี้เป็นวันไม่ดื่มได้จากไดอารี่</string>
+    <string name="stats_dry_title_numbers">วันไม่ดื่ม</string>
+    <string name="stats_dry_body_numbers">%1$d จาก %2$d วัน · %3$d%% ของช่วงนี้</string>
+    <string name="stats_dry_ring_pct">%1$d%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">ช่วงที่กำหนดเอง</string>
+    <string name="sheet_range_from">จาก</string>
+    <string name="sheet_range_to">ถึง</string>
+    <string name="sheet_range_last7">7 วันล่าสุด</string>
+    <string name="sheet_range_last30">30 วันล่าสุด</string>
+    <string name="action_apply">ใช้</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">ส่งออกสถิติ</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">สถิติ %1$s.csv</string>
+    <string name="sheet_export_desc">ทุกตัวเลขของช่วงนี้ พร้อมแชร์</string>
+    <string name="sheet_export_cta">แชร์ CSV</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">ให้บันทึกซิงค์กันไว้</string>
+    <string name="sheet_health_body">แก้วที่จดไว้จะถูกบันทึกไปยัง %1$s โดยอัตโนมัติ ภาพทั้งหมดจึงอยู่ที่เดียวกัน</string>
+    <string name="sheet_health_data_title">ข้อมูลแอลกอฮอล์</string>
+    <string name="sheet_health_data_sub">เขียนเฉพาะรายการการดื่มแอลกอฮอล์เท่านั้น ไม่มีการอ่านข้อมูลใดๆ</string>
+    <string name="sheet_health_cta">เชื่อมต่อกับ %1$s</string>
+    <string name="sheet_health_change_access">เปลี่ยนสิทธิ์เข้าถึงภายหลังได้ใน %1$s</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">การแจ้งเตือนที่ค้างไว้</string>
+    <string name="sheet_live_body">ระหว่างที่ค่าประมาณระดับแอลกอฮอล์ในเลือดค่อยๆ ลดลง การ์ดเงียบๆ ใบหนึ่งจะอยู่ในแถบแจ้งเตือน ไม่ต้องเปิดแอปเลย</string>
+    <string name="sheet_live_mock_status">ค่าประมาณแอลกอฮอล์ในเลือด กำลังลดลง</string>
+    <string name="sheet_live_mock_value" formatted="false">0.065%</string>
+    <string name="sheet_live_mock_tozero">อีก 3 ชม. 42 น. ถึงศูนย์</string>
+    <string name="sheet_live_note">เป็นตัวอย่างที่ใช้ตัวเลขสมมติ ไม่ได้กำลังทำงานอยู่จริง</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">เห็นภาพทั้งหมด</string>
+    <string name="pay_sub">ประวัติการดื่มทั้งหมดของคุณ ค่าประมาณแอลกอฮอล์ในเลือดแบบเรียลไทม์ และแนวโน้มรายสัปดาห์ที่บอกว่าเดือนหนัก ๆ เริ่มตรงไหน</string>
+    <string name="pay_no_ads">ไม่มีโฆษณา ไม่ขายข้อมูล ไม่ต้องสมัครบัญชี</string>
+    <string name="pay_benefit_history">ไม่ใช่แค่ 90 วันล่าสุด แต่ทุกแก้วที่คุณเคยบันทึก</string>
+    <string name="pay_benefit_bac">ค่าประมาณแอลกอฮอล์ในเลือดแบบเรียลไทม์ และเวลาที่จะกลับสู่ศูนย์</string>
+    <string name="pay_benefit_insights">ยอดรวมรายสัปดาห์เทียบกับแนวทาง พร้อมแนวโน้ม</string>
+    <string name="pay_benefit_streaks">สถิติวันไม่ดื่มติดต่อกัน เงินที่เก็บได้ แคลอรีที่เลี่ยงไป</string>
+    <string name="pay_benefit_quicklog">บันทึกซ้ำด้วยแตะเดียวจากหน้าจอหลัก</string>
+    <string name="pay_benefit_report">รายงาน PDF ที่สะอาดตา ยื่นให้หมอได้เลย</string>
+    <string name="pay_compare_caption">สิ่งที่คุณจะได้</string>
+    <string name="pay_compare_free">ฟรี</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">บันทึกไม่จำกัดและเครื่องดื่มของคุณเอง</string>
+    <string name="pay_compare_export">ส่งออก สำรองข้อมูล และวิดเจ็ต</string>
+    <string name="pay_compare_darkmode">โหมดมืด ล็อกแอป และการเตือน</string>
+    <string name="pay_compare_history">ประวัติย้อนหลังเกิน 90 วัน</string>
+    <string name="pay_compare_bac">ค่าประมาณแอลกอฮอล์ในเลือดและช่องบันทึกด่วน</string>
+    <string name="pay_compare_insights">เชิงลึกขั้นสูง PDF และซิงก์ส่วนตัว</string>
+    <string name="pay_plan_weekly">รายสัปดาห์</string>
+    <string name="pay_plan_monthly">รายเดือน</string>
+    <string name="pay_plan_annual">รายปี</string>
+    <string name="pay_plan_lifetime">ตลอดชีพ</string>
+    <string name="pay_price_line_weekly">%1$s ต่อสัปดาห์</string>
+    <string name="pay_price_line_monthly">%1$s ต่อเดือน</string>
+    <string name="pay_price_line_annual">%1$s ต่อปี</string>
+    <string name="pay_price_line_lifetime">%1$s ครั้งเดียว เป็นของคุณตลอดไป</string>
+    <string name="pay_badge_trial">ฟรี %1$d วัน</string>
+    <string name="pay_badge_save">ประหยัด %1$d%%</string>
+    <string name="pay_badge_best">คุ้มที่สุด</string>
+    <string name="pay_loading">กำลังเช็กราคาวันนี้กับร้านค้า…</string>
+    <string name="pay_unavailable">ร้านค้าไม่ตอบสนองในตอนนี้ การบันทึก ส่งออก และสำรองข้อมูลยังทำงานได้ตามปกติ</string>
+    <string name="pay_retry">ลองอีกครั้ง</string>
+    <string name="pay_faq_caption">คำถามที่พบบ่อย</string>
+    <string name="pay_faq_q_trial">ทดลองใช้ฟรีทำงานอย่างไร</string>
+    <string name="pay_faq_a_trial">ฟีเจอร์ Pro ทั้งหมดเป็นของคุณ %1$d วัน ยกเลิกก่อนหมดเมื่อไรก็ได้ แล้วจะไม่มีการเรียกเก็บเงิน</string>
+    <string name="pay_faq_q_after">เมื่อหมดแล้วจะเป็นอย่างไร</string>
+    <string name="pay_faq_a_after">แพ็กเกจที่คุณเลือกจะเริ่มต้นในราคาที่แสดงบนการ์ดของมัน ไม่มีทางแพงกว่านั้น เราจะเตือนล่วงหน้า 2 วัน จะได้ไม่มีอะไรมาเซอร์ไพรส์</string>
+    <string name="pay_faq_q_logs">บันทึกของฉันจะถูกล็อกไหม</string>
+    <string name="pay_faq_a_logs">ไม่ การบันทึก เครื่องดื่มของคุณเอง สถิติสัปดาห์นี้ วิดเจ็ต การส่งออก CSV การสำรองข้อมูล โหมดมืด ล็อกแอป และการเตือน ฟรีตลอดไป ถ้าคุณหยุดจ่าย ทุกอย่างที่คุณเขียนไว้ยังเป็นของคุณและยังอ่านได้</string>
+    <string name="pay_faq_q_cancel">ยกเลิกเมื่อไรก็ได้ไหม</string>
+    <string name="pay_faq_a_cancel">ได้เสมอ จัดการหรือยกเลิกได้จากการสมัครสมาชิก %1$s ของคุณ และข้อมูลของคุณยังอยู่ตรงนี้ ในเครื่องของคุณ</string>
+    <string name="pay_cta_trial">เริ่ม %1$d วันฟรีของฉัน</string>
+    <string name="pay_cta_plan">ดำเนินการต่อ %1$s</string>
+    <string name="pay_cta_lifetime">ปลดล็อก Pro ตลอดไป</string>
+    <string name="pay_cta_default">ดำเนินการต่อ</string>
+    <string name="pay_sub_trial">ฟรี %1$d วัน จากนั้น %2$s วันนี้ยังไม่มีการเรียกเก็บเงิน</string>
+    <string name="pay_sub_recurring">ต่ออายุที่ %1$s จนกว่าคุณจะยกเลิก แตะเดียวในการตั้งค่า</string>
+    <string name="pay_sub_lifetime">จ่ายครั้งเดียว ไม่กลายเป็นการสมัครสมาชิก</string>
+    <string name="pay_restore">กู้คืน</string>
+    <string name="pay_terms">ข้อกำหนด</string>
+    <string name="pay_privacy">ความเป็นส่วนตัว</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro ขอบคุณที่ช่วยให้ไฟยังอุ่นอยู่</string>
+    <string name="set_pro_banner_title">เห็นมากขึ้น ออกแรงน้อยลง</string>
+    <string name="set_pro_banner_sub">ตรวจวันไม่ดื่มอัตโนมัติ · ไทล์จดเร็ว · ระดับแอลกอฮอล์ในเลือด</string>
+    <string name="set_section_you">คุณ</string>
+    <string name="set_section_insights">การวิเคราะห์และการซิงค์</string>
+    <string name="set_section_appearance">หน้าตา</string>
+    <string name="set_section_data">ข้อมูลของคุณ</string>
+    <string name="set_section_privacy">ความเป็นส่วนตัวและน้ำเสียง</string>
+    <string name="set_section_support">การสนับสนุน</string>
+    <string name="set_profile">โปรไฟล์</string>
+    <string name="set_profile_not_set">ยังไม่ได้ตั้ง</string>
+    <string name="set_profile_summary">%1$s %2$s · %3$s</string>
+    <string name="set_units">หน่วย</string>
+    <string name="set_units_summary">%1$s · %2$s</string>
+    <string name="set_guideline">แนวทางการดื่ม</string>
+    <string name="set_guideline_value">%1$d ต่อวัน</string>
+    <string name="set_ask_cost">ถามราคาเครื่องดื่ม</string>
+    <string name="set_show_calories">แสดงแคลอรี่</string>
+    <string name="set_auto_dry">ตรวจวันไม่ดื่มอัตโนมัติ</string>
+    <string name="set_notifications">การแจ้งเตือน</string>
+    <string name="set_notif_none">ไม่มี</string>
+    <plurals name="set_notif_count">
+        <item quantity="other">%1$d รายการต่อวัน</item>
+    </plurals>
+    <string name="set_health_sync">ซิงค์กับสุขภาพ</string>
+    <string name="set_health_connected">เชื่อมต่อแล้ว</string>
+    <string name="set_health_off">ปิด</string>
+    <string name="set_quick_log">ไทล์จดเร็ว</string>
+    <string name="set_quick_log_setup">ตั้งค่า</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="other">%1$d รายการ</item>
+    </plurals>
+    <string name="set_dark_mode">โหมดมืด</string>
+    <string name="set_app_icon">ไอคอนแอป</string>
+    <string name="set_icon_default">ค่าเริ่มต้น</string>
+    <string name="set_icon_gift">ของขวัญ</string>
+    <string name="set_icon_holiday">วันหยุด</string>
+    <string name="set_language">ภาษา</string>
+    <string name="set_language_value">ไทย</string>
+    <string name="set_backup_title">สำรองข้อมูลแล้ว</string>
+    <string name="set_backup_title_none">ยังไม่ได้สำรองข้อมูล</string>
+    <string name="set_backup_detail_never_android">สร้างได้ด้านล่าง · เก็บในเครื่องนี้ · ส่งออกฟรีเสมอ</string>
+    <string name="set_backup_detail_dated">%1$s · เก็บในเครื่องนี้ · ส่งออกฟรีเสมอ</string>
+    <string name="set_backup_row">สำรอง ส่งออก และนำเข้าข้อมูล</string>
+    <string name="set_backup_free">ฟรี</string>
+    <string name="set_app_lock">ล็อกแอป</string>
+    <string name="set_app_lock_sub">ปลดล็อกก่อน จึงจะแสดงข้อมูลใดๆ</string>
+    <string name="set_discreet">การแจ้งเตือนแบบไม่เปิดเผย</string>
+    <string name="set_discreet_sub">การเตือนบนหน้าจอล็อกจะไม่พูดถึงแอลกอฮอล์เลย</string>
+    <string name="set_day_ends">วันสิ้นสุดเมื่อ</string>
+    <string name="set_day_ends_sub">แก้วตอนตี 1 จะนับเข้าคืนก่อนหน้า</string>
+    <string name="set_cutoff_midnight">เที่ยงคืน</string>
+    <string name="set_cutoff_2am">ตี 2</string>
+    <string name="set_cutoff_4am">ตี 4</string>
+    <string name="set_tone">น้ำเสียง</string>
+    <string name="set_tone_icon_sample">กข</string>
+    <string name="set_tone_neutral">กลาง</string>
+    <string name="set_tone_push">ผลักดัน</string>
+    <string name="set_tone_numbers">ตัวเลข</string>
+    <string name="set_tone_sub_neutral">ตัวเลข กับการรับรู้แบบอ่อนโยน ไม่ตัดสิน</string>
+    <string name="set_tone_sub_push">เน้นวันต่อเนื่อง และเน้นตอนเกินเป้าหมายให้ชัดขึ้น</string>
+    <string name="set_tone_sub_numbers">บัญชีล้วนๆ ตัดคำที่ตัดสินและการตัดสินด้วยสีออกทั้งหมด</string>
+    <string name="set_contact">ติดต่อฝ่ายสนับสนุน</string>
+    <string name="set_about">เกี่ยวกับ Alcohol Tracker</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">รหัสลูกค้า</string>
+    <string name="set_copy">คัดลอก</string>
+    <string name="set_footer">ทำขึ้นอย่างมีสติ\nข้อมูลของคุณไม่เคยออกจากเครื่องนี้</string>
+    <string name="support_email_subject">ฝ่ายสนับสนุน Alcohol Tracker</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">ร่างกายของคุณ ตัวเลขของคุณ</string>
+    <string name="profile_body">แก้วเดียวกันส่งผลกับแต่ละร่างกายไม่เหมือนกัน ใส่แค่สองอย่าง ค่าประมาณก็จะเลิกเป็นค่าเฉลี่ย แล้วกลายเป็นของคุณ</string>
+    <string name="profile_privacy_note">สิบวินาที ครั้งเดียว ทุกอย่างตรงนี้ไม่เคยออกจากเครื่องนี้</string>
+    <string name="profile_sex_label">เพศกำเนิด</string>
+    <string name="profile_sex_female">หญิง</string>
+    <string name="profile_sex_male">ชาย</string>
+    <string name="profile_weight_label">น้ำหนักตัว</string>
+    <string name="profile_weight_kg">กก.</string>
+    <string name="profile_weight_lb">ปอนด์</string>
+    <string name="profile_weight_placeholder">เดาคร่าวๆ ก็พอ</string>
+    <string name="profile_cta">ทำให้เป็นของฉัน</string>
+    <string name="profile_footer">เปลี่ยนทั้งสองอย่างได้ตลอด ค่าประมาณจะปรับตามทันที</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">พลังงาน</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">ปริมาณต่อแก้ว</string>
+    <string name="units_millilitres">มิลลิลิตร</string>
+    <string name="units_ounces">ออนซ์</string>
+    <string name="units_note">สิ่งเหล่านี้เปลี่ยนแค่วิธีอ่านตัวเลข ไม่ได้เปลี่ยนสิ่งที่คุณจดไว้</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">ยังไม่ได้ตั้งเวลาไว้</string>
+    <string name="notif_empty_body">ช่วงเย็นเป็นของคุณ ถ้าการเตือนเบาๆ วันละครั้งช่วยได้ เพิ่มได้ด้านล่าง</string>
+    <string name="notif_repeat_hint">การเตือนแต่ละรายการจะซ้ำทุกวัน แตะ − เพื่อลบออก</string>
+    <string name="notif_reminder_sub">%1$s · %2$s</string>
+    <string name="notif_create_cta">สร้างการแจ้งเตือน</string>
+    <string name="sheet_notif_title_placeholder">ชื่อ เช่น แก้วสุดท้าย</string>
+    <string name="sheet_notif_time_label">เวลาที่จะเตือน</string>
+    <string name="sheet_notif_message_placeholder">ข้อความ (ไม่บังคับ)</string>
+    <string name="sheet_notif_repeat_note">ซ้ำทุกวันในเวลาที่เลือกไว้</string>
+    <string name="sheet_notif_cta">สร้าง</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">ค่าประมาณระดับแอลกอฮอล์ในเลือด เวลาถึงศูนย์ และการ์ดสถานะที่ค้างไว้</string>
+    <string name="set_bac_unit_label">หน่วยของค่าแอลกอฮอล์ในเลือด</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">ดูตัวอย่างการ์ดสถานะ</string>
+    <string name="set_bac_preview_sub">การแจ้งเตือนเงียบๆ ที่ค้างไว้ ระหว่างที่ค่าประมาณค่อยๆ ลดลง</string>
+    <string name="set_bac_disclaimer">ค่าประมาณมีไว้ดูเท่านั้น ห้ามใช้ตัดสินว่าขับรถได้หรือไม่ โดยเด็ดขาด</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">ไทล์จดเร็ว</string>
+    <string name="quicklog_mock_caption">จดเร็ว</string>
+    <string name="quicklog_mock_footer">แตะครั้งเดียว · จดแล้ว</string>
+    <string name="quicklog_section_caption">เครื่องดื่มที่บันทึกไว้เป็นไทล์</string>
+    <string name="quicklog_selected_count">เลือกแล้ว %1$d จาก %2$d</string>
+    <string name="quicklog_empty_title">ยังไม่มีเครื่องดื่มที่บันทึกไว้</string>
+    <string name="quicklog_empty_sub">สร้างสักรายการ แล้วมันจะอยู่ห่างแค่แตะเดียว ใส่ได้สูงสุดสี่รายการ</string>
+    <string name="quicklog_drink_meta">%1$d มล. · %2$s%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">สำรองข้อมูลและกู้คืน</string>
+    <string name="backup_status_dated">สำรองข้อมูลแล้ว %1$s ในเครื่องนี้</string>
+    <string name="backup_status_none_android">ยังไม่มีข้อมูลสำรอง — สร้างได้ด้านล่าง</string>
+    <string name="backup_whats_here">มีอะไรอยู่ในเครื่องนี้</string>
+    <plurals name="backup_count_logs">
+        <item quantity="other">รายการการดื่ม</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="other">วันไม่ดื่ม</item>
+    </plurals>
+    <string name="backup_count_profile">โปรไฟล์</string>
+    <string name="backup_export">ส่งออกข้อมูล</string>
+    <string name="backup_import">นำเข้าข้อมูล</string>
+    <string name="backup_create">สร้างข้อมูลสำรอง</string>
+    <string name="backup_restore">กู้คืนจากข้อมูลสำรอง</string>
+    <string name="backup_merge_note">การนำเข้าจะรวมกับที่มีอยู่ รายการซ้ำจะถูกข้ามไปเงียบๆ</string>
+    <string name="backup_danger_zone">โซนอันตราย</string>
+    <string name="backup_clear_all">ล้างข้อมูลทั้งหมด</string>
+    <string name="backup_clear_note">ถาวร และย้อนกลับไม่ได้ ถ้ามันสำคัญ ส่งออกสำเนาไว้ก่อน</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">เกี่ยวกับ</string>
+    <string name="about_version">เวอร์ชัน %1$s · %2$s</string>
+    <string name="about_privacy">นโยบายความเป็นส่วนตัว</string>
+    <string name="about_terms">ข้อกำหนดการให้บริการ</string>
+    <string name="about_ack_caption">ขอบคุณ</string>
+    <string name="about_ack_role_db">ฐานข้อมูลในเครื่อง</string>
+    <string name="about_ack_role_ui_android">ส่วนติดต่อผู้ใช้</string>
+    <string name="about_ack_role_settings_android">การตั้งค่า</string>
+    <string name="about_footer">ภาพแก้วและหยดน้ำวาดด้วยโค้ด\nอย่างมีสติ</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">แอปเดิม เปลี่ยนเสื้อ เลือกอันที่เข้ากับหน้าจอโฮมของคุณ</string>
+    <string name="icon_relaunch_note">การสลับอาจทำให้แอปปิดชั่วครู่ ระหว่างที่ตัวเรียกใช้อัปเดต</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">แนวโน้มแอลกอฮอล์ในเลือด</string>
+    <string name="trends_title">ค่าประมาณแอลกอฮอล์ในเลือดสูงสุด</string>
+    <string name="trends_range">7 วันล่าสุด</string>
+    <string name="trends_axis_start">6 วันก่อน</string>
+    <string name="trends_axis_end">วันนี้</string>
+    <string name="trends_note" formatted="false">เส้นจะค่อยๆ ลดลงตามที่ร่างกายกำจัดออกราว 0.015% ต่อชั่วโมง สัปดาห์ที่เส้นราบคือสัปดาห์ที่ดี</string>
+    <string name="trends_empty_title">ยังไม่มีเส้น</string>
+    <string name="trends_empty_body">ใส่โปรไฟล์แล้วจดสักแก้ว เส้นแนวโน้มจะเริ่มจากแก้วแรก</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">แนวทางการดื่ม</string>
+    <string name="guideline_intro">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_intro__us">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_intro__gb">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_intro__au">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_intro__ca">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_intro__jp">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_intro__dk">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_intro__vn">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_intro__who">แนวทางความเสี่ยงต่ำขององค์การอนามัยโลกเสนอไม่เกิน 2 %1$s ต่อวัน และให้มีวันไม่ดื่มอย่างสม่ำเสมอ ตั้งค่าที่รู้สึกว่าเหมาะกับคุณ</string>
+    <string name="guideline_daily_target">เป้าหมายต่อวัน</string>
+    <string name="guideline_weekly_target">เป้าหมายต่อสัปดาห์</string>
+    <plurals name="guideline_target_units">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="other">เป้าหมายรายเดือนจะตามมาเองโดยอัตโนมัติ %1$d %2$s แนวทางขององค์การอนามัยโลกเป็นแหล่งอ้างอิง ไม่ใช่คำตัดสิน</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">ลบแก้วนี้ไหม</string>
+    <string name="dialog_delete_body">มันจะออกจากไดอารี่ และตัวเลขของคุณจะลดกลับลงมา</string>
+    <string name="dialog_delete_keep">เก็บไว้</string>
+    <string name="dialog_delete_remove">ลบ</string>
+    <string name="dialog_clear_title">ล้างข้อมูลทั้งหมดไหม</string>
+    <string name="dialog_clear_body">ทุกบันทึก ทุกวันไม่ดื่ม และทุกการตั้งค่า จะหายไปถาวร ถ้าอยากเก็บสำเนา ส่งออกไว้ก่อน</string>
+    <string name="dialog_clear_delete">ลบ</string>
+    <string name="dialog_health_title">อนุญาตให้ “%1$s” เขียนข้อมูลการดื่มแอลกอฮอล์ไปยัง %2$s ไหม</string>
+    <string name="dialog_health_deny">ไม่อนุญาต</string>
+    <string name="dialog_health_allow">อนุญาต</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">จด %1$s แล้ว %2$.1f %3$s</string>
+    <string name="toast_logged">จดแล้ว %1$.1f %2$s</string>
+    <string name="action_undo">เลิกทำ</string>
+    <string name="toast_relogged">เหมือนเดิม จดเข้าวันนี้แล้ว</string>
+    <string name="toast_entry_removed">ลบออกจากไดอารี่แล้ว</string>
+    <string name="toast_dry_marked">ทำเป็นวันไม่ดื่มแล้ว วันเงียบๆ ก็มีค่าไม่แพ้กัน</string>
+    <string name="toast_day_has_drinks">วันนี้มีบันทึกการดื่มอยู่แล้ว</string>
+    <string name="toast_day_has_drinks_cal">วันนั้นมีบันทึกการดื่มอยู่</string>
+    <string name="toast_custom_saved">บันทึกแล้ว คราวหน้าแตะครั้งเดียว</string>
+    <string name="toast_profile_incomplete">ใส่ทั้งน้ำหนักและเพศ การประมาณแอลกอฮอล์ในเลือดต้องใช้ทั้งสองอย่าง</string>
+    <string name="toast_profile_saved">บันทึกแล้ว ค่าประมาณแอลกอฮอล์ในเลือดคมขึ้นอีกนิด</string>
+    <string name="toast_reminder_scheduled">ตั้งเวลาแล้ว เตือนเบาๆ ทุกวัน</string>
+    <string name="toast_reminder_silent">บันทึกแล้ว แต่ %1$s จะปิดเสียงไว้</string>
+    <string name="toast_icon_updated">เปลี่ยนไอคอนแล้ว เข้ากับคุณดี</string>
+    <string name="toast_customer_id_copied">คัดลอกแล้ว วางลงในอีเมลฝ่ายสนับสนุนได้เลย</string>
+    <string name="toast_pro_welcome">ยินดีต้อนรับสู่ Pro ปลดล็อกครบทุกอย่าง</string>
+    <string name="toast_restore_success">ยินดีต้อนรับกลับมา ปลดล็อกไว้ครบแล้ว</string>
+    <string name="toast_restore_none">ยังไม่มีอะไรให้กู้คืน พร้อมใช้งานแล้ว</string>
+    <string name="toast_purchase_unavailable">ตอนนี้ยังซื้อไม่ได้</string>
+    <string name="toast_health_connected">ตอนนี้บันทึกจะไหลไปที่ %1$s เงียบๆ</string>
+    <string name="toast_backup_created">สร้างข้อมูลสำรองในเครื่องนี้แล้ว</string>
+    <string name="toast_backup_restored_android">กู้คืนแล้ว รายการซ้ำถูกข้ามไปเงียบๆ</string>
+    <string name="toast_backup_none_android">เครื่องนี้ยังไม่มีข้อมูลสำรอง</string>
+    <string name="toast_export_file_android">บันทึกไฟล์สำรองแล้ว เก็บไว้ในที่ปลอดภัย</string>
+    <string name="toast_file_unreadable">อ่านไฟล์นั้นไม่ได้</string>
+    <plurals name="toast_import_result">
+        <item quantity="other">นำเข้า %1$d รายการ ข้ามรายการซ้ำ %2$d รายการ</item>
+    </plurals>
+    <string name="toast_import_ok_android">นำเข้าแล้ว รายการซ้ำถูกข้ามไปเงียบๆ</string>
+    <string name="toast_import_invalid_android">นั่นดูไม่เหมือนไฟล์สำรองข้อมูล</string>
+    <string name="toast_cleared">กระดาษเปล่าหนึ่งแผ่น ดูแลมันดีๆ</string>
+    <string name="toast_csv_ready_android">พร้อมแชร์แล้ว</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">การเตือนรายวัน</string>
+    <string name="notif_channel_reminders_desc">การเตือนรายวันที่คุณสร้างไว้ในตั้งค่า</string>
+    <string name="notif_channel_bac">สถานะค่าประมาณ</string>
+    <string name="notif_channel_bac_desc">การ์ดเงียบๆ ระหว่างที่ค่าประมาณค่อยๆ ลดลง</string>
+    <string name="notif_discreet_title">บันทึกช่วงเย็น</string>
+    <string name="notif_discreet_body">จดสิบวินาที ภาพก็ตรงตามจริง</string>
+    <string name="notif_reminder_body_fallback">จดสั้นๆ ภาพก็ตรงตามจริง</string>
+    <string name="notif_bac_discreet_title">กำลังลดลง</string>
+    <string name="notif_bac_discreet_body">อีกราว %1$s ถึงศูนย์</string>
+    <string name="notif_bac_title">ค่าประมาณแอลกอฮอล์ในเลือด %1$s</string>
+    <string name="notif_bac_body">อีก %1$s ถึงศูนย์ ไม่ใช่สัญญาณว่าขับรถได้โดยเด็ดขาด</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">วันก่อนหน้า</string>
+    <string name="a11y_open_calendar">เปิดปฏิทิน</string>
+    <string name="a11y_next_day">วันถัดไป</string>
+    <string name="a11y_log_quick">จด %1$s %2$.1f %3$s</string>
+    <string name="a11y_units_info">1 %1$s คืออะไร</string>
+    <string name="a11y_units_info__us">1 %1$s คืออะไร</string>
+    <string name="a11y_units_info__gb">1 %1$s คืออะไร</string>
+    <string name="a11y_units_info__au">1 %1$s คืออะไร</string>
+    <string name="a11y_units_info__ca">1 %1$s คืออะไร</string>
+    <string name="a11y_units_info__jp">1 %1$s คืออะไร</string>
+    <string name="a11y_units_info__dk">1 %1$s คืออะไร</string>
+    <string name="a11y_units_info__vn">1 %1$s คืออะไร</string>
+    <string name="a11y_units_info__who">1 %1$s คืออะไร</string>
+    <string name="a11y_intake_ring">วันนี้ %1$.1f จาก %2$d %3$s</string>
+    <string name="a11y_mini_progress">%1$s %2$.1f จาก %3$d %4$s</string>
+    <string name="a11y_back">กลับ</string>
+    <string name="a11y_close">ปิด</string>
+    <string name="a11y_prev_month">เดือนก่อนหน้า</string>
+    <string name="a11y_next_month">เดือนถัดไป</string>
+    <string name="a11y_cal_day">วันที่ %1$d</string>
+    <string name="a11y_cal_day_logged">วันที่ %1$d มีบันทึกการดื่ม</string>
+    <string name="a11y_cal_day_dry">วันที่ %1$d วันไม่ดื่ม</string>
+    <string name="a11y_cal_day_logged_dry">วันที่ %1$d มีบันทึกการดื่ม วันไม่ดื่ม</string>
+    <string name="a11y_prev_period">ช่วงก่อนหน้า</string>
+    <string name="a11y_next_period">ช่วงถัดไป</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="other">วันไม่ดื่ม %1$d วัน คิดเป็น %2$d เปอร์เซ็นต์ของช่วงนี้</item>
+    </plurals>
+    <string name="a11y_remove_reminder">ลบ %1$s</string>
+    <string name="a11y_toggle_on">เปิด</string>
+    <string name="a11y_toggle_off">ปิด</string>
+    <string name="a11y_fab_add">เพิ่ม</string>
+    <string name="a11y_fab_close">ปิดเมนูการทำงาน</string>
+    <string name="a11y_fab_hint">จดหนึ่งแก้ว หรือทำเป็นวันไม่ดื่ม</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">หน่วยแอลกอฮอล์</string>
+    <string name="units_noun_unit_pl">หน่วยแอลกอฮอล์</string>
+    <string name="units_noun_unit_short">หน่วย</string>
+    <string name="units_noun_unit_abbr">หน่วย</string>
+    <string name="units_noun_unit_indef">หน่วยแอลกอฮอล์</string>
+    <string name="units_noun_std_sg">ดื่มมาตรฐาน</string>
+    <string name="units_noun_std_pl">ดื่มมาตรฐาน</string>
+    <string name="units_noun_std_short">ดื่มมาตรฐาน</string>
+    <string name="units_noun_std_abbr">ดื่มมาตรฐาน</string>
+    <string name="units_noun_std_indef">ดื่มมาตรฐาน</string>
+    <string name="units_noun_local_sg">ดื่มมาตรฐาน</string>
+    <string name="units_noun_local_pl">ดื่มมาตรฐาน</string>
+    <string name="units_noun_local_short">ดื่มมาตรฐาน</string>
+    <string name="units_noun_local_abbr">ดื่มมาตรฐาน</string>
+    <string name="units_noun_local_indef">ดื่มมาตรฐาน</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">ไดอารี</string>
+    <string name="tab_statistics_short">สถิติ</string>
+    <string name="tab_settings_short">ตั้งค่า</string>
+</resources>

@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/ja-JP.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">日記</string>
+    <string name="tab_statistics">統計</string>
+    <string name="tab_settings">設定</string>
+    <string name="lock_tap_to_unlock">ロック中です。タップで解除できます。</string>
+    <string name="applock_prompt_title">Alcohol Trackerはロックされています</string>
+    <string name="applock_prompt_sub">解除するまで、何も表示されません。</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">Alcohol Trackerへ\nようこそ</string>
+    <string name="ob_welcome_sub">飲む量と向き合うための、あなたの相棒。</string>
+    <string name="ob_welcome_body">評価はしません。数秒で一杯を記録して、推定BACが下がっていくのを、手首からでも見られます。</string>
+    <string name="ob_welcome_quick_caption">ポケットから、すぐに記録</string>
+    <string name="ob_welcome_bac_example" formatted="false">推定BAC 0.032%</string>
+    <string name="ob_welcome_sober_example">推定値がゼロになるまで約2時間</string>
+    <string name="ob_get_started">はじめる</string>
+    <string name="ob_step_indicator">ステップ %1$d / 3</string>
+    <string name="ob_skip">スキップ</string>
+    <string name="ob_goals_title">どんなきっかけで、ここへ?</string>
+    <string name="ob_goals_sub">当てはまるものを、いくつでも。ここだけの話です。</string>
+    <string name="ob_goal_less">お酒を減らす</string>
+    <string name="ob_goal_awareness">飲む量を知る</string>
+    <string name="ob_goal_break">体を休ませる</string>
+    <string name="ob_goal_free_days">休肝日を増やす</string>
+    <string name="ob_goal_conscious">意識して飲む</string>
+    <string name="ob_goal_reset">習慣を仕切り直す</string>
+    <string name="ob_goal_social">人づきあいの場をうまく乗りきる</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="other">%1$dつの目標で続ける</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">目標を1つ以上選んでください</string>
+    <string name="ob_base_title">ふつうの1週間で、何杯くらいですか?</string>
+    <string name="ob_base_sub">リズムをつかむだけです。評価はしません、ただの出発点です。</string>
+    <string name="ob_base_0_4">0〜4杯</string>
+    <string name="ob_base_5_9">5〜9杯</string>
+    <string name="ob_base_10_14">10〜14杯</string>
+    <string name="ob_base_15_19">15〜19杯</string>
+    <string name="ob_base_20_plus">20杯以上</string>
+    <string name="ob_continue">続ける</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">今日</string>
+    <string name="diary_yesterday">昨日</string>
+    <string name="diary_pro_banner_title">全体像をひらく</string>
+    <string name="diary_pro_banner_sub">クイック記録タイル · BACの分析 · 休肝日の自動判定 · リマインダー</string>
+    <string name="diary_usual">いつもの?</string>
+    <string name="units_abbrev_value">%1$.1f%2$s</string>
+    <string name="diary_intake_today">今日の量</string>
+    <string name="diary_intake">飲んだ量</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="other">%1$d%2$s中</item>
+    </plurals>
+    <string name="diary_this_week">今週</string>
+    <string name="diary_this_month">今月</string>
+    <string name="diary_mini_value">%1$.1f / %2$d</string>
+    <string name="diary_remaining_numbers">本日の記録 %1$.1f%3$s / 目標 %2$d%3$s</string>
+    <string name="diary_remaining_zero_neutral">今日の枠はそのままです。あるいは、今日は必要ないのかもしれません。</string>
+    <string name="diary_remaining_left_neutral">今日の目標まで、あと%1$.1f%2$s。</string>
+    <string name="diary_remaining_at_target_neutral">ちょうど目標どおりです。次はお水にしますか?</string>
+    <string name="diary_remaining_over_neutral">今日の目標%2$dを%1$.1f%3$s超えています。</string>
+    <string name="diary_adjust_guideline">飲酒の目安を調整</string>
+    <string name="bac_monitor">BACモニター</string>
+    <string name="bac_status_waiting">待機中</string>
+    <string name="bac_free_body">Proにすると、一杯記録するだけで、推定BACがここに表示されます。</string>
+    <string name="bac_how_estimated">BACの推定のしかた</string>
+    <string name="bac_trends">推移</string>
+    <string name="bac_setup_title">BACプロフィールを設定</string>
+    <string name="bac_setup_body">体重と性別を入れると、推定値がはじめて意味を持ちます。十秒で終わります。</string>
+    <string name="bac_setup_cta">BACプロフィールを設定</string>
+    <string name="bac_status_rising">上昇中</string>
+    <string name="bac_status_settling">低下中</string>
+    <string name="bac_status_clear">推定ゼロ</string>
+    <string name="bac_value_percent">%1$.3f%%</string>
+    <string name="bac_value_permille">%1$.2f‰</string>
+    <string name="bac_sober_in">推定値がゼロになるまで約%1$s</string>
+    <string name="bac_all_clear">推定値はゼロです。体内に残っているものはありません。</string>
+    <string name="bac_disclaimer_short">推定値はあくまで参考です。運転してよいというゴーサインでは決してありません。</string>
+    <string name="diary_dry_marked">休肝日、記録しました。</string>
+    <string name="diary_dry_remembered">休肝日、あとから記録しました。</string>
+    <string name="diary_dry_body">体が静かに「ありがとう」を注いでいます。</string>
+    <string name="diary_dry_unmark">取り消す</string>
+    <string name="diary_logged_today">今日の記録</string>
+    <string name="diary_logged_this_day">この日の記録</string>
+    <string name="diary_entry_meta">%1$d ml · %2$s%%</string>
+    <string name="diary_empty_title_today">今日は、まだ空のグラス。</string>
+    <string name="diary_empty_title_other">この日の記録はありません。</string>
+    <string name="diary_empty_body_today">注いだら、二回のタップで記録できます。今日を休肝日にして、続きを始めることもできます。</string>
+    <string name="diary_empty_body_other">覚えているなら、あとから足してください。さかのぼって記録すると、傾向が正直なままです。</string>
+    <string name="action_log_drink">一杯を記録</string>
+    <string name="action_mark_dry_day">休肝日にする</string>
+    <string name="diary_add_previous_dry">過去の休肝日を追加</string>
+    <string name="action_dry_day">休肝日</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">細かく調整する</string>
+    <string name="log_title_review">確認して保存</string>
+    <string name="log_cta_next">次へ</string>
+    <string name="log_cta_save">保存する</string>
+    <string name="log_pick_intro">何を飲みましたか? 近いものを選べば大丈夫です。細かいところは次で調整できます。</string>
+    <string name="log_search_placeholder">お酒を検索</string>
+    <string name="log_custom_title">カスタムのお酒を作る</string>
+    <string name="log_custom_sub">どんな量でも、どんな度数でも。ここに課金の壁はありません。</string>
+    <string name="log_section_your_drinks">保存したお酒</string>
+    <string name="log_section_popular">定番</string>
+    <string name="log_grid_meta">%1$s%% · %2$d ml</string>
+    <string name="log_tune_intro">実際にテーブルにあったものに合わせて、量を調整してください。</string>
+    <string name="log_abv_label">アルコール度数</string>
+    <string name="log_abv_value">%1$.1f%%</string>
+    <string name="log_serving_label">1杯の量</string>
+    <string name="log_unit_ml">ml</string>
+    <string name="log_unit_floz">fl oz</string>
+    <string name="log_serving_ml_value">%1$d ml</string>
+    <string name="log_serving_oz_value">%1$.1f oz</string>
+    <string name="log_quantity_label">杯数</string>
+    <string name="log_qty_half">1/2</string>
+    <string name="log_result_line">≈ %1$.1f%3$s · %2$d kcal</string>
+    <string name="log_working_line">%1$d ml × %2$s%% × 0.789 ÷ 1000 = %3$.1f%4$s</string>
+    <string name="log_working_line_half">1/2 × %1$d ml × %2$s%% × 0.789 ÷ 1000 = %3$.1f%4$s</string>
+    <string name="log_working_line_qty">%1$d × %2$d ml × %3$s%% × 0.789 ÷ 1000 = %4$.1f%5$s</string>
+    <string name="log_review_meta">%1$d ml · 度数%2$s%%</string>
+    <string name="log_review_meta_half">×1/2 · %1$d ml · 度数%2$s%%</string>
+    <string name="log_review_meta_qty">×%1$d · %2$d ml · 度数%3$s%%</string>
+    <string name="log_when_label">いつ</string>
+    <string name="log_when_now">今</string>
+    <string name="log_when_1h">1時間前</string>
+    <string name="log_when_2h">2時間前</string>
+    <string name="log_cost_label">いくらでしたか?</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">カロリー</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">今日に保存しました。いつでも削除できます。</string>
+    <string name="log_saved_to_day">%1$sに保存しました。いつでも削除できます。</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">日 / 月 / 火 / 水 / 木 / 金 / 土</string>
+    <string name="sheet_cal_hint_select">青い点は記録のある日、緑の点は休肝日です。タップすると開きます。</string>
+    <string name="sheet_cal_hint_dry">過去の日をタップすると休肝日になります。もう一度タップすると取り消せます。記録のある日はそのままです。</string>
+    <string name="action_done">完了</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d ml · %2$s%% · %3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">支出</string>
+    <string name="sheet_entry_relog">同じものをもう一杯記録</string>
+    <string name="sheet_entry_remove">日記から削除</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">%1$sって、そもそも何?</string>
+    <string name="sheet_units_title__us">%1$sって、そもそも何?</string>
+    <string name="sheet_units_title__gb">%1$sって、そもそも何?</string>
+    <string name="sheet_units_title__au">%1$sって、そもそも何?</string>
+    <string name="sheet_units_title__ca">%1$sって、そもそも何?</string>
+    <string name="sheet_units_title__jp">%1$sって、そもそも何?</string>
+    <string name="sheet_units_title__dk">%1$sって、そもそも何?</string>
+    <string name="sheet_units_title__vn">%1$sって、そもそも何?</string>
+    <string name="sheet_units_title__who">%1$sって、そもそも何?</string>
+    <string name="sheet_units_body">純アルコール10g、WHOが使うものさしです。グラスごとに含まれる量は違うので、計算はこちらでやります。</string>
+    <string name="sheet_units_chip_pour">150 ml</string>
+    <string name="sheet_units_chip_abv" formatted="false">度数13%</string>
+    <string name="sheet_units_chip_density">0.789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1.5%1$s</string>
+    <string name="sheet_units_chip_result__us">1.5%1$s</string>
+    <string name="sheet_units_chip_result__gb">1.5%1$s</string>
+    <string name="sheet_units_chip_result__au">1.5%1$s</string>
+    <string name="sheet_units_chip_result__ca">1.5%1$s</string>
+    <string name="sheet_units_chip_result__jp">1.5%1$s</string>
+    <string name="sheet_units_chip_result__dk">1.5%1$s</string>
+    <string name="sheet_units_chip_result__vn">1.5%1$s</string>
+    <string name="sheet_units_chip_result__who">1.5%1$s</string>
+    <string name="sheet_units_density_note">0.789は、ただのアルコールの密度です。神秘的なものではありません。</string>
+    <string name="sheet_units_targets">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+    <string name="sheet_units_targets__us">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+    <string name="sheet_units_targets__gb">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+    <string name="sheet_units_targets__au">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+    <string name="sheet_units_targets__ca">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+    <string name="sheet_units_targets__jp">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+    <string name="sheet_units_targets__dk">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+    <string name="sheet_units_targets__vn">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+    <string name="sheet_units_targets__who">マルガリータ1杯で、さりげなく1.5%1$sです。1日と1週間の目標は、WHOの低リスク指針を出発点にしています。あとは自由に動かせます。</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">ウィドマーク法で計算しています。記録したアルコールを体水分量(体重と性別から求めます)に広げ、体が分解する分、1時間あたり約0.015%を差し引きます。</string>
+    <string name="sheet_bac_not_measurement">これは推定であって、測定ではありません。食事も、薬も、あなた自身の体質も、実際の数値を動かします。</string>
+    <string name="sheet_bac_never_drive">運転できるかどうかの判断に、推定値を使っては絶対にいけません。少しでも迷ったら、運転しないでください。</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">新しい保存ドリンク</string>
+    <string name="sheet_custom_name_placeholder">名前(すぐ見つかるように)</string>
+    <string name="sheet_custom_base_caption">ベースの種類</string>
+    <string name="sheet_custom_abv_label" formatted="false">度数 %</string>
+    <string name="sheet_custom_ml_label">1杯の量(ml)</string>
+    <string name="sheet_custom_notes_placeholder">材料やメモ(任意)</string>
+    <string name="action_save">保存</string>
+    <string name="action_cancel">キャンセル</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7日</string>
+    <string name="stats_period_30d">30日</string>
+    <string name="stats_period_90d">90日</string>
+    <string name="stats_period_1y">1年</string>
+    <string name="stats_period_custom">カスタム</string>
+    <string name="action_export">書き出し</string>
+    <string name="stats_edit_range">期間を編集</string>
+    <string name="stats_verdict_numbers">今期 %1$.1f%3$s · 前期 %2$.1f%3$s</string>
+    <string name="stats_verdict_level_neutral">前の期間と同じくらいです。</string>
+    <string name="stats_verdict_less_neutral">前の期間より%1$d%%少ない</string>
+    <string name="stats_verdict_more_neutral">前の期間より%1$d%%多い</string>
+    <string name="stats_verdict_first_numbers">今期 %1$.1f%2$s</string>
+    <string name="stats_verdict_first_neutral">データのある最初の期間です。比較は次の期間から始まります。</string>
+    <string name="stats_tile_drunk">飲んだ量</string>
+    <string name="stats_tile_alcohol">アルコール</string>
+    <string name="stats_tile_spending">支出</string>
+    <string name="stats_tile_calories">カロリー</string>
+    <string name="stats_unit_ml">ml</string>
+    <plurals name="stats_unit_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="other">≈ チーズバーガー%1$d個</item>
+    </plurals>
+    <string name="stats_units_chart_title">飲んだ%1$s</string>
+    <string name="stats_units_chart_title__us">飲んだ%1$s</string>
+    <string name="stats_units_chart_title__gb">飲んだ%1$s</string>
+    <string name="stats_units_chart_title__au">飲んだ%1$s</string>
+    <string name="stats_units_chart_title__ca">飲んだ%1$s</string>
+    <string name="stats_units_chart_title__jp">飲んだ%1$s</string>
+    <string name="stats_units_chart_title__dk">飲んだ%1$s</string>
+    <string name="stats_units_chart_title__vn">飲んだ%1$s</string>
+    <string name="stats_units_chart_title__who">飲んだ%1$s</string>
+    <string name="stats_daily_average">1日平均</string>
+    <string name="stats_units_total">合計 %1$.1f%2$s</string>
+    <string name="stats_units_per_day">%1$.2f / 日</string>
+    <string name="stats_units_empty">ここに、あなたの傾向が描かれていきます。</string>
+    <string name="stats_spend_chart_title">支出の推移</string>
+    <string name="stats_spend_total">合計 %1$s</string>
+    <string name="stats_spend_per_day">%1$s / 日</string>
+    <string name="stats_spend_empty">価格を入れて記録すると、ここに費用が出ます。</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">浮いたお金</string>
+    <string name="stats_baseline_label">ふだんの1週間 %1$s</string>
+    <string name="stats_saved_unset">ふだんの1週間の支出を入れると、ここが浮いたお金になります。全国平均ではなく、あなたが実際に払った金額から計算します。</string>
+    <string name="stats_saved_under">この期間は、ふだんの支出より%1$s少なくすみました。平均ではなく、あなたが実際に払っている金額をもとにしています。</string>
+    <string name="stats_saved_over">この期間は、ふだんの支出より%1$s多くなりました。</string>
+    <string name="stats_breakdown_title">お酒の内訳</string>
+    <string name="stats_breakdown_locked">どのお酒があなたの1週間を引っぱっているのか、静かにどれだけ積み上がっているのかが見えます。</string>
+    <string name="stats_breakdown_empty">何杯か記録すると、よく飲むものが見えてきます。</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="other">%1$s · %2$d杯</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d%%</string>
+    <string name="stats_breakdown_leader">%1$sが最多で、この期間の%3$sの%2$d%%です。</string>
+    <string name="stats_dry_title_positive">休肝日、とれましたね。</string>
+    <string name="stats_dry_body_positive">この期間の%1$d%%が休肝日でした。その一日ずつを、体はちゃんと休めています。</string>
+    <string name="stats_dry_title_none">休肝日は、まだありません。</string>
+    <string name="stats_dry_body_none">最初の一日から続きが始まります。日記から今日を休肝日にできます。</string>
+    <string name="stats_dry_title_numbers">休肝日</string>
+    <string name="stats_dry_body_numbers">%2$d日中%1$d日 · この期間の%3$d%%</string>
+    <string name="stats_dry_ring_pct">%1$d%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">カスタム期間</string>
+    <string name="sheet_range_from">開始</string>
+    <string name="sheet_range_to">終了</string>
+    <string name="sheet_range_last7">過去7日</string>
+    <string name="sheet_range_last30">過去30日</string>
+    <string name="action_apply">適用</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">統計を書き出す</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">統計, %1$s.csv</string>
+    <string name="sheet_export_desc">この期間の数字を、すべて共有できる形で。</string>
+    <string name="sheet_export_cta">CSVを共有</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">記録を同期しておく</string>
+    <string name="sheet_health_body">記録したお酒は%1$sに自動で保存できます。全体像がひとつの場所にまとまります。</string>
+    <string name="sheet_health_data_title">アルコールのデータ</string>
+    <string name="sheet_health_data_sub">書き込むのはアルコール摂取の記録だけで、読み取りは一切しません。</string>
+    <string name="sheet_health_cta">%1$sと連携</string>
+    <string name="sheet_health_change_access">アクセス権はあとから%1$sで変更できます。</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">進行中の通知</string>
+    <string name="sheet_live_body">BACが下がっていくあいだ、静かなカードが後ろで待機します。アプリを開く必要はありません。</string>
+    <string name="sheet_live_mock_status">推定BAC、低下中</string>
+    <string name="sheet_live_mock_value" formatted="false">0.065%</string>
+    <string name="sheet_live_mock_tozero">ゼロまで3時間42分</string>
+    <string name="sheet_live_note">例の数字を使ったプレビューです。実際には何も動いていません。</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">全体像が見えます。</string>
+    <string name="pay_sub">飲酒履歴のすべて、リアルタイムの血中アルコール濃度の推定、そして重い月がどこから始まるかを示す週ごとの傾向。</string>
+    <string name="pay_no_ads">広告なし。データ販売なし。アカウント不要。</string>
+    <string name="pay_benefit_history">直近90日ではなく、記録したすべての一杯</string>
+    <string name="pay_benefit_bac">リアルタイムの推定血中アルコール濃度とゼロに戻るまでの時間</string>
+    <string name="pay_benefit_insights">週の合計とガイドラインの比較、傾向つき</string>
+    <string name="pay_benefit_streaks">休肝日の連続記録、浮いた金額、抑えたカロリー</string>
+    <string name="pay_benefit_quicklog">ホーム画面からワンタップで同じ記録</string>
+    <string name="pay_benefit_report">医師に渡せる、すっきりしたPDFレポート</string>
+    <string name="pay_compare_caption">使えるもの</string>
+    <string name="pay_compare_free">無料</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">無制限の記録とカスタムドリンク</string>
+    <string name="pay_compare_export">書き出し、バックアップ、ウィジェット</string>
+    <string name="pay_compare_darkmode">ダークモード、アプリロック、リマインダー</string>
+    <string name="pay_compare_history">90日を超える履歴</string>
+    <string name="pay_compare_bac">血中アルコール濃度の推定とクイック記録タイル</string>
+    <string name="pay_compare_insights">高度な分析、PDF、プライベート同期</string>
+    <string name="pay_plan_weekly">週額</string>
+    <string name="pay_plan_monthly">月額</string>
+    <string name="pay_plan_annual">年額</string>
+    <string name="pay_plan_lifetime">買い切り</string>
+    <string name="pay_price_line_weekly">週 %1$s</string>
+    <string name="pay_price_line_monthly">月 %1$s</string>
+    <string name="pay_price_line_annual">年 %1$s</string>
+    <string name="pay_price_line_lifetime">%1$s の一度きり、ずっとあなたのもの</string>
+    <string name="pay_badge_trial">%1$d日間無料</string>
+    <string name="pay_badge_save">%1$d%%お得</string>
+    <string name="pay_badge_best">いちばんお得</string>
+    <string name="pay_loading">ストアに今日の価格を確認中…</string>
+    <string name="pay_unavailable">ストアが応答しません。記録、書き出し、バックアップはこれまでどおり使えます。</string>
+    <string name="pay_retry">もう一度</string>
+    <string name="pay_faq_caption">よくある質問</string>
+    <string name="pay_faq_q_trial">無料トライアルはどう動きますか？</string>
+    <string name="pay_faq_a_trial">%1$d日間、Proの機能はすべてあなたのものです。終了前ならいつでも解約でき、料金は一切かかりません。</string>
+    <string name="pay_faq_q_after">終わったらどうなりますか？</string>
+    <string name="pay_faq_a_after">選んだプランが、そのカードに表示された価格で始まります。より高い価格になることはありません。2日前にお知らせするので、不意打ちにはなりません。</string>
+    <string name="pay_faq_q_logs">記録がロックされることはありますか？</string>
+    <string name="pay_faq_a_logs">ありません。記録、カスタムドリンク、今週の統計、ウィジェット、CSV書き出し、バックアップ、ダークモード、アプリロック、リマインダーはずっと無料です。支払いをやめても、書いたものはすべてあなたのもので、読める状態のまま残ります。</string>
+    <string name="pay_faq_q_cancel">いつでも解約できますか？</string>
+    <string name="pay_faq_a_cancel">いつでも。%1$sのサブスクリプションから管理または解約でき、データはこの端末に残ります。</string>
+    <string name="pay_cta_trial">%1$d日間の無料を始める</string>
+    <string name="pay_cta_plan">続ける（%1$s）</string>
+    <string name="pay_cta_lifetime">Proをずっと使う</string>
+    <string name="pay_cta_default">続ける</string>
+    <string name="pay_sub_trial">%1$d日間無料、その後 %2$s。本日の請求はありません。</string>
+    <string name="pay_sub_recurring">解約するまで %1$s で自動更新されます。設定からワンタップで解約できます。</string>
+    <string name="pay_sub_lifetime">支払いは一度きり。サブスクリプションにはなりません。</string>
+    <string name="pay_restore">復元</string>
+    <string name="pay_terms">利用規約</string>
+    <string name="pay_privacy">プライバシー</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Proをご利用中です。灯りをともし続けてくれて、ありがとうございます。</string>
+    <string name="set_pro_banner_title">気づきは多く、手間は少なく。</string>
+    <string name="set_pro_banner_sub">休肝日の自動判定 · クイック記録タイル · BACモニター</string>
+    <string name="set_section_you">あなたのこと</string>
+    <string name="set_section_insights">分析と同期</string>
+    <string name="set_section_appearance">外観</string>
+    <string name="set_section_data">あなたのデータ</string>
+    <string name="set_section_privacy">プライバシーとトーン</string>
+    <string name="set_section_support">サポート</string>
+    <string name="set_profile">プロフィール</string>
+    <string name="set_profile_not_set">未設定</string>
+    <string name="set_profile_summary">%1$s %2$s · %3$s</string>
+    <string name="set_units">単位</string>
+    <string name="set_units_summary">%1$s · %2$s</string>
+    <string name="set_guideline">飲酒の目安</string>
+    <string name="set_guideline_value">%1$d / 日</string>
+    <string name="set_ask_cost">金額を聞く</string>
+    <string name="set_show_calories">カロリーを表示</string>
+    <string name="set_auto_dry">休肝日を自動で判定</string>
+    <string name="set_notifications">通知</string>
+    <string name="set_notif_none">なし</string>
+    <plurals name="set_notif_count">
+        <item quantity="other">毎日%1$d件</item>
+    </plurals>
+    <string name="set_health_sync">ヘルスケア連携</string>
+    <string name="set_health_connected">連携済み</string>
+    <string name="set_health_off">オフ</string>
+    <string name="set_quick_log">クイック記録タイル</string>
+    <string name="set_quick_log_setup">設定する</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="other">%1$d件</item>
+    </plurals>
+    <string name="set_dark_mode">ダークモード</string>
+    <string name="set_app_icon">Appアイコン</string>
+    <string name="set_icon_default">デフォルト</string>
+    <string name="set_icon_gift">ギフト</string>
+    <string name="set_icon_holiday">ホリデー</string>
+    <string name="set_language">言語</string>
+    <string name="set_language_value">日本語</string>
+    <string name="set_backup_title">バックアップ済み</string>
+    <string name="set_backup_title_none">まだバックアップされていません</string>
+    <string name="set_backup_detail_never_android">下から作成できます · この端末内 · 書き出しはいつでも無料</string>
+    <string name="set_backup_detail_dated">%1$s · この端末内 · 書き出しはいつでも無料</string>
+    <string name="set_backup_row">バックアップ、書き出し、読み込み</string>
+    <string name="set_backup_free">無料</string>
+    <string name="set_app_lock">アプリロック</string>
+    <string name="set_app_lock_sub">解除するまで、何も表示されません。</string>
+    <string name="set_discreet">控えめな通知</string>
+    <string name="set_discreet_sub">ロック画面のお知らせには、お酒のことは一切出しません。</string>
+    <string name="set_day_ends">1日の区切り</string>
+    <string name="set_day_ends_sub">深夜1時の一杯は、前の晩に数えます。</string>
+    <string name="set_cutoff_midnight">0時</string>
+    <string name="set_cutoff_2am">2時</string>
+    <string name="set_cutoff_4am">4時</string>
+    <string name="set_tone">トーン</string>
+    <string name="set_tone_icon_sample">あA</string>
+    <string name="set_tone_neutral">ニュートラル</string>
+    <string name="set_tone_push">後押し</string>
+    <string name="set_tone_numbers">数字だけ</string>
+    <string name="set_tone_sub_neutral">数字と、そっとしたうなずき。評価はしません。</string>
+    <string name="set_tone_sub_push">連続日数を前に出し、目標を超えたときははっきり示します。</string>
+    <string name="set_tone_sub_numbers">純粋な記録だけ。評価の言葉も、色による判定も出しません。</string>
+    <string name="set_contact">サポートに連絡</string>
+    <string name="set_about">Alcohol Trackerについて</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">カスタマーID</string>
+    <string name="set_copy">コピー</string>
+    <string name="set_footer">控えめに作りました。\nデータがこの端末を離れることはありません。</string>
+    <string name="support_email_subject">Alcohol Tracker サポート</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">あなたの体、あなたの数字。</string>
+    <string name="profile_body">同じ一杯でも、体によって効き方は違います。ふたつ入れるだけで、推定値は平均ではなく、あなたの数値になります。</string>
+    <string name="profile_privacy_note">十秒、一度きり。ここに入れたものが、この端末を離れることはありません。</string>
+    <string name="profile_sex_label">生物学的性別</string>
+    <string name="profile_sex_female">女性</string>
+    <string name="profile_sex_male">男性</string>
+    <string name="profile_weight_label">体重</string>
+    <string name="profile_weight_kg">kg</string>
+    <string name="profile_weight_lb">lb</string>
+    <string name="profile_weight_placeholder">だいたいで大丈夫です</string>
+    <string name="profile_cta">自分に合わせる</string>
+    <string name="profile_footer">どちらもいつでも変えられます。推定値はすぐに合わせ直します。</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">エネルギー</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">1杯の量</string>
+    <string name="units_millilitres">ミリリットル</string>
+    <string name="units_ounces">オンス</string>
+    <string name="units_note">変わるのは数字の見え方だけで、記録した内容は変わりません。</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">予定はありません。</string>
+    <string name="notif_empty_body">夜はあなたのものです。毎日そっと知らせてくれるものが役に立ちそうなら、下から追加してください。</string>
+    <string name="notif_repeat_hint">リマインダーは毎日くり返します。− をタップすると削除できます。</string>
+    <string name="notif_reminder_sub">%1$s · %2$s</string>
+    <string name="notif_create_cta">リマインダーを作成</string>
+    <string name="sheet_notif_title_placeholder">タイトル(例:夜のふりかえり)</string>
+    <string name="sheet_notif_time_label">通知する時刻</string>
+    <string name="sheet_notif_message_placeholder">メッセージ(任意)</string>
+    <string name="sheet_notif_repeat_note">選んだ時刻に、毎日くり返します。</string>
+    <string name="sheet_notif_cta">作成</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">推定BAC、ゼロまでの時間、そして進行中のステータスカード。</string>
+    <string name="set_bac_unit_label">BACの表示単位</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">ステータスカードをプレビュー</string>
+    <string name="set_bac_preview_sub">BACが下がっていくあいだの、静かな進行中の通知。</string>
+    <string name="set_bac_disclaimer">推定値はあくまで参考です。運転できるかどうかの判断に使っては絶対にいけません。</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">クイック記録タイル</string>
+    <string name="quicklog_mock_caption">クイック記録</string>
+    <string name="quicklog_mock_footer">ワンタップ · 記録完了</string>
+    <string name="quicklog_section_caption">タイルにする保存ドリンク</string>
+    <string name="quicklog_selected_count">%2$d件中%1$d件を選択</string>
+    <string name="quicklog_empty_title">保存したお酒はまだありません。</string>
+    <string name="quicklog_empty_sub">作っておくと、ワンタップの場所に置けます。4つまで入ります。</string>
+    <string name="quicklog_drink_meta">%1$d ml · %2$s%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">バックアップと復元</string>
+    <string name="backup_status_dated">%1$s にこの端末内でバックアップしました。</string>
+    <string name="backup_status_none_android">バックアップはまだありません。下から作成できます。</string>
+    <string name="backup_whats_here">この端末にあるもの</string>
+    <plurals name="backup_count_logs">
+        <item quantity="other">飲酒記録</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="other">休肝日</item>
+    </plurals>
+    <string name="backup_count_profile">プロフィール</string>
+    <string name="backup_export">データを書き出す</string>
+    <string name="backup_import">データを読み込む</string>
+    <string name="backup_create">バックアップを作成</string>
+    <string name="backup_restore">バックアップから復元</string>
+    <string name="backup_merge_note">読み込んだデータは今あるものと統合され、重複は静かにスキップされます。</string>
+    <string name="backup_danger_zone">取り消せない操作</string>
+    <string name="backup_clear_all">すべてのデータを削除</string>
+    <string name="backup_clear_note">完全に削除され、元には戻せません。大事なものなら、先に書き出しておいてください。</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">このAppについて</string>
+    <string name="about_version">バージョン %1$s · %2$s</string>
+    <string name="about_privacy">プライバシーポリシー</string>
+    <string name="about_terms">利用規約</string>
+    <string name="about_ack_caption">クレジット</string>
+    <string name="about_ack_role_db">ローカルデータベース</string>
+    <string name="about_ack_role_ui_android">ユーザーインターフェース</string>
+    <string name="about_ack_role_settings_android">設定</string>
+    <string name="about_footer">グラスと雫は、コードで描きました。\n控えめに。</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">同じアプリ、違う装い。ホーム画面に合うものを選んでください。</string>
+    <string name="icon_relaunch_note">切り替えると、ランチャーの更新のあいだ、アプリが一度閉じることがあります。</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">BACの推移</string>
+    <string name="trends_title">推定BACのピーク</string>
+    <string name="trends_range">過去7日間</string>
+    <string name="trends_axis_start">6日前</string>
+    <string name="trends_axis_end">今日</string>
+    <string name="trends_note" formatted="false">体が1時間におよそ0.015%を分解するので、曲線は下がっていきます。平らな週は、良い週です。</string>
+    <string name="trends_empty_title">まだ曲線はありません。</string>
+    <string name="trends_empty_body">プロフィールを入れて一杯記録すると、最初の一杯から線が始まります。</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">飲酒の目安</string>
+    <string name="guideline_intro">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_intro__us">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_intro__gb">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_intro__au">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_intro__ca">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_intro__jp">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_intro__dk">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_intro__vn">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_intro__who">WHOの低リスク指針は、1日の上限を2%1$sとし、あわせて定期的な休肝日を挙げています。あなたに合う値を設定してください。</string>
+    <string name="guideline_daily_target">1日の目標</string>
+    <string name="guideline_weekly_target">1週間の目標</string>
+    <plurals name="guideline_target_units">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="other">%1$d%2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="other">1か月の目標は自動で決まります: %1$d%2$s。WHOの指針は出典であって、判定ではありません。</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">この記録を削除しますか?</string>
+    <string name="dialog_delete_body">日記から消えて、数字も元に戻ります。</string>
+    <string name="dialog_delete_keep">残す</string>
+    <string name="dialog_delete_remove">削除</string>
+    <string name="dialog_clear_title">すべてのデータを削除しますか?</string>
+    <string name="dialog_clear_body">記録も、休肝日も、設定も、すべて完全になくなります。控えが必要なら、先に書き出してください。</string>
+    <string name="dialog_clear_delete">削除</string>
+    <string name="dialog_health_title">「%1$s」が%2$sにアルコール摂取量を書き込むことを許可しますか?</string>
+    <string name="dialog_health_deny">許可しない</string>
+    <string name="dialog_health_allow">許可</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">%1$sを記録しました。%2$.1f%3$s。</string>
+    <string name="toast_logged">記録しました。%1$.1f%2$s。</string>
+    <string name="action_undo">取り消す</string>
+    <string name="toast_relogged">同じものを、今日に記録しました。</string>
+    <string name="toast_entry_removed">日記から削除しました。</string>
+    <string name="toast_dry_marked">休肝日を記録しました。静かな一歩は、二倍の値打ちがあります。</string>
+    <string name="toast_day_has_drinks">この日には、すでに記録があります。</string>
+    <string name="toast_day_has_drinks_cal">その日には記録があります。</string>
+    <string name="toast_custom_saved">保存しました。次からはワンタップです。</string>
+    <string name="toast_profile_incomplete">体重と性別の両方を入れてください。BACの計算に必要です。</string>
+    <string name="toast_profile_saved">保存しました。BACの推定が、より自分に近づきました。</string>
+    <string name="toast_reminder_scheduled">設定しました。毎日、そっとお知らせします。</string>
+    <string name="toast_reminder_silent">保存しましたが、%1$sの設定で音は鳴りません。</string>
+    <string name="toast_icon_updated">アイコンを変えました。似合っています。</string>
+    <string name="toast_customer_id_copied">コピーしました。サポートへのメールに貼りつけてください。</string>
+    <string name="toast_pro_welcome">Proへようこそ。すべて使えます。</string>
+    <string name="toast_restore_success">おかえりなさい。すべて使えます。</string>
+    <string name="toast_restore_none">復元するものはありません。このままで大丈夫です。</string>
+    <string name="toast_purchase_unavailable">いまは購入できません。</string>
+    <string name="toast_health_connected">これから記録は、静かに%1$sへ流れていきます。</string>
+    <string name="toast_backup_created">この端末内にバックアップを作成しました。</string>
+    <string name="toast_backup_restored_android">復元しました。重複は静かにスキップされました。</string>
+    <string name="toast_backup_none_android">この端末にバックアップはまだありません。</string>
+    <string name="toast_export_file_android">バックアップファイルを保存しました。安全な場所に置いておいてください。</string>
+    <string name="toast_file_unreadable">そのファイルは読み取れませんでした。</string>
+    <plurals name="toast_import_result">
+        <item quantity="other">%1$d件を読み込み、重複%2$d件をスキップしました。</item>
+    </plurals>
+    <string name="toast_import_ok_android">読み込みました。重複は静かにスキップされました。</string>
+    <string name="toast_import_invalid_android">バックアップファイルではないようです。</string>
+    <string name="toast_cleared">まっさらです。やさしく使ってください。</string>
+    <string name="toast_csv_ready_android">共有の準備ができました。</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">毎日のリマインダー</string>
+    <string name="notif_channel_reminders_desc">設定で作った、毎日のお知らせです。</string>
+    <string name="notif_channel_bac">推定値のステータス</string>
+    <string name="notif_channel_bac_desc">推定値が下がっていくあいだの、静かなカードです。</string>
+    <string name="notif_discreet_title">夜のふりかえり</string>
+    <string name="notif_discreet_body">十秒のメモで、全体像は正直なままです。</string>
+    <string name="notif_reminder_body_fallback">ひとことのメモで、全体像は正直なままです。</string>
+    <string name="notif_bac_discreet_title">低下中</string>
+    <string name="notif_bac_discreet_body">ゼロまで約%1$s。</string>
+    <string name="notif_bac_title">推定BAC %1$s</string>
+    <string name="notif_bac_body">ゼロまで%1$s。運転してよいという合図では決してありません。</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">前の日</string>
+    <string name="a11y_open_calendar">カレンダーを開く</string>
+    <string name="a11y_next_day">次の日</string>
+    <string name="a11y_log_quick">%1$sを記録、%2$.1f%3$s</string>
+    <string name="a11y_units_info">%1$sとは?</string>
+    <string name="a11y_units_info__us">%1$sとは?</string>
+    <string name="a11y_units_info__gb">%1$sとは?</string>
+    <string name="a11y_units_info__au">%1$sとは?</string>
+    <string name="a11y_units_info__ca">%1$sとは?</string>
+    <string name="a11y_units_info__jp">%1$sとは?</string>
+    <string name="a11y_units_info__dk">%1$sとは?</string>
+    <string name="a11y_units_info__vn">%1$sとは?</string>
+    <string name="a11y_units_info__who">%1$sとは?</string>
+    <string name="a11y_intake_ring">今日 %2$d%3$s中 %1$.1f%3$s</string>
+    <string name="a11y_mini_progress">%1$s: %3$d%4$s中 %2$.1f%4$s</string>
+    <string name="a11y_back">戻る</string>
+    <string name="a11y_close">閉じる</string>
+    <string name="a11y_prev_month">前の月</string>
+    <string name="a11y_next_month">次の月</string>
+    <string name="a11y_cal_day">%1$d日</string>
+    <string name="a11y_cal_day_logged">%1$d日、記録あり</string>
+    <string name="a11y_cal_day_dry">%1$d日、休肝日</string>
+    <string name="a11y_cal_day_logged_dry">%1$d日、記録あり、休肝日</string>
+    <string name="a11y_prev_period">前の期間</string>
+    <string name="a11y_next_period">次の期間</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="other">休肝日%1$d日、この期間の%2$dパーセント</item>
+    </plurals>
+    <string name="a11y_remove_reminder">%1$sを削除</string>
+    <string name="a11y_toggle_on">オン</string>
+    <string name="a11y_toggle_off">オフ</string>
+    <string name="a11y_fab_add">追加</string>
+    <string name="a11y_fab_close">操作を閉じる</string>
+    <string name="a11y_fab_hint">一杯を記録するか、休肝日にします</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">ユニット</string>
+    <string name="units_noun_unit_pl">ユニット</string>
+    <string name="units_noun_unit_short">ユニット</string>
+    <string name="units_noun_unit_abbr">U</string>
+    <string name="units_noun_unit_indef">ユニット</string>
+    <string name="units_noun_std_sg">標準ドリンク</string>
+    <string name="units_noun_std_pl">標準ドリンク</string>
+    <string name="units_noun_std_short">標準ドリンク</string>
+    <string name="units_noun_std_abbr">SD</string>
+    <string name="units_noun_std_indef">標準ドリンク</string>
+    <string name="units_noun_local_sg">単位</string>
+    <string name="units_noun_local_pl">単位</string>
+    <string name="units_noun_local_short">単位</string>
+    <string name="units_noun_local_abbr">単位</string>
+    <string name="units_noun_local_indef">単位</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">日記</string>
+    <string name="tab_statistics_short">統計</string>
+    <string name="tab_settings_short">設定</string>
+</resources>

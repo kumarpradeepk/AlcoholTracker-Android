@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/ko-KR.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">기록</string>
+    <string name="tab_statistics">통계</string>
+    <string name="tab_settings">설정</string>
+    <string name="lock_tap_to_unlock">잠겨 있어요. 탭하면 열려요.</string>
+    <string name="applock_prompt_title">Alcohol Tracker가 잠겨 있어요</string>
+    <string name="applock_prompt_sub">잠금을 해제하기 전에는 아무것도 보이지 않아요.</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">Alcohol Tracker에\n오신 걸 환영해요</string>
+    <string name="ob_welcome_sub">있는 그대로 보는 음주 기록장.</string>
+    <string name="ob_welcome_body">평가하지 않고 기록해요. 한 잔을 몇 초 만에 남기고, 추정 혈중알코올농도가 내려가는 것을 손목에서도 볼 수 있어요.</string>
+    <string name="ob_welcome_quick_caption">주머니에서 바로 기록</string>
+    <string name="ob_welcome_bac_example" formatted="false">추정 혈중알코올농도 0.032%</string>
+    <string name="ob_welcome_sober_example">추정치 0까지 약 2시간</string>
+    <string name="ob_get_started">시작하기</string>
+    <string name="ob_step_indicator">3단계 중 %1$d단계</string>
+    <string name="ob_skip">건너뛰기</string>
+    <string name="ob_goals_title">어떤 이유로 오셨나요?</string>
+    <string name="ob_goals_sub">해당되는 만큼 골라도 돼요. 이 답은 나와 앱 사이에만 남아요.</string>
+    <string name="ob_goal_less">덜 마시기</string>
+    <string name="ob_goal_awareness">얼마나 마시는지 알기</string>
+    <string name="ob_goal_break">몸에 쉬어갈 시간 주기</string>
+    <string name="ob_goal_free_days">술 없는 날 늘리기</string>
+    <string name="ob_goal_conscious">의식하며 마시기</string>
+    <string name="ob_goal_reset">익숙해진 기준 다시 잡기</string>
+    <string name="ob_goal_social">모임 자리 대처하기</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="other">목표 %1$d개로 계속하기</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">최소 하나는 골라주세요</string>
+    <string name="ob_base_title">보통 일주일에 몇 잔 정도 마셔요?</string>
+    <string name="ob_base_sub">리듬을 가늠해 보는 것뿐이에요. 평가가 아니라 출발점이에요.</string>
+    <string name="ob_base_0_4">0~4잔</string>
+    <string name="ob_base_5_9">5~9잔</string>
+    <string name="ob_base_10_14">10~14잔</string>
+    <string name="ob_base_15_19">15~19잔</string>
+    <string name="ob_base_20_plus">20잔 이상</string>
+    <string name="ob_continue">계속하기</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">오늘</string>
+    <string name="diary_yesterday">어제</string>
+    <string name="diary_pro_banner_title">전체 그림 열어보기</string>
+    <string name="diary_pro_banner_sub">빠른 기록 타일 · 혈중알코올농도 분석 · 술 없는 날 자동 감지 · 알림</string>
+    <string name="diary_usual">늘 마시던 걸로?</string>
+    <string name="units_abbrev_value">%1$.1f %2$s</string>
+    <string name="diary_intake_today">오늘 섭취량</string>
+    <string name="diary_intake">섭취량</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="other">%1$d%2$s 중</item>
+    </plurals>
+    <string name="diary_this_week">이번 주</string>
+    <string name="diary_this_month">이번 달</string>
+    <string name="diary_mini_value">%1$.1f / %2$d</string>
+    <string name="diary_remaining_numbers">오늘 %1$.1f / %2$d %3$s 기록됨.</string>
+    <string name="diary_remaining_zero_neutral">오늘 목표는 그대로 남아 있어요. 굳이 쓰지 않아도 되고요.</string>
+    <string name="diary_remaining_left_neutral">오늘 목표까지 %1$.1f %2$s 남았어요.</string>
+    <string name="diary_remaining_at_target_neutral">딱 목표만큼이에요. 다음은 물 한 잔 어때요?</string>
+    <string name="diary_remaining_over_neutral">오늘 목표 %2$d %3$s에서 %1$.1f 넘었어요.</string>
+    <string name="diary_adjust_guideline">음주 기준 조정하기</string>
+    <string name="bac_monitor">혈중알코올농도 모니터</string>
+    <string name="bac_status_waiting">대기 중</string>
+    <string name="bac_free_body">Pro를 열고 한 잔을 기록하면 추정 혈중알코올농도가 여기에 나타나요.</string>
+    <string name="bac_how_estimated">혈중알코올농도를 추정하는 방법</string>
+    <string name="bac_trends">추이</string>
+    <string name="bac_setup_title">혈중알코올농도 프로필 설정하기</string>
+    <string name="bac_setup_body">체중과 성별을 넣으면 추정치가 실제로 의미를 갖게 돼요. 10초면 충분해요.</string>
+    <string name="bac_setup_cta">혈중알코올농도 프로필 설정</string>
+    <string name="bac_status_rising">상승 중</string>
+    <string name="bac_status_settling">감소 중</string>
+    <string name="bac_status_clear">추정 0</string>
+    <string name="bac_value_percent">%1$.3f%%</string>
+    <string name="bac_value_permille">%1$.2f‰</string>
+    <string name="bac_sober_in">추정치 0까지 약 %1$s</string>
+    <string name="bac_all_clear">추정치가 0이에요. 계산상 남은 양이 없다는 뜻이에요.</string>
+    <string name="bac_disclaimer_short">추정치는 참고용일 뿐이에요. 운전해도 된다는 뜻은 절대 아니에요.</string>
+    <string name="diary_dry_marked">술 없는 날로 기록했어요.</string>
+    <string name="diary_dry_remembered">술 없는 날로 남겨 두었어요.</string>
+    <string name="diary_dry_body">몸이 조용히 고마워하고 있을 거예요.</string>
+    <string name="diary_dry_unmark">표시 해제</string>
+    <string name="diary_logged_today">오늘 기록</string>
+    <string name="diary_logged_this_day">이날 기록</string>
+    <string name="diary_entry_meta">%1$d ml · %2$s%%</string>
+    <string name="diary_empty_title_today">아직은 빈 잔이에요.</string>
+    <string name="diary_empty_title_other">이날은 기록이 없어요.</string>
+    <string name="diary_empty_body_today">한 잔 따르면 두어 번 탭으로 기록하고, 오늘을 술 없는 날로 표시해 연속 기록을 시작해도 좋아요.</string>
+    <string name="diary_empty_body_other">기억나면 지금 추가해도 돼요. 지난 날짜로 기록해야 패턴이 정직해져요.</string>
+    <string name="action_log_drink">한 잔 기록하기</string>
+    <string name="action_mark_dry_day">술 없는 날로 표시</string>
+    <string name="diary_add_previous_dry">지난 술 없는 날 추가하기</string>
+    <string name="action_dry_day">술 없는 날</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">세부 사항 다듬기</string>
+    <string name="log_title_review">확인하고 저장</string>
+    <string name="log_cta_next">다음</string>
+    <string name="log_cta_save">이 잔 저장하기</string>
+    <string name="log_pick_intro">뭘 드셨어요? 비슷한 걸로 고르면 돼요. 자세한 건 다음 단계에서 맞출 수 있어요.</string>
+    <string name="log_search_placeholder">술 검색</string>
+    <string name="log_custom_title">나만의 술 만들기</string>
+    <string name="log_custom_sub">용량도 도수도 자유롭게. 유료 기능이 아니에요.</string>
+    <string name="log_section_your_drinks">내 술</string>
+    <string name="log_section_popular">인기</string>
+    <string name="log_grid_meta">%1$s%% · %2$d ml</string>
+    <string name="log_tune_intro">실제로 테이블에 있던 잔에 맞게 조정해 보세요.</string>
+    <string name="log_abv_label">도수</string>
+    <string name="log_abv_value">%1$.1f%%</string>
+    <string name="log_serving_label">용량</string>
+    <string name="log_unit_ml">ml</string>
+    <string name="log_unit_floz">fl oz</string>
+    <string name="log_serving_ml_value">%1$d ml</string>
+    <string name="log_serving_oz_value">%1$.1f oz</string>
+    <string name="log_quantity_label">잔 수</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈ %1$.1f %3$s · %2$d kcal</string>
+    <string name="log_working_line">%1$d ml × %2$s%% × 0.789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_half">½ × %1$d ml × %2$s%% × 0.789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_qty">%1$d × %2$d ml × %3$s%% × 0.789 ÷ 1000 = %4$.1f %5$s</string>
+    <string name="log_review_meta">%1$d ml · 도수 %2$s%%</string>
+    <string name="log_review_meta_half">×½ · %1$d ml · 도수 %2$s%%</string>
+    <string name="log_review_meta_qty">×%1$d · %2$d ml · 도수 %3$s%%</string>
+    <string name="log_when_label">언제</string>
+    <string name="log_when_now">지금</string>
+    <string name="log_when_1h">1시간 전</string>
+    <string name="log_when_2h">2시간 전</string>
+    <string name="log_cost_label">얼마였어요?</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">칼로리</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">오늘 날짜로 저장했어요. 언제든 지울 수 있어요.</string>
+    <string name="log_saved_to_day">%1$s에 저장했어요. 언제든 지울 수 있어요.</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">일 / 월 / 화 / 수 / 목 / 금 / 토</string>
+    <string name="sheet_cal_hint_select">파란 점은 기록이 있는 날, 초록 점은 술 없는 날이에요. 탭하면 열려요.</string>
+    <string name="sheet_cal_hint_dry">지난 날짜를 탭하면 술 없는 날로 표시되고, 다시 탭하면 해제돼요. 기록이 있는 날은 그대로 둬요.</string>
+    <string name="action_done">완료</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d ml · %2$s%% · %3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">지출</string>
+    <string name="sheet_entry_relog">같은 걸로 한 잔 더</string>
+    <string name="sheet_entry_remove">기록에서 삭제</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_title__us">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_title__gb">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_title__au">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_title__ca">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_title__jp">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_title__dk">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_title__vn">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_title__who">%1$s, 정확히 뭐예요?</string>
+    <string name="sheet_units_body">순수 알코올 10 g, WHO가 쓰는 잣대예요. 잔마다 그 양이 다르게 숨어 있어서, 계산은 앱이 대신해요.</string>
+    <string name="sheet_units_chip_pour">150 ml 한 잔</string>
+    <string name="sheet_units_chip_abv" formatted="false">도수 13%</string>
+    <string name="sheet_units_chip_density">0.789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__us">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__gb">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__au">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__ca">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__jp">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__dk">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__vn">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__who">1.5 %1$s</string>
+    <string name="sheet_units_density_note">0.789은 그냥 알코올의 밀도예요. 신비로울 것 없어요.</string>
+    <string name="sheet_units_targets">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+    <string name="sheet_units_targets__us">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+    <string name="sheet_units_targets__gb">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+    <string name="sheet_units_targets__au">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+    <string name="sheet_units_targets__ca">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+    <string name="sheet_units_targets__jp">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+    <string name="sheet_units_targets__dk">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+    <string name="sheet_units_targets__vn">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+    <string name="sheet_units_targets__who">마가리타 한 잔, 조용히 %1$s 1.5예요. 하루 목표와 주간 목표는 WHO 저위험 기준에서 시작하고, 옮기는 건 언제나 내 몫이에요.</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">위드마크(Widmark) 공식을 써요. 기록한 알코올을 체중과 성별에서 계산한 체내 수분량에 나누고, 몸이 시간당 약 0.015%씩 분해하는 만큼을 빼요.</string>
+    <string name="sheet_bac_not_measurement">추정치일 뿐, 측정값이 아니에요. 음식, 약, 그리고 각자의 몸이 실제 수치를 다르게 만들어요.</string>
+    <string name="sheet_bac_never_drive">운전해도 되는지를 추정치로 판단하면 절대 안 돼요. 조금이라도 망설여진다면, 하지 마세요.</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">새로 저장할 술</string>
+    <string name="sheet_custom_name_placeholder">이름, 빨리 찾을 수 있게</string>
+    <string name="sheet_custom_base_caption">기본 종류</string>
+    <string name="sheet_custom_abv_label" formatted="false">도수 %</string>
+    <string name="sheet_custom_ml_label">용량 (ml)</string>
+    <string name="sheet_custom_notes_placeholder">재료나 메모 (선택)</string>
+    <string name="action_save">저장</string>
+    <string name="action_cancel">취소</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7일</string>
+    <string name="stats_period_30d">30일</string>
+    <string name="stats_period_90d">90일</string>
+    <string name="stats_period_1y">1년</string>
+    <string name="stats_period_custom">직접 설정</string>
+    <string name="action_export">내보내기</string>
+    <string name="stats_edit_range">기간 직접 설정하기</string>
+    <string name="stats_verdict_numbers">이번 기간 %1$.1f %3$s · 이전 기간 %2$.1f %3$s</string>
+    <string name="stats_verdict_level_neutral">이전 기간과 같아요.</string>
+    <string name="stats_verdict_less_neutral">이전 기간보다 %1$d%% 적어요</string>
+    <string name="stats_verdict_more_neutral">이전 기간보다 %1$d%% 많아요</string>
+    <string name="stats_verdict_first_numbers">이번 기간 %1$.1f %2$s.</string>
+    <string name="stats_verdict_first_neutral">데이터가 쌓인 첫 기간이에요. 비교는 다음 기간부터 시작돼요.</string>
+    <string name="stats_tile_drunk">마신 양</string>
+    <string name="stats_tile_alcohol">알코올</string>
+    <string name="stats_tile_spending">지출</string>
+    <string name="stats_tile_calories">칼로리</string>
+    <string name="stats_unit_ml">ml</string>
+    <plurals name="stats_unit_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="other">≈ 치즈버거 %1$d개</item>
+    </plurals>
+    <string name="stats_units_chart_title">마신 %1$s</string>
+    <string name="stats_units_chart_title__us">마신 %1$s</string>
+    <string name="stats_units_chart_title__gb">마신 %1$s</string>
+    <string name="stats_units_chart_title__au">마신 %1$s</string>
+    <string name="stats_units_chart_title__ca">마신 %1$s</string>
+    <string name="stats_units_chart_title__jp">마신 %1$s</string>
+    <string name="stats_units_chart_title__dk">마신 %1$s</string>
+    <string name="stats_units_chart_title__vn">마신 %1$s</string>
+    <string name="stats_units_chart_title__who">마신 %1$s</string>
+    <string name="stats_daily_average">일 평균</string>
+    <string name="stats_units_total">합계 %1$.1f %2$s</string>
+    <string name="stats_units_per_day">하루 %1$.2f</string>
+    <string name="stats_units_empty">여기에 패턴이 그려질 거예요.</string>
+    <string name="stats_spend_chart_title">지출 추이</string>
+    <string name="stats_spend_total">합계 %1$s</string>
+    <string name="stats_spend_per_day">하루 %1$s</string>
+    <string name="stats_spend_empty">가격을 적은 잔이 쌓이면 비용이 나타나요.</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">아낀 돈</string>
+    <string name="stats_baseline_label">평소 일주일 %1$s</string>
+    <string name="stats_saved_unset">평소 일주일 지출을 넣으면, 국가 평균이 아니라 내가 실제로 낸 가격으로 아낀 돈이 계산돼요.</string>
+    <string name="stats_saved_under">이번 기간, 평소 지출보다 %1$s 적어요. 평균이 아니라 실제로 낸 가격 기준이에요.</string>
+    <string name="stats_saved_over">이번 기간, 평소 지출보다 %1$s 많아요.</string>
+    <string name="stats_breakdown_title">술 구성</string>
+    <string name="stats_breakdown_locked">어떤 술이 한 주를 이끄는지, 그리고 조용히 얼마나 쌓이는지 볼 수 있어요.</string>
+    <string name="stats_breakdown_empty">몇 잔 기록하면 자주 마시는 술이 드러나요.</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="other">%1$s · %2$d회</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d%%</string>
+    <string name="stats_breakdown_leader">1위는 %1$s, 이번 기간 %3$s의 %2$d%%예요.</string>
+    <string name="stats_dry_title_positive">술 없는 날을 잘 챙겼어요.</string>
+    <string name="stats_dry_body_positive">이번 기간의 %1$d%%가 술 없는 날이었어요. 하루하루가 몸이 알아채는 휴식이에요.</string>
+    <string name="stats_dry_title_none">아직 술 없는 날은 없어요.</string>
+    <string name="stats_dry_body_none">첫 하루가 연속 기록의 시작이에요. 기록 탭에서 오늘을 술 없는 날로 표시해 보세요.</string>
+    <string name="stats_dry_title_numbers">술 없는 날</string>
+    <string name="stats_dry_body_numbers">%2$d일 중 %1$d일 · 이번 기간의 %3$d%%.</string>
+    <string name="stats_dry_ring_pct">%1$d%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">직접 설정한 기간</string>
+    <string name="sheet_range_from">시작</string>
+    <string name="sheet_range_to">끝</string>
+    <string name="sheet_range_last7">최근 7일</string>
+    <string name="sheet_range_last30">최근 30일</string>
+    <string name="action_apply">적용</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">통계 내보내기</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">통계 %1$s.csv</string>
+    <string name="sheet_export_desc">이번 기간의 모든 숫자, 바로 공유할 수 있어요.</string>
+    <string name="sheet_export_cta">CSV 공유</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">기록을 동기화해 두기</string>
+    <string name="sheet_health_body">기록한 잔을 %1$s에 자동으로 저장할 수 있어요. 전체 그림이 한곳에 모여요.</string>
+    <string name="sheet_health_data_title">알코올 데이터</string>
+    <string name="sheet_health_data_sub">알코올 섭취 기록만 쓰고, 아무것도 읽지 않아요.</string>
+    <string name="sheet_health_cta">%1$s에 연결</string>
+    <string name="sheet_health_change_access">접근 권한은 나중에 %1$s에서 바꿀 수 있어요.</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">진행 중인 알림</string>
+    <string name="sheet_live_body">추정 혈중알코올농도가 내려가는 동안, 조용한 카드가 알림 영역에 머물러요. 앱을 열 필요 없어요.</string>
+    <string name="sheet_live_mock_status">추정 혈중알코올농도, 감소 중</string>
+    <string name="sheet_live_mock_value" formatted="false">0.065%</string>
+    <string name="sheet_live_mock_tozero">0까지 3시간 42분</string>
+    <string name="sheet_live_note">예시 숫자로 만든 미리보기예요. 실제로 동작 중인 건 아니에요.</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">전체 그림을 봅니다.</string>
+    <string name="pay_sub">전체 음주 기록, 실시간 혈중 알코올 농도 추정치, 그리고 무거운 한 달이 어디서 시작되는지 보여 주는 주간 추세.</string>
+    <string name="pay_no_ads">광고 없음. 데이터 판매 없음. 계정 필요 없음.</string>
+    <string name="pay_benefit_history">최근 90일이 아니라, 지금까지 기록한 모든 잔</string>
+    <string name="pay_benefit_bac">실시간 혈중 알코올 농도 추정치와 0으로 돌아가는 시간</string>
+    <string name="pay_benefit_insights">가이드라인과 비교한 주간 합계, 추세까지</string>
+    <string name="pay_benefit_streaks">금주일 연속 기록, 아낀 돈, 줄인 칼로리</string>
+    <string name="pay_benefit_quicklog">홈 화면에서 한 번 탭해 같은 기록 반복</string>
+    <string name="pay_benefit_report">의사에게 건넬 수 있는 깔끔한 PDF 리포트</string>
+    <string name="pay_compare_caption">받는 것</string>
+    <string name="pay_compare_free">무료</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">무제한 기록과 나만의 음료</string>
+    <string name="pay_compare_export">내보내기, 백업, 위젯</string>
+    <string name="pay_compare_darkmode">다크 모드, 앱 잠금, 알림</string>
+    <string name="pay_compare_history">90일이 넘는 기록</string>
+    <string name="pay_compare_bac">혈중 알코올 농도 추정과 빠른 기록 타일</string>
+    <string name="pay_compare_insights">고급 분석, PDF, 비공개 동기화</string>
+    <string name="pay_plan_weekly">주간</string>
+    <string name="pay_plan_monthly">월간</string>
+    <string name="pay_plan_annual">연간</string>
+    <string name="pay_plan_lifetime">평생</string>
+    <string name="pay_price_line_weekly">주 %1$s</string>
+    <string name="pay_price_line_monthly">월 %1$s</string>
+    <string name="pay_price_line_annual">연 %1$s</string>
+    <string name="pay_price_line_lifetime">%1$s 한 번, 평생 내 것</string>
+    <string name="pay_badge_trial">%1$d일 무료</string>
+    <string name="pay_badge_save">%1$d%% 절약</string>
+    <string name="pay_badge_best">최고의 가치</string>
+    <string name="pay_loading">스토어에서 오늘 가격을 확인하는 중…</string>
+    <string name="pay_unavailable">지금은 스토어가 응답하지 않습니다. 기록, 내보내기, 백업은 그대로 작동합니다.</string>
+    <string name="pay_retry">다시 시도</string>
+    <string name="pay_faq_caption">자주 묻는 질문</string>
+    <string name="pay_faq_q_trial">무료 체험은 어떻게 되나요?</string>
+    <string name="pay_faq_a_trial">%1$d일 동안 모든 Pro 기능이 내 것입니다. 끝나기 전 언제든 해지하면 아무것도 청구되지 않습니다.</string>
+    <string name="pay_faq_q_after">끝나면 어떻게 되나요?</string>
+    <string name="pay_faq_a_after">고른 플랜이 그 카드에 적힌 가격으로 시작합니다. 더 비싼 가격이 되는 일은 없습니다. 2일 전에 알려 드리니 갑작스러울 일도 없습니다.</string>
+    <string name="pay_faq_q_logs">제 기록이 잠기는 일이 있나요?</string>
+    <string name="pay_faq_a_logs">없습니다. 기록, 나만의 음료, 이번 주 통계, 위젯, CSV 내보내기, 백업, 다크 모드, 앱 잠금, 알림은 영원히 무료입니다. 결제를 멈춰도 적어 둔 모든 것은 그대로 내 것이고, 그대로 읽을 수 있습니다.</string>
+    <string name="pay_faq_q_cancel">언제든 해지할 수 있나요?</string>
+    <string name="pay_faq_a_cancel">언제나요. %1$s 구독에서 관리하거나 해지할 수 있고, 데이터는 이 휴대폰에 그대로 남습니다.</string>
+    <string name="pay_cta_trial">%1$d일 무료로 시작</string>
+    <string name="pay_cta_plan">계속하기, %1$s</string>
+    <string name="pay_cta_lifetime">Pro 평생 잠금 해제</string>
+    <string name="pay_cta_default">계속하기</string>
+    <string name="pay_sub_trial">%1$d일 무료, 이후 %2$s. 오늘은 아무것도 청구되지 않습니다.</string>
+    <string name="pay_sub_recurring">해지할 때까지 %1$s로 갱신됩니다. 설정에서 한 번 탭하면 끝입니다.</string>
+    <string name="pay_sub_lifetime">결제는 한 번뿐. 구독으로 바뀌지 않습니다.</string>
+    <string name="pay_restore">복원</string>
+    <string name="pay_terms">약관</string>
+    <string name="pay_privacy">개인정보</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro예요. 불을 켜 두게 해줘서 고마워요.</string>
+    <string name="set_pro_banner_title">더 많은 분석, 더 적은 수고.</string>
+    <string name="set_pro_banner_sub">술 없는 날 자동 감지 · 빠른 기록 타일 · 혈중알코올농도 모니터</string>
+    <string name="set_section_you">나</string>
+    <string name="set_section_insights">분석 &amp; 동기화</string>
+    <string name="set_section_appearance">화면</string>
+    <string name="set_section_data">내 데이터</string>
+    <string name="set_section_privacy">개인정보 &amp; 말투</string>
+    <string name="set_section_support">지원</string>
+    <string name="set_profile">프로필</string>
+    <string name="set_profile_not_set">미설정</string>
+    <string name="set_profile_summary">%1$s %2$s · %3$s</string>
+    <string name="set_units">단위</string>
+    <string name="set_units_summary">%1$s · %2$s</string>
+    <string name="set_guideline">음주 기준</string>
+    <string name="set_guideline_value">하루 %1$d</string>
+    <string name="set_ask_cost">가격 묻기</string>
+    <string name="set_show_calories">칼로리 표시</string>
+    <string name="set_auto_dry">술 없는 날 자동 감지</string>
+    <string name="set_notifications">알림</string>
+    <string name="set_notif_none">없음</string>
+    <plurals name="set_notif_count">
+        <item quantity="other">매일 %1$d개</item>
+    </plurals>
+    <string name="set_health_sync">건강 동기화</string>
+    <string name="set_health_connected">연결됨</string>
+    <string name="set_health_off">꺼짐</string>
+    <string name="set_quick_log">빠른 기록 타일</string>
+    <string name="set_quick_log_setup">설정하기</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="other">%1$d잔</item>
+    </plurals>
+    <string name="set_dark_mode">다크 모드</string>
+    <string name="set_app_icon">앱 아이콘</string>
+    <string name="set_icon_default">기본</string>
+    <string name="set_icon_gift">선물</string>
+    <string name="set_icon_holiday">휴일</string>
+    <string name="set_language">언어</string>
+    <string name="set_language_value">한국어</string>
+    <string name="set_backup_title">백업됨</string>
+    <string name="set_backup_title_none">아직 백업 없음</string>
+    <string name="set_backup_detail_never_android">아래에서 만들 수 있어요 · 이 기기에 저장 · 내보내기는 언제나 무료</string>
+    <string name="set_backup_detail_dated">%1$s · 이 기기에 저장 · 내보내기는 언제나 무료</string>
+    <string name="set_backup_row">백업, 내보내기 &amp; 가져오기</string>
+    <string name="set_backup_free">무료</string>
+    <string name="set_app_lock">앱 잠금</string>
+    <string name="set_app_lock_sub">잠금을 해제하기 전에는 아무것도 보이지 않아요.</string>
+    <string name="set_discreet">조용한 알림</string>
+    <string name="set_discreet_sub">잠금 화면 알림에는 술 이야기가 나오지 않아요.</string>
+    <string name="set_day_ends">하루가 끝나는 시각</string>
+    <string name="set_day_ends_sub">새벽 1시에 마신 잔은 전날 밤으로 계산돼요.</string>
+    <string name="set_cutoff_midnight">자정</string>
+    <string name="set_cutoff_2am">새벽 2시</string>
+    <string name="set_cutoff_4am">새벽 4시</string>
+    <string name="set_tone">말투</string>
+    <string name="set_tone_icon_sample">가나</string>
+    <string name="set_tone_neutral">중립</string>
+    <string name="set_tone_push">밀어주기</string>
+    <string name="set_tone_numbers">숫자만</string>
+    <string name="set_tone_sub_neutral">숫자와 부드러운 인정, 평가는 없어요.</string>
+    <string name="set_tone_sub_push">연속 기록 중심, 목표 초과는 더 또렷하게.</string>
+    <string name="set_tone_sub_numbers">순수한 장부. 평가하는 말과 색 판단을 모두 없앤 모드예요.</string>
+    <string name="set_contact">고객 지원 문의</string>
+    <string name="set_about">Alcohol Tracker 정보</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">고객 ID</string>
+    <string name="set_copy">복사</string>
+    <string name="set_footer">절제를 담아 만들었어요.\n데이터는 이 휴대폰을 떠나지 않아요.</string>
+    <string name="support_email_subject">Alcohol Tracker 고객 지원</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">내 몸, 내 숫자.</string>
+    <string name="profile_body">같은 한 잔도 몸마다 다르게 작용해요. 두 가지만 넣으면 추정치가 평균이 아니라 내 것이 돼요.</string>
+    <string name="profile_privacy_note">10초면 끝, 한 번이면 돼요. 여기 있는 건 이 휴대폰을 떠나지 않아요.</string>
+    <string name="profile_sex_label">생물학적 성별</string>
+    <string name="profile_sex_female">여성</string>
+    <string name="profile_sex_male">남성</string>
+    <string name="profile_weight_label">체중</string>
+    <string name="profile_weight_kg">kg</string>
+    <string name="profile_weight_lb">lb</string>
+    <string name="profile_weight_placeholder">대략이어도 괜찮아요</string>
+    <string name="profile_cta">내 것으로 만들기</string>
+    <string name="profile_footer">둘 다 언제든 바꿀 수 있고, 추정치는 바로 반영돼요.</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">에너지</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">용량</string>
+    <string name="units_millilitres">밀리리터</string>
+    <string name="units_ounces">온스</string>
+    <string name="units_note">표시 방식만 바뀌고, 기록한 내용은 그대로예요.</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">예정된 알림이 없어요.</string>
+    <string name="notif_empty_body">저녁은 온전히 내 것이에요. 하루 한 번 가벼운 알림이 도움이 된다면 아래에서 추가해 보세요.</string>
+    <string name="notif_repeat_hint">알림은 매일 반복돼요. − 를 탭하면 지워져요.</string>
+    <string name="notif_reminder_sub">%1$s · %2$s</string>
+    <string name="notif_create_cta">알림 만들기</string>
+    <string name="sheet_notif_title_placeholder">제목, 예: 마지막 잔</string>
+    <string name="sheet_notif_time_label">알림 시각</string>
+    <string name="sheet_notif_message_placeholder">메시지 (선택)</string>
+    <string name="sheet_notif_repeat_note">선택한 시각에 매일 반복돼요.</string>
+    <string name="sheet_notif_cta">만들기</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">추정 혈중알코올농도, 0까지 남은 시간, 진행 중인 상태 카드.</string>
+    <string name="set_bac_unit_label">혈중알코올농도 단위</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">상태 카드 미리보기</string>
+    <string name="set_bac_preview_sub">추정치가 내려가는 동안 조용히 남아 있는 알림이에요.</string>
+    <string name="set_bac_disclaimer">추정치는 참고용일 뿐이에요. 운전해도 되는지를 판단하는 데 절대 쓰지 마세요.</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">빠른 기록 타일</string>
+    <string name="quicklog_mock_caption">빠른 기록</string>
+    <string name="quicklog_mock_footer">한 번 탭 · 기록 완료</string>
+    <string name="quicklog_section_caption">타일로 쓸 저장 술</string>
+    <string name="quicklog_selected_count">%2$d개 중 %1$d개 선택</string>
+    <string name="quicklog_empty_title">아직 저장한 술이 없어요.</string>
+    <string name="quicklog_empty_sub">하나 만들면 한 번 탭으로 기록할 수 있어요. 최대 네 개까지 들어가요.</string>
+    <string name="quicklog_drink_meta">%1$d ml · %2$s%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">백업 &amp; 복원</string>
+    <string name="backup_status_dated">%1$s, 이 기기에 백업했어요.</string>
+    <string name="backup_status_none_android">아직 백업이 없어요 — 아래에서 만들 수 있어요.</string>
+    <string name="backup_whats_here">이 휴대폰에 있는 것</string>
+    <plurals name="backup_count_logs">
+        <item quantity="other">기록한 잔</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="other">술 없는 날</item>
+    </plurals>
+    <string name="backup_count_profile">프로필</string>
+    <string name="backup_export">데이터 내보내기</string>
+    <string name="backup_import">데이터 가져오기</string>
+    <string name="backup_create">백업 만들기</string>
+    <string name="backup_restore">백업에서 복원</string>
+    <string name="backup_merge_note">가져오면 지금 있는 것과 합쳐지고, 중복은 조용히 건너뛰어요.</string>
+    <string name="backup_danger_zone">위험 구역</string>
+    <string name="backup_clear_all">모든 데이터 삭제</string>
+    <string name="backup_clear_note">영구적이고, 되돌릴 수 없어요. 소중하다면 먼저 사본을 내보내세요.</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">정보</string>
+    <string name="about_version">버전 %1$s · %2$s</string>
+    <string name="about_privacy">개인정보 처리방침</string>
+    <string name="about_terms">서비스 이용약관</string>
+    <string name="about_ack_caption">감사의 말</string>
+    <string name="about_ack_role_db">로컬 데이터베이스</string>
+    <string name="about_ack_role_ui_android">사용자 인터페이스</string>
+    <string name="about_ack_role_settings_android">설정</string>
+    <string name="about_footer">잔과 물방울 그림은 코드로,\n절제를 담아 그렸어요.</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">같은 앱, 다른 옷. 홈 화면에 어울리는 걸로 고르세요.</string>
+    <string name="icon_relaunch_note">런처가 갱신되는 동안 앱이 잠깐 닫힐 수 있어요.</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">혈중알코올농도 추이</string>
+    <string name="trends_title">최고 추정 혈중알코올농도</string>
+    <string name="trends_range">최근 7일</string>
+    <string name="trends_axis_start">6일 전</string>
+    <string name="trends_axis_end">오늘</string>
+    <string name="trends_note" formatted="false">몸이 시간당 대략 0.015%씩 분해하면서 곡선이 내려가요. 평평한 주가 좋은 주예요.</string>
+    <string name="trends_empty_title">아직 곡선이 없어요.</string>
+    <string name="trends_empty_body">프로필을 넣고 한 잔을 기록하면, 첫 잔부터 추이선이 시작돼요.</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">음주 기준</string>
+    <string name="guideline_intro">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_intro__us">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_intro__gb">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_intro__au">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_intro__ca">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_intro__jp">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_intro__dk">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_intro__vn">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_intro__who">WHO 저위험 기준은 하루 최대 2 %1$s와 규칙적인 술 없는 날을 제안해요. 나에게 맞는 값으로 정하세요.</string>
+    <string name="guideline_daily_target">하루 목표</string>
+    <string name="guideline_weekly_target">주간 목표</string>
+    <plurals name="guideline_target_units">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="other">월간 목표는 자동으로 따라와요: %1$d %2$s. WHO 기준은 출처일 뿐, 판정이 아니에요.</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">이 잔을 지울까요?</string>
+    <string name="dialog_delete_body">기록에서 빠지고, 숫자도 함께 내려가요.</string>
+    <string name="dialog_delete_keep">그대로 두기</string>
+    <string name="dialog_delete_remove">삭제</string>
+    <string name="dialog_clear_title">모든 데이터를 지울까요?</string>
+    <string name="dialog_clear_body">기록, 술 없는 날, 설정까지 전부 사라져요. 사본이 필요하면 먼저 내보내세요.</string>
+    <string name="dialog_clear_delete">삭제</string>
+    <string name="dialog_health_title">‘%1$s’에서 %2$s에 알코올 섭취량을 쓰도록 허용할까요?</string>
+    <string name="dialog_health_deny">허용 안 함</string>
+    <string name="dialog_health_allow">허용</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">%1$s 기록, %2$.1f %3$s.</string>
+    <string name="toast_logged">기록했어요, %1$.1f %2$s.</string>
+    <string name="action_undo">실행 취소</string>
+    <string name="toast_relogged">같은 걸로 오늘 기록했어요.</string>
+    <string name="toast_entry_removed">기록에서 지웠어요.</string>
+    <string name="toast_dry_marked">술 없는 날로 표시했어요. 조용한 하루도 그만큼 값져요.</string>
+    <string name="toast_day_has_drinks">이 날은 이미 기록이 있어요.</string>
+    <string name="toast_day_has_drinks_cal">그 날은 기록이 있어요.</string>
+    <string name="toast_custom_saved">저장했어요. 다음엔 한 번 탭이면 돼요.</string>
+    <string name="toast_profile_incomplete">체중과 성별을 모두 넣어주세요. 혈중알코올농도 추정에 꼭 필요해요.</string>
+    <string name="toast_profile_saved">저장했어요. 추정치가 조금 더 또렷해졌어요.</string>
+    <string name="toast_reminder_scheduled">예약했어요. 매일 가볍게 알려드릴게요.</string>
+    <string name="toast_reminder_silent">저장했어요. 다만 %1$s에서 알림이 꺼져 있어 소리는 나지 않아요.</string>
+    <string name="toast_icon_updated">아이콘을 바꿨어요. 잘 어울려요.</string>
+    <string name="toast_customer_id_copied">복사했어요. 지원 메일에 붙여 넣으면 돼요.</string>
+    <string name="toast_pro_welcome">Pro 시작이에요. 전부 열렸어요.</string>
+    <string name="toast_restore_success">다시 오셨네요. 전부 열려 있어요.</string>
+    <string name="toast_restore_none">복원할 게 없어요. 이미 준비돼 있어요.</string>
+    <string name="toast_purchase_unavailable">지금은 구매를 이용할 수 없어요.</string>
+    <string name="toast_health_connected">이제 기록이 %1$s에 조용히 저장돼요.</string>
+    <string name="toast_backup_created">이 기기에 백업을 만들었어요.</string>
+    <string name="toast_backup_restored_android">복원했어요. 중복은 조용히 건너뛰었어요.</string>
+    <string name="toast_backup_none_android">이 기기에는 아직 백업이 없어요.</string>
+    <string name="toast_export_file_android">백업 파일을 저장했어요. 안전한 곳에 두세요.</string>
+    <string name="toast_file_unreadable">그 파일은 읽을 수 없었어요.</string>
+    <plurals name="toast_import_result">
+        <item quantity="other">%1$d개 가져오고, 중복 %2$d개는 건너뛰었어요.</item>
+    </plurals>
+    <string name="toast_import_ok_android">가져왔어요. 중복은 조용히 건너뛰었어요.</string>
+    <string name="toast_import_invalid_android">백업 파일로 보이지 않아요.</string>
+    <string name="toast_cleared">다시 백지예요. 아껴 주세요.</string>
+    <string name="toast_csv_ready_android">공유할 준비가 됐어요.</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">매일 알림</string>
+    <string name="notif_channel_reminders_desc">설정에서 만든 매일 알림이에요.</string>
+    <string name="notif_channel_bac">추정치 상태</string>
+    <string name="notif_channel_bac_desc">추정치가 내려가는 동안 조용히 남는 카드예요.</string>
+    <string name="notif_discreet_title">저녁 체크인</string>
+    <string name="notif_discreet_body">10초만 적어도 그림이 정직해져요.</string>
+    <string name="notif_reminder_body_fallback">짧게 한 줄이면 그림이 정직해져요.</string>
+    <string name="notif_bac_discreet_title">감소 중</string>
+    <string name="notif_bac_discreet_body">0까지 약 %1$s.</string>
+    <string name="notif_bac_title">추정 혈중알코올농도 %1$s</string>
+    <string name="notif_bac_body">0까지 %1$s. 운전해도 된다는 신호는 절대 아니에요.</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">이전 날</string>
+    <string name="a11y_open_calendar">달력 열기</string>
+    <string name="a11y_next_day">다음 날</string>
+    <string name="a11y_log_quick">%1$s 기록, %2$.1f %3$s</string>
+    <string name="a11y_units_info">%1$s에 대한 설명</string>
+    <string name="a11y_units_info__us">%1$s에 대한 설명</string>
+    <string name="a11y_units_info__gb">%1$s에 대한 설명</string>
+    <string name="a11y_units_info__au">%1$s에 대한 설명</string>
+    <string name="a11y_units_info__ca">%1$s에 대한 설명</string>
+    <string name="a11y_units_info__jp">%1$s에 대한 설명</string>
+    <string name="a11y_units_info__dk">%1$s에 대한 설명</string>
+    <string name="a11y_units_info__vn">%1$s에 대한 설명</string>
+    <string name="a11y_units_info__who">%1$s에 대한 설명</string>
+    <string name="a11y_intake_ring">오늘 %2$d %3$s 중 %1$.1f</string>
+    <string name="a11y_mini_progress">%1$s: %3$d %4$s 중 %2$.1f</string>
+    <string name="a11y_back">뒤로</string>
+    <string name="a11y_close">닫기</string>
+    <string name="a11y_prev_month">이전 달</string>
+    <string name="a11y_next_month">다음 달</string>
+    <string name="a11y_cal_day">%1$d일</string>
+    <string name="a11y_cal_day_logged">%1$d일, 기록 있음</string>
+    <string name="a11y_cal_day_dry">%1$d일, 술 없는 날</string>
+    <string name="a11y_cal_day_logged_dry">%1$d일, 기록 있음, 술 없는 날</string>
+    <string name="a11y_prev_period">이전 기간</string>
+    <string name="a11y_next_period">다음 기간</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="other">술 없는 날 %1$d일, 이번 기간의 %2$d 퍼센트</item>
+    </plurals>
+    <string name="a11y_remove_reminder">%1$s 삭제</string>
+    <string name="a11y_toggle_on">켬</string>
+    <string name="a11y_toggle_off">끔</string>
+    <string name="a11y_fab_add">추가</string>
+    <string name="a11y_fab_close">동작 닫기</string>
+    <string name="a11y_fab_hint">한 잔을 기록하거나 술 없는 날로 표시해요</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">유닛</string>
+    <string name="units_noun_unit_pl">유닛</string>
+    <string name="units_noun_unit_short">유닛</string>
+    <string name="units_noun_unit_abbr">U</string>
+    <string name="units_noun_unit_indef">유닛</string>
+    <string name="units_noun_std_sg">표준잔</string>
+    <string name="units_noun_std_pl">표준잔</string>
+    <string name="units_noun_std_short">표준잔</string>
+    <string name="units_noun_std_abbr">SD</string>
+    <string name="units_noun_std_indef">표준잔</string>
+    <string name="units_noun_local_sg">표준잔</string>
+    <string name="units_noun_local_pl">표준잔</string>
+    <string name="units_noun_local_short">표준잔</string>
+    <string name="units_noun_local_abbr">SD</string>
+    <string name="units_noun_local_indef">표준잔</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">일기</string>
+    <string name="tab_statistics_short">통계</string>
+    <string name="tab_settings_short">설정</string>
+</resources>

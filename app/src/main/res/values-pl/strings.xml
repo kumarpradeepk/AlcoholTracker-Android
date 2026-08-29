@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/pl-PL.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">Dziennik</string>
+    <string name="tab_statistics">Statystyki</string>
+    <string name="tab_settings">Ustawienia</string>
+    <string name="lock_tap_to_unlock">Zablokowano. Dotknij, aby odblokować.</string>
+    <string name="applock_prompt_title">Alcohol Tracker jest zablokowany</string>
+    <string name="applock_prompt_sub">Odblokuj, zanim cokolwiek się pokaże.</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">Witaj w aplikacji\nAlcohol Tracker</string>
+    <string name="ob_welcome_sub">Twój dziennik świadomego picia.</string>
+    <string name="ob_welcome_body">Zapisuj bez oceniania. Drink w kilka sekund, szacowany alkohol we krwi opada na twoich oczach — nawet z nadgarstka.</string>
+    <string name="ob_welcome_quick_caption">Szybki zapis, prosto z kieszeni</string>
+    <string name="ob_welcome_bac_example" formatted="false">Szacowany alkohol we krwi 0,032&#160;%</string>
+    <string name="ob_welcome_sober_example">Do zera ok. 2 godz.</string>
+    <string name="ob_get_started">Zacznijmy</string>
+    <string name="ob_step_indicator">KROK&#160;%1$d Z 3</string>
+    <string name="ob_skip">Pomiń</string>
+    <string name="ob_goals_title">Co cię tu sprowadza?</string>
+    <string name="ob_goals_sub">Zaznacz tyle, ile pasuje. To zostaje między tobą a aplikacją.</string>
+    <string name="ob_goal_less">Pić mniej</string>
+    <string name="ob_goal_awareness">Wiedzieć, ile piję</string>
+    <string name="ob_goal_break">Dać organizmowi odpocząć</string>
+    <string name="ob_goal_free_days">Więcej dni bez alkoholu</string>
+    <string name="ob_goal_conscious">Pić świadomie</string>
+    <string name="ob_goal_reset">Zresetować nawyki</string>
+    <string name="ob_goal_social">Radzić sobie w towarzystwie</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="one">Dalej z&#160;%1$d celem</item>
+        <item quantity="few">Dalej z&#160;%1$d celami</item>
+        <item quantity="many">Dalej z&#160;%1$d celami</item>
+        <item quantity="other">Dalej z&#160;%1$d celami</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">Wybierz przynajmniej jeden cel</string>
+    <string name="ob_base_title">Ile drinków w przeciętnym tygodniu?</string>
+    <string name="ob_base_sub">Szybkie wyczucie rytmu — bez oceniania, po prostu punkt wyjścia.</string>
+    <string name="ob_base_0_4">0–4 drinki</string>
+    <string name="ob_base_5_9">5–9 drinków</string>
+    <string name="ob_base_10_14">10–14 drinków</string>
+    <string name="ob_base_15_19">15–19 drinków</string>
+    <string name="ob_base_20_plus">20 lub więcej</string>
+    <string name="ob_continue">Dalej</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">Dziś</string>
+    <string name="diary_yesterday">Wczoraj</string>
+    <string name="diary_pro_banner_title">Odblokuj pełny obraz</string>
+    <string name="diary_pro_banner_sub">Kafelki szybkiego zapisu · analizy alkoholu we krwi · automatyczne dni bez alkoholu · przypomnienia</string>
+    <string name="diary_usual">To co zwykle?</string>
+    <string name="units_abbrev_value">%1$.1f&#160;%2$s</string>
+    <string name="diary_intake_today">Dzisiejsze spożycie</string>
+    <string name="diary_intake">Spożycie</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="one">z&#160;%1$d jednostki</item>
+        <item quantity="few">z&#160;%1$d jednostek</item>
+        <item quantity="many">z&#160;%1$d jednostek</item>
+        <item quantity="other">z&#160;%1$d jednostki</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="one">z&#160;%1$d drinka standardowego</item>
+        <item quantity="few">z&#160;%1$d drinków standardowych</item>
+        <item quantity="many">z&#160;%1$d drinków standardowych</item>
+        <item quantity="other">z&#160;%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="one">z&#160;%1$d drinka standardowego</item>
+        <item quantity="few">z&#160;%1$d drinków standardowych</item>
+        <item quantity="many">z&#160;%1$d drinków standardowych</item>
+        <item quantity="other">z&#160;%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="one">z&#160;%1$d drinka standardowego</item>
+        <item quantity="few">z&#160;%1$d drinków standardowych</item>
+        <item quantity="many">z&#160;%1$d drinków standardowych</item>
+        <item quantity="other">z&#160;%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="one">z&#160;%1$d drinka standardowego</item>
+        <item quantity="few">z&#160;%1$d drinków standardowych</item>
+        <item quantity="many">z&#160;%1$d drinków standardowych</item>
+        <item quantity="other">z&#160;%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="one">z&#160;%1$d drinka standardowego</item>
+        <item quantity="few">z&#160;%1$d drinków standardowych</item>
+        <item quantity="many">z&#160;%1$d drinków standardowych</item>
+        <item quantity="other">z&#160;%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="one">z&#160;%1$d drinka standardowego</item>
+        <item quantity="few">z&#160;%1$d drinków standardowych</item>
+        <item quantity="many">z&#160;%1$d drinków standardowych</item>
+        <item quantity="other">z&#160;%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="one">z&#160;%1$d drinka standardowego</item>
+        <item quantity="few">z&#160;%1$d drinków standardowych</item>
+        <item quantity="many">z&#160;%1$d drinków standardowych</item>
+        <item quantity="other">z&#160;%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="one">z&#160;%1$d drinka standardowego</item>
+        <item quantity="few">z&#160;%1$d drinków standardowych</item>
+        <item quantity="many">z&#160;%1$d drinków standardowych</item>
+        <item quantity="other">z&#160;%1$d drinka standardowego</item>
+    </plurals>
+    <string name="diary_this_week">Ten tydzień</string>
+    <string name="diary_this_month">Ten miesiąc</string>
+    <string name="diary_mini_value">%1$.1f /&#160;%2$d</string>
+    <string name="diary_remaining_numbers">Dziś zapisano:&#160;%1$.1f z&#160;%2$d&#160;%3$s.</string>
+    <string name="diary_remaining_zero_neutral">Cały dzienny cel nietknięty — albo po prostu dziś niepotrzebny.</string>
+    <string name="diary_remaining_left_neutral">W dzisiejszym celu zostało jeszcze&#160;%1$.1f&#160;%2$s.</string>
+    <string name="diary_remaining_at_target_neutral">Dokładnie na celu — może teraz szklanka wody?</string>
+    <string name="diary_remaining_over_neutral">%1$.1f&#160;%3$s ponad dzisiejszy cel&#160;%2$d.</string>
+    <string name="diary_adjust_guideline">Dostosuj wytyczne alkoholowe</string>
+    <string name="bac_monitor">Monitor alkoholu we krwi</string>
+    <string name="bac_status_waiting">OCZEKIWANIE</string>
+    <string name="bac_free_body">Odblokuj Pro, zapisz drinka, a szacowany alkohol we krwi pojawi się tutaj.</string>
+    <string name="bac_how_estimated">Jak szacujemy alkohol we krwi</string>
+    <string name="bac_trends">Trendy</string>
+    <string name="bac_setup_title">Uzupełnij profil alkoholu we krwi</string>
+    <string name="bac_setup_body">Podaj masę ciała i płeć, żeby szacunki naprawdę coś znaczyły — to dziesięć sekund.</string>
+    <string name="bac_setup_cta">Uzupełnij profil</string>
+    <string name="bac_status_rising">ROŚNIE</string>
+    <string name="bac_status_settling">SPADA</string>
+    <string name="bac_status_clear">ZERO</string>
+    <string name="bac_value_percent">%1$.3f&#160;%%</string>
+    <string name="bac_value_permille">%1$.2f&#160;‰</string>
+    <string name="bac_sober_in">Szacunek spadnie do zera za ok.&#160;%1$s</string>
+    <string name="bac_all_clear">Szacunek wskazuje zero, nic już nie jest liczone.</string>
+    <string name="bac_disclaimer_short">Szacunki mają charakter wyłącznie informacyjny — nigdy nie są zielonym światłem do jazdy.</string>
+    <string name="diary_dry_marked">Dzień bez alkoholu — zapisany.</string>
+    <string name="diary_dry_remembered">Dzień bez alkoholu — odnotowany.</string>
+    <string name="diary_dry_body">Organizm nalewa sobie ciche podziękowanie.</string>
+    <string name="diary_dry_unmark">Cofnij zaznaczenie</string>
+    <string name="diary_logged_today">ZAPISANE DZIŚ</string>
+    <string name="diary_logged_this_day">ZAPISANE TEGO DNIA</string>
+    <string name="diary_entry_meta">%1$d ml ·&#160;%2$s&#160;%%</string>
+    <string name="diary_empty_title_today">Na razie pusta szklanka.</string>
+    <string name="diary_empty_title_other">Tego dnia nic nie zapisano.</string>
+    <string name="diary_empty_body_today">Kiedy coś się naleje, wystarczy kilka dotknięć. Albo zaznacz dziś dzień bez alkoholu i zacznij serię.</string>
+    <string name="diary_empty_body_other">Jeśli pamięć dopisuje, dodaj wpis — wsteczne wpisy trzymają wzorzec w uczciwości.</string>
+    <string name="action_log_drink">Zapisz drinka</string>
+    <string name="action_mark_dry_day">Zaznacz dzień bez alkoholu</string>
+    <string name="diary_add_previous_dry">Dodaj wcześniejszy dzień bez alkoholu</string>
+    <string name="action_dry_day">Bez alk.</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">Dopracuj szczegóły</string>
+    <string name="log_title_review">Sprawdź i zapisz</string>
+    <string name="log_cta_next">Dalej</string>
+    <string name="log_cta_save">Zapisz drinka</string>
+    <string name="log_pick_intro">Co to było? Wystarczy coś zbliżonego — wszystko można doprecyzować w następnym kroku.</string>
+    <string name="log_search_placeholder">Szukaj drinków</string>
+    <string name="log_custom_title">Utwórz własnego drinka</string>
+    <string name="log_custom_sub">Dowolna objętość, dowolna moc — nigdy za opłatą.</string>
+    <string name="log_section_your_drinks">TWOJE DRINKI</string>
+    <string name="log_section_popular">POPULARNE</string>
+    <string name="log_grid_meta">%1$s&#160;%% ·&#160;%2$d ml</string>
+    <string name="log_tune_intro">Dopasuj porcję do tego, co naprawdę stało na stole.</string>
+    <string name="log_abv_label">Zawartość alkoholu</string>
+    <string name="log_abv_value">%1$.1f&#160;%%</string>
+    <string name="log_serving_label">Wielkość porcji</string>
+    <string name="log_unit_ml">ml</string>
+    <string name="log_unit_floz">fl oz</string>
+    <string name="log_serving_ml_value">%1$d ml</string>
+    <string name="log_serving_oz_value">%1$.1f oz</string>
+    <string name="log_quantity_label">Ilość</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈&#160;%1$.1f&#160;%3$s ·&#160;%2$d kcal</string>
+    <string name="log_working_line">%1$d ml ×&#160;%2$s&#160;%% × 0,789 ÷ 1000 =&#160;%3$.1f&#160;%4$s</string>
+    <string name="log_working_line_half">½ ×&#160;%1$d ml ×&#160;%2$s&#160;%% × 0,789 ÷ 1000 =&#160;%3$.1f&#160;%4$s</string>
+    <string name="log_working_line_qty">%1$d ×&#160;%2$d ml ×&#160;%3$s&#160;%% × 0,789 ÷ 1000 =&#160;%4$.1f&#160;%5$s</string>
+    <string name="log_review_meta">%1$d ml · alk.&#160;%2$s&#160;%%</string>
+    <string name="log_review_meta_half">×½ ·&#160;%1$d ml · alk.&#160;%2$s&#160;%%</string>
+    <string name="log_review_meta_qty">×%1$d ·&#160;%2$d ml · alk.&#160;%3$s&#160;%%</string>
+    <string name="log_when_label">Kiedy</string>
+    <string name="log_when_now">Teraz</string>
+    <string name="log_when_1h">−1 godz.</string>
+    <string name="log_when_2h">−2 godz.</string>
+    <string name="log_cost_label">Ile to kosztowało?</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">Kalorie</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">Zapisano na dziś. Można to usunąć w każdej chwili.</string>
+    <string name="log_saved_to_day">Zapisano:&#160;%1$s. Można to usunąć w każdej chwili.</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">Pn / Wt / Śr / Cz / Pt / So / Nd</string>
+    <string name="sheet_cal_hint_select">Niebieskie kropki to dni z wpisami, zielone — dni bez alkoholu. Dotknij, aby otworzyć.</string>
+    <string name="sheet_cal_hint_dry">Dotknij minionego dnia, aby oznaczyć go jako dzień bez alkoholu; dotknij ponownie, aby cofnąć. Dni z wpisami zostają bez zmian.</string>
+    <string name="action_done">Gotowe</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d ml ·&#160;%2$s&#160;%% ·&#160;%3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="one">jednostka</item>
+        <item quantity="few">jednostki</item>
+        <item quantity="many">jednostek</item>
+        <item quantity="other">jednostki</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">wydano</string>
+    <string name="sheet_entry_relog">To samo jeszcze raz</string>
+    <string name="sheet_entry_remove">Usuń z dziennika</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">Czym właściwie jest jednostka?</string>
+    <string name="sheet_units_title__us">Czym właściwie jest drink standardowy?</string>
+    <string name="sheet_units_title__gb">Czym właściwie jest jednostka?</string>
+    <string name="sheet_units_title__au">Czym właściwie jest drink standardowy?</string>
+    <string name="sheet_units_title__ca">Czym właściwie jest drink standardowy?</string>
+    <string name="sheet_units_title__jp">Czym właściwie jest drink standardowy?</string>
+    <string name="sheet_units_title__dk">Czym właściwie jest drink standardowy?</string>
+    <string name="sheet_units_title__vn">Czym właściwie jest drink standardowy?</string>
+    <string name="sheet_units_title__who">Czym właściwie jest drink standardowy?</string>
+    <string name="sheet_units_body">10 g czystego alkoholu — miara, którą stosuje WHO. Każda szklanka kryje w sobie inną ilość, więc liczymy to za ciebie.</string>
+    <string name="sheet_units_chip_pour">Porcja 150 ml</string>
+    <string name="sheet_units_chip_abv" formatted="false">13&#160;% alk.</string>
+    <string name="sheet_units_chip_density">0,789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1,5 jednostki</string>
+    <string name="sheet_units_chip_result__us">1,5 drinka standardowego</string>
+    <string name="sheet_units_chip_result__gb">1,5 jednostki</string>
+    <string name="sheet_units_chip_result__au">1,5 drinka standardowego</string>
+    <string name="sheet_units_chip_result__ca">1,5 drinka standardowego</string>
+    <string name="sheet_units_chip_result__jp">1,5 drinka standardowego</string>
+    <string name="sheet_units_chip_result__dk">1,5 drinka standardowego</string>
+    <string name="sheet_units_chip_result__vn">1,5 drinka standardowego</string>
+    <string name="sheet_units_chip_result__who">1,5 drinka standardowego</string>
+    <string name="sheet_units_density_note">0,789 to po prostu gęstość alkoholu. Nic mistycznego.</string>
+    <string name="sheet_units_targets">To jedna Margarita — po cichu półtorej jednostki. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+    <string name="sheet_units_targets__us">To jedna Margarita — po cichu półtora drinka standardowego. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+    <string name="sheet_units_targets__gb">To jedna Margarita — po cichu półtorej jednostki. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+    <string name="sheet_units_targets__au">To jedna Margarita — po cichu półtora drinka standardowego. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+    <string name="sheet_units_targets__ca">To jedna Margarita — po cichu półtora drinka standardowego. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+    <string name="sheet_units_targets__jp">To jedna Margarita — po cichu półtora drinka standardowego. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+    <string name="sheet_units_targets__dk">To jedna Margarita — po cichu półtora drinka standardowego. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+    <string name="sheet_units_targets__vn">To jedna Margarita — po cichu półtora drinka standardowego. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+    <string name="sheet_units_targets__who">To jedna Margarita — po cichu półtora drinka standardowego. Cel dzienny i tygodniowy startują od wytycznych WHO dotyczących niskiego ryzyka i można je dowolnie przesunąć.</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">Stosujemy metodę Widmarka: zapisany alkohol rozłożony na wodę w organizmie (z masy ciała i płci), minus to, co organizm usuwa — około 0,015&#160;% na godzinę.</string>
+    <string name="sheet_bac_not_measurement">To szacunek, nie pomiar. Jedzenie, leki i własna biologia przesuwają rzeczywistą wartość.</string>
+    <string name="sheet_bac_never_drive">Szacunek nigdy nie jest podstawą do decyzji o prowadzeniu pojazdu. W razie wątpliwości: nie prowadź.</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">Nowy zapisany drink</string>
+    <string name="sheet_custom_name_placeholder">Nazwa, żeby szybko go znaleźć</string>
+    <string name="sheet_custom_base_caption">TYP BAZOWY</string>
+    <string name="sheet_custom_abv_label" formatted="false">Alkohol (%)</string>
+    <string name="sheet_custom_ml_label">Porcja (ml)</string>
+    <string name="sheet_custom_notes_placeholder">Składniki lub notatki (opcjonalnie)</string>
+    <string name="action_save">Zapisz</string>
+    <string name="action_cancel">Anuluj</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7 dni</string>
+    <string name="stats_period_30d">30 dni</string>
+    <string name="stats_period_90d">90 dni</string>
+    <string name="stats_period_1y">1 rok</string>
+    <string name="stats_period_custom">Własny</string>
+    <string name="action_export">Eksport</string>
+    <string name="stats_edit_range">Zmień własny zakres</string>
+    <string name="stats_verdict_numbers">Ten okres&#160;%1$.1f&#160;%3$s · poprzedni&#160;%2$.1f&#160;%3$s</string>
+    <string name="stats_verdict_level_neutral">Na równi z poprzednim okresem.</string>
+    <string name="stats_verdict_less_neutral">%1$d&#160;%% mniej niż w poprzednim okresie</string>
+    <string name="stats_verdict_more_neutral">%1$d&#160;%% więcej niż w poprzednim okresie</string>
+    <string name="stats_verdict_first_numbers">%1$.1f&#160;%2$s w tym okresie.</string>
+    <string name="stats_verdict_first_neutral">Pierwszy okres z danymi — porównanie zacznie się w następnym.</string>
+    <string name="stats_tile_drunk">Wypite</string>
+    <string name="stats_tile_alcohol">Alkohol</string>
+    <string name="stats_tile_spending">Wydatki</string>
+    <string name="stats_tile_calories">Kalorie</string>
+    <string name="stats_unit_ml">ml</string>
+    <plurals name="stats_unit_units">
+        <item quantity="one">jednostka</item>
+        <item quantity="few">jednostki</item>
+        <item quantity="many">jednostek</item>
+        <item quantity="other">jednostki</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="one">drink standardowy</item>
+        <item quantity="few">drinki standardowe</item>
+        <item quantity="many">drinków standardowych</item>
+        <item quantity="other">drinka standardowego</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="one">≈&#160;%1$d cheeseburger</item>
+        <item quantity="few">≈&#160;%1$d cheeseburgery</item>
+        <item quantity="many">≈&#160;%1$d cheeseburgerów</item>
+        <item quantity="other">≈&#160;%1$d cheeseburgera</item>
+    </plurals>
+    <string name="stats_units_chart_title">Wypite jednostki</string>
+    <string name="stats_units_chart_title__us">Wypite drinki standardowe</string>
+    <string name="stats_units_chart_title__gb">Wypite jednostki</string>
+    <string name="stats_units_chart_title__au">Wypite drinki standardowe</string>
+    <string name="stats_units_chart_title__ca">Wypite drinki standardowe</string>
+    <string name="stats_units_chart_title__jp">Wypite drinki standardowe</string>
+    <string name="stats_units_chart_title__dk">Wypite drinki standardowe</string>
+    <string name="stats_units_chart_title__vn">Wypite drinki standardowe</string>
+    <string name="stats_units_chart_title__who">Wypite drinki standardowe</string>
+    <string name="stats_daily_average">Średnia dzienna</string>
+    <string name="stats_units_total">Łącznie&#160;%1$.1f&#160;%2$s</string>
+    <string name="stats_units_per_day">%1$.2f / dzień</string>
+    <string name="stats_units_empty">Wzorzec sam się tu namaluje.</string>
+    <string name="stats_spend_chart_title">Trend wydatków</string>
+    <string name="stats_spend_total">Łącznie&#160;%1$s</string>
+    <string name="stats_spend_per_day">%1$s / dzień</string>
+    <string name="stats_spend_empty">Koszty pojawią się po zapisaniu drinka z ceną.</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">Oszczędności</string>
+    <string name="stats_baseline_label">Typowy tydzień (%1$s)</string>
+    <string name="stats_saved_unset">Podaj typowy tygodniowy wydatek, a to zamieni się w oszczędności — z twoich realnych cen, nie ze średnich krajowych.</string>
+    <string name="stats_saved_under">%1$s poniżej typowego wydatku w tym okresie — na podstawie tego, co naprawdę płacisz, nie średnich.</string>
+    <string name="stats_saved_over">%1$s powyżej typowego wydatku w tym okresie.</string>
+    <string name="stats_breakdown_title">Podział na drinki</string>
+    <string name="stats_breakdown_locked">Zobacz, które drinki prowadzą w twoich tygodniach i ile po cichu składają się na całość.</string>
+    <string name="stats_breakdown_empty">Zapisz kilka drinków, a ulubione same się pokażą.</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="one">%1$s ·&#160;%2$d raz</item>
+        <item quantity="few">%1$s ·&#160;%2$d razy</item>
+        <item quantity="many">%1$s ·&#160;%2$d razy</item>
+        <item quantity="other">%1$s ·&#160;%2$d raza</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d&#160;%%</string>
+    <string name="stats_breakdown_leader">Na czele:&#160;%1$s —&#160;%2$d&#160;%% z&#160;%3$s w tym okresie.</string>
+    <string name="stats_dry_title_positive">Dobra robota z dniami bez alkoholu.</string>
+    <string name="stats_dry_body_positive">Dni bez alkoholu to&#160;%1$d&#160;%% tego okresu. Każdy z nich to odpoczynek, który organizm zauważa.</string>
+    <string name="stats_dry_title_none">Jeszcze żadnego dnia bez alkoholu.</string>
+    <string name="stats_dry_body_none">Pierwszy zaczyna serię — zaznacz dziś w Dzienniku.</string>
+    <string name="stats_dry_title_numbers">Dni bez alkoholu</string>
+    <string name="stats_dry_body_numbers">%1$d z&#160;%2$d dni ·&#160;%3$d&#160;%% tego okresu.</string>
+    <string name="stats_dry_ring_pct">%1$d&#160;%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">Własny zakres</string>
+    <string name="sheet_range_from">Od</string>
+    <string name="sheet_range_to">Do</string>
+    <string name="sheet_range_last7">Ostatnie 7 dni</string>
+    <string name="sheet_range_last30">Ostatnie 30 dni</string>
+    <string name="action_apply">Zastosuj</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">Eksport statystyk</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">Statystyki,&#160;%1$s.csv</string>
+    <string name="sheet_export_desc">Każda liczba z tego okresu, gotowa do wysłania.</string>
+    <string name="sheet_export_cta">Udostępnij CSV</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">Synchronizuj zapisane drinki</string>
+    <string name="sheet_health_body">Zapisane drinki mogą trafiać automatycznie do&#160;%1$s, żeby cały obraz był w jednym miejscu.</string>
+    <string name="sheet_health_data_title">Dane o alkoholu</string>
+    <string name="sheet_health_data_sub">Zapisywane są wyłącznie wpisy o spożyciu alkoholu — nic nie jest odczytywane.</string>
+    <string name="sheet_health_cta">Połącz z&#160;%1$s</string>
+    <string name="sheet_health_change_access">Dostęp można zmienić później w&#160;%1$s.</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">Stałe powiadomienie</string>
+    <string name="sheet_live_body">Dopóki alkohol we krwi spada, cicha karta zostaje w tle — bez otwierania aplikacji.</string>
+    <string name="sheet_live_mock_status">Szacowany alkohol we krwi, spada</string>
+    <string name="sheet_live_mock_value" formatted="false">0,065&#160;%</string>
+    <string name="sheet_live_mock_tozero">3 godz. 42 min do zera</string>
+    <string name="sheet_live_note">Podgląd z przykładowymi liczbami — nic nie jest uruchomione.</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">Zobacz cały obraz.</string>
+    <string name="pay_sub">Twoja pełna historia picia, bieżące oszacowanie promili i tygodniowy trend, który pokazuje, gdzie zaczyna się ciężki miesiąc.</string>
+    <string name="pay_no_ads">Bez reklam. Bez sprzedaży danych. Bez konta.</string>
+    <string name="pay_benefit_history">Każdy drink, jaki kiedykolwiek zapisałeś, nie tylko 90 dni</string>
+    <string name="pay_benefit_bac">Bieżące oszacowanie promili i czas powrotu do zera</string>
+    <string name="pay_benefit_insights">Tygodniowa suma na tle wytycznej, wraz z trendem</string>
+    <string name="pay_benefit_streaks">Serie dni bez alkoholu, zaoszczędzone pieniądze, pominięte kalorie</string>
+    <string name="pay_benefit_quicklog">Powtórz drinka jednym dotknięciem, z ekranu głównego</string>
+    <string name="pay_benefit_report">Czytelny raport PDF do pokazania lekarzowi</string>
+    <string name="pay_compare_caption">CO DOSTAJESZ</string>
+    <string name="pay_compare_free">ZA DARMO</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">Nielimitowane wpisy i własne drinki</string>
+    <string name="pay_compare_export">Eksport, kopia zapasowa i widżety</string>
+    <string name="pay_compare_darkmode">Tryb ciemny, blokada aplikacji i przypomnienia</string>
+    <string name="pay_compare_history">Historia dalej niż 90 dni</string>
+    <string name="pay_compare_bac">Szacunki promili i kafelki szybkiego wpisu</string>
+    <string name="pay_compare_insights">Zaawansowane analizy, PDF i prywatna synchronizacja</string>
+    <string name="pay_plan_weekly">Tygodniowy</string>
+    <string name="pay_plan_monthly">Miesięczny</string>
+    <string name="pay_plan_annual">Roczny</string>
+    <string name="pay_plan_lifetime">Dożywotni</string>
+    <string name="pay_price_line_weekly">%1$s tygodniowo</string>
+    <string name="pay_price_line_monthly">%1$s miesięcznie</string>
+    <string name="pay_price_line_annual">%1$s rocznie</string>
+    <string name="pay_price_line_lifetime">%1$s raz, twoje na zawsze</string>
+    <string name="pay_badge_trial">%1$d DNI GRATIS</string>
+    <string name="pay_badge_save">OSZCZĘDŹ&#160;%1$d%%</string>
+    <string name="pay_badge_best">NAJLEPSZA CENA</string>
+    <string name="pay_loading">Sprawdzamy dzisiejsze ceny w sklepie…</string>
+    <string name="pay_unavailable">Sklep w tej chwili nie odpowiada. Zapisywanie, eksport i kopia zapasowa i tak działają.</string>
+    <string name="pay_retry">Spróbuj ponownie</string>
+    <string name="pay_faq_caption">PYTANIA, ODPOWIEDZI</string>
+    <string name="pay_faq_q_trial">Jak działa darmowy okres próbny?</string>
+    <string name="pay_faq_a_trial">Wszystkie funkcje Pro są twoje przez&#160;%1$d dni. Anuluj przed końcem, a nic nie zostanie pobrane.</string>
+    <string name="pay_faq_q_after">Co się dzieje, gdy się skończy?</string>
+    <string name="pay_faq_a_after">Startuje dokładnie ten plan, który wybrałeś, w cenie z jego karty, nigdy droższy. Przypomnimy 2 dni wcześniej, żeby nic cię nie zaskoczyło.</string>
+    <string name="pay_faq_q_logs">Czy moje wpisy kiedyś zostaną zablokowane?</string>
+    <string name="pay_faq_a_logs">Nie. Zapisywanie, własne drinki, statystyki tego tygodnia, widżety, eksport CSV, kopia zapasowa, tryb ciemny, blokada aplikacji i przypomnienia są darmowe na zawsze. Jeśli przestaniesz płacić, wszystko, co zapisałeś, zostaje twoje i zostaje czytelne.</string>
+    <string name="pay_faq_q_cancel">Czy mogę anulować w każdej chwili?</string>
+    <string name="pay_faq_a_cancel">Zawsze. Zarządzaj lub anuluj w swoich subskrypcjach&#160;%1$s, a twoje dane zostają tutaj, w telefonie.</string>
+    <string name="pay_cta_trial">Zacznij&#160;%1$d dni gratis</string>
+    <string name="pay_cta_plan">Dalej,&#160;%1$s</string>
+    <string name="pay_cta_lifetime">Odblokuj Pro na zawsze</string>
+    <string name="pay_cta_default">Dalej</string>
+    <string name="pay_sub_trial">%1$d dni gratis, potem&#160;%2$s. Dziś nic nie zostanie pobrane.</string>
+    <string name="pay_sub_recurring">Odnawia się za&#160;%1$s, dopóki nie anulujesz. Jedno dotknięcie w Ustawieniach.</string>
+    <string name="pay_sub_lifetime">Jedna płatność. Nigdy nie zmienia się w subskrypcję.</string>
+    <string name="pay_restore">Przywróć</string>
+    <string name="pay_terms">Regulamin</string>
+    <string name="pay_privacy">Prywatność</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro. Dzięki, że trzymasz tu światło.</string>
+    <string name="set_pro_banner_title">Więcej wglądu, mniej wysiłku.</string>
+    <string name="set_pro_banner_sub">Automatyczne dni bez alkoholu · kafelki szybkiego zapisu · monitor alkoholu we krwi</string>
+    <string name="set_section_you">TY</string>
+    <string name="set_section_insights">ANALIZY I SYNCHRONIZACJA</string>
+    <string name="set_section_appearance">WYGLĄD</string>
+    <string name="set_section_data">TWOJE DANE</string>
+    <string name="set_section_privacy">PRYWATNOŚĆ I TON</string>
+    <string name="set_section_support">POMOC</string>
+    <string name="set_profile">Profil</string>
+    <string name="set_profile_not_set">Nie ustawiono</string>
+    <string name="set_profile_summary">%1$s&#160;%2$s ·&#160;%3$s</string>
+    <string name="set_units">Miary</string>
+    <string name="set_units_summary">%1$s ·&#160;%2$s</string>
+    <string name="set_guideline">Wytyczne alkoholowe</string>
+    <string name="set_guideline_value">%1$d / dzień</string>
+    <string name="set_ask_cost">Pytaj o cenę drinka</string>
+    <string name="set_show_calories">Pokazuj kalorie</string>
+    <string name="set_auto_dry">Wykrywaj dni bez alkoholu</string>
+    <string name="set_notifications">Powiadomienia</string>
+    <string name="set_notif_none">Brak</string>
+    <plurals name="set_notif_count">
+        <item quantity="one">%1$d dziennie</item>
+        <item quantity="few">%1$d dziennie</item>
+        <item quantity="many">%1$d dziennie</item>
+        <item quantity="other">%1$d dziennie</item>
+    </plurals>
+    <string name="set_health_sync">Synchronizacja zdrowia</string>
+    <string name="set_health_connected">Połączono</string>
+    <string name="set_health_off">Wyłączone</string>
+    <string name="set_quick_log">Kafelki szybkiego zapisu</string>
+    <string name="set_quick_log_setup">Skonfiguruj</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="one">%1$d drink</item>
+        <item quantity="few">%1$d drinki</item>
+        <item quantity="many">%1$d drinków</item>
+        <item quantity="other">%1$d drinka</item>
+    </plurals>
+    <string name="set_dark_mode">Tryb ciemny</string>
+    <string name="set_app_icon">Ikona aplikacji</string>
+    <string name="set_icon_default">Domyślna</string>
+    <string name="set_icon_gift">Prezentowa</string>
+    <string name="set_icon_holiday">Świąteczna</string>
+    <string name="set_language">Język</string>
+    <string name="set_language_value">Polski</string>
+    <string name="set_backup_title">Kopia zapasowa</string>
+    <string name="set_backup_title_none">Brak kopii zapasowej</string>
+    <string name="set_backup_detail_never_android">Utwórz ją poniżej · na tym urządzeniu · eksport zawsze bezpłatny</string>
+    <string name="set_backup_detail_dated">%1$s · na tym urządzeniu · eksport zawsze bezpłatny</string>
+    <string name="set_backup_row">Kopia zapasowa, eksport i import</string>
+    <string name="set_backup_free">Bezpłatne</string>
+    <string name="set_app_lock">Blokada aplikacji</string>
+    <string name="set_app_lock_sub">Odblokuj, zanim cokolwiek się pokaże.</string>
+    <string name="set_discreet">Dyskretne powiadomienia</string>
+    <string name="set_discreet_sub">Przypomnienia na ekranie blokady nigdy nie wspominają o alkoholu.</string>
+    <string name="set_day_ends">Doba kończy się o</string>
+    <string name="set_day_ends_sub">Drink o 1:00 liczy się do poprzedniej nocy.</string>
+    <string name="set_cutoff_midnight">Północ</string>
+    <string name="set_cutoff_2am">2:00</string>
+    <string name="set_cutoff_4am">4:00</string>
+    <string name="set_tone">Ton</string>
+    <string name="set_tone_icon_sample">Aa</string>
+    <string name="set_tone_neutral">Neutralny</string>
+    <string name="set_tone_push">Motywuj</string>
+    <string name="set_tone_numbers">Liczby</string>
+    <string name="set_tone_sub_neutral">Liczby i łagodne potwierdzenie, nigdy ocena.</string>
+    <string name="set_tone_sub_push">Nacisk na serie i mocniejsze podkreślenie przekroczeń.</string>
+    <string name="set_tone_sub_numbers">Czysty rejestr — bez słów oceny i bez oceny kolorem.</string>
+    <string name="set_contact">Kontakt z pomocą</string>
+    <string name="set_about">O aplikacji Alcohol Tracker</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">Identyfikator klienta</string>
+    <string name="set_copy">Kopiuj</string>
+    <string name="set_footer">Zrobione z umiarem.\nTwoje dane nigdy nie opuszczają tego telefonu.</string>
+    <string name="support_email_subject">Alcohol Tracker — pomoc</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">Twoje ciało, twoje liczby.</string>
+    <string name="profile_body">Ten sam drink działa inaczej w każdym organizmie. Dwa szybkie szczegóły i szacunki przestają być średnią, a zaczynają być twoje.</string>
+    <string name="profile_privacy_note">Dziesięć sekund, raz. Nic stąd nigdy nie opuszcza tego telefonu.</string>
+    <string name="profile_sex_label">Płeć</string>
+    <string name="profile_sex_female">Kobieta</string>
+    <string name="profile_sex_male">Mężczyzna</string>
+    <string name="profile_weight_label">Masa ciała</string>
+    <string name="profile_weight_kg">kg</string>
+    <string name="profile_weight_lb">lb</string>
+    <string name="profile_weight_placeholder">Wystarczy przybliżenie</string>
+    <string name="profile_cta">Ustaw po swojemu</string>
+    <string name="profile_footer">Jedno i drugie można zmienić w każdej chwili — szacunki od razu się dostosują.</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">Energia</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">Wielkość porcji</string>
+    <string name="units_millilitres">Mililitry</string>
+    <string name="units_ounces">Uncje</string>
+    <string name="units_note">To zmienia tylko sposób wyświetlania liczb, nigdy tego, co zapisano.</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">Nic nie zaplanowano.</string>
+    <string name="notif_empty_body">Wieczory należą do ciebie. Jeśli łagodne codzienne przypomnienie miałoby pomóc, dodaj je poniżej.</string>
+    <string name="notif_repeat_hint">Każde przypomnienie powtarza się codziennie. Dotknij −, aby usunąć.</string>
+    <string name="notif_reminder_sub">%1$s ·&#160;%2$s</string>
+    <string name="notif_create_cta">Utwórz powiadomienie</string>
+    <string name="sheet_notif_title_placeholder">Tytuł, np. Wieczorna notatka</string>
+    <string name="sheet_notif_time_label">Godzina przypomnienia</string>
+    <string name="sheet_notif_message_placeholder">Wiadomość (opcjonalnie)</string>
+    <string name="sheet_notif_repeat_note">Powtarza się codziennie o wybranej godzinie.</string>
+    <string name="sheet_notif_cta">Utwórz</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">Szacowany alkohol we krwi, czas do zera i stała karta statusu.</string>
+    <string name="set_bac_unit_label">Miara alkoholu we krwi</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">Podgląd karty statusu</string>
+    <string name="set_bac_preview_sub">Ciche stałe powiadomienie, dopóki alkohol we krwi spada.</string>
+    <string name="set_bac_disclaimer">Szacunki mają charakter wyłącznie informacyjny. Nigdy nie opieraj na nich decyzji o prowadzeniu pojazdu.</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">Kafelki szybkiego zapisu</string>
+    <string name="quicklog_mock_caption">SZYBKI ZAPIS</string>
+    <string name="quicklog_mock_footer">jedno dotknięcie · zapisane</string>
+    <string name="quicklog_section_caption">ZAPISANE DRINKI JAKO KAFELKI</string>
+    <string name="quicklog_selected_count">Wybrano&#160;%1$d z&#160;%2$d</string>
+    <string name="quicklog_empty_title">Brak zapisanych drinków.</string>
+    <string name="quicklog_empty_sub">Utwórz jednego, a będzie o jedno dotknięcie stąd — mieszczą się cztery.</string>
+    <string name="quicklog_drink_meta">%1$d ml ·&#160;%2$s&#160;%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">Kopia zapasowa i przywracanie</string>
+    <string name="backup_status_dated">Kopia zapasowa:&#160;%1$s, na tym urządzeniu.</string>
+    <string name="backup_status_none_android">Brak kopii zapasowej — utwórz ją poniżej.</string>
+    <string name="backup_whats_here">Co jest na tym telefonie</string>
+    <plurals name="backup_count_logs">
+        <item quantity="one">wpis</item>
+        <item quantity="few">wpisy</item>
+        <item quantity="many">wpisów</item>
+        <item quantity="other">wpisu</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="one">dzień bez alkoholu</item>
+        <item quantity="few">dni bez alkoholu</item>
+        <item quantity="many">dni bez alkoholu</item>
+        <item quantity="other">dnia bez alkoholu</item>
+    </plurals>
+    <string name="backup_count_profile">profil</string>
+    <string name="backup_export">Eksportuj dane</string>
+    <string name="backup_import">Importuj dane</string>
+    <string name="backup_create">Utwórz kopię zapasową</string>
+    <string name="backup_restore">Przywróć z kopii zapasowej</string>
+    <string name="backup_merge_note">Import łączy się z tym, co już jest — duplikaty są po cichu pomijane.</string>
+    <string name="backup_danger_zone">STREFA RYZYKA</string>
+    <string name="backup_clear_all">Wyczyść wszystkie dane</string>
+    <string name="backup_clear_note">Nieodwracalne. Nie da się tego cofnąć. Najpierw wyeksportuj kopię, jeśli dane mają znaczenie.</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">O aplikacji</string>
+    <string name="about_version">Wersja&#160;%1$s ·&#160;%2$s</string>
+    <string name="about_privacy">Polityka prywatności</string>
+    <string name="about_terms">Regulamin</string>
+    <string name="about_ack_caption">PODZIĘKOWANIA</string>
+    <string name="about_ack_role_db">lokalna baza danych</string>
+    <string name="about_ack_role_ui_android">interfejs użytkownika</string>
+    <string name="about_ack_role_settings_android">ustawienia</string>
+    <string name="about_footer">Szklanka i kropla narysowane kodem,\nz umiarem.</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">Ta sama aplikacja, inny płaszcz. Wybierz tę, która pasuje do ekranu głównego.</string>
+    <string name="icon_relaunch_note">Przełączenie może na chwilę zamknąć aplikację, gdy launcher się odświeża.</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">Trendy alkoholu we krwi</string>
+    <string name="trends_title">Szczytowy szacowany alkohol we krwi</string>
+    <string name="trends_range">Ostatnie 7 dni</string>
+    <string name="trends_axis_start">6 dni temu</string>
+    <string name="trends_axis_end">dziś</string>
+    <string name="trends_note" formatted="false">Krzywa opada, bo organizm usuwa mniej więcej 0,015&#160;% na godzinę. Płaskie tygodnie to dobre tygodnie.</string>
+    <string name="trends_empty_title">Jeszcze bez krzywej.</string>
+    <string name="trends_empty_body">Uzupełnij profil i zapisz drinka — linia trendu zaczyna się od pierwszej porcji.</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">Wytyczne alkoholowe</string>
+    <string name="guideline_intro">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 jednostek dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_intro__us">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 drinków standardowych dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_intro__gb">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 jednostek dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_intro__au">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 drinków standardowych dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_intro__ca">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 drinków standardowych dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_intro__jp">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 drinków standardowych dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_intro__dk">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 drinków standardowych dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_intro__vn">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 drinków standardowych dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_intro__who">Wytyczne WHO dotyczące niskiego ryzyka wskazują górną granicę 2 drinków standardowych dziennie i regularne dni bez alkoholu. Ustaw to, co pasuje tobie.</string>
+    <string name="guideline_daily_target">Cel dzienny</string>
+    <string name="guideline_weekly_target">Cel tygodniowy</string>
+    <plurals name="guideline_target_units">
+        <item quantity="one">%1$d jednostka</item>
+        <item quantity="few">%1$d jednostki</item>
+        <item quantity="many">%1$d jednostek</item>
+        <item quantity="other">%1$d jednostki</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="one">%1$d drink standardowy</item>
+        <item quantity="few">%1$d drinki standardowe</item>
+        <item quantity="many">%1$d drinków standardowych</item>
+        <item quantity="other">%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="one">%1$d jednostka</item>
+        <item quantity="few">%1$d jednostki</item>
+        <item quantity="many">%1$d jednostek</item>
+        <item quantity="other">%1$d jednostki</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="one">%1$d drink standardowy</item>
+        <item quantity="few">%1$d drinki standardowe</item>
+        <item quantity="many">%1$d drinków standardowych</item>
+        <item quantity="other">%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="one">%1$d drink standardowy</item>
+        <item quantity="few">%1$d drinki standardowe</item>
+        <item quantity="many">%1$d drinków standardowych</item>
+        <item quantity="other">%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="one">%1$d drink standardowy</item>
+        <item quantity="few">%1$d drinki standardowe</item>
+        <item quantity="many">%1$d drinków standardowych</item>
+        <item quantity="other">%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="one">%1$d drink standardowy</item>
+        <item quantity="few">%1$d drinki standardowe</item>
+        <item quantity="many">%1$d drinków standardowych</item>
+        <item quantity="other">%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="one">%1$d drink standardowy</item>
+        <item quantity="few">%1$d drinki standardowe</item>
+        <item quantity="many">%1$d drinków standardowych</item>
+        <item quantity="other">%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="one">%1$d drink standardowy</item>
+        <item quantity="few">%1$d drinki standardowe</item>
+        <item quantity="many">%1$d drinków standardowych</item>
+        <item quantity="other">%1$d drinka standardowego</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d jednostka. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d jednostki. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d jednostek. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d jednostki. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d drink standardowy. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinki standardowe. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinków standardowych. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinka standardowego. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d jednostka. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d jednostki. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d jednostek. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d jednostki. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d drink standardowy. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinki standardowe. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinków standardowych. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinka standardowego. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d drink standardowy. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinki standardowe. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinków standardowych. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinka standardowego. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d drink standardowy. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinki standardowe. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinków standardowych. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinka standardowego. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d drink standardowy. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinki standardowe. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinków standardowych. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinka standardowego. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d drink standardowy. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinki standardowe. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinków standardowych. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinka standardowego. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="one">Cel miesięczny wylicza się automatycznie:&#160;%1$d drink standardowy. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="few">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinki standardowe. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="many">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinków standardowych. Wytyczne WHO to źródło, nie wyrok.</item>
+        <item quantity="other">Cel miesięczny wylicza się automatycznie:&#160;%1$d drinka standardowego. Wytyczne WHO to źródło, nie wyrok.</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">Usunąć tego drinka?</string>
+    <string name="dialog_delete_body">Zniknie z dziennika, a liczby wrócą na swoje miejsce.</string>
+    <string name="dialog_delete_keep">Zostaw</string>
+    <string name="dialog_delete_remove">Usuń</string>
+    <string name="dialog_clear_title">Wyczyścić wszystkie dane?</string>
+    <string name="dialog_clear_body">Każdy wpis, każdy dzień bez alkoholu i każde ustawienie — bezpowrotnie. Jeśli chcesz kopię, wyeksportuj ją najpierw.</string>
+    <string name="dialog_clear_delete">Usuń</string>
+    <string name="dialog_health_title">Zezwolić aplikacji „%1$s” na zapisywanie spożycia alkoholu w&#160;%2$s?</string>
+    <string name="dialog_health_deny">Nie zezwalaj</string>
+    <string name="dialog_health_allow">Zezwól</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">Zapisano:&#160;%1$s,&#160;%2$.1f&#160;%3$s.</string>
+    <string name="toast_logged">Zapisano:&#160;%1$.1f&#160;%2$s.</string>
+    <string name="action_undo">Cofnij</string>
+    <string name="toast_relogged">To samo jeszcze raz — zapisano na dziś.</string>
+    <string name="toast_entry_removed">Usunięto z dziennika.</string>
+    <string name="toast_dry_marked">Dzień bez alkoholu zapisany. Ciche zwycięstwa liczą się podwójnie.</string>
+    <string name="toast_day_has_drinks">W tym dniu są już zapisane drinki.</string>
+    <string name="toast_day_has_drinks_cal">W tamtym dniu są zapisane drinki.</string>
+    <string name="toast_custom_saved">Zapisano — następnym razem jedno dotknięcie.</string>
+    <string name="toast_profile_incomplete">Uzupełnij masę ciała i płeć — bez nich nie da się policzyć szacunku.</string>
+    <string name="toast_profile_saved">Zapisano — szacunki alkoholu we krwi właśnie się wyostrzyły.</string>
+    <string name="toast_reminder_scheduled">Zaplanowano — łagodne przypomnienie, codziennie.</string>
+    <string name="toast_reminder_silent">Zapisano, ale&#160;%1$s będzie je wyciszać.</string>
+    <string name="toast_icon_updated">Ikona zmieniona — pasuje.</string>
+    <string name="toast_customer_id_copied">Skopiowano — wklej to w dowolnym e-mailu do pomocy.</string>
+    <string name="toast_pro_welcome">Witamy w Pro — wszystko odblokowane.</string>
+    <string name="toast_restore_success">Witamy z powrotem — wszystko odblokowane.</string>
+    <string name="toast_restore_none">Nie ma czego przywracać — wszystko gotowe.</string>
+    <string name="toast_purchase_unavailable">Zakupy są teraz niedostępne.</string>
+    <string name="toast_health_connected">Drinki płyną teraz po cichu do&#160;%1$s.</string>
+    <string name="toast_backup_created">Kopia zapasowa utworzona na tym urządzeniu.</string>
+    <string name="toast_backup_restored_android">Przywrócono — duplikaty po cichu pominięto.</string>
+    <string name="toast_backup_none_android">Brak kopii na tym urządzeniu.</string>
+    <string name="toast_export_file_android">Plik kopii zapisany — trzymaj go w bezpiecznym miejscu.</string>
+    <string name="toast_file_unreadable">Nie udało się odczytać tego pliku.</string>
+    <plurals name="toast_import_result">
+        <item quantity="one">Zaimportowano&#160;%1$d, pominięto&#160;%2$d duplikat.</item>
+        <item quantity="few">Zaimportowano&#160;%1$d, pominięto&#160;%2$d duplikaty.</item>
+        <item quantity="many">Zaimportowano&#160;%1$d, pominięto&#160;%2$d duplikatów.</item>
+        <item quantity="other">Zaimportowano&#160;%1$d, pominięto&#160;%2$d duplikatu.</item>
+    </plurals>
+    <string name="toast_import_ok_android">Zaimportowano — duplikaty po cichu pominięto.</string>
+    <string name="toast_import_invalid_android">To nie wyglądało na plik kopii zapasowej.</string>
+    <string name="toast_cleared">Czysta karta. Obchodź się z nią łagodnie.</string>
+    <string name="toast_csv_ready_android">Gotowe do udostępnienia.</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">Codzienne przypomnienia</string>
+    <string name="notif_channel_reminders_desc">Codzienne przypomnienia tworzone w Ustawieniach.</string>
+    <string name="notif_channel_bac">Status szacunku</string>
+    <string name="notif_channel_bac_desc">Cicha karta, dopóki szacunek spada.</string>
+    <string name="notif_discreet_title">Wieczorne podsumowanie</string>
+    <string name="notif_discreet_body">Dziesięć sekund notatki wystarczy, żeby obraz był uczciwy.</string>
+    <string name="notif_reminder_body_fallback">Krótka notatka i obraz pozostaje uczciwy.</string>
+    <string name="notif_bac_discreet_title">Spada</string>
+    <string name="notif_bac_discreet_body">Ok.&#160;%1$s do zera.</string>
+    <string name="notif_bac_title">Szacowany alkohol we krwi:&#160;%1$s</string>
+    <string name="notif_bac_body">Nigdy nie jest to zielone światło do jazdy.&#160;%1$s do zera.</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">Poprzedni dzień</string>
+    <string name="a11y_open_calendar">Otwórz kalendarz</string>
+    <string name="a11y_next_day">Następny dzień</string>
+    <string name="a11y_log_quick">Zapisz:&#160;%1$s,&#160;%2$.1f&#160;%3$s</string>
+    <string name="a11y_units_info">Czym jest jednostka?</string>
+    <string name="a11y_units_info__us">Czym jest drink standardowy?</string>
+    <string name="a11y_units_info__gb">Czym jest jednostka?</string>
+    <string name="a11y_units_info__au">Czym jest drink standardowy?</string>
+    <string name="a11y_units_info__ca">Czym jest drink standardowy?</string>
+    <string name="a11y_units_info__jp">Czym jest drink standardowy?</string>
+    <string name="a11y_units_info__dk">Czym jest drink standardowy?</string>
+    <string name="a11y_units_info__vn">Czym jest drink standardowy?</string>
+    <string name="a11y_units_info__who">Czym jest drink standardowy?</string>
+    <string name="a11y_intake_ring">Dziś&#160;%1$.1f z&#160;%2$d&#160;%3$s</string>
+    <string name="a11y_mini_progress">%1$s:&#160;%2$.1f z&#160;%3$d&#160;%4$s</string>
+    <string name="a11y_back">Wstecz</string>
+    <string name="a11y_close">Zamknij</string>
+    <string name="a11y_prev_month">Poprzedni miesiąc</string>
+    <string name="a11y_next_month">Następny miesiąc</string>
+    <string name="a11y_cal_day">Dzień&#160;%1$d</string>
+    <string name="a11y_cal_day_logged">Dzień&#160;%1$d, zapisane drinki</string>
+    <string name="a11y_cal_day_dry">Dzień&#160;%1$d, dzień bez alkoholu</string>
+    <string name="a11y_cal_day_logged_dry">Dzień&#160;%1$d, zapisane drinki, dzień bez alkoholu</string>
+    <string name="a11y_prev_period">Poprzedni okres</string>
+    <string name="a11y_next_period">Następny okres</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="one">%1$d dzień bez alkoholu,&#160;%2$d procent tego okresu</item>
+        <item quantity="few">%1$d dni bez alkoholu,&#160;%2$d procent tego okresu</item>
+        <item quantity="many">%1$d dni bez alkoholu,&#160;%2$d procent tego okresu</item>
+        <item quantity="other">%1$d dnia bez alkoholu,&#160;%2$d procent tego okresu</item>
+    </plurals>
+    <string name="a11y_remove_reminder">Usuń przypomnienie:&#160;%1$s</string>
+    <string name="a11y_toggle_on">Włączone</string>
+    <string name="a11y_toggle_off">Wyłączone</string>
+    <string name="a11y_fab_add">Dodaj</string>
+    <string name="a11y_fab_close">Zamknij akcje</string>
+    <string name="a11y_fab_hint">Zapisz drinka lub zaznacz dzień bez alkoholu</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">jednostka</string>
+    <string name="units_noun_unit_pl">jednostki</string>
+    <string name="units_noun_unit_short">jednostki</string>
+    <string name="units_noun_unit_abbr">j.</string>
+    <string name="units_noun_unit_indef">jednostka</string>
+    <string name="units_noun_std_sg">drink standardowy</string>
+    <string name="units_noun_std_pl">drinki standardowe</string>
+    <string name="units_noun_std_short">drinki</string>
+    <string name="units_noun_std_abbr">ds</string>
+    <string name="units_noun_std_indef">drink standardowy</string>
+    <string name="units_noun_local_sg">drink standardowy</string>
+    <string name="units_noun_local_pl">drinki standardowe</string>
+    <string name="units_noun_local_short">drinki</string>
+    <string name="units_noun_local_abbr">ds</string>
+    <string name="units_noun_local_indef">drink standardowy</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">Dziennik</string>
+    <string name="tab_statistics_short">Statystyki</string>
+    <string name="tab_settings_short">Więcej</string>
+</resources>

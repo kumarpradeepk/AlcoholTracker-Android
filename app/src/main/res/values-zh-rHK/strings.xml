@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/zh-Hant-HK.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">日誌</string>
+    <string name="tab_statistics">統計</string>
+    <string name="tab_settings">設定</string>
+    <string name="lock_tap_to_unlock">已鎖定，輕點即可解鎖。</string>
+    <string name="applock_prompt_title">Alcohol Tracker 已鎖定</string>
+    <string name="applock_prompt_sub">解鎖之後才會顯示任何內容。</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">歡迎使用\nAlcohol Tracker</string>
+    <string name="ob_welcome_sub">如實記下每一杯的小本子。</string>
+    <string name="ob_welcome_body">記錄，不評價。幾秒記下一杯，看着估算的血液酒精濃度慢慢回落，在手腕上也看得到。</string>
+    <string name="ob_welcome_quick_caption">從口袋快速記錄</string>
+    <string name="ob_welcome_bac_example" formatted="false">估算血液酒精濃度 0.032%</string>
+    <string name="ob_welcome_sober_example">估算值歸零約需 2 小時</string>
+    <string name="ob_get_started">開始使用</string>
+    <string name="ob_step_indicator">第 %1$d 步，共 3 步</string>
+    <string name="ob_skip">略過</string>
+    <string name="ob_goals_title">是甚麼帶你來的？</string>
+    <string name="ob_goals_sub">覺得對的都可以選。這些只留在你和這個 App 之間。</string>
+    <string name="ob_goal_less">飲少一點</string>
+    <string name="ob_goal_awareness">知道自己飲了多少</string>
+    <string name="ob_goal_break">讓身體休息一下</string>
+    <string name="ob_goal_free_days">多一些無酒日</string>
+    <string name="ob_goal_conscious">有意識地飲</string>
+    <string name="ob_goal_reset">重新調整習慣的基準</string>
+    <string name="ob_goal_social">應付社交場合</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="other">以 %1$d 個目標繼續</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">至少選一個目標</string>
+    <string name="ob_base_title">平常一個星期飲幾多杯？</string>
+    <string name="ob_base_sub">只是大概摸一摸你的節奏，不是評價，只是一個起點。</string>
+    <string name="ob_base_0_4">0–4 杯</string>
+    <string name="ob_base_5_9">5–9 杯</string>
+    <string name="ob_base_10_14">10–14 杯</string>
+    <string name="ob_base_15_19">15–19 杯</string>
+    <string name="ob_base_20_plus">20 杯或以上</string>
+    <string name="ob_continue">繼續</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">今日</string>
+    <string name="diary_yesterday">昨日</string>
+    <string name="diary_pro_banner_title">解鎖完整的畫面</string>
+    <string name="diary_pro_banner_sub">快速記錄圖塊 · 血液酒精濃度分析 · 自動偵測無酒日 · 提醒</string>
+    <string name="diary_usual">照舊？</string>
+    <string name="units_abbrev_value">%1$.1f %2$s</string>
+    <string name="diary_intake_today">今日攝入量</string>
+    <string name="diary_intake">攝入量</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="other">共 %1$d %2$s</item>
+    </plurals>
+    <string name="diary_this_week">本星期</string>
+    <string name="diary_this_month">本月</string>
+    <string name="diary_mini_value">%1$.1f / %2$d</string>
+    <string name="diary_remaining_numbers">今日 %1$.1f／%2$d %3$s。</string>
+    <string name="diary_remaining_zero_neutral">今日的目標一點未動，又或者，今日根本不需要。</string>
+    <string name="diary_remaining_left_neutral">距離今日目標，還有 %1$.1f %2$s。</string>
+    <string name="diary_remaining_at_target_neutral">剛好到目標，下一杯來點水？</string>
+    <string name="diary_remaining_over_neutral">超出今日目標 %2$d %3$s，多了 %1$.1f。</string>
+    <string name="diary_adjust_guideline">調整飲酒指引</string>
+    <string name="bac_monitor">血液酒精濃度監測</string>
+    <string name="bac_status_waiting">等待中</string>
+    <string name="bac_free_body">解鎖 Pro，記下一杯，估算的血液酒精濃度就會在這裏顯示。</string>
+    <string name="bac_how_estimated">血液酒精濃度如何估算</string>
+    <string name="bac_trends">走勢</string>
+    <string name="bac_setup_title">設定你的血液酒精濃度檔案</string>
+    <string name="bac_setup_body">填上體重和性別，估算值才真正有意思，十秒就夠。</string>
+    <string name="bac_setup_cta">設定血液酒精濃度檔案</string>
+    <string name="bac_status_rising">上升中</string>
+    <string name="bac_status_settling">回落中</string>
+    <string name="bac_status_clear">估算歸零</string>
+    <string name="bac_value_percent">%1$.3f%%</string>
+    <string name="bac_value_permille">%1$.2f‰</string>
+    <string name="bac_sober_in">估算值歸零約需 %1$s</string>
+    <string name="bac_all_clear">估算值已歸零，計算上沒有餘下酒精。</string>
+    <string name="bac_disclaimer_short">估算值只供參考，絕不代表可以駕駛。</string>
+    <string name="diary_dry_marked">無酒日，記下了。</string>
+    <string name="diary_dry_remembered">無酒日，記住了。</string>
+    <string name="diary_dry_body">你的身體，正靜靜為自己斟一杯謝意。</string>
+    <string name="diary_dry_unmark">取消標記</string>
+    <string name="diary_logged_today">今日記錄</string>
+    <string name="diary_logged_this_day">當日記錄</string>
+    <string name="diary_entry_meta">%1$d 毫升 · %2$s%%</string>
+    <string name="diary_empty_title_today">到目前為止，杯還是空的。</string>
+    <string name="diary_empty_title_other">這一日沒有記錄。</string>
+    <string name="diary_empty_body_today">斟了就輕點兩下記下來，又或者把今日標為無酒日，讓連續紀錄由此開始。</string>
+    <string name="diary_empty_body_other">記得的話就補上，補回舊日子，模式才誠實。</string>
+    <string name="action_log_drink">記錄一杯</string>
+    <string name="action_mark_dry_day">標記無酒日</string>
+    <string name="diary_add_previous_dry">補回過往的無酒日</string>
+    <string name="action_dry_day">無酒日</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">微調細節</string>
+    <string name="log_title_review">檢視並儲存</string>
+    <string name="log_cta_next">下一步</string>
+    <string name="log_cta_save">儲存這一杯</string>
+    <string name="log_pick_intro">飲了甚麼？揀個相近的就可以，下一步再慢慢調。</string>
+    <string name="log_search_placeholder">搜尋飲品</string>
+    <string name="log_custom_title">自訂一款飲品</string>
+    <string name="log_custom_sub">任何份量、任何酒精度，永遠不收費。</string>
+    <string name="log_section_your_drinks">你的飲品</string>
+    <string name="log_section_popular">熱門</string>
+    <string name="log_grid_meta">%1$s%% · %2$d 毫升</string>
+    <string name="log_tune_intro">調到跟枱面上那一杯一樣。</string>
+    <string name="log_abv_label">酒精度</string>
+    <string name="log_abv_value">%1$.1f%%</string>
+    <string name="log_serving_label">份量</string>
+    <string name="log_unit_ml">毫升</string>
+    <string name="log_unit_floz">安士</string>
+    <string name="log_serving_ml_value">%1$d 毫升</string>
+    <string name="log_serving_oz_value">%1$.1f 安士</string>
+    <string name="log_quantity_label">杯數</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈ %1$.1f %3$s · %2$d 千卡</string>
+    <string name="log_working_line">%1$d 毫升 × %2$s%% × 0.789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_half">½ × %1$d 毫升 × %2$s%% × 0.789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_qty">%1$d × %2$d 毫升 × %3$s%% × 0.789 ÷ 1000 = %4$.1f %5$s</string>
+    <string name="log_review_meta">%1$d 毫升 · 酒精度 %2$s%%</string>
+    <string name="log_review_meta_half">×½ · %1$d 毫升 · 酒精度 %2$s%%</string>
+    <string name="log_review_meta_qty">×%1$d · %2$d 毫升 · 酒精度 %3$s%%</string>
+    <string name="log_when_label">幾時</string>
+    <string name="log_when_now">現在</string>
+    <string name="log_when_1h">1 小時前</string>
+    <string name="log_when_2h">2 小時前</string>
+    <string name="log_cost_label">幾多錢？</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">卡路里</string>
+    <string name="log_calories_kcal">%1$d 千卡</string>
+    <string name="log_saved_to_today">已存到今日，隨時可以移除。</string>
+    <string name="log_saved_to_day">已存到 %1$s，隨時可以移除。</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">日 / 一 / 二 / 三 / 四 / 五 / 六</string>
+    <string name="sheet_cal_hint_select">藍點是有記錄的日子，綠點是無酒日。輕點一下就可以打開。</string>
+    <string name="sheet_cal_hint_dry">輕點過往的日子就標為無酒日，再點一次取消。有記錄的日子維持不變。</string>
+    <string name="action_done">完成</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d 毫升 · %2$s%% · %3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">千卡</string>
+    <string name="stat_label_spent">花費</string>
+    <string name="sheet_entry_relog">照舊，再記一杯</string>
+    <string name="sheet_entry_remove">從日誌移除</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_title__us">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_title__gb">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_title__au">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_title__ca">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_title__jp">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_title__dk">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_title__vn">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_title__who">一%1$s，究竟是甚麼？</string>
+    <string name="sheet_units_body">10 克純酒精，世衞用的那把尺。每一杯藏着的份量都不同，所以計算交給我們。</string>
+    <string name="sheet_units_chip_pour">150 毫升一杯</string>
+    <string name="sheet_units_chip_abv" formatted="false">酒精度 13%</string>
+    <string name="sheet_units_chip_density">0.789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__us">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__gb">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__au">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__ca">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__jp">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__dk">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__vn">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__who">1.5 %1$s</string>
+    <string name="sheet_units_density_note">0.789 只是酒精的密度，沒有甚麼玄機。</string>
+    <string name="sheet_units_targets">那是一杯 Margarita，靜靜地就是一個半%1$s。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+    <string name="sheet_units_targets__us">那是一杯 Margarita，靜靜地就是一個半標準杯。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+    <string name="sheet_units_targets__gb">那是一杯 Margarita，靜靜地就是一個半酒精單位。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+    <string name="sheet_units_targets__au">那是一杯 Margarita，靜靜地就是一個半標準杯。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+    <string name="sheet_units_targets__ca">那是一杯 Margarita，靜靜地就是一個半標準杯。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+    <string name="sheet_units_targets__jp">那是一杯 Margarita，靜靜地就是一個半標準杯。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+    <string name="sheet_units_targets__dk">那是一杯 Margarita，靜靜地就是一個半標準杯。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+    <string name="sheet_units_targets__vn">那是一杯 Margarita，靜靜地就是一個半標準杯。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+    <string name="sheet_units_targets__who">那是一杯 Margarita，靜靜地就是一個半標準杯。你的每日和每星期目標，由世衞低風險指引起步，之後怎樣調，都是你的事。</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">我們用 Widmark 公式：把你記下的酒精，分散到由體重和性別推算的身體水分之中，再減去身體代謝掉的部分，大約每小時 0.015%。</string>
+    <string name="sheet_bac_not_measurement">這是估算，不是量度。食物、藥物，以及你自己的身體，都會令真實數字不同。</string>
+    <string name="sheet_bac_never_drive">絕對不要用估算值去判斷可不可以駕駛。只要有半點猶豫，就不要駕駛。</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">新增自訂飲品</string>
+    <string name="sheet_custom_name_placeholder">名稱，方便快些找到</string>
+    <string name="sheet_custom_base_caption">基本類別</string>
+    <string name="sheet_custom_abv_label" formatted="false">酒精度 %</string>
+    <string name="sheet_custom_ml_label">份量（毫升）</string>
+    <string name="sheet_custom_notes_placeholder">材料或備註（可選）</string>
+    <string name="action_save">儲存</string>
+    <string name="action_cancel">取消</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7日</string>
+    <string name="stats_period_30d">30日</string>
+    <string name="stats_period_90d">90日</string>
+    <string name="stats_period_1y">1年</string>
+    <string name="stats_period_custom">自訂</string>
+    <string name="action_export">匯出</string>
+    <string name="stats_edit_range">編輯自訂範圍</string>
+    <string name="stats_verdict_numbers">今期 %1$.1f %3$s · 上期 %2$.1f %3$s</string>
+    <string name="stats_verdict_level_neutral">跟上一期持平。</string>
+    <string name="stats_verdict_less_neutral">比上一期少 %1$d%%</string>
+    <string name="stats_verdict_more_neutral">比上一期多 %1$d%%</string>
+    <string name="stats_verdict_first_numbers">今期 %1$.1f %2$s。</string>
+    <string name="stats_verdict_first_neutral">這是第一段有數據的期間，比較由下一期開始。</string>
+    <string name="stats_tile_drunk">飲用量</string>
+    <string name="stats_tile_alcohol">酒精</string>
+    <string name="stats_tile_spending">花費</string>
+    <string name="stats_tile_calories">卡路里</string>
+    <string name="stats_unit_ml">毫升</string>
+    <plurals name="stats_unit_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">千卡</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="other">≈ %1$d 個芝士漢堡</item>
+    </plurals>
+    <string name="stats_units_chart_title">已飲用的%1$s</string>
+    <string name="stats_units_chart_title__us">已飲用的標準杯</string>
+    <string name="stats_units_chart_title__gb">已飲用的酒精單位</string>
+    <string name="stats_units_chart_title__au">已飲用的標準杯</string>
+    <string name="stats_units_chart_title__ca">已飲用的標準杯</string>
+    <string name="stats_units_chart_title__jp">已飲用的標準杯</string>
+    <string name="stats_units_chart_title__dk">已飲用的標準杯</string>
+    <string name="stats_units_chart_title__vn">已飲用的標準杯</string>
+    <string name="stats_units_chart_title__who">已飲用的標準杯</string>
+    <string name="stats_daily_average">每日平均</string>
+    <string name="stats_units_total">合共 %1$.1f %2$s</string>
+    <string name="stats_units_per_day">每日 %1$.2f</string>
+    <string name="stats_units_empty">你的模式會在這裏自己畫出來。</string>
+    <string name="stats_spend_chart_title">花費走勢</string>
+    <string name="stats_spend_total">合共 %1$s</string>
+    <string name="stats_spend_per_day">每日 %1$s</string>
+    <string name="stats_spend_empty">記下有價錢的一杯，花費就會出現。</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">省下的錢</string>
+    <string name="stats_baseline_label">平常一星期 %1$s</string>
+    <string name="stats_saved_unset">填上你平常一星期的花費，這裏就會變成省下的錢——用你真正付的價錢，不是甚麼平均數。</string>
+    <string name="stats_saved_under">今期比平常花費少 %1$s，根據你真正付的價錢，不是平均數。</string>
+    <string name="stats_saved_over">今期比平常花費多 %1$s。</string>
+    <string name="stats_breakdown_title">飲品分佈</string>
+    <string name="stats_breakdown_locked">看看哪一款飲品主導你的星期，以及它們靜靜地累積成甚麼。</string>
+    <string name="stats_breakdown_empty">記下幾杯，經常飲的自然會浮現。</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="other">%1$s · %2$d 次</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d%%</string>
+    <string name="stats_breakdown_leader">%1$s 排第一，佔今期%3$s的 %2$d%%。</string>
+    <string name="stats_dry_title_positive">無酒日，守得好。</string>
+    <string name="stats_dry_body_positive">今期有 %1$d%% 是無酒日。每一日，身體都感覺得到那份休息。</string>
+    <string name="stats_dry_title_none">暫時未有無酒日。</string>
+    <string name="stats_dry_body_none">第一日就是連續紀錄的開始，可以在「日誌」把今日標為無酒日。</string>
+    <string name="stats_dry_title_numbers">無酒日</string>
+    <string name="stats_dry_body_numbers">%2$d 日之中 %1$d 日 · 佔今期 %3$d%%。</string>
+    <string name="stats_dry_ring_pct">%1$d%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">自訂範圍</string>
+    <string name="sheet_range_from">由</string>
+    <string name="sheet_range_to">至</string>
+    <string name="sheet_range_last7">最近 7 日</string>
+    <string name="sheet_range_last30">最近 30 日</string>
+    <string name="action_apply">套用</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">匯出統計</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">統計 %1$s.csv</string>
+    <string name="sheet_export_desc">今期的每一個數字，隨時可以分享。</string>
+    <string name="sheet_export_cta">分享 CSV</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">讓記錄保持同步</string>
+    <string name="sheet_health_body">記下的每一杯，可以自動存到 %1$s，整幅圖就集中在一個地方。</string>
+    <string name="sheet_health_data_title">酒精數據</string>
+    <string name="sheet_health_data_sub">只會寫入飲酒記錄，不會讀取任何資料。</string>
+    <string name="sheet_health_cta">連接 %1$s</string>
+    <string name="sheet_health_change_access">之後可以在 %1$s 更改存取權限。</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">持續通知</string>
+    <string name="sheet_live_body">估算的血液酒精濃度回落期間，一張安靜的卡片會留在通知欄，不用打開 App。</string>
+    <string name="sheet_live_mock_status">估算血液酒精濃度，回落中</string>
+    <string name="sheet_live_mock_value" formatted="false">0.065%</string>
+    <string name="sheet_live_mock_tozero">3 小時 42 分歸零</string>
+    <string name="sheet_live_note">這只是用示範數字做的預覽，並沒有在運行。</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">睇清成幅圖。</string>
+    <string name="pay_sub">你完整嘅飲酒紀錄、即時血液酒精濃度估算，同埋顯示邊度開始變成沉重一個月嘅每週趨勢。</string>
+    <string name="pay_no_ads">冇廣告。冇賣數據。唔使開戶口。</string>
+    <string name="pay_benefit_history">唔止近90日，而係你紀錄過嘅每一杯</string>
+    <string name="pay_benefit_bac">即時血液酒精濃度估算，同你返回零嘅時間</string>
+    <string name="pay_benefit_insights">每週總數對照指引，連趨勢一齊睇</string>
+    <string name="pay_benefit_streaks">無酒日連續紀錄、慳返嘅錢、避開嘅卡路里</string>
+    <string name="pay_benefit_quicklog">喺主畫面一㩒就重複紀錄</string>
+    <string name="pay_benefit_report">一份清晰嘅PDF報告，可以交畀醫生</string>
+    <string name="pay_compare_caption">你會得到</string>
+    <string name="pay_compare_free">免費</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">無限紀錄同自訂飲品</string>
+    <string name="pay_compare_export">匯出、備份同小工具</string>
+    <string name="pay_compare_darkmode">深色模式、應用程式鎖同提醒</string>
+    <string name="pay_compare_history">90日以上嘅紀錄</string>
+    <string name="pay_compare_bac">血液酒精濃度估算同快速紀錄格</string>
+    <string name="pay_compare_insights">進階分析、PDF同私人同步</string>
+    <string name="pay_plan_weekly">每週</string>
+    <string name="pay_plan_monthly">每月</string>
+    <string name="pay_plan_annual">每年</string>
+    <string name="pay_plan_lifetime">永久</string>
+    <string name="pay_price_line_weekly">每週 %1$s</string>
+    <string name="pay_price_line_monthly">每月 %1$s</string>
+    <string name="pay_price_line_annual">每年 %1$s</string>
+    <string name="pay_price_line_lifetime">一次過 %1$s，永遠屬於你</string>
+    <string name="pay_badge_trial">免費 %1$d 日</string>
+    <string name="pay_badge_save">慳 %1$d%%</string>
+    <string name="pay_badge_best">最抵</string>
+    <string name="pay_loading">正向商店查詢今日價錢…</string>
+    <string name="pay_unavailable">商店而家冇回應。紀錄、匯出同備份照樣運作。</string>
+    <string name="pay_retry">再試一次</string>
+    <string name="pay_faq_caption">常見問題</string>
+    <string name="pay_faq_q_trial">免費試用點運作？</string>
+    <string name="pay_faq_a_trial">%1$d 日內所有 Pro 功能都係你嘅。喺結束前隨時取消，唔會收你錢。</string>
+    <string name="pay_faq_q_after">結束之後會點？</string>
+    <string name="pay_faq_a_after">你揀嘅方案就會開始，用佢卡片上顯示嘅價錢，絕對唔會更貴。我哋會提早 2 日提你，唔會嚇你一跳。</string>
+    <string name="pay_faq_q_logs">我嘅紀錄會唔會有日被鎖？</string>
+    <string name="pay_faq_a_logs">唔會。紀錄、自訂飲品、今個星期嘅統計、小工具、CSV 匯出、備份、深色模式、應用程式鎖同提醒永遠免費。就算你唔再付款，你寫低嘅一切依然係你嘅，依然睇得到。</string>
+    <string name="pay_faq_q_cancel">可唔可以隨時取消？</string>
+    <string name="pay_faq_a_cancel">永遠可以。喺你嘅 %1$s 訂閱度管理或者取消，你嘅數據就留喺呢部電話。</string>
+    <string name="pay_cta_trial">開始我嘅 %1$d 日免費</string>
+    <string name="pay_cta_plan">繼續，%1$s</string>
+    <string name="pay_cta_lifetime">永久解鎖 Pro</string>
+    <string name="pay_cta_default">繼續</string>
+    <string name="pay_sub_trial">%1$d 日免費，之後 %2$s。今日唔會收費。</string>
+    <string name="pay_sub_recurring">取消之前會以 %1$s 續期。喺設定㩒一下就得。</string>
+    <string name="pay_sub_lifetime">一次付款。永遠唔會變成訂閱。</string>
+    <string name="pay_restore">還原</string>
+    <string name="pay_terms">條款</string>
+    <string name="pay_privacy">私隱</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro，多謝你讓這盞燈一直亮着。</string>
+    <string name="set_pro_banner_title">更多分析，更少工夫。</string>
+    <string name="set_pro_banner_sub">自動偵測無酒日 · 快速記錄圖塊 · 血液酒精濃度監測</string>
+    <string name="set_section_you">你</string>
+    <string name="set_section_insights">分析與同步</string>
+    <string name="set_section_appearance">外觀</string>
+    <string name="set_section_data">你的資料</string>
+    <string name="set_section_privacy">私隱與語氣</string>
+    <string name="set_section_support">支援</string>
+    <string name="set_profile">個人檔案</string>
+    <string name="set_profile_not_set">未設定</string>
+    <string name="set_profile_summary">%1$s %2$s · %3$s</string>
+    <string name="set_units">單位</string>
+    <string name="set_units_summary">%1$s · %2$s</string>
+    <string name="set_guideline">飲酒指引</string>
+    <string name="set_guideline_value">每日 %1$d</string>
+    <string name="set_ask_cost">詢問飲品價錢</string>
+    <string name="set_show_calories">顯示卡路里</string>
+    <string name="set_auto_dry">自動偵測無酒日</string>
+    <string name="set_notifications">通知</string>
+    <string name="set_notif_none">無</string>
+    <plurals name="set_notif_count">
+        <item quantity="other">每日 %1$d 個</item>
+    </plurals>
+    <string name="set_health_sync">健康同步</string>
+    <string name="set_health_connected">已連接</string>
+    <string name="set_health_off">關閉</string>
+    <string name="set_quick_log">快速記錄圖塊</string>
+    <string name="set_quick_log_setup">設定</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="other">%1$d 款</item>
+    </plurals>
+    <string name="set_dark_mode">深色模式</string>
+    <string name="set_app_icon">App 圖示</string>
+    <string name="set_icon_default">預設</string>
+    <string name="set_icon_gift">禮物</string>
+    <string name="set_icon_holiday">節日</string>
+    <string name="set_language">語言</string>
+    <string name="set_language_value">繁體中文（香港）</string>
+    <string name="set_backup_title">已備份</string>
+    <string name="set_backup_title_none">尚未備份</string>
+    <string name="set_backup_detail_never_android">可在下方建立 · 存於此裝置 · 匯出永遠免費</string>
+    <string name="set_backup_detail_dated">%1$s · 存於此裝置 · 匯出永遠免費</string>
+    <string name="set_backup_row">備份、匯出與匯入</string>
+    <string name="set_backup_free">免費</string>
+    <string name="set_app_lock">App 鎖</string>
+    <string name="set_app_lock_sub">解鎖之後才會顯示任何內容。</string>
+    <string name="set_discreet">低調通知</string>
+    <string name="set_discreet_sub">鎖定畫面上的提示，永遠不會提到酒。</string>
+    <string name="set_day_ends">一日結束於</string>
+    <string name="set_day_ends_sub">凌晨 1 時飲的一杯，會算入前一晚。</string>
+    <string name="set_cutoff_midnight">午夜</string>
+    <string name="set_cutoff_2am">凌晨 2 時</string>
+    <string name="set_cutoff_4am">凌晨 4 時</string>
+    <string name="set_tone">語氣</string>
+    <string name="set_tone_icon_sample">漢字</string>
+    <string name="set_tone_neutral">中性</string>
+    <string name="set_tone_push">推我一把</string>
+    <string name="set_tone_numbers">只看數字</string>
+    <string name="set_tone_sub_neutral">數字，加一點溫和的認可，從不評價。</string>
+    <string name="set_tone_sub_push">以連續紀錄為主，超出目標時強調得更明顯。</string>
+    <string name="set_tone_sub_numbers">純粹的帳目，所有評價字眼和顏色判斷都會收起。</string>
+    <string name="set_contact">聯絡支援</string>
+    <string name="set_about">關於 Alcohol Tracker</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">客戶編號</string>
+    <string name="set_copy">複製</string>
+    <string name="set_footer">克制地做出來。\n你的資料，從不離開這部手機。</string>
+    <string name="support_email_subject">Alcohol Tracker 支援</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">你的身體，你的數字。</string>
+    <string name="profile_body">同一杯酒，落在每個人身上都不一樣。填兩項，估算值就不再是平均數，而是你的。</string>
+    <string name="profile_privacy_note">十秒鐘，一次就夠。這裏的一切，從不離開這部手機。</string>
+    <string name="profile_sex_label">生理性別</string>
+    <string name="profile_sex_female">女性</string>
+    <string name="profile_sex_male">男性</string>
+    <string name="profile_weight_label">體重</string>
+    <string name="profile_weight_kg">公斤</string>
+    <string name="profile_weight_lb">磅</string>
+    <string name="profile_weight_placeholder">大概估一估就得</string>
+    <string name="profile_cta">變成我的</string>
+    <string name="profile_footer">兩項隨時可改，估算值即時跟着調整。</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">能量</string>
+    <string name="units_kcal">千卡</string>
+    <string name="units_kj">千焦</string>
+    <string name="units_serving_label">份量</string>
+    <string name="units_millilitres">毫升</string>
+    <string name="units_ounces">安士</string>
+    <string name="units_note">這些只會改變數字的顯示方式，不會改動你記下的內容。</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">未有排程。</string>
+    <string name="notif_empty_body">晚上是你自己的。如果每日一下溫和的提醒有幫助，可以在下面加一個。</string>
+    <string name="notif_repeat_hint">每個提醒都會每日重複。輕點 − 可以移除。</string>
+    <string name="notif_reminder_sub">%1$s · %2$s</string>
+    <string name="notif_create_cta">建立通知</string>
+    <string name="sheet_notif_title_placeholder">標題，例如：最後一杯</string>
+    <string name="sheet_notif_time_label">提醒時間</string>
+    <string name="sheet_notif_message_placeholder">訊息（可選）</string>
+    <string name="sheet_notif_repeat_note">每日在所選時間重複。</string>
+    <string name="sheet_notif_cta">建立</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">估算血液酒精濃度、歸零時間，以及持續狀態卡片。</string>
+    <string name="set_bac_unit_label">血液酒精濃度單位</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">預覽狀態卡片</string>
+    <string name="set_bac_preview_sub">估算值回落期間，那張安靜的持續通知。</string>
+    <string name="set_bac_disclaimer">估算值只供參考。絕對不要用來判斷可不可以駕駛。</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">快速記錄圖塊</string>
+    <string name="quicklog_mock_caption">快速記錄</string>
+    <string name="quicklog_mock_footer">一下 · 記好了</string>
+    <string name="quicklog_section_caption">化作圖塊的自訂飲品</string>
+    <string name="quicklog_selected_count">已選 %1$d / %2$d</string>
+    <string name="quicklog_empty_title">尚未有自訂飲品。</string>
+    <string name="quicklog_empty_sub">建立一款，就可以一下記好，最多放得下四款。</string>
+    <string name="quicklog_drink_meta">%1$d 毫升 · %2$s%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">備份與回復</string>
+    <string name="backup_status_dated">已於 %1$s 備份到此裝置。</string>
+    <string name="backup_status_none_android">尚未有備份——可在下面建立。</string>
+    <string name="backup_whats_here">這部手機上有甚麼</string>
+    <plurals name="backup_count_logs">
+        <item quantity="other">飲酒紀錄</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="other">無酒日</item>
+    </plurals>
+    <string name="backup_count_profile">個人檔案</string>
+    <string name="backup_export">匯出資料</string>
+    <string name="backup_import">匯入資料</string>
+    <string name="backup_create">建立備份</string>
+    <string name="backup_restore">從備份回復</string>
+    <string name="backup_merge_note">匯入會與現有內容合併，重複的會靜靜略過。</string>
+    <string name="backup_danger_zone">危險區域</string>
+    <string name="backup_clear_all">清除所有資料</string>
+    <string name="backup_clear_note">永久生效，無法還原。如果重要，先匯出一份。</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">關於</string>
+    <string name="about_version">版本 %1$s · %2$s</string>
+    <string name="about_privacy">私隱政策</string>
+    <string name="about_terms">服務條款</string>
+    <string name="about_ack_caption">鳴謝</string>
+    <string name="about_ack_role_db">本機資料庫</string>
+    <string name="about_ack_role_ui_android">使用者介面</string>
+    <string name="about_ack_role_settings_android">設定</string>
+    <string name="about_footer">酒杯與水滴，全部用程式碼畫成，\n畫得克制。</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">同一個 App，換件外衣。揀個配襯你主畫面的。</string>
+    <string name="icon_relaunch_note">切換時，App 可能會短暫關閉，等待啟動器更新。</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">血液酒精濃度走勢</string>
+    <string name="trends_title">估算血液酒精濃度峰值</string>
+    <string name="trends_range">最近 7 日</string>
+    <string name="trends_axis_start">6 日前</string>
+    <string name="trends_axis_end">今日</string>
+    <string name="trends_note" formatted="false">身體大約每小時代謝 0.015%，曲線就這樣回落。平坦的一個星期，就是好的一個星期。</string>
+    <string name="trends_empty_title">暫時未有曲線。</string>
+    <string name="trends_empty_body">填好個人檔案，再記一杯，走勢線就由第一杯開始。</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">飲酒指引</string>
+    <string name="guideline_intro">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_intro__us">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_intro__gb">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_intro__au">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_intro__ca">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_intro__jp">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_intro__dk">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_intro__vn">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_intro__who">世衞的低風險指引建議每日最多 2 %1$s，並且定期有無酒日。設一個你覺得合適的數。</string>
+    <string name="guideline_daily_target">每日目標</string>
+    <string name="guideline_weekly_target">每星期目標</string>
+    <plurals name="guideline_target_units">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="other">每月目標會自動跟着：%1$d %2$s。世衞的指引是一個出處，不是一個判決。</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">移除這一杯？</string>
+    <string name="dialog_delete_body">它會離開你的日誌，數字亦會跟着回落。</string>
+    <string name="dialog_delete_keep">保留</string>
+    <string name="dialog_delete_remove">移除</string>
+    <string name="dialog_clear_title">清除所有資料？</string>
+    <string name="dialog_clear_body">每一筆記錄、每一個無酒日、每一項設定，都會永遠消失。想留一份的話，先匯出。</string>
+    <string name="dialog_clear_delete">刪除</string>
+    <string name="dialog_health_title">允許「%1$s」將飲酒記錄寫入 %2$s？</string>
+    <string name="dialog_health_deny">不允許</string>
+    <string name="dialog_health_allow">允許</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">已記錄 %1$s，%2$.1f %3$s。</string>
+    <string name="toast_logged">已記錄，%1$.1f %2$s。</string>
+    <string name="action_undo">還原</string>
+    <string name="toast_relogged">照舊，已記入今日。</string>
+    <string name="toast_entry_removed">已從日誌移除。</string>
+    <string name="toast_dry_marked">無酒日，記下了。安靜的日子，同樣算數。</string>
+    <string name="toast_day_has_drinks">這一日已經有飲品記錄。</string>
+    <string name="toast_day_has_drinks_cal">那一日有飲品記錄。</string>
+    <string name="toast_custom_saved">已儲存，下次一下就得。</string>
+    <string name="toast_profile_incomplete">體重和性別都要填，血液酒精濃度估算需要這兩項。</string>
+    <string name="toast_profile_saved">已儲存，血液酒精濃度的估算清晰了一點。</string>
+    <string name="toast_reminder_scheduled">已排程，每日一下溫和的提醒。</string>
+    <string name="toast_reminder_silent">已儲存，不過 %1$s 會讓它保持靜音。</string>
+    <string name="toast_icon_updated">圖示已更新，幾襯你。</string>
+    <string name="toast_customer_id_copied">已複製，貼進任何一封支援電郵就可以。</string>
+    <string name="toast_pro_welcome">歡迎加入 Pro，一切都解鎖了。</string>
+    <string name="toast_restore_success">歡迎回來，一切都已解鎖。</string>
+    <string name="toast_restore_none">暫時沒有可回復的項目，一切正常。</string>
+    <string name="toast_purchase_unavailable">現時未能進行購買。</string>
+    <string name="toast_health_connected">記錄現在會靜靜流向 %1$s。</string>
+    <string name="toast_backup_created">已在此裝置建立備份。</string>
+    <string name="toast_backup_restored_android">已回復，重複的靜靜略過了。</string>
+    <string name="toast_backup_none_android">此裝置上暫時未有備份。</string>
+    <string name="toast_export_file_android">備份檔案已儲存，放在安全的地方。</string>
+    <string name="toast_file_unreadable">讀不到那個檔案。</string>
+    <plurals name="toast_import_result">
+        <item quantity="other">已匯入 %1$d 筆，略過 %2$d 筆重複。</item>
+    </plurals>
+    <string name="toast_import_ok_android">已匯入，重複的靜靜略過了。</string>
+    <string name="toast_import_invalid_android">那個看來不是備份檔案。</string>
+    <string name="toast_cleared">一張白紙。好好待它。</string>
+    <string name="toast_csv_ready_android">可以分享了。</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">每日提醒</string>
+    <string name="notif_channel_reminders_desc">你在「設定」建立的每日提醒。</string>
+    <string name="notif_channel_bac">估算狀態</string>
+    <string name="notif_channel_bac_desc">估算值回落期間的一張安靜卡片。</string>
+    <string name="notif_discreet_title">晚間記事</string>
+    <string name="notif_discreet_body">十秒鐘寫一筆，整幅圖就誠實。</string>
+    <string name="notif_reminder_body_fallback">隨手寫一筆，整幅圖就誠實。</string>
+    <string name="notif_bac_discreet_title">回落中</string>
+    <string name="notif_bac_discreet_body">大約 %1$s 歸零。</string>
+    <string name="notif_bac_title">估算血液酒精濃度 %1$s</string>
+    <string name="notif_bac_body">%1$s 後歸零。絕不代表可以駕駛。</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">前一日</string>
+    <string name="a11y_open_calendar">打開日曆</string>
+    <string name="a11y_next_day">後一日</string>
+    <string name="a11y_log_quick">記錄 %1$s，%2$.1f %3$s</string>
+    <string name="a11y_units_info">一%1$s是甚麼？</string>
+    <string name="a11y_units_info__us">一%1$s是甚麼？</string>
+    <string name="a11y_units_info__gb">一%1$s是甚麼？</string>
+    <string name="a11y_units_info__au">一%1$s是甚麼？</string>
+    <string name="a11y_units_info__ca">一%1$s是甚麼？</string>
+    <string name="a11y_units_info__jp">一%1$s是甚麼？</string>
+    <string name="a11y_units_info__dk">一%1$s是甚麼？</string>
+    <string name="a11y_units_info__vn">一%1$s是甚麼？</string>
+    <string name="a11y_units_info__who">一%1$s是甚麼？</string>
+    <string name="a11y_intake_ring">今日 %2$d %3$s 之中的 %1$.1f</string>
+    <string name="a11y_mini_progress">%1$s：%3$d %4$s 之中的 %2$.1f</string>
+    <string name="a11y_back">返回</string>
+    <string name="a11y_close">關閉</string>
+    <string name="a11y_prev_month">上一個月</string>
+    <string name="a11y_next_month">下一個月</string>
+    <string name="a11y_cal_day">%1$d 日</string>
+    <string name="a11y_cal_day_logged">%1$d 日，有飲品記錄</string>
+    <string name="a11y_cal_day_dry">%1$d 日，無酒日</string>
+    <string name="a11y_cal_day_logged_dry">%1$d 日，有飲品記錄，無酒日</string>
+    <string name="a11y_prev_period">上一期</string>
+    <string name="a11y_next_period">下一期</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="other">無酒日 %1$d 日，佔今期百分之 %2$d</item>
+    </plurals>
+    <string name="a11y_remove_reminder">移除 %1$s</string>
+    <string name="a11y_toggle_on">開啟</string>
+    <string name="a11y_toggle_off">關閉</string>
+    <string name="a11y_fab_add">加入</string>
+    <string name="a11y_fab_close">收起動作</string>
+    <string name="a11y_fab_hint">記錄一杯，或者標記無酒日</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">個酒精單位</string>
+    <string name="units_noun_unit_pl">個酒精單位</string>
+    <string name="units_noun_unit_short">酒精單位</string>
+    <string name="units_noun_unit_abbr">個酒精單位</string>
+    <string name="units_noun_unit_indef">個酒精單位</string>
+    <string name="units_noun_std_sg">標準杯</string>
+    <string name="units_noun_std_pl">標準杯</string>
+    <string name="units_noun_std_short">標準杯</string>
+    <string name="units_noun_std_abbr">標準杯</string>
+    <string name="units_noun_std_indef">標準杯</string>
+    <string name="units_noun_local_sg">個酒精單位</string>
+    <string name="units_noun_local_pl">個酒精單位</string>
+    <string name="units_noun_local_short">酒精單位</string>
+    <string name="units_noun_local_abbr">個酒精單位</string>
+    <string name="units_noun_local_indef">個酒精單位</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">日記</string>
+    <string name="tab_statistics_short">統計</string>
+    <string name="tab_settings_short">設定</string>
+</resources>

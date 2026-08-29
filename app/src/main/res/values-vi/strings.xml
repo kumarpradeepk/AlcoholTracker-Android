@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/vi-VN.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">Nhật ký</string>
+    <string name="tab_statistics">Thống kê</string>
+    <string name="tab_settings">Cài đặt</string>
+    <string name="lock_tap_to_unlock">Đã khóa. Chạm để mở khóa.</string>
+    <string name="applock_prompt_title">Alcohol Tracker đang khóa</string>
+    <string name="applock_prompt_sub">Mở khóa trước khi mọi thứ hiện ra.</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">Chào mừng đến với\nAlcohol Tracker</string>
+    <string name="ob_welcome_sub">Người bạn đồng hành cho thói quen uống có ý thức.</string>
+    <string name="ob_welcome_body">Ghi lại mà không phán xét. Ghi một ly trong vài giây, theo dõi ước tính BAC giảm dần, ngay từ cổ tay.</string>
+    <string name="ob_welcome_quick_caption">Ghi nhanh, ngay trong túi áo</string>
+    <string name="ob_welcome_bac_example" formatted="false">Ước tính BAC 0,032%</string>
+    <string name="ob_welcome_sober_example">Ước tính về 0 sau khoảng 2 giờ</string>
+    <string name="ob_get_started">Bắt đầu</string>
+    <string name="ob_step_indicator">BƯỚC %1$d/3</string>
+    <string name="ob_skip">Bỏ qua</string>
+    <string name="ob_goals_title">Điều gì đưa bạn đến đây?</string>
+    <string name="ob_goals_sub">Chọn bao nhiêu cũng được, miễn là đúng. Chỉ có bạn và ứng dụng biết.</string>
+    <string name="ob_goal_less">Uống ít lại</string>
+    <string name="ob_goal_awareness">Biết mình uống bao nhiêu</string>
+    <string name="ob_goal_break">Cho cơ thể nghỉ ngơi</string>
+    <string name="ob_goal_free_days">Thêm ngày không cồn</string>
+    <string name="ob_goal_conscious">Uống có ý thức</string>
+    <string name="ob_goal_reset">Đặt lại thói quen mặc định</string>
+    <string name="ob_goal_social">Xoay xở với những buổi gặp gỡ</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="other">Tiếp tục với %1$d mục tiêu</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">Chọn ít nhất một mục tiêu</string>
+    <string name="ob_base_title">Một tuần trung bình uống bao nhiêu ly?</string>
+    <string name="ob_base_sub">Chỉ để nắm nhịp độ của bạn, không phán xét, chỉ là điểm khởi đầu.</string>
+    <string name="ob_base_0_4">0–4 ly</string>
+    <string name="ob_base_5_9">5–9 ly</string>
+    <string name="ob_base_10_14">10–14 ly</string>
+    <string name="ob_base_15_19">15–19 ly</string>
+    <string name="ob_base_20_plus">Từ 20 ly trở lên</string>
+    <string name="ob_continue">Tiếp tục</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">Hôm nay</string>
+    <string name="diary_yesterday">Hôm qua</string>
+    <string name="diary_pro_banner_title">Mở khóa bức tranh đầy đủ</string>
+    <string name="diary_pro_banner_sub">Ô ghi nhanh · Phân tích BAC · Tự nhận ngày không cồn · Lời nhắc</string>
+    <string name="diary_usual">Như mọi khi?</string>
+    <string name="units_abbrev_value">%1$.1f %2$s</string>
+    <string name="diary_intake_today">Lượng nạp hôm nay</string>
+    <string name="diary_intake">Lượng nạp</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="other">trên %1$d %2$s</item>
+    </plurals>
+    <string name="diary_this_week">Tuần này</string>
+    <string name="diary_this_month">Tháng này</string>
+    <string name="diary_mini_value">%1$.1f / %2$d</string>
+    <string name="diary_remaining_numbers">Hôm nay: %1$.1f/%2$d %3$s.</string>
+    <string name="diary_remaining_zero_neutral">Mục tiêu hôm nay còn nguyên, hoặc đơn giản là hôm nay không cần đến.</string>
+    <string name="diary_remaining_left_neutral">Còn %1$.1f %2$s trong mục tiêu hôm nay.</string>
+    <string name="diary_remaining_at_target_neutral">Vừa đúng mục tiêu, một ly nước tiếp theo nhé?</string>
+    <string name="diary_remaining_over_neutral">Vượt %1$.1f %3$s so với mục tiêu %2$d hôm nay.</string>
+    <string name="diary_adjust_guideline">Điều chỉnh hướng dẫn về cồn</string>
+    <string name="bac_monitor">Theo dõi BAC</string>
+    <string name="bac_status_waiting">CHỜ</string>
+    <string name="bac_free_body">Mở khóa Pro, ghi một ly, ước tính BAC sẽ hiện ra ở đây.</string>
+    <string name="bac_how_estimated">BAC được ước tính thế nào</string>
+    <string name="bac_trends">Xu hướng</string>
+    <string name="bac_setup_title">Thiết lập hồ sơ BAC</string>
+    <string name="bac_setup_body">Thêm cân nặng và giới tính sinh học để ước tính có ý nghĩa, chỉ mất mười giây.</string>
+    <string name="bac_setup_cta">Thiết lập hồ sơ BAC</string>
+    <string name="bac_status_rising">ĐANG TĂNG</string>
+    <string name="bac_status_settling">ĐANG GIẢM</string>
+    <string name="bac_status_clear">VỀ MỨC 0</string>
+    <string name="bac_value_percent">%1$.3f%%</string>
+    <string name="bac_value_permille">%1$.2f‰</string>
+    <string name="bac_sober_in">Ước tính về 0 sau khoảng %1$s</string>
+    <string name="bac_all_clear">Ước tính đã về 0, không còn cồn trong phép tính.</string>
+    <string name="bac_disclaimer_short">Chỉ là ước tính tham khảo, không bao giờ là tín hiệu cho phép lái xe.</string>
+    <string name="diary_dry_marked">Một ngày không cồn, đã ghi nhận.</string>
+    <string name="diary_dry_remembered">Một ngày không cồn, vẫn được nhớ.</string>
+    <string name="diary_dry_body">Cơ thể đang lặng lẽ tự rót cho mình một lời cảm ơn.</string>
+    <string name="diary_dry_unmark">Bỏ ghi nhận</string>
+    <string name="diary_logged_today">ĐÃ GHI HÔM NAY</string>
+    <string name="diary_logged_this_day">ĐÃ GHI NGÀY NÀY</string>
+    <string name="diary_entry_meta">%1$d ml · %2$s%%</string>
+    <string name="diary_empty_title_today">Ly vẫn trong, đến lúc này.</string>
+    <string name="diary_empty_title_other">Không có gì được ghi ngày này.</string>
+    <string name="diary_empty_body_today">Khi rót, hãy ghi lại bằng vài lần chạm, hoặc đánh dấu hôm nay không cồn để bắt đầu một chuỗi ngày.</string>
+    <string name="diary_empty_body_other">Nếu còn nhớ thì thêm vào, ghi lùi ngày giúp các mẫu hình trung thực.</string>
+    <string name="action_log_drink">Ghi một ly</string>
+    <string name="action_mark_dry_day">Đánh dấu ngày không cồn</string>
+    <string name="diary_add_previous_dry">Thêm ngày không cồn trước đó</string>
+    <string name="action_dry_day">Không cồn</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">Tinh chỉnh chi tiết</string>
+    <string name="log_title_review">Xem lại và lưu</string>
+    <string name="log_cta_next">Tiếp</string>
+    <string name="log_cta_save">Lưu ly này</string>
+    <string name="log_pick_intro">Bạn đã uống gì? Chọn gần đúng là được, bước sau tinh chỉnh lại hết.</string>
+    <string name="log_search_placeholder">Tìm đồ uống</string>
+    <string name="log_custom_title">Tạo đồ uống tùy chọn</string>
+    <string name="log_custom_sub">Bất kỳ dung tích nào, bất kỳ độ cồn nào, không bao giờ phải trả phí.</string>
+    <string name="log_section_your_drinks">ĐỒ UỐNG CỦA BẠN</string>
+    <string name="log_section_popular">PHỔ BIẾN</string>
+    <string name="log_grid_meta">%1$s%% · %2$d ml</string>
+    <string name="log_tune_intro">Chỉnh lại phần rót cho khớp với thứ thực sự có trên bàn.</string>
+    <string name="log_abv_label">Độ cồn</string>
+    <string name="log_abv_value">%1$.1f%%</string>
+    <string name="log_serving_label">Dung tích</string>
+    <string name="log_unit_ml">ml</string>
+    <string name="log_unit_floz">fl oz</string>
+    <string name="log_serving_ml_value">%1$d ml</string>
+    <string name="log_serving_oz_value">%1$.1f oz</string>
+    <string name="log_quantity_label">Số lượng</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈ %1$.1f %3$s · %2$d kcal</string>
+    <string name="log_working_line">%1$d ml × %2$s%% × 0,789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_half">½ × %1$d ml × %2$s%% × 0,789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_qty">%1$d × %2$d ml × %3$s%% × 0,789 ÷ 1000 = %4$.1f %5$s</string>
+    <string name="log_review_meta">%1$d ml · %2$s%% độ cồn</string>
+    <string name="log_review_meta_half">×½ · %1$d ml · %2$s%% độ cồn</string>
+    <string name="log_review_meta_qty">×%1$d · %2$d ml · %3$s%% độ cồn</string>
+    <string name="log_when_label">Lúc nào</string>
+    <string name="log_when_now">Bây giờ</string>
+    <string name="log_when_1h">1 giờ trước</string>
+    <string name="log_when_2h">2 giờ trước</string>
+    <string name="log_cost_label">Ly này giá bao nhiêu?</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">Calo</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">Đã lưu vào hôm nay, có thể gỡ bất cứ lúc nào.</string>
+    <string name="log_saved_to_day">Đã lưu vào %1$s, có thể gỡ bất cứ lúc nào.</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">CN / T2 / T3 / T4 / T5 / T6 / T7</string>
+    <string name="sheet_cal_hint_select">Chấm xanh dương là ngày có ghi, chấm xanh lá là ngày không cồn. Chạm vào một ngày để mở.</string>
+    <string name="sheet_cal_hint_dry">Chạm vào một ngày đã qua để đánh dấu không cồn, chạm lần nữa để bỏ. Những ngày có đồ uống vẫn giữ nguyên.</string>
+    <string name="action_done">Xong</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d ml · %2$s%% · %3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">chi tiêu</string>
+    <string name="sheet_entry_relog">Thêm ly nữa như vậy</string>
+    <string name="sheet_entry_remove">Gỡ khỏi nhật ký</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_title__us">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_title__gb">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_title__au">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_title__ca">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_title__jp">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_title__dk">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_title__vn">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_title__who">Một %1$s thực ra là gì?</string>
+    <string name="sheet_units_body">10 g cồn nguyên chất, thước đo mà WHO sử dụng. Mỗi ly chứa một lượng khác nhau, nên phép tính để ứng dụng lo.</string>
+    <string name="sheet_units_chip_pour">Rót 150 ml</string>
+    <string name="sheet_units_chip_abv" formatted="false">13% độ cồn</string>
+    <string name="sheet_units_chip_density">0,789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__us">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__gb">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__au">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__ca">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__jp">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__dk">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__vn">1,5 %1$s</string>
+    <string name="sheet_units_chip_result__who">1,5 %1$s</string>
+    <string name="sheet_units_density_note">0,789 chỉ là khối lượng riêng của cồn. Không có gì huyền bí.</string>
+    <string name="sheet_units_targets">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+    <string name="sheet_units_targets__us">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+    <string name="sheet_units_targets__gb">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+    <string name="sheet_units_targets__au">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+    <string name="sheet_units_targets__ca">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+    <string name="sheet_units_targets__jp">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+    <string name="sheet_units_targets__dk">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+    <string name="sheet_units_targets__vn">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+    <string name="sheet_units_targets__who">Đó là một ly Margarita, lặng lẽ bằng một %1$s rưỡi. Mục tiêu ngày và tuần của bạn khởi đầu từ khuyến nghị nguy cơ thấp của WHO, và bạn toàn quyền dịch chuyển.</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">Ứng dụng dùng phương pháp Widmark: lượng cồn đã ghi, dàn đều trong lượng nước cơ thể (tính từ cân nặng và giới tính sinh học), trừ đi phần cơ thể đào thải, khoảng 0,015% mỗi giờ.</string>
+    <string name="sheet_bac_not_measurement">Đây là ước tính, không phải phép đo. Thức ăn, thuốc men và cơ địa mỗi người đều làm lệch con số thật.</string>
+    <string name="sheet_bac_never_drive">Tuyệt đối không dùng số liệu ước tính để quyết định có lái xe hay không. Đã uống rượu bia thì không lái xe.</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">Đồ uống lưu sẵn mới</string>
+    <string name="sheet_custom_name_placeholder">Tên, để tìm lại cho nhanh</string>
+    <string name="sheet_custom_base_caption">NHÓM ĐỒ UỐNG</string>
+    <string name="sheet_custom_abv_label" formatted="false">Độ cồn %</string>
+    <string name="sheet_custom_ml_label">Dung tích (ml)</string>
+    <string name="sheet_custom_notes_placeholder">Nguyên liệu hoặc ghi chú (không bắt buộc)</string>
+    <string name="action_save">Lưu</string>
+    <string name="action_cancel">Hủy</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7N</string>
+    <string name="stats_period_30d">30N</string>
+    <string name="stats_period_90d">90N</string>
+    <string name="stats_period_1y">1 năm</string>
+    <string name="stats_period_custom">Tùy chọn</string>
+    <string name="action_export">Xuất</string>
+    <string name="stats_edit_range">Sửa khoảng tùy chọn</string>
+    <string name="stats_verdict_numbers">Kỳ này %1$.1f %3$s · kỳ trước %2$.1f %3$s</string>
+    <string name="stats_verdict_level_neutral">Ngang với kỳ trước.</string>
+    <string name="stats_verdict_less_neutral">Thấp hơn kỳ trước %1$d%%</string>
+    <string name="stats_verdict_more_neutral">Cao hơn kỳ trước %1$d%%</string>
+    <string name="stats_verdict_first_numbers">Kỳ này %1$.1f %2$s.</string>
+    <string name="stats_verdict_first_neutral">Kỳ đầu tiên có dữ liệu, so sánh bắt đầu từ kỳ sau.</string>
+    <string name="stats_tile_drunk">Đã uống</string>
+    <string name="stats_tile_alcohol">Cồn</string>
+    <string name="stats_tile_spending">Chi tiêu</string>
+    <string name="stats_tile_calories">Calo</string>
+    <string name="stats_unit_ml">ml</string>
+    <plurals name="stats_unit_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="other">≈ %1$d chiếc burger phô mai</item>
+    </plurals>
+    <string name="stats_units_chart_title">Lượng cồn đã nạp</string>
+    <string name="stats_units_chart_title__us">Lượng cồn đã nạp</string>
+    <string name="stats_units_chart_title__gb">Lượng cồn đã nạp</string>
+    <string name="stats_units_chart_title__au">Lượng cồn đã nạp</string>
+    <string name="stats_units_chart_title__ca">Lượng cồn đã nạp</string>
+    <string name="stats_units_chart_title__jp">Lượng cồn đã nạp</string>
+    <string name="stats_units_chart_title__dk">Lượng cồn đã nạp</string>
+    <string name="stats_units_chart_title__vn">Lượng cồn đã nạp</string>
+    <string name="stats_units_chart_title__who">Lượng cồn đã nạp</string>
+    <string name="stats_daily_average">Trung bình ngày</string>
+    <string name="stats_units_total">Tổng %1$.1f %2$s</string>
+    <string name="stats_units_per_day">%1$.2f/ngày</string>
+    <string name="stats_units_empty">Mẫu hình của bạn sẽ tự vẽ nên ở đây.</string>
+    <string name="stats_spend_chart_title">Xu hướng chi tiêu</string>
+    <string name="stats_spend_total">Tổng %1$s</string>
+    <string name="stats_spend_per_day">%1$s/ngày</string>
+    <string name="stats_spend_empty">Chi phí xuất hiện khi ghi một ly có giá.</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">Tiền tiết kiệm</string>
+    <string name="stats_baseline_label">Tuần điển hình (%1$s)</string>
+    <string name="stats_saved_unset">Nhập mức chi tiêu một tuần điển hình, chỗ này sẽ thành tiền tiết kiệm, tính từ giá thật của bạn chứ không phải mức trung bình cả nước.</string>
+    <string name="stats_saved_under">Kỳ này ít hơn mức chi tiêu điển hình %1$s, tính từ số tiền thực trả chứ không phải mức trung bình.</string>
+    <string name="stats_saved_over">Kỳ này nhiều hơn mức chi tiêu điển hình %1$s.</string>
+    <string name="stats_breakdown_title">Phân tích theo đồ uống</string>
+    <string name="stats_breakdown_locked">Xem đồ uống nào dẫn đầu các tuần của bạn, và chúng lặng lẽ cộng lại thành bao nhiêu.</string>
+    <string name="stats_breakdown_empty">Ghi thêm vài ly, những lựa chọn quen thuộc sẽ tự lộ ra.</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="other">%1$s · %2$d lần</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d%%</string>
+    <string name="stats_breakdown_leader">%1$s dẫn đầu, chiếm %2$d%% tổng %3$s của kỳ này.</string>
+    <string name="stats_dry_title_positive">Giữ được những ngày không cồn.</string>
+    <string name="stats_dry_body_positive">Ngày không cồn chiếm %1$d%% kỳ này. Mỗi ngày như vậy là một quãng nghỉ cơ thể nhận ra.</string>
+    <string name="stats_dry_title_none">Chưa có ngày không cồn nào.</string>
+    <string name="stats_dry_body_none">Ngày đầu tiên mở ra một chuỗi, đánh dấu hôm nay không cồn từ Nhật ký.</string>
+    <string name="stats_dry_title_numbers">Ngày không cồn</string>
+    <string name="stats_dry_body_numbers">%1$d/%2$d ngày · %3$d%% kỳ này.</string>
+    <string name="stats_dry_ring_pct">%1$d%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">Khoảng tùy chọn</string>
+    <string name="sheet_range_from">Từ</string>
+    <string name="sheet_range_to">Đến</string>
+    <string name="sheet_range_last7">7 ngày qua</string>
+    <string name="sheet_range_last30">30 ngày qua</string>
+    <string name="action_apply">Áp dụng</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">Xuất thống kê</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">Thống kê, %1$s.csv</string>
+    <string name="sheet_export_desc">Mọi con số của kỳ này, sẵn sàng để chia sẻ.</string>
+    <string name="sheet_export_cta">Chia sẻ CSV</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">Đồng bộ những gì đã ghi</string>
+    <string name="sheet_health_body">Đồ uống đã ghi có thể tự động lưu sang %1$s, để toàn bộ bức tranh nằm ở một nơi.</string>
+    <string name="sheet_health_data_title">Dữ liệu về cồn</string>
+    <string name="sheet_health_data_sub">Chỉ ghi các mục về lượng cồn tiêu thụ, không đọc bất cứ thứ gì.</string>
+    <string name="sheet_health_cta">Kết nối với %1$s</string>
+    <string name="sheet_health_change_access">Có thể đổi quyền truy cập sau trong %1$s.</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">Thông báo thường trực</string>
+    <string name="sheet_live_body">Trong lúc BAC giảm dần, một thẻ lặng lẽ nằm sẵn ở khu thông báo, không cần mở ứng dụng.</string>
+    <string name="sheet_live_mock_status">Ước tính BAC, đang giảm</string>
+    <string name="sheet_live_mock_value" formatted="false">0,065%</string>
+    <string name="sheet_live_mock_tozero">Còn 3 giờ 42 phút về 0</string>
+    <string name="sheet_live_note">Bản xem trước với số liệu ví dụ, không có gì đang chạy.</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">Nhìn thấy toàn cảnh.</string>
+    <string name="pay_sub">Toàn bộ lịch sử uống của bạn, ước tính nồng độ cồn theo thời gian thực, và xu hướng hằng tuần cho thấy một tháng nặng bắt đầu từ đâu.</string>
+    <string name="pay_no_ads">Không quảng cáo. Không bán dữ liệu. Không cần tài khoản.</string>
+    <string name="pay_benefit_history">Mọi ly bạn từng ghi lại, không chỉ 90 ngày gần nhất</string>
+    <string name="pay_benefit_bac">Ước tính nồng độ cồn theo thời gian thực và thời gian về không</string>
+    <string name="pay_benefit_insights">Tổng tuần so với khuyến nghị, kèm xu hướng</string>
+    <string name="pay_benefit_streaks">Chuỗi ngày không uống, tiền tiết kiệm, calo tránh được</string>
+    <string name="pay_benefit_quicklog">Ghi lại lần nữa chỉ với một chạm, ngay từ màn hình chính</string>
+    <string name="pay_benefit_report">Báo cáo PDF gọn gàng để đưa cho bác sĩ</string>
+    <string name="pay_compare_caption">BẠN NHẬN ĐƯỢC GÌ</string>
+    <string name="pay_compare_free">MIỄN PHÍ</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">Ghi không giới hạn và đồ uống riêng</string>
+    <string name="pay_compare_export">Xuất, sao lưu và widget</string>
+    <string name="pay_compare_darkmode">Chế độ tối, khóa ứng dụng và nhắc nhở</string>
+    <string name="pay_compare_history">Lịch sử xa hơn 90 ngày</string>
+    <string name="pay_compare_bac">Ước tính nồng độ cồn và ô ghi nhanh</string>
+    <string name="pay_compare_insights">Phân tích nâng cao, PDF và đồng bộ riêng tư</string>
+    <string name="pay_plan_weekly">Hằng tuần</string>
+    <string name="pay_plan_monthly">Hằng tháng</string>
+    <string name="pay_plan_annual">Hằng năm</string>
+    <string name="pay_plan_lifetime">Trọn đời</string>
+    <string name="pay_price_line_weekly">%1$s mỗi tuần</string>
+    <string name="pay_price_line_monthly">%1$s mỗi tháng</string>
+    <string name="pay_price_line_annual">%1$s mỗi năm</string>
+    <string name="pay_price_line_lifetime">%1$s một lần, của bạn mãi mãi</string>
+    <string name="pay_badge_trial">MIỄN PHÍ %1$d NGÀY</string>
+    <string name="pay_badge_save">TIẾT KIỆM %1$d%%</string>
+    <string name="pay_badge_best">ĐÁNG TIỀN NHẤT</string>
+    <string name="pay_loading">Đang hỏi cửa hàng giá hôm nay…</string>
+    <string name="pay_unavailable">Cửa hàng hiện không phản hồi. Ghi chép, xuất dữ liệu và sao lưu vẫn hoạt động bình thường.</string>
+    <string name="pay_retry">Thử lại</string>
+    <string name="pay_faq_caption">CÂU HỎI, ĐÃ TRẢ LỜI</string>
+    <string name="pay_faq_q_trial">Bản dùng thử miễn phí hoạt động thế nào?</string>
+    <string name="pay_faq_a_trial">Mọi tính năng Pro là của bạn trong %1$d ngày. Hủy bất cứ lúc nào trước khi kết thúc và bạn không bị tính phí.</string>
+    <string name="pay_faq_q_after">Khi kết thúc thì sao?</string>
+    <string name="pay_faq_a_after">Gói bạn đã chọn bắt đầu, với đúng giá ghi trên thẻ của nó, không bao giờ cao hơn. Chúng tôi nhắc trước 2 ngày, để không có gì bất ngờ.</string>
+    <string name="pay_faq_q_logs">Nhật ký của tôi có bao giờ bị khóa không?</string>
+    <string name="pay_faq_a_logs">Không. Ghi chép, đồ uống riêng, thống kê tuần này, widget, xuất CSV, sao lưu, chế độ tối, khóa ứng dụng và nhắc nhở miễn phí mãi mãi. Nếu bạn ngừng trả tiền, mọi thứ bạn đã ghi vẫn là của bạn và vẫn đọc được.</string>
+    <string name="pay_faq_q_cancel">Tôi có thể hủy bất cứ lúc nào không?</string>
+    <string name="pay_faq_a_cancel">Luôn luôn. Quản lý hoặc hủy trong phần đăng ký %1$s của bạn, và dữ liệu vẫn nằm ngay đây, trên điện thoại của bạn.</string>
+    <string name="pay_cta_trial">Bắt đầu %1$d ngày miễn phí</string>
+    <string name="pay_cta_plan">Tiếp tục, %1$s</string>
+    <string name="pay_cta_lifetime">Mở khóa Pro trọn đời</string>
+    <string name="pay_cta_default">Tiếp tục</string>
+    <string name="pay_sub_trial">%1$d ngày miễn phí, sau đó %2$s. Hôm nay không tính phí gì.</string>
+    <string name="pay_sub_recurring">Gia hạn ở mức %1$s cho đến khi bạn hủy. Một chạm trong Cài đặt.</string>
+    <string name="pay_sub_lifetime">Một lần trả. Không bao giờ thành gói đăng ký.</string>
+    <string name="pay_restore">Khôi phục</string>
+    <string name="pay_terms">Điều khoản</string>
+    <string name="pay_privacy">Quyền riêng tư</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro, cảm ơn đã giữ cho ngọn đèn ấm.</string>
+    <string name="set_pro_banner_title">Nhiều phân tích hơn, ít công sức hơn.</string>
+    <string name="set_pro_banner_sub">Ngày không cồn thông minh · Ô ghi nhanh · Theo dõi BAC</string>
+    <string name="set_section_you">BẠN</string>
+    <string name="set_section_insights">PHÂN TÍCH VÀ ĐỒNG BỘ</string>
+    <string name="set_section_appearance">GIAO DIỆN</string>
+    <string name="set_section_data">DỮ LIỆU CỦA BẠN</string>
+    <string name="set_section_privacy">RIÊNG TƯ VÀ GIỌNG ĐIỆU</string>
+    <string name="set_section_support">HỖ TRỢ</string>
+    <string name="set_profile">Hồ sơ</string>
+    <string name="set_profile_not_set">Chưa đặt</string>
+    <string name="set_profile_summary">%1$s %2$s · %3$s</string>
+    <string name="set_units">Đơn vị</string>
+    <string name="set_units_summary">%1$s · %2$s</string>
+    <string name="set_guideline">Hướng dẫn về cồn</string>
+    <string name="set_guideline_value">%1$d/ngày</string>
+    <string name="set_ask_cost">Hỏi giá đồ uống</string>
+    <string name="set_show_calories">Hiện calo</string>
+    <string name="set_auto_dry">Tự nhận ngày không cồn</string>
+    <string name="set_notifications">Thông báo</string>
+    <string name="set_notif_none">Không có</string>
+    <plurals name="set_notif_count">
+        <item quantity="other">%1$d lời nhắc mỗi ngày</item>
+    </plurals>
+    <string name="set_health_sync">Đồng bộ Sức khỏe</string>
+    <string name="set_health_connected">Đã kết nối</string>
+    <string name="set_health_off">Tắt</string>
+    <string name="set_quick_log">Ô ghi nhanh</string>
+    <string name="set_quick_log_setup">Thiết lập</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="other">%1$d đồ uống</item>
+    </plurals>
+    <string name="set_dark_mode">Chế độ tối</string>
+    <string name="set_app_icon">Biểu tượng ứng dụng</string>
+    <string name="set_icon_default">Mặc định</string>
+    <string name="set_icon_gift">Quà tặng</string>
+    <string name="set_icon_holiday">Ngày lễ</string>
+    <string name="set_language">Ngôn ngữ</string>
+    <string name="set_language_value">Tiếng Việt</string>
+    <string name="set_backup_title">Đã sao lưu</string>
+    <string name="set_backup_title_none">Chưa sao lưu</string>
+    <string name="set_backup_detail_never_android">Tạo một bản ở dưới · trên máy này · xuất dữ liệu luôn miễn phí</string>
+    <string name="set_backup_detail_dated">%1$s · trên máy này · xuất dữ liệu luôn miễn phí</string>
+    <string name="set_backup_row">Sao lưu, xuất và nhập</string>
+    <string name="set_backup_free">Miễn phí</string>
+    <string name="set_app_lock">Khóa ứng dụng</string>
+    <string name="set_app_lock_sub">Mở khóa trước khi mọi thứ hiện ra.</string>
+    <string name="set_discreet">Thông báo kín đáo</string>
+    <string name="set_discreet_sub">Nhắc trên màn hình khóa không bao giờ nhắc đến rượu bia.</string>
+    <string name="set_day_ends">Ngày kết thúc lúc</string>
+    <string name="set_day_ends_sub">Ly uống lúc 1:00 được tính cho đêm hôm trước.</string>
+    <string name="set_cutoff_midnight">Nửa đêm</string>
+    <string name="set_cutoff_2am">2:00</string>
+    <string name="set_cutoff_4am">4:00</string>
+    <string name="set_tone">Giọng điệu</string>
+    <string name="set_tone_icon_sample">Aa</string>
+    <string name="set_tone_neutral">Trung tính</string>
+    <string name="set_tone_push">Thúc đẩy</string>
+    <string name="set_tone_numbers">Con số</string>
+    <string name="set_tone_sub_neutral">Con số và sự ghi nhận nhẹ nhàng, không phán xét.</string>
+    <string name="set_tone_sub_push">Đề cao chuỗi ngày, nhấn mạnh hơn khi vượt mục tiêu.</string>
+    <string name="set_tone_sub_numbers">Thuần sổ sách, ẩn mọi từ đánh giá và mọi phán xét bằng màu sắc.</string>
+    <string name="set_contact">Liên hệ hỗ trợ</string>
+    <string name="set_about">Giới thiệu Alcohol Tracker</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">Mã khách hàng</string>
+    <string name="set_copy">Sao chép</string>
+    <string name="set_footer">Làm ra với sự chừng mực.\nDữ liệu không bao giờ rời khỏi điện thoại này.</string>
+    <string name="support_email_subject">Hỗ trợ Alcohol Tracker</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">Cơ thể của bạn, con số của bạn.</string>
+    <string name="profile_body">Cùng một ly nhưng vào mỗi cơ thể lại khác. Hai chi tiết nhỏ, và ước tính không còn là số trung bình mà thành con số của riêng bạn.</string>
+    <string name="profile_privacy_note">Mười giây, một lần duy nhất. Không gì ở đây rời khỏi điện thoại này.</string>
+    <string name="profile_sex_label">Giới tính sinh học</string>
+    <string name="profile_sex_female">Nữ</string>
+    <string name="profile_sex_male">Nam</string>
+    <string name="profile_weight_label">Cân nặng</string>
+    <string name="profile_weight_kg">kg</string>
+    <string name="profile_weight_lb">lb</string>
+    <string name="profile_weight_placeholder">Ước chừng cũng được</string>
+    <string name="profile_cta">Lưu thành của tôi</string>
+    <string name="profile_footer">Có thể đổi cả hai bất cứ lúc nào, ước tính điều chỉnh ngay lập tức.</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">Năng lượng</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">Đơn vị dung tích</string>
+    <string name="units_millilitres">Mililít</string>
+    <string name="units_ounces">Ounce</string>
+    <string name="units_note">Những lựa chọn này chỉ đổi cách hiển thị con số, không đổi những gì đã ghi.</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">Chưa có lời nhắc nào.</string>
+    <string name="notif_empty_body">Buổi tối là của bạn. Nếu một lời nhắc nhẹ nhàng mỗi ngày có ích, hãy thêm ở dưới.</string>
+    <string name="notif_repeat_hint">Mỗi lời nhắc lặp lại hằng ngày. Chạm − để gỡ một lời nhắc.</string>
+    <string name="notif_reminder_sub">%1$s · %2$s</string>
+    <string name="notif_create_cta">Tạo thông báo</string>
+    <string name="sheet_notif_title_placeholder">Tiêu đề, ví dụ Ly cuối</string>
+    <string name="sheet_notif_time_label">Giờ nhắc</string>
+    <string name="sheet_notif_message_placeholder">Nội dung (không bắt buộc)</string>
+    <string name="sheet_notif_repeat_note">Lặp lại mỗi ngày vào giờ đã chọn.</string>
+    <string name="sheet_notif_cta">Tạo</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">Ước tính BAC, thời gian về 0 và thẻ trạng thái thường trực.</string>
+    <string name="set_bac_unit_label">Đơn vị BAC</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">Xem trước thẻ trạng thái</string>
+    <string name="set_bac_preview_sub">Thông báo thường trực lặng lẽ, trong lúc BAC giảm dần.</string>
+    <string name="set_bac_disclaimer">Số liệu chỉ mang tính tham khảo. Tuyệt đối không dùng chúng để quyết định có lái xe hay không. Đã uống rượu bia thì không lái xe.</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">Ô ghi nhanh</string>
+    <string name="quicklog_mock_caption">GHI NHANH</string>
+    <string name="quicklog_mock_footer">một lần chạm · đã ghi</string>
+    <string name="quicklog_section_caption">ĐỒ UỐNG LƯU SẴN THÀNH Ô</string>
+    <string name="quicklog_selected_count">Đã chọn %1$d/%2$d</string>
+    <string name="quicklog_empty_title">Chưa có đồ uống lưu sẵn.</string>
+    <string name="quicklog_empty_sub">Tạo một mục và nó nằm cách bạn một lần chạm, tối đa bốn ô.</string>
+    <string name="quicklog_drink_meta">%1$d ml · %2$s%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">Sao lưu và khôi phục</string>
+    <string name="backup_status_dated">Đã sao lưu, %1$s, trên máy này.</string>
+    <string name="backup_status_none_android">Chưa có bản sao lưu — tạo một bản ở dưới.</string>
+    <string name="backup_whats_here">Những gì có trên điện thoại này</string>
+    <plurals name="backup_count_logs">
+        <item quantity="other">lần ghi đồ uống</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="other">ngày không cồn</item>
+    </plurals>
+    <string name="backup_count_profile">hồ sơ</string>
+    <string name="backup_export">Xuất dữ liệu</string>
+    <string name="backup_import">Nhập dữ liệu</string>
+    <string name="backup_create">Tạo bản sao lưu</string>
+    <string name="backup_restore">Khôi phục từ bản sao lưu</string>
+    <string name="backup_merge_note">Dữ liệu nhập vào sẽ hòa với dữ liệu sẵn có, các mục trùng được lặng lẽ bỏ qua.</string>
+    <string name="backup_danger_zone">NGUY HIỂM</string>
+    <string name="backup_clear_all">Xóa toàn bộ dữ liệu</string>
+    <string name="backup_clear_note">Vĩnh viễn và không thể hoàn tác. Hãy xuất một bản sao trước nếu dữ liệu còn quan trọng.</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">Giới thiệu</string>
+    <string name="about_version">Phiên bản %1$s · %2$s</string>
+    <string name="about_privacy">Chính sách quyền riêng tư</string>
+    <string name="about_terms">Điều khoản dịch vụ</string>
+    <string name="about_ack_caption">GHI CÔNG</string>
+    <string name="about_ack_role_db">cơ sở dữ liệu cục bộ</string>
+    <string name="about_ack_role_ui_android">giao diện người dùng</string>
+    <string name="about_ack_role_settings_android">cài đặt</string>
+    <string name="about_footer">Hình ly và giọt nước được vẽ bằng mã,\nvới sự chừng mực.</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">Vẫn ứng dụng đó, khoác áo khác. Chọn kiểu hợp với Màn hình chính của bạn.</string>
+    <string name="icon_relaunch_note">Việc đổi biểu tượng có thể đóng ứng dụng trong chốc lát khi trình khởi chạy cập nhật.</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">Xu hướng BAC</string>
+    <string name="trends_title">Ước tính BAC cao nhất</string>
+    <string name="trends_range">7 ngày qua</string>
+    <string name="trends_axis_start">6 ngày trước</string>
+    <string name="trends_axis_end">hôm nay</string>
+    <string name="trends_note" formatted="false">Đường cong hạ xuống khi cơ thể đào thải khoảng 0,015% mỗi giờ. Những tuần phẳng là những tuần lành.</string>
+    <string name="trends_empty_title">Chưa có đường cong nào.</string>
+    <string name="trends_empty_body">Thêm hồ sơ và ghi một ly, đường xu hướng bắt đầu từ lần rót đầu tiên.</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">Hướng dẫn về cồn</string>
+    <string name="guideline_intro">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_intro__us">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_intro__gb">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_intro__au">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_intro__ca">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_intro__jp">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_intro__dk">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_intro__vn">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_intro__who">Khuyến nghị nguy cơ thấp của WHO đề xuất tối đa 2 %1$s mỗi ngày, kèm những ngày không cồn đều đặn. Hãy đặt mức phù hợp với bạn.</string>
+    <string name="guideline_daily_target">Mục tiêu ngày</string>
+    <string name="guideline_weekly_target">Mục tiêu tuần</string>
+    <plurals name="guideline_target_units">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="other">Mục tiêu tháng tự động theo sau: %1$d %2$s. Khuyến nghị của WHO là một nguồn tham khảo, không phải một phán quyết.</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">Gỡ ly này?</string>
+    <string name="dialog_delete_body">Mục này rời khỏi nhật ký, và các con số lùi lại như cũ.</string>
+    <string name="dialog_delete_keep">Giữ lại</string>
+    <string name="dialog_delete_remove">Gỡ</string>
+    <string name="dialog_clear_title">Xóa toàn bộ dữ liệu?</string>
+    <string name="dialog_clear_body">Mọi lần ghi, ngày không cồn và cài đặt sẽ mất hẳn. Hãy xuất một bản sao trước nếu muốn giữ.</string>
+    <string name="dialog_clear_delete">Xóa</string>
+    <string name="dialog_health_title">Cho phép “%1$s” ghi dữ liệu lượng cồn tiêu thụ vào %2$s?</string>
+    <string name="dialog_health_deny">Không cho phép</string>
+    <string name="dialog_health_allow">Cho phép</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">Đã ghi %1$s, %2$.1f %3$s.</string>
+    <string name="toast_logged">Đã ghi, %1$.1f %2$s.</string>
+    <string name="action_undo">Hoàn tác</string>
+    <string name="toast_relogged">Thêm ly nữa như vậy, đã ghi cho hôm nay.</string>
+    <string name="toast_entry_removed">Đã gỡ khỏi nhật ký.</string>
+    <string name="toast_dry_marked">Đã ghi nhận ngày không cồn. Những điều lặng lẽ vẫn có sức nặng.</string>
+    <string name="toast_day_has_drinks">Ngày này đã có đồ uống được ghi.</string>
+    <string name="toast_day_has_drinks_cal">Ngày đó có đồ uống được ghi.</string>
+    <string name="toast_custom_saved">Đã lưu, lần sau chỉ một lần chạm.</string>
+    <string name="toast_profile_incomplete">Cần cả cân nặng và giới tính sinh học, BAC dựa vào hai thông tin này.</string>
+    <string name="toast_profile_saved">Đã lưu, ước tính BAC vừa sắc nét hơn.</string>
+    <string name="toast_reminder_scheduled">Đã đặt lịch, một lời nhắc nhẹ nhàng, mỗi ngày.</string>
+    <string name="toast_reminder_silent">Đã lưu, nhưng %1$s sẽ giữ im lặng.</string>
+    <string name="toast_icon_updated">Đã đổi biểu tượng, trông hợp với bạn.</string>
+    <string name="toast_customer_id_copied">Đã sao chép, dán vào bất kỳ email hỗ trợ nào.</string>
+    <string name="toast_pro_welcome">Chào mừng đến với Pro, mọi thứ đã mở khóa.</string>
+    <string name="toast_restore_success">Chào bạn trở lại, mọi thứ đã mở khóa.</string>
+    <string name="toast_restore_none">Chưa có gì để khôi phục, mọi thứ vẫn ổn.</string>
+    <string name="toast_purchase_unavailable">Hiện chưa thể mua hàng.</string>
+    <string name="toast_health_connected">Từ giờ dữ liệu đồ uống lặng lẽ chảy sang %1$s.</string>
+    <string name="toast_backup_created">Đã tạo bản sao lưu trên máy này.</string>
+    <string name="toast_backup_restored_android">Đã khôi phục, các mục trùng được lặng lẽ bỏ qua.</string>
+    <string name="toast_backup_none_android">Máy này chưa có bản sao lưu nào.</string>
+    <string name="toast_export_file_android">Đã lưu tệp sao lưu, hãy giữ ở nơi an toàn.</string>
+    <string name="toast_file_unreadable">Không đọc được tệp đó.</string>
+    <plurals name="toast_import_result">
+        <item quantity="other">Đã nhập %1$d, bỏ qua %2$d mục trùng.</item>
+    </plurals>
+    <string name="toast_import_ok_android">Đã nhập, các mục trùng được lặng lẽ bỏ qua.</string>
+    <string name="toast_import_invalid_android">Tệp đó trông không giống một bản sao lưu.</string>
+    <string name="toast_cleared">Một trang giấy trắng. Hãy nhẹ tay với nó.</string>
+    <string name="toast_csv_ready_android">Sẵn sàng để chia sẻ.</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">Lời nhắc hằng ngày</string>
+    <string name="notif_channel_reminders_desc">Những lời nhắc hằng ngày bạn tạo trong Cài đặt.</string>
+    <string name="notif_channel_bac">Trạng thái ước tính</string>
+    <string name="notif_channel_bac_desc">Một thẻ lặng lẽ trong lúc ước tính giảm dần.</string>
+    <string name="notif_discreet_title">Ghi chú buổi tối</string>
+    <string name="notif_discreet_body">Một ghi chú mười giây giữ cho bức tranh trung thực.</string>
+    <string name="notif_reminder_body_fallback">Một ghi chú nhanh giữ cho bức tranh trung thực.</string>
+    <string name="notif_bac_discreet_title">Đang giảm</string>
+    <string name="notif_bac_discreet_body">Khoảng %1$s nữa về 0.</string>
+    <string name="notif_bac_title">Ước tính BAC %1$s</string>
+    <string name="notif_bac_body">%1$s nữa về 0. Đã uống rượu bia thì không lái xe.</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">Ngày trước</string>
+    <string name="a11y_open_calendar">Mở lịch</string>
+    <string name="a11y_next_day">Ngày sau</string>
+    <string name="a11y_log_quick">Ghi %1$s, %2$.1f %3$s</string>
+    <string name="a11y_units_info">Một %1$s là gì?</string>
+    <string name="a11y_units_info__us">Một %1$s là gì?</string>
+    <string name="a11y_units_info__gb">Một %1$s là gì?</string>
+    <string name="a11y_units_info__au">Một %1$s là gì?</string>
+    <string name="a11y_units_info__ca">Một %1$s là gì?</string>
+    <string name="a11y_units_info__jp">Một %1$s là gì?</string>
+    <string name="a11y_units_info__dk">Một %1$s là gì?</string>
+    <string name="a11y_units_info__vn">Một %1$s là gì?</string>
+    <string name="a11y_units_info__who">Một %1$s là gì?</string>
+    <string name="a11y_intake_ring">Hôm nay %1$.1f trên %2$d %3$s</string>
+    <string name="a11y_mini_progress">%1$s: %2$.1f trên %3$d %4$s</string>
+    <string name="a11y_back">Quay lại</string>
+    <string name="a11y_close">Đóng</string>
+    <string name="a11y_prev_month">Tháng trước</string>
+    <string name="a11y_next_month">Tháng sau</string>
+    <string name="a11y_cal_day">Ngày %1$d</string>
+    <string name="a11y_cal_day_logged">Ngày %1$d, có đồ uống được ghi</string>
+    <string name="a11y_cal_day_dry">Ngày %1$d, ngày không cồn</string>
+    <string name="a11y_cal_day_logged_dry">Ngày %1$d, có đồ uống được ghi, ngày không cồn</string>
+    <string name="a11y_prev_period">Kỳ trước</string>
+    <string name="a11y_next_period">Kỳ sau</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="other">%1$d ngày không cồn, %2$d phần trăm của kỳ này</item>
+    </plurals>
+    <string name="a11y_remove_reminder">Gỡ %1$s</string>
+    <string name="a11y_toggle_on">Bật</string>
+    <string name="a11y_toggle_off">Tắt</string>
+    <string name="a11y_fab_add">Thêm</string>
+    <string name="a11y_fab_close">Đóng các thao tác</string>
+    <string name="a11y_fab_hint">Ghi một ly hoặc đánh dấu ngày không cồn</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">đơn vị cồn</string>
+    <string name="units_noun_unit_pl">đơn vị cồn</string>
+    <string name="units_noun_unit_short">đơn vị</string>
+    <string name="units_noun_unit_abbr">đv</string>
+    <string name="units_noun_unit_indef">đơn vị cồn</string>
+    <string name="units_noun_std_sg">ly chuẩn</string>
+    <string name="units_noun_std_pl">ly chuẩn</string>
+    <string name="units_noun_std_short">ly chuẩn</string>
+    <string name="units_noun_std_abbr">SD</string>
+    <string name="units_noun_std_indef">ly chuẩn</string>
+    <string name="units_noun_local_sg">đơn vị cồn</string>
+    <string name="units_noun_local_pl">đơn vị cồn</string>
+    <string name="units_noun_local_short">đơn vị</string>
+    <string name="units_noun_local_abbr">đv</string>
+    <string name="units_noun_local_indef">đơn vị cồn</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">Nhật ký</string>
+    <string name="tab_statistics_short">Thống kê</string>
+    <string name="tab_settings_short">Cài đặt</string>
+</resources>

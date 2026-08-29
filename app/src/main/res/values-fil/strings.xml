@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/fil-PH.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">Diary</string>
+    <string name="tab_statistics">Istatistika</string>
+    <string name="tab_settings">Mga Setting</string>
+    <string name="lock_tap_to_unlock">Naka-lock. I-tap para i-unlock.</string>
+    <string name="applock_prompt_title">Naka-lock ang Alcohol Tracker</string>
+    <string name="applock_prompt_sub">I-unlock muna bago may lumabas.</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">Maligayang pagdating sa\nAlcohol Tracker</string>
+    <string name="ob_welcome_sub">Ang kasama mo sa mas mulat na pag-inom.</string>
+    <string name="ob_welcome_body">I-track nang walang paghusga. Mag-log ng inom sa ilang segundo, tingnan kung paano bumababa ang tinatayang BAC mo, kahit mula sa wrist mo.</string>
+    <string name="ob_welcome_quick_caption">Mabilisang log, mula sa bulsa mo</string>
+    <string name="ob_welcome_bac_example" formatted="false">Tinatayang BAC 0.032%</string>
+    <string name="ob_welcome_sober_example">Mga 2h bago maging zero</string>
+    <string name="ob_get_started">Magsimula</string>
+    <string name="ob_step_indicator">HAKBANG %1$d SA 3</string>
+    <string name="ob_skip">Laktawan</string>
+    <string name="ob_goals_title">Ano ang nagdala sa iyo rito?</string>
+    <string name="ob_goals_sub">Pumili ng kahit ilan basta totoo sa iyo. Sa iyo at sa app lang ito mananatili.</string>
+    <string name="ob_goal_less">Bawas na pag-inom</string>
+    <string name="ob_goal_awareness">Malaman kung gaano karami ang naiinom ko</string>
+    <string name="ob_goal_break">Pahinga para sa katawan ko</string>
+    <string name="ob_goal_free_days">Mas maraming araw na walang inom</string>
+    <string name="ob_goal_conscious">Mulat na pag-inom</string>
+    <string name="ob_goal_reset">Pag-reset ng mga nakasanayan ko</string>
+    <string name="ob_goal_social">Pagharap sa mga social na sitwasyon</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="other">Ituloy nang may %1$d na layunin</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">Pumili ng kahit isang layunin</string>
+    <string name="ob_base_title">Ilang inumin sa karaniwang linggo?</string>
+    <string name="ob_base_sub">Mabilisang tingin sa ritmo mo, walang paghusga, panimula lang.</string>
+    <string name="ob_base_0_4">0–4 na inumin</string>
+    <string name="ob_base_5_9">5–9 na inumin</string>
+    <string name="ob_base_10_14">10–14 na inumin</string>
+    <string name="ob_base_15_19">15–19 na inumin</string>
+    <string name="ob_base_20_plus">20 o higit pa</string>
+    <string name="ob_continue">Ituloy</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">Ngayong Araw</string>
+    <string name="diary_yesterday">Kahapon</string>
+    <string name="diary_pro_banner_title">I-unlock ang buong larawan</string>
+    <string name="diary_pro_banner_sub">Quick log tiles · BAC insights · awtomatikong araw na walang alak · mga paalala</string>
+    <string name="diary_usual">Ang usual?</string>
+    <string name="units_abbrev_value">%1$.1f %2$s</string>
+    <string name="diary_intake_today">Nainom Ngayong Araw</string>
+    <string name="diary_intake">Nainom</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="other">sa %1$d na %2$s</item>
+    </plurals>
+    <string name="diary_this_week">Ngayong linggo</string>
+    <string name="diary_this_month">Ngayong buwan</string>
+    <string name="diary_mini_value">%1$.1f / %2$d</string>
+    <string name="diary_remaining_numbers">Na-log ngayong araw: %1$.1f sa %2$d na %3$s.</string>
+    <string name="diary_remaining_zero_neutral">Hindi pa nagagalaw ang target mo ngayong araw, o hindi mo lang ito kailangan.</string>
+    <string name="diary_remaining_left_neutral">May %1$.1f na %2$s pang natitira sa target mo ngayong araw.</string>
+    <string name="diary_remaining_at_target_neutral">Nasa target mo mismo, isang basong tubig kaya ang sunod?</string>
+    <string name="diary_remaining_over_neutral">%1$.1f na %3$s ang lampas sa target mong %2$d ngayong araw.</string>
+    <string name="diary_adjust_guideline">Ayusin ang guideline sa alak</string>
+    <string name="bac_monitor">BAC Monitor</string>
+    <string name="bac_status_waiting">NAGHIHINTAY</string>
+    <string name="bac_free_body">I-unlock ang Pro, mag-log ng inom, at dito lalabas ang tinatayang BAC mo.</string>
+    <string name="bac_how_estimated">Paano tinatantiya ang BAC</string>
+    <string name="bac_trends">Mga Trend</string>
+    <string name="bac_setup_title">I-set up ang BAC profile mo</string>
+    <string name="bac_setup_body">Ilagay ang timbang at kasarian mo para may saysay ang mga tantiya, sampung segundo lang ito.</string>
+    <string name="bac_setup_cta">I-set Up ang BAC Profile</string>
+    <string name="bac_status_rising">TUMATAAS</string>
+    <string name="bac_status_settling">BUMABABA</string>
+    <string name="bac_status_clear">TANTIYA 0</string>
+    <string name="bac_value_percent">%1$.3f%%</string>
+    <string name="bac_value_permille">%1$.2f‰</string>
+    <string name="bac_sober_in">Mga %1$s bago maging zero ang tantiya</string>
+    <string name="bac_all_clear">Zero na ang tantiya, wala nang natitira sa kuwenta.</string>
+    <string name="bac_disclaimer_short">Tantiya lang ito, hindi ito go signal para mag-drive.</string>
+    <string name="diary_dry_marked">Isang araw na walang alak, naitala.</string>
+    <string name="diary_dry_remembered">Isang araw na walang alak, naalala.</string>
+    <string name="diary_dry_body">Tahimik na nagpapasalamat ang katawan mo.</string>
+    <string name="diary_dry_unmark">I-unmark</string>
+    <string name="diary_logged_today">NA-LOG NGAYONG ARAW</string>
+    <string name="diary_logged_this_day">NA-LOG SA ARAW NA ITO</string>
+    <string name="diary_entry_meta">%1$d ml · %2$s%%</string>
+    <string name="diary_empty_title_today">Walang laman pa ang baso.</string>
+    <string name="diary_empty_title_other">Walang na-log sa araw na ito.</string>
+    <string name="diary_empty_body_today">Kapag nagsalin ka, i-log ito sa ilang tap, o markahang walang alak ang araw na ito at magsimula ng streak.</string>
+    <string name="diary_empty_body_other">Kung natatandaan mo pa, idagdag mo, ang pag-backdate ang nagpapanatiling tapat sa mga pattern mo.</string>
+    <string name="action_log_drink">Mag-log ng Inom</string>
+    <string name="action_mark_dry_day">Markahang Walang Alak</string>
+    <string name="diary_add_previous_dry">Magdagdag ng nakaraang araw na walang alak</string>
+    <string name="action_dry_day">Walang alak</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">Ayusin ang mga detalye</string>
+    <string name="log_title_review">Repasuhin at i-save</string>
+    <string name="log_cta_next">Susunod</string>
+    <string name="log_cta_save">I-save ang inom</string>
+    <string name="log_pick_intro">Ano ang ininom mo? Pumili ng malapit na, maaayos mo ang lahat sa susunod.</string>
+    <string name="log_search_placeholder">Maghanap ng inumin</string>
+    <string name="log_custom_title">Gumawa ng custom na inumin</string>
+    <string name="log_custom_sub">Kahit anong volume, kahit anong ABV, hindi kailanman nasa likod ng paywall.</string>
+    <string name="log_section_your_drinks">MGA INUMIN MO</string>
+    <string name="log_section_popular">POPULAR</string>
+    <string name="log_grid_meta">%1$s%% · %2$d ml</string>
+    <string name="log_tune_intro">Iayon ang laki ng inom sa kung ano talaga ang nasa mesa.</string>
+    <string name="log_abv_label">Nilalamang alkohol</string>
+    <string name="log_abv_value">%1$.1f%%</string>
+    <string name="log_serving_label">Laki ng serving</string>
+    <string name="log_unit_ml">ml</string>
+    <string name="log_unit_floz">fl oz</string>
+    <string name="log_serving_ml_value">%1$d ml</string>
+    <string name="log_serving_oz_value">%1$.1f oz</string>
+    <string name="log_quantity_label">Dami</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈ %1$.1f na %3$s · %2$d kcal</string>
+    <string name="log_working_line">%1$d ml × %2$s%% × 0.789 ÷ 1000 = %3$.1f na %4$s</string>
+    <string name="log_working_line_half">½ × %1$d ml × %2$s%% × 0.789 ÷ 1000 = %3$.1f na %4$s</string>
+    <string name="log_working_line_qty">%1$d × %2$d ml × %3$s%% × 0.789 ÷ 1000 = %4$.1f na %5$s</string>
+    <string name="log_review_meta">%1$d ml · %2$s%% ABV</string>
+    <string name="log_review_meta_half">×½ · %1$d ml · %2$s%% ABV</string>
+    <string name="log_review_meta_qty">×%1$d · %2$d ml · %3$s%% ABV</string>
+    <string name="log_when_label">Kailan</string>
+    <string name="log_when_now">Ngayon</string>
+    <string name="log_when_1h">1h nakaraan</string>
+    <string name="log_when_2h">2h nakaraan</string>
+    <string name="log_cost_label">Magkano ito?</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">Calories</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">Na-save sa araw na ito, maaari mo itong alisin anumang oras.</string>
+    <string name="log_saved_to_day">Na-save sa %1$s, maaari mo itong alisin anumang oras.</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">Li / Lu / Ma / Mi / Hu / Bi / Sa</string>
+    <string name="sheet_cal_hint_select">Ang asul na tuldok ay mga araw na may na-log; ang berdeng tuldok ay mga araw na walang alak. I-tap ang isa para buksan ito.</string>
+    <string name="sheet_cal_hint_dry">I-tap ang nakaraang araw para markahang walang alak, i-tap ulit para alisin. Hindi magbabago ang mga araw na may inom.</string>
+    <string name="action_done">Tapos</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d ml · %2$s%% · %3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">nagastos</string>
+    <string name="sheet_entry_relog">Ganoon ulit, mag-log ng isa pa</string>
+    <string name="sheet_entry_remove">Alisin sa diary</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_title__us">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_title__gb">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_title__au">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_title__ca">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_title__jp">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_title__dk">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_title__vn">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_title__who">Ano ba talaga ang isang %1$s?</string>
+    <string name="sheet_units_body">10 g na purong alkohol, ang panukat na ginagamit ng WHO. Iba-iba ang dami nito sa bawat baso, kaya kami na ang bahala sa matematika.</string>
+    <string name="sheet_units_chip_pour">150 ml na inom</string>
+    <string name="sheet_units_chip_abv" formatted="false">13% ABV</string>
+    <string name="sheet_units_chip_density">0.789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1.5 na %1$s</string>
+    <string name="sheet_units_chip_result__us">1.5 na %1$s</string>
+    <string name="sheet_units_chip_result__gb">1.5 na %1$s</string>
+    <string name="sheet_units_chip_result__au">1.5 na %1$s</string>
+    <string name="sheet_units_chip_result__ca">1.5 na %1$s</string>
+    <string name="sheet_units_chip_result__jp">1.5 na %1$s</string>
+    <string name="sheet_units_chip_result__dk">1.5 na %1$s</string>
+    <string name="sheet_units_chip_result__vn">1.5 na %1$s</string>
+    <string name="sheet_units_chip_result__who">1.5 na %1$s</string>
+    <string name="sheet_units_density_note">Density lang ng alkohol ang 0.789. Walang mahika riyan.</string>
+    <string name="sheet_units_targets">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+    <string name="sheet_units_targets__us">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+    <string name="sheet_units_targets__gb">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+    <string name="sheet_units_targets__au">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+    <string name="sheet_units_targets__ca">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+    <string name="sheet_units_targets__jp">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+    <string name="sheet_units_targets__dk">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+    <string name="sheet_units_targets__vn">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+    <string name="sheet_units_targets__who">Isa iyang margarita, tahimik na isa\'t kalahating %1$s. Ang pang-araw-araw at lingguhang target mo ay nagsisimula sa mababang-panganib na guideline ng WHO, at ikaw ang may hawak kung ililipat mo ang mga ito.</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">Ginagamit namin ang Widmark method: ang alkohol na na-log mo, ikinakalat sa tubig ng katawan mo (mula sa timbang at kasarian), bawas ang naaalis ng katawan mo, mga 0.015% kada oras.</string>
+    <string name="sheet_bac_not_measurement">Tantiya ito, hindi sukat. Ang pagkain, gamot, at ang sarili mong biyolohiya ay nagbabago sa totoong numero.</string>
+    <string name="sheet_bac_never_drive">Huwag na huwag gamitin ang tantiya para magpasya kung ligtas nang mag-drive. Kapag may duda, huwag mag-drive.</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">Bagong naka-save na inumin</string>
+    <string name="sheet_custom_name_placeholder">Pangalan, para mabilis mahanap</string>
+    <string name="sheet_custom_base_caption">URI NG BASE</string>
+    <string name="sheet_custom_abv_label" formatted="false">ABV %</string>
+    <string name="sheet_custom_ml_label">Serving (ml)</string>
+    <string name="sheet_custom_notes_placeholder">Mga sangkap o tala (opsyonal)</string>
+    <string name="action_save">I-save</string>
+    <string name="action_cancel">Kanselahin</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7A</string>
+    <string name="stats_period_30d">30A</string>
+    <string name="stats_period_90d">90A</string>
+    <string name="stats_period_1y">1T</string>
+    <string name="stats_period_custom">Custom</string>
+    <string name="action_export">I-export</string>
+    <string name="stats_edit_range">I-edit ang custom range</string>
+    <string name="stats_verdict_numbers">Panahong ito %1$.1f %3$s · nakaraan %2$.1f %3$s</string>
+    <string name="stats_verdict_level_neutral">Kapantay ng nakaraang panahon.</string>
+    <string name="stats_verdict_less_neutral">%1$d%% na mas mababa kaysa sa nakaraang panahon</string>
+    <string name="stats_verdict_more_neutral">%1$d%% na mas mataas kaysa sa nakaraang panahon</string>
+    <string name="stats_verdict_first_numbers">%1$.1f %2$s sa panahong ito.</string>
+    <string name="stats_verdict_first_neutral">Ito ang unang panahon mong may datos, magsisimula ang paghahambing sa susunod na panahon.</string>
+    <string name="stats_tile_drunk">Nainom</string>
+    <string name="stats_tile_alcohol">Alkohol</string>
+    <string name="stats_tile_spending">Nagastos</string>
+    <string name="stats_tile_calories">Calories</string>
+    <string name="stats_unit_ml">ml</string>
+    <plurals name="stats_unit_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="other">≈ %1$d na cheeseburger</item>
+    </plurals>
+    <string name="stats_units_chart_title">%1$s na Nainom</string>
+    <string name="stats_units_chart_title__us">%1$s na Nainom</string>
+    <string name="stats_units_chart_title__gb">%1$s na Nainom</string>
+    <string name="stats_units_chart_title__au">%1$s na Nainom</string>
+    <string name="stats_units_chart_title__ca">%1$s na Nainom</string>
+    <string name="stats_units_chart_title__jp">%1$s na Nainom</string>
+    <string name="stats_units_chart_title__dk">%1$s na Nainom</string>
+    <string name="stats_units_chart_title__vn">%1$s na Nainom</string>
+    <string name="stats_units_chart_title__who">%1$s na Nainom</string>
+    <string name="stats_daily_average">Araw-araw na average</string>
+    <string name="stats_units_total">Kabuuan %1$.1f na %2$s</string>
+    <string name="stats_units_per_day">%1$.2f / araw</string>
+    <string name="stats_units_empty">Dito mismo mabubuo ang pattern mo.</string>
+    <string name="stats_spend_chart_title">Trend ng Gastos</string>
+    <string name="stats_spend_total">Kabuuan %1$s</string>
+    <string name="stats_spend_per_day">%1$s / araw</string>
+    <string name="stats_spend_empty">Lalabas ang halaga kapag nag-log ka ng inuming may presyo.</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">Naipong pera</string>
+    <string name="stats_baseline_label">Karaniwang linggo %1$s</string>
+    <string name="stats_saved_unset">Itakda ang karaniwang lingguhang gastos mo at magiging naipong pera ito, mula sa totoong presyong binabayaran mo, hindi sa pambansang average.</string>
+    <string name="stats_saved_under">Mas mababa nang %1$s sa karaniwang gastos mo ngayong panahon, batay sa totoong binabayaran mo, hindi sa average.</string>
+    <string name="stats_saved_over">Mas mataas nang %1$s sa karaniwang gastos mo ngayong panahon.</string>
+    <string name="stats_breakdown_title">Breakdown ng Inumin</string>
+    <string name="stats_breakdown_locked">Tingnan kung aling inumin ang nangunguna sa mga linggo mo, at kung ano ang tahimik nilang kinalalabasan.</string>
+    <string name="stats_breakdown_empty">Mag-log ng ilang inom at lalabas na ang mga paborito mo.</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="other">%1$s · %2$d beses</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d%%</string>
+    <string name="stats_breakdown_leader">Nangunguna ang %1$s, %2$d%% ng %3$s sa panahong ito.</string>
+    <string name="stats_dry_title_positive">Mabuti ang mga araw mong walang alak.</string>
+    <string name="stats_dry_body_positive">%1$d%% ng panahong ito ang mga araw na walang alak. Bawat isa ay pahingang napapansin ng katawan mo.</string>
+    <string name="stats_dry_title_none">Wala pang araw na walang alak.</string>
+    <string name="stats_dry_body_none">Ang una ang magsisimula ng streak, markahang walang alak ang araw na ito mula sa Diary.</string>
+    <string name="stats_dry_title_numbers">Mga araw na walang alak</string>
+    <string name="stats_dry_body_numbers">%1$d sa %2$d na araw · %3$d%% ng panahong ito.</string>
+    <string name="stats_dry_ring_pct">%1$d%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">Custom na range</string>
+    <string name="sheet_range_from">Mula</string>
+    <string name="sheet_range_to">Hanggang</string>
+    <string name="sheet_range_last7">Huling 7 araw</string>
+    <string name="sheet_range_last30">Huling 30 araw</string>
+    <string name="action_apply">I-apply</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">I-export ang istatistika</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">Istatistika, %1$s.csv</string>
+    <string name="sheet_export_desc">Lahat ng numero mula sa panahong ito, handa nang i-share.</string>
+    <string name="sheet_export_cta">I-share ang CSV</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">Panatilihing naka-sync ang mga inom mo</string>
+    <string name="sheet_health_body">Awtomatikong maisi-save sa %1$s ang mga na-log na inom, para nasa iisang lugar ang buong larawan mo.</string>
+    <string name="sheet_health_data_title">Datos ng alak</string>
+    <string name="sheet_health_data_sub">Mga tala lang ng pag-inom ng alak ang isinusulat, walang binabasa.</string>
+    <string name="sheet_health_cta">Kumonekta sa %1$s</string>
+    <string name="sheet_health_change_access">Mababago mo ang access mamaya sa %1$s.</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">Tuloy-tuloy na notification</string>
+    <string name="sheet_live_body">Habang bumababa ang BAC mo, may tahimik na card na nananatili sa gilid, hindi mo na kailangang buksan ang app.</string>
+    <string name="sheet_live_mock_status">Tinatayang BAC, bumababa</string>
+    <string name="sheet_live_mock_value" formatted="false">0.065%</string>
+    <string name="sheet_live_mock_tozero">3h 42m bago maging zero</string>
+    <string name="sheet_live_note">Preview ito na may halimbawang numero, walang aktuwal na tumatakbo.</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">Tingnan ang buong larawan.</string>
+    <string name="pay_sub">Buong history ng iyong pag-inom, live na tantiya ng alcohol level, at ang weekly trend na nagpapakita kung saan nagsisimula ang mabigat na buwan.</string>
+    <string name="pay_no_ads">Walang ads. Walang binebentang data. Walang account.</string>
+    <string name="pay_benefit_history">Bawat inuming na-log mo kailanman, hindi lang huling 90 araw</string>
+    <string name="pay_benefit_bac">Live na tantiya ng alcohol level at oras mo pabalik sa zero</string>
+    <string name="pay_benefit_insights">Weekly total kumpara sa gabay, kasama ang trend</string>
+    <string name="pay_benefit_streaks">Streak ng mga araw na walang alak, naipong pera, naiwasang calories</string>
+    <string name="pay_benefit_quicklog">Ulitin ang log sa isang tap, mula sa home screen</string>
+    <string name="pay_benefit_report">Malinis na PDF report na maibibigay mo sa doktor</string>
+    <string name="pay_compare_caption">ANO ANG NAKUKUHA MO</string>
+    <string name="pay_compare_free">LIBRE</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">Walang limitasyong pag-log at sariling inumin</string>
+    <string name="pay_compare_export">Export, backup at widgets</string>
+    <string name="pay_compare_darkmode">Dark mode, app lock at mga paalala</string>
+    <string name="pay_compare_history">History lampas sa 90 araw</string>
+    <string name="pay_compare_bac">Tantiya ng alcohol level at quick log tiles</string>
+    <string name="pay_compare_insights">Malalim na insight, PDF at pribadong sync</string>
+    <string name="pay_plan_weekly">Lingguhan</string>
+    <string name="pay_plan_monthly">Buwanan</string>
+    <string name="pay_plan_annual">Taunan</string>
+    <string name="pay_plan_lifetime">Habambuhay</string>
+    <string name="pay_price_line_weekly">%1$s kada linggo</string>
+    <string name="pay_price_line_monthly">%1$s kada buwan</string>
+    <string name="pay_price_line_annual">%1$s kada taon</string>
+    <string name="pay_price_line_lifetime">%1$s isang beses, sa iyo habambuhay</string>
+    <string name="pay_badge_trial">%1$d ARAW LIBRE</string>
+    <string name="pay_badge_save">TIPID %1$d%%</string>
+    <string name="pay_badge_best">PINAKASULIT</string>
+    <string name="pay_loading">Kinukuha ang presyo ngayon sa store…</string>
+    <string name="pay_unavailable">Hindi sumasagot ang store ngayon. Gumagana pa rin ang pag-log, export at backup.</string>
+    <string name="pay_retry">Subukan ulit</string>
+    <string name="pay_faq_caption">MGA TANONG, SINAGOT</string>
+    <string name="pay_faq_q_trial">Paano gumagana ang libreng trial?</string>
+    <string name="pay_faq_a_trial">Sa iyo ang lahat ng Pro feature sa loob ng %1$d araw. Kanselahin bago ito matapos at walang sisingilin.</string>
+    <string name="pay_faq_q_after">Ano ang mangyayari pagkatapos?</string>
+    <string name="pay_faq_a_after">Magsisimula ang plan na pinili mo, sa presyong nakalagay sa card nito, hindi kailanman mas mataas. Papaalalahanan ka namin 2 araw bago, para walang biglaan.</string>
+    <string name="pay_faq_q_logs">Mala-lock ba ang mga log ko balang araw?</string>
+    <string name="pay_faq_a_logs">Hindi. Ang pag-log, sariling inumin, stats ngayong linggo, widgets, CSV export, backup, dark mode, app lock at mga paalala ay libre habambuhay. Kung tumigil kang magbayad, mananatiling sa iyo at mananatiling nababasa ang lahat ng isinulat mo.</string>
+    <string name="pay_faq_q_cancel">Puwede bang kanselahin anumang oras?</string>
+    <string name="pay_faq_a_cancel">Palagi. I-manage o kanselahin mula sa mga subscription mo sa %1$s, at mananatili ang data mo dito, sa telepono mo.</string>
+    <string name="pay_cta_trial">Simulan ang %1$d araw kong libre</string>
+    <string name="pay_cta_plan">Magpatuloy, %1$s</string>
+    <string name="pay_cta_lifetime">I-unlock ang Pro habambuhay</string>
+    <string name="pay_cta_default">Magpatuloy</string>
+    <string name="pay_sub_trial">%1$d araw libre, tapos %2$s. Walang sisingilin ngayon.</string>
+    <string name="pay_sub_recurring">Mag-re-renew sa %1$s hanggang kanselahin mo. Isang tap sa Settings.</string>
+    <string name="pay_sub_lifetime">Isang bayad lang. Hindi kailanman nagiging subscription.</string>
+    <string name="pay_restore">I-restore</string>
+    <string name="pay_terms">Mga Tuntunin</string>
+    <string name="pay_privacy">Privacy</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro, salamat sa patuloy mong suporta.</string>
+    <string name="set_pro_banner_title">Mas maraming insight, mas kaunting effort.</string>
+    <string name="set_pro_banner_sub">Smart na araw na walang alak · Quick log tiles · BAC monitor</string>
+    <string name="set_section_you">IKAW</string>
+    <string name="set_section_insights">INSIGHT AT SYNC</string>
+    <string name="set_section_appearance">ITSURA</string>
+    <string name="set_section_data">ANG DATOS MO</string>
+    <string name="set_section_privacy">PRIVACY AT TONO</string>
+    <string name="set_section_support">SUPORTA</string>
+    <string name="set_profile">Profile</string>
+    <string name="set_profile_not_set">Hindi pa nakatakda</string>
+    <string name="set_profile_summary">%1$s %2$s · %3$s</string>
+    <string name="set_units">Mga Sukat</string>
+    <string name="set_units_summary">%1$s · %2$s</string>
+    <string name="set_guideline">Guideline sa alak</string>
+    <string name="set_guideline_value">%1$d / araw</string>
+    <string name="set_ask_cost">Itanong ang halaga ng inom</string>
+    <string name="set_show_calories">Ipakita ang calories</string>
+    <string name="set_auto_dry">Awtomatikong tukuyin ang araw na walang alak</string>
+    <string name="set_notifications">Mga Notification</string>
+    <string name="set_notif_none">Wala</string>
+    <plurals name="set_notif_count">
+        <item quantity="other">%1$d kada araw</item>
+    </plurals>
+    <string name="set_health_sync">Health Sync</string>
+    <string name="set_health_connected">Konektado</string>
+    <string name="set_health_off">Naka-off</string>
+    <string name="set_quick_log">Quick log tiles</string>
+    <string name="set_quick_log_setup">I-set up</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="other">%1$d na inumin</item>
+    </plurals>
+    <string name="set_dark_mode">Dark Mode</string>
+    <string name="set_app_icon">App Icon</string>
+    <string name="set_icon_default">Default</string>
+    <string name="set_icon_gift">Regalo</string>
+    <string name="set_icon_holiday">Pista</string>
+    <string name="set_language">Wika</string>
+    <string name="set_language_value">Filipino</string>
+    <string name="set_backup_title">Naka-backup</string>
+    <string name="set_backup_title_none">Wala pang backup</string>
+    <string name="set_backup_detail_never_android">Gumawa ng isa sa ibaba · sa device na ito · palaging libre ang export</string>
+    <string name="set_backup_detail_dated">%1$s · sa device na ito · palaging libre ang export</string>
+    <string name="set_backup_row">Backup, export at import</string>
+    <string name="set_backup_free">Libre</string>
+    <string name="set_app_lock">App Lock</string>
+    <string name="set_app_lock_sub">I-unlock muna bago may lumabas.</string>
+    <string name="set_discreet">Diskretong notification</string>
+    <string name="set_discreet_sub">Hindi kailanman babanggitin ang alak sa mga paalala sa lock screen.</string>
+    <string name="set_day_ends">Nagtatapos ang araw nang</string>
+    <string name="set_day_ends_sub">Ang inom nang 1 AM ay bibilangin sa gabi bago iyon.</string>
+    <string name="set_cutoff_midnight">Hatinggabi</string>
+    <string name="set_cutoff_2am">2 AM</string>
+    <string name="set_cutoff_4am">4 AM</string>
+    <string name="set_tone">Tono</string>
+    <string name="set_tone_icon_sample">Aa</string>
+    <string name="set_tone_neutral">Neutral</string>
+    <string name="set_tone_push">Push</string>
+    <string name="set_tone_numbers">Numbers</string>
+    <string name="set_tone_sub_neutral">Mga numero at banayad na pagkilala, hindi kailanman paghusga.</string>
+    <string name="set_tone_sub_push">Naka-pokus sa streak, mas malakas ang diin kapag lampas sa target.</string>
+    <string name="set_tone_sub_numbers">Purong talaan, walang anumang salitang naghuhusga at walang paghatol sa pamamagitan ng kulay.</string>
+    <string name="set_contact">Makipag-ugnayan sa Suporta</string>
+    <string name="set_about">Tungkol sa Alcohol Tracker</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">Customer ID</string>
+    <string name="set_copy">I-copy</string>
+    <string name="set_footer">Ginawa nang may pagpipigil.\nHinding-hindi lalabas ng phone na ito ang datos mo.</string>
+    <string name="support_email_subject">Suporta sa Alcohol Tracker</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">Ang katawan mo, ang mga numero mo.</string>
+    <string name="profile_body">Iba ang dating ng parehong inumin sa bawat katawan. Dalawang mabilisang detalye, at hindi na average ang mga tantiya mo kundi sa iyo na talaga.</string>
+    <string name="profile_privacy_note">Sampung segundo, minsan lang. Walang anuman dito ang lalabas ng phone na ito.</string>
+    <string name="profile_sex_label">Kasarian</string>
+    <string name="profile_sex_female">Babae</string>
+    <string name="profile_sex_male">Lalaki</string>
+    <string name="profile_weight_label">Timbang ng katawan</string>
+    <string name="profile_weight_kg">kg</string>
+    <string name="profile_weight_lb">lb</string>
+    <string name="profile_weight_placeholder">Sapat na ang tantiya mo</string>
+    <string name="profile_cta">Gawin itong akin</string>
+    <string name="profile_footer">Puwedeng baguhin ang alinman anumang oras, agad na nag-a-adjust ang mga tantiya.</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">Enerhiya</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">Laki ng serving</string>
+    <string name="units_millilitres">Mililitro</string>
+    <string name="units_ounces">Onsa</string>
+    <string name="units_note">Binabago lang nito kung paano basahin ang mga numero, hindi ang na-log mo.</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">Walang nakaiskedyul.</string>
+    <string name="notif_empty_body">Sa iyo ang mga gabi mo. Kung makakatulong ang banayad na paalala araw-araw, magdagdag ng isa sa ibaba.</string>
+    <string name="notif_repeat_hint">Inuulit araw-araw ang bawat paalala. I-tap ang − para alisin ang isa.</string>
+    <string name="notif_reminder_sub">%1$s · %2$s</string>
+    <string name="notif_create_cta">Gumawa ng notification</string>
+    <string name="sheet_notif_title_placeholder">Pamagat, hal. Last Call</string>
+    <string name="sheet_notif_time_label">Oras ng paalala</string>
+    <string name="sheet_notif_message_placeholder">Mensahe (opsyonal)</string>
+    <string name="sheet_notif_repeat_note">Inuulit araw-araw sa napiling oras.</string>
+    <string name="sheet_notif_cta">Gumawa</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">Tinatayang BAC, oras bago maging zero, at ang tuloy-tuloy na status card.</string>
+    <string name="set_bac_unit_label">Sukat ng BAC</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">I-preview ang status card</string>
+    <string name="set_bac_preview_sub">Ang tahimik na tuloy-tuloy na notification, habang bumababa ang BAC.</string>
+    <string name="set_bac_disclaimer">Impormasyon lang ang mga tantiya. Huwag na huwag itong gamitin para magpasya kung ligtas nang mag-drive.</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">Quick log tiles</string>
+    <string name="quicklog_mock_caption">QUICK LOG</string>
+    <string name="quicklog_mock_footer">isang tap · na-log</string>
+    <string name="quicklog_section_caption">MGA NAKA-SAVE NA INUMIN BILANG TILE</string>
+    <string name="quicklog_selected_count">%1$d sa %2$d ang napili</string>
+    <string name="quicklog_empty_title">Wala pang naka-save na inumin.</string>
+    <string name="quicklog_empty_sub">Gumawa ng isa at isang tap na lang ito ang layo, hanggang apat ang kasya.</string>
+    <string name="quicklog_drink_meta">%1$d ml · %2$s%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">Backup at Restore</string>
+    <string name="backup_status_dated">Naka-backup, %1$s, sa device na ito.</string>
+    <string name="backup_status_none_android">Wala pang backup — gumawa ng isa sa ibaba.</string>
+    <string name="backup_whats_here">Ano ang nasa phone na ito</string>
+    <plurals name="backup_count_logs">
+        <item quantity="other">log ng inom</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="other">araw na walang alak</item>
+    </plurals>
+    <string name="backup_count_profile">profile</string>
+    <string name="backup_export">I-export ang Datos</string>
+    <string name="backup_import">I-import ang Datos</string>
+    <string name="backup_create">Gumawa ng Backup</string>
+    <string name="backup_restore">I-restore mula sa Backup</string>
+    <string name="backup_merge_note">Isinasama ang mga na-import sa nandito na, tahimik na nilalaktawan ang mga duplicate.</string>
+    <string name="backup_danger_zone">DANGER ZONE</string>
+    <string name="backup_clear_all">Burahin Lahat ng Datos</string>
+    <string name="backup_clear_note">Permanente ito, at hindi na maibabalik. Mag-export muna ng kopya kung mahalaga ito sa iyo.</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">Tungkol Dito</string>
+    <string name="about_version">Bersyon %1$s · %2$s</string>
+    <string name="about_privacy">Patakaran sa Privacy</string>
+    <string name="about_terms">Mga Tuntunin ng Serbisyo</string>
+    <string name="about_ack_caption">MGA PASASALAMAT</string>
+    <string name="about_ack_role_db">lokal na database</string>
+    <string name="about_ack_role_ui_android">user interface</string>
+    <string name="about_ack_role_settings_android">mga setting</string>
+    <string name="about_footer">Ang baso at patak ay iginuhit sa code,\nnang may pagpipigil.</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">Parehong app, ibang balat. Piliin kung alin ang bagay sa Home Screen mo.</string>
+    <string name="icon_relaunch_note">Maaaring saglit na magsara ang app habang nag-a-update ang launcher.</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">Mga Trend ng BAC</string>
+    <string name="trends_title">Pinakamataas na tinatayang BAC</string>
+    <string name="trends_range">Huling 7 araw</string>
+    <string name="trends_axis_start">6 na araw ang nakalipas</string>
+    <string name="trends_axis_end">ngayon</string>
+    <string name="trends_note" formatted="false">Bumababa ang kurba habang naaalis ng katawan mo ang mga 0.015% kada oras. Mabuti ang mga linggong patag.</string>
+    <string name="trends_empty_title">Wala pang kurba.</string>
+    <string name="trends_empty_body">Idagdag ang profile mo at mag-log ng inom, magsisimula ang trend line mo sa unang tala.</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">Guideline sa Alak</string>
+    <string name="guideline_intro">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_intro__us">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_intro__gb">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_intro__au">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_intro__ca">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_intro__jp">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_intro__dk">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_intro__vn">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_intro__who">Iminumungkahi ng mababang-panganib na guideline ng WHO ang hanggang 2 na %1$s kada araw, kasama ang regular na araw na walang inom. Itakda kung ano ang tama para sa iyo.</string>
+    <string name="guideline_daily_target">Target kada araw</string>
+    <string name="guideline_weekly_target">Target kada linggo</string>
+    <plurals name="guideline_target_units">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="other">%1$d na %2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="other">Awtomatikong sumusunod ang buwanang target mo: %1$d na %2$s. Sanggunian ang guideline ng WHO, hindi hatol.</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">Alisin ang inom na ito?</string>
+    <string name="dialog_delete_body">Aalis ito sa diary mo, at babalik sa dati ang mga numero mo.</string>
+    <string name="dialog_delete_keep">Panatilihin</string>
+    <string name="dialog_delete_remove">Alisin</string>
+    <string name="dialog_clear_title">Burahin lahat ng datos?</string>
+    <string name="dialog_clear_body">Lahat ng log, araw na walang alak at setting, tuluyang mawawala. Mag-export muna ng kopya kung gusto mo ng isa.</string>
+    <string name="dialog_clear_delete">Burahin</string>
+    <string name="dialog_health_title">Payagan ang \"%1$s\" na isulat ang pag-inom ng alak sa %2$s?</string>
+    <string name="dialog_health_deny">Huwag Payagan</string>
+    <string name="dialog_health_allow">Payagan</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">Na-log ang %1$s, %2$.1f %3$s.</string>
+    <string name="toast_logged">Na-log, %1$.1f na %2$s.</string>
+    <string name="action_undo">I-undo</string>
+    <string name="toast_relogged">Ganoon ulit, na-log para sa araw na ito.</string>
+    <string name="toast_entry_removed">Inalis sa diary mo.</string>
+    <string name="toast_dry_marked">Namarkahan ang araw na walang alak. Doble ang halaga ng tahimik na panalo.</string>
+    <string name="toast_day_has_drinks">May naka-log nang inom sa araw na ito.</string>
+    <string name="toast_day_has_drinks_cal">May naka-log na inom sa araw na iyon.</string>
+    <string name="toast_custom_saved">Na-save, isang tap na lang sa susunod.</string>
+    <string name="toast_profile_incomplete">Ilagay ang timbang at kasarian, kailangan ng BAC ang dalawa.</string>
+    <string name="toast_profile_saved">Na-save, mas naging matalas ang mga tantiyang BAC mo.</string>
+    <string name="toast_reminder_scheduled">Nakaiskedyul na, banayad na paalala, araw-araw.</string>
+    <string name="toast_reminder_silent">Na-save, pero patatahimikin ito ng %1$s.</string>
+    <string name="toast_icon_updated">Na-update ang icon, bagay sa iyo.</string>
+    <string name="toast_customer_id_copied">Na-copy, i-paste ito sa kahit anong support email.</string>
+    <string name="toast_pro_welcome">Maligayang pagdating sa Pro, lahat, naka-unlock na.</string>
+    <string name="toast_restore_success">Maligayang pagbabalik, naka-unlock na ang lahat.</string>
+    <string name="toast_restore_none">Wala pang maibabalik, kumpleto ka na.</string>
+    <string name="toast_purchase_unavailable">Hindi available ang pagbili sa ngayon.</string>
+    <string name="toast_health_connected">Tahimik nang dumadaloy ang mga inom sa %1$s.</string>
+    <string name="toast_backup_created">Nakagawa ng backup sa device na ito.</string>
+    <string name="toast_backup_restored_android">Naibalik, tahimik na nilaktawan ang mga duplicate.</string>
+    <string name="toast_backup_none_android">Wala pang backup sa device na ito.</string>
+    <string name="toast_export_file_android">Na-save ang backup file, itago ito sa ligtas na lugar.</string>
+    <string name="toast_file_unreadable">Hindi mabasa ang file na iyon.</string>
+    <plurals name="toast_import_result">
+        <item quantity="other">Na-import %1$d, nilaktawan %2$d na duplicate.</item>
+    </plurals>
+    <string name="toast_import_ok_android">Na-import, tahimik na nilaktawan ang mga duplicate.</string>
+    <string name="toast_import_invalid_android">Mukhang hindi iyon backup file.</string>
+    <string name="toast_cleared">Bagong simula. Pakabutihin mo ito.</string>
+    <string name="toast_csv_ready_android">Handa nang i-share.</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">Mga paalala araw-araw</string>
+    <string name="notif_channel_reminders_desc">Ang mga araw-araw na paalalang ginagawa mo sa Mga Setting.</string>
+    <string name="notif_channel_bac">Status ng tantiya</string>
+    <string name="notif_channel_bac_desc">Tahimik na card habang bumababa ang isang tantiya.</string>
+    <string name="notif_discreet_title">Check-in sa gabi</string>
+    <string name="notif_discreet_body">Pinapanatiling tapat ng sampung segundong tala ang larawan.</string>
+    <string name="notif_reminder_body_fallback">Pinapanatiling tapat ng mabilisang tala ang larawan.</string>
+    <string name="notif_bac_discreet_title">Bumababa</string>
+    <string name="notif_bac_discreet_body">Mga %1$s bago maging zero.</string>
+    <string name="notif_bac_title">Tinatayang BAC %1$s</string>
+    <string name="notif_bac_body">%1$s bago maging zero. Hindi ito go signal para mag-drive.</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">Nakaraang araw</string>
+    <string name="a11y_open_calendar">Buksan ang kalendaryo</string>
+    <string name="a11y_next_day">Susunod na araw</string>
+    <string name="a11y_log_quick">I-log ang %1$s, %2$.1f na %3$s</string>
+    <string name="a11y_units_info">Ano ang isang %1$s?</string>
+    <string name="a11y_units_info__us">Ano ang isang %1$s?</string>
+    <string name="a11y_units_info__gb">Ano ang isang %1$s?</string>
+    <string name="a11y_units_info__au">Ano ang isang %1$s?</string>
+    <string name="a11y_units_info__ca">Ano ang isang %1$s?</string>
+    <string name="a11y_units_info__jp">Ano ang isang %1$s?</string>
+    <string name="a11y_units_info__dk">Ano ang isang %1$s?</string>
+    <string name="a11y_units_info__vn">Ano ang isang %1$s?</string>
+    <string name="a11y_units_info__who">Ano ang isang %1$s?</string>
+    <string name="a11y_intake_ring">%1$.1f sa %2$d na %3$s ngayong araw</string>
+    <string name="a11y_mini_progress">%1$s: %2$.1f sa %3$d na %4$s</string>
+    <string name="a11y_back">Bumalik</string>
+    <string name="a11y_close">Isara</string>
+    <string name="a11y_prev_month">Nakaraang buwan</string>
+    <string name="a11y_next_month">Susunod na buwan</string>
+    <string name="a11y_cal_day">Araw %1$d</string>
+    <string name="a11y_cal_day_logged">Araw %1$d, may na-log na inom</string>
+    <string name="a11y_cal_day_dry">Araw %1$d, araw na walang alak</string>
+    <string name="a11y_cal_day_logged_dry">Araw %1$d, may na-log na inom, araw na walang alak</string>
+    <string name="a11y_prev_period">Nakaraang panahon</string>
+    <string name="a11y_next_period">Susunod na panahon</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="other">%1$d na araw na walang alak, %2$d porsyento ng panahong ito</item>
+    </plurals>
+    <string name="a11y_remove_reminder">Alisin ang %1$s</string>
+    <string name="a11y_toggle_on">Naka-on</string>
+    <string name="a11y_toggle_off">Naka-off</string>
+    <string name="a11y_fab_add">Magdagdag</string>
+    <string name="a11y_fab_close">Isara ang mga aksyon</string>
+    <string name="a11y_fab_hint">Mag-log ng inom o markahang walang alak ang araw</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">unit</string>
+    <string name="units_noun_unit_pl">unit</string>
+    <string name="units_noun_unit_short">unit</string>
+    <string name="units_noun_unit_abbr">u</string>
+    <string name="units_noun_unit_indef">unit</string>
+    <string name="units_noun_std_sg">standard drink</string>
+    <string name="units_noun_std_pl">standard drink</string>
+    <string name="units_noun_std_short">drink</string>
+    <string name="units_noun_std_abbr">SD</string>
+    <string name="units_noun_std_indef">standard drink</string>
+    <string name="units_noun_local_sg">standard drink</string>
+    <string name="units_noun_local_pl">standard drink</string>
+    <string name="units_noun_local_short">drink</string>
+    <string name="units_noun_local_abbr">SD</string>
+    <string name="units_noun_local_indef">standard drink</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">Diary</string>
+    <string name="tab_statistics_short">Stats</string>
+    <string name="tab_settings_short">Settings</string>
+</resources>

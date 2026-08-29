@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GENERATED FILE — do not edit by hand.
+  Source: Localization/locales/ms-MY.md
+  Regenerate: python Localization/tools/gen_android.py
+-->
+<resources>
+
+    <!-- 1. Global — app identity, tab bar, app lock -->
+    <string name="app_name">Alcohol Tracker</string>
+    <string name="tab_diary">Diari</string>
+    <string name="tab_statistics">Statistik</string>
+    <string name="tab_settings">Tetapan</string>
+    <string name="lock_tap_to_unlock">Berkunci. Ketik untuk buka.</string>
+    <string name="applock_prompt_title">Alcohol Tracker berkunci</string>
+    <string name="applock_prompt_sub">Buka kunci sebelum apa-apa dipaparkan.</string>
+
+    <!-- 2. Onboarding -->
+    <string name="ob_welcome_title">Selamat datang ke\nAlcohol Tracker</string>
+    <string name="ob_welcome_sub">Teman anda untuk minum dengan lebih sedar.</string>
+    <string name="ob_welcome_body">Rekod tanpa penilaian. Catat minuman dalam beberapa saat, lihat anggaran BAC anda menurun, malah dari pergelangan tangan anda.</string>
+    <string name="ob_welcome_quick_caption">Catatan pantas, dari poket anda</string>
+    <string name="ob_welcome_bac_example" formatted="false">Anggaran BAC 0.032%</string>
+    <string name="ob_welcome_sober_example">Anggaran sifar lebih kurang 2 jam</string>
+    <string name="ob_get_started">Mula</string>
+    <string name="ob_step_indicator">LANGKAH %1$d DARIPADA 3</string>
+    <string name="ob_skip">Langkau</string>
+    <string name="ob_goals_title">Apa yang membawa anda ke sini?</string>
+    <string name="ob_goals_sub">Pilih seberapa banyak yang terasa benar. Ini kekal antara anda dan aplikasi ini.</string>
+    <string name="ob_goal_less">Minum lebih sedikit</string>
+    <string name="ob_goal_awareness">Tahu berapa banyak saya minum</string>
+    <string name="ob_goal_break">Memberi badan saya rehat</string>
+    <string name="ob_goal_free_days">Lebih banyak hari bebas alkohol</string>
+    <string name="ob_goal_conscious">Minum dengan sedar</string>
+    <string name="ob_goal_reset">Menetapkan semula kebiasaan saya</string>
+    <string name="ob_goal_social">Menghadapi situasi sosial</string>
+    <plurals name="ob_goals_cta">
+        <item quantity="other">Teruskan dengan %1$d matlamat</item>
+    </plurals>
+    <string name="ob_goals_cta_empty">Pilih sekurang-kurangnya satu matlamat</string>
+    <string name="ob_base_title">Berapa banyak minuman dalam seminggu biasa?</string>
+    <string name="ob_base_sub">Gambaran ringkas tentang rentak anda, tiada penilaian, hanya titik permulaan.</string>
+    <string name="ob_base_0_4">0–4 minuman</string>
+    <string name="ob_base_5_9">5–9 minuman</string>
+    <string name="ob_base_10_14">10–14 minuman</string>
+    <string name="ob_base_15_19">15–19 minuman</string>
+    <string name="ob_base_20_plus">20 atau lebih</string>
+    <string name="ob_continue">Teruskan</string>
+
+    <!-- 3. Diary (home) -->
+    <string name="diary_today">Hari ini</string>
+    <string name="diary_yesterday">Semalam</string>
+    <string name="diary_pro_banner_title">Buka gambaran penuh</string>
+    <string name="diary_pro_banner_sub">Jubin catatan pantas · cerapan BAC · hari bebas alkohol automatik · peringatan</string>
+    <string name="diary_usual">Yang biasa?</string>
+    <string name="units_abbrev_value">%1$.1f %2$s</string>
+    <string name="diary_intake_today">Pengambilan Hari Ini</string>
+    <string name="diary_intake">Pengambilan</string>
+    <plurals name="diary_ring_of_goal">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__us">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__gb">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__au">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__ca">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__jp">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__dk">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__vn">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <plurals name="diary_ring_of_goal__who">
+        <item quantity="other">daripada %1$d %2$s</item>
+    </plurals>
+    <string name="diary_this_week">Minggu ini</string>
+    <string name="diary_this_month">Bulan ini</string>
+    <string name="diary_mini_value">%1$.1f / %2$d</string>
+    <string name="diary_remaining_numbers">%1$.1f daripada %2$d %3$s dicatat hari ini.</string>
+    <string name="diary_remaining_zero_neutral">Sasaran anda masih penuh, atau memang tidak diperlukan hari ini.</string>
+    <string name="diary_remaining_left_neutral">%1$.1f %2$s lagi dalam sasaran hari ini.</string>
+    <string name="diary_remaining_at_target_neutral">Tepat pada sasaran anda, segelas air selepas ini?</string>
+    <string name="diary_remaining_over_neutral">%1$.1f %3$s melebihi sasaran hari ini iaitu %2$d.</string>
+    <string name="diary_adjust_guideline">Laraskan garis panduan alkohol</string>
+    <string name="bac_monitor">Monitor BAC</string>
+    <string name="bac_status_waiting">MENUNGGU</string>
+    <string name="bac_free_body">Buka Pro, catat satu minuman, dan anggaran BAC anda akan muncul di sini.</string>
+    <string name="bac_how_estimated">Bagaimana BAC dianggarkan</string>
+    <string name="bac_trends">Trend</string>
+    <string name="bac_setup_title">Sediakan profil BAC anda</string>
+    <string name="bac_setup_body">Masukkan berat dan jantina anda supaya anggaran ini benar-benar bermakna, sepuluh saat sahaja.</string>
+    <string name="bac_setup_cta">Sediakan Profil BAC</string>
+    <string name="bac_status_rising">MENINGKAT</string>
+    <string name="bac_status_settling">MENURUN</string>
+    <string name="bac_status_clear">ANGGARAN 0</string>
+    <string name="bac_value_percent">%1$.3f%%</string>
+    <string name="bac_value_permille">%1$.2f‰</string>
+    <string name="bac_sober_in">Anggaran kembali ke sifar dalam kira-kira %1$s</string>
+    <string name="bac_all_clear">Anggaran sudah sifar, tiada alkohol tinggal dalam kiraan.</string>
+    <string name="bac_disclaimer_short">Anggaran ini maklumat sahaja, bukan lampu hijau untuk memandu.</string>
+    <string name="diary_dry_marked">Hari bebas alkohol, ditanda.</string>
+    <string name="diary_dry_remembered">Hari bebas alkohol, diingati.</string>
+    <string name="diary_dry_body">Badan anda sedang menuangkan terima kasihnya sendiri dengan senyap.</string>
+    <string name="diary_dry_unmark">Buang tanda</string>
+    <string name="diary_logged_today">DICATAT HARI INI</string>
+    <string name="diary_logged_this_day">DICATAT PADA HARI TERPILIH</string>
+    <string name="diary_entry_meta">%1$d ml · %2$s%%</string>
+    <string name="diary_empty_title_today">Gelas masih kosong, setakat ini.</string>
+    <string name="diary_empty_title_other">Tiada apa-apa dicatat pada hari itu.</string>
+    <string name="diary_empty_body_today">Apabila anda menuang, catat dengan dua tiga ketikan, atau tanda hari ini sebagai hari bebas alkohol dan biarkan rentetan bermula.</string>
+    <string name="diary_empty_body_other">Kalau masih ingat, tambah sekarang, tarikh ke belakang menjadikan corak anda jujur.</string>
+    <string name="action_log_drink">Catat Minuman</string>
+    <string name="action_mark_dry_day">Tanda Hari Bebas Alkohol</string>
+    <string name="diary_add_previous_dry">Tambah hari bebas alkohol yang lepas</string>
+    <string name="action_dry_day">Hari bebas</string>
+    <string name="badge_pro">PRO</string>
+
+    <!-- 4. Log Drink sheet (three steps, one sheet) -->
+    <string name="log_title_tune">Perhalusi butirannya</string>
+    <string name="log_title_review">Semak &amp; simpan</string>
+    <string name="log_cta_next">Seterusnya</string>
+    <string name="log_cta_save">Simpan minuman</string>
+    <string name="log_pick_intro">Apa yang anda minum? Pilih yang hampir sama, semuanya boleh diperhalusi selepas ini.</string>
+    <string name="log_search_placeholder">Cari minuman</string>
+    <string name="log_custom_title">Cipta minuman tersuai</string>
+    <string name="log_custom_sub">Apa-apa isi padu, apa-apa ABV, tidak pernah berbayar.</string>
+    <string name="log_section_your_drinks">MINUMAN ANDA</string>
+    <string name="log_section_popular">POPULAR</string>
+    <string name="log_grid_meta">%1$s%% · %2$d ml</string>
+    <string name="log_tune_intro">Laraskan tuangan supaya sepadan dengan apa yang sebenarnya ada di atas meja.</string>
+    <string name="log_abv_label">Kandungan alkohol</string>
+    <string name="log_abv_value">%1$.1f%%</string>
+    <string name="log_serving_label">Saiz hidangan</string>
+    <string name="log_unit_ml">ml</string>
+    <string name="log_unit_floz">fl oz</string>
+    <string name="log_serving_ml_value">%1$d ml</string>
+    <string name="log_serving_oz_value">%1$.1f auns</string>
+    <string name="log_quantity_label">Kuantiti</string>
+    <string name="log_qty_half">½</string>
+    <string name="log_result_line">≈ %1$.1f %3$s · %2$d kcal</string>
+    <string name="log_working_line">%1$d ml × %2$s%% × 0.789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_half">½ × %1$d ml × %2$s%% × 0.789 ÷ 1000 = %3$.1f %4$s</string>
+    <string name="log_working_line_qty">%1$d × %2$d ml × %3$s%% × 0.789 ÷ 1000 = %4$.1f %5$s</string>
+    <string name="log_review_meta">%1$d ml · %2$s%% ABV</string>
+    <string name="log_review_meta_half">×½ · %1$d ml · %2$s%% ABV</string>
+    <string name="log_review_meta_qty">×%1$d · %2$d ml · %3$s%% ABV</string>
+    <string name="log_when_label">Bila</string>
+    <string name="log_when_now">Sekarang</string>
+    <string name="log_when_1h">1 jam lalu</string>
+    <string name="log_when_2h">2 jam lalu</string>
+    <string name="log_cost_label">Berapa harganya?</string>
+    <string name="log_cost_currency">%1$s</string>
+    <string name="log_cost_placeholder">0</string>
+    <string name="log_calories_label">Kalori</string>
+    <string name="log_calories_kcal">%1$d kcal</string>
+    <string name="log_saved_to_today">Disimpan untuk hari ini, anda boleh membuangnya bila-bila masa.</string>
+    <string name="log_saved_to_day">Disimpan untuk %1$s, anda boleh membuangnya bila-bila masa.</string>
+
+    <!-- 5. Calendar sheet -->
+    <string name="cal_weekday_initials">A / I / S / R / K / J / S</string>
+    <string name="sheet_cal_hint_select">Bintik biru ialah hari yang dicatat; bintik hijau ialah hari bebas alkohol. Ketik satu untuk membukanya.</string>
+    <string name="sheet_cal_hint_dry">Ketik hari yang lepas untuk menandakannya bebas alkohol, ketik sekali lagi untuk membuang tanda. Hari yang ada minuman kekal seperti sedia ada.</string>
+    <string name="action_done">Selesai</string>
+
+    <!-- 6. Entry detail sheet -->
+    <string name="sheet_entry_meta">%1$d ml · %2$s%% · %3$s</string>
+    <plurals name="stat_label_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stat_label_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stat_label_kcal">kcal</string>
+    <string name="stat_label_spent">dibelanja</string>
+    <string name="sheet_entry_relog">Sama seperti tadi, catat satu lagi</string>
+    <string name="sheet_entry_remove">Buang daripada diari</string>
+
+    <!-- 7. Units info sheet ("What's a unit, really?") -->
+    <string name="sheet_units_title">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_title__us">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_title__gb">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_title__au">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_title__ca">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_title__jp">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_title__dk">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_title__vn">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_title__who">Apa sebenarnya satu %1$s?</string>
+    <string name="sheet_units_body">10 g alkohol tulen, ukuran yang digunakan WHO. Setiap gelas menyembunyikan jumlah yang berbeza, jadi kami yang kira untuk anda.</string>
+    <string name="sheet_units_chip_pour">Tuangan 150 ml</string>
+    <string name="sheet_units_chip_abv" formatted="false">ABV 13%</string>
+    <string name="sheet_units_chip_density">0.789 ÷ 1000</string>
+    <string name="sheet_units_chip_result">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__us">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__gb">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__au">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__ca">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__jp">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__dk">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__vn">1.5 %1$s</string>
+    <string name="sheet_units_chip_result__who">1.5 %1$s</string>
+    <string name="sheet_units_density_note">0.789 hanyalah ketumpatan alkohol. Tiada apa-apa yang misteri.</string>
+    <string name="sheet_units_targets">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+    <string name="sheet_units_targets__us">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+    <string name="sheet_units_targets__gb">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+    <string name="sheet_units_targets__au">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+    <string name="sheet_units_targets__ca">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+    <string name="sheet_units_targets__jp">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+    <string name="sheet_units_targets__dk">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+    <string name="sheet_units_targets__vn">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+    <string name="sheet_units_targets__who">Itu satu Margarita, diam-diam bernilai 1.5 %1$s. Sasaran harian dan mingguan anda bermula pada garis panduan risiko rendah WHO, dan anda bebas mengubahnya.</string>
+
+    <!-- 8. BAC info sheet -->
+    <string name="sheet_bac_widmark" formatted="false">Kami menggunakan kaedah Widmark: alkohol yang anda catat, disebarkan ke seluruh air badan anda (daripada berat dan jantina), tolak apa yang dihapuskan oleh badan anda, kira-kira 0.015% setiap jam.</string>
+    <string name="sheet_bac_not_measurement">Ini anggaran kandungan alkohol dalam darah, bukan pengukuran. Makanan, ubat dan biologi anda sendiri semuanya menggeser angka sebenar.</string>
+    <string name="sheet_bac_never_drive">Jangan sekali-kali gunakan anggaran untuk memutuskan sama ada selamat memandu. Jika ragu-ragu sedikit pun, jangan memandu.</string>
+
+    <!-- 9. Custom drink sheet -->
+    <string name="sheet_custom_title">Minuman simpanan baharu</string>
+    <string name="sheet_custom_name_placeholder">Nama, supaya cepat dijumpai</string>
+    <string name="sheet_custom_base_caption">JENIS ASAS</string>
+    <string name="sheet_custom_abv_label" formatted="false">ABV %</string>
+    <string name="sheet_custom_ml_label">Hidangan (ml)</string>
+    <string name="sheet_custom_notes_placeholder">Bahan atau nota (pilihan)</string>
+    <string name="action_save">Simpan</string>
+    <string name="action_cancel">Batal</string>
+
+    <!-- 10. Statistics -->
+    <string name="stats_period_7d">7H</string>
+    <string name="stats_period_30d">30H</string>
+    <string name="stats_period_90d">90H</string>
+    <string name="stats_period_1y">1T</string>
+    <string name="stats_period_custom">Tersuai</string>
+    <string name="action_export">Eksport</string>
+    <string name="stats_edit_range">Edit julat tersuai</string>
+    <string name="stats_verdict_numbers">Tempoh ini %1$.1f %3$s · sebelumnya %2$.1f %3$s</string>
+    <string name="stats_verdict_level_neutral">Sama dengan tempoh sebelumnya.</string>
+    <string name="stats_verdict_less_neutral">%1$d%% lebih sedikit daripada tempoh sebelumnya</string>
+    <string name="stats_verdict_more_neutral">%1$d%% lebih banyak daripada tempoh sebelumnya</string>
+    <string name="stats_verdict_first_numbers">%1$.1f %2$s tempoh ini.</string>
+    <string name="stats_verdict_first_neutral">Tempoh pertama anda dengan data, perbandingan bermula pada tempoh berikutnya.</string>
+    <string name="stats_tile_drunk">Diminum</string>
+    <string name="stats_tile_alcohol">Alkohol</string>
+    <string name="stats_tile_spending">Perbelanjaan</string>
+    <string name="stats_tile_calories">Kalori</string>
+    <string name="stats_unit_ml">ml</string>
+    <plurals name="stats_unit_units">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__us">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__gb">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__au">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__ca">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__jp">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__dk">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__vn">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <plurals name="stats_unit_units__who">
+        <item quantity="other">%1$s</item>
+    </plurals>
+    <string name="stats_unit_kcal">kcal</string>
+    <plurals name="stats_kcal_burgers_neutral">
+        <item quantity="other">≈ %1$d burger keju</item>
+    </plurals>
+    <string name="stats_units_chart_title">%1$s Diminum</string>
+    <string name="stats_units_chart_title__us">%1$s Diminum</string>
+    <string name="stats_units_chart_title__gb">%1$s Diminum</string>
+    <string name="stats_units_chart_title__au">%1$s Diminum</string>
+    <string name="stats_units_chart_title__ca">%1$s Diminum</string>
+    <string name="stats_units_chart_title__jp">%1$s Diminum</string>
+    <string name="stats_units_chart_title__dk">%1$s Diminum</string>
+    <string name="stats_units_chart_title__vn">%1$s Diminum</string>
+    <string name="stats_units_chart_title__who">%1$s Diminum</string>
+    <string name="stats_daily_average">Purata harian</string>
+    <string name="stats_units_total">Jumlah %1$.1f %2$s</string>
+    <string name="stats_units_per_day">%1$.2f / hari</string>
+    <string name="stats_units_empty">Corak anda akan melukis dirinya di sini.</string>
+    <string name="stats_spend_chart_title">Trend Perbelanjaan</string>
+    <string name="stats_spend_total">Jumlah %1$s</string>
+    <string name="stats_spend_per_day">%1$s / hari</string>
+    <string name="stats_spend_empty">Kos muncul sebaik sahaja anda mencatat minuman berserta harganya.</string>
+    <string name="fmt_money">%1$s</string>
+    <string name="stats_money_saved_title">Wang dijimatkan</string>
+    <string name="stats_baseline_label">Seminggu biasa %1$s</string>
+    <string name="stats_saved_unset">Tetapkan perbelanjaan mingguan biasa anda dan ini menjadi wang yang dijimatkan, daripada harga sebenar anda, bukan purata kebangsaan.</string>
+    <string name="stats_saved_under">%1$s di bawah perbelanjaan biasa anda tempoh ini, berdasarkan apa yang anda benar-benar bayar, bukan purata.</string>
+    <string name="stats_saved_over">%1$s melebihi perbelanjaan biasa anda tempoh ini.</string>
+    <string name="stats_breakdown_title">Pecahan Minuman</string>
+    <string name="stats_breakdown_locked">Lihat minuman mana yang mendahului minggu anda, dan berapa jumlahnya secara senyap.</string>
+    <string name="stats_breakdown_empty">Catat beberapa minuman dan kegemaran anda akan menampakkan diri.</string>
+    <plurals name="stats_breakdown_row">
+        <item quantity="other">%1$s · %2$d tuangan</item>
+    </plurals>
+    <string name="stats_breakdown_pct">%1$d%%</string>
+    <string name="stats_breakdown_leader">%1$s mendahului, %2$d%% daripada %3$s tempoh ini.</string>
+    <string name="stats_dry_title_positive">Bagus, hari bebas alkohol terkumpul.</string>
+    <string name="stats_dry_body_positive">Hari bebas alkohol membentuk %1$d%% daripada tempoh ini. Setiap satu ialah rehat yang badan anda perasan.</string>
+    <string name="stats_dry_title_none">Belum ada hari bebas alkohol.</string>
+    <string name="stats_dry_body_none">Yang pertama memulakan rentetan, tanda hari ini bebas alkohol dari Diari.</string>
+    <string name="stats_dry_title_numbers">Hari bebas alkohol</string>
+    <string name="stats_dry_body_numbers">%1$d daripada %2$d hari · %3$d%% tempoh ini.</string>
+    <string name="stats_dry_ring_pct">%1$d%%</string>
+
+    <!-- 11. Custom range sheet -->
+    <string name="sheet_range_title">Julat tersuai</string>
+    <string name="sheet_range_from">Dari</string>
+    <string name="sheet_range_to">Hingga</string>
+    <string name="sheet_range_last7">7 hari lepas</string>
+    <string name="sheet_range_last30">30 hari lepas</string>
+    <string name="action_apply">Guna</string>
+
+    <!-- 12. Export sheet -->
+    <string name="sheet_export_title">Eksport statistik</string>
+    <string name="sheet_export_format">CSV</string>
+    <string name="sheet_export_filename">Statistik, %1$s.csv</string>
+    <string name="sheet_export_desc">Setiap angka daripada tempoh ini, sedia untuk dikongsi.</string>
+    <string name="sheet_export_cta">Kongsi CSV</string>
+
+    <!-- 13. Health sync sheet -->
+    <string name="sheet_health_title">Kekalkan minuman anda segerak</string>
+    <string name="sheet_health_body">Minuman yang dicatat boleh disimpan secara automatik ke %1$s, supaya keseluruhan gambaran anda berada di satu tempat.</string>
+    <string name="sheet_health_data_title">Data alkohol</string>
+    <string name="sheet_health_data_sub">Hanya catatan pengambilan alkohol ditulis, tiada apa-apa dibaca.</string>
+    <string name="sheet_health_cta">Sambung ke %1$s</string>
+    <string name="sheet_health_change_access">Ubah kebenaran kemudian dalam %1$s.</string>
+
+    <!-- 14. Ongoing status / Live Activity preview sheet -->
+    <string name="sheet_live_title">Pemberitahuan berterusan</string>
+    <string name="sheet_live_body">Sementara BAC anda menurun, satu kad senyap kekal di latar, tanpa perlu membuka aplikasi.</string>
+    <string name="sheet_live_mock_status">Anggaran BAC, sedang menurun</string>
+    <string name="sheet_live_mock_value" formatted="false">0.065%</string>
+    <string name="sheet_live_mock_tozero">3j 42m ke sifar</string>
+    <string name="sheet_live_note">Pratonton dengan angka contoh, tiada apa-apa sedang berjalan.</string>
+
+    <!-- 15. Paywall -->
+    <string name="pay_title">Lihat gambaran penuh.</string>
+    <string name="pay_sub">Sejarah minuman anda sepenuhnya, anggaran kandungan alkohol secara langsung, dan aliran mingguan yang menunjukkan di mana bulan berat bermula.</string>
+    <string name="pay_no_ads">Tiada iklan. Tiada data dijual. Tiada akaun.</string>
+    <string name="pay_benefit_history">Setiap minuman yang pernah anda rekod, bukan 90 hari terakhir</string>
+    <string name="pay_benefit_bac">Anggaran kandungan alkohol langsung dan masa anda kembali ke sifar</string>
+    <string name="pay_benefit_insights">Jumlah mingguan berbanding garis panduan, berserta alirannya</string>
+    <string name="pay_benefit_streaks">Rentetan hari tanpa alkohol, wang disimpan, kalori dielak</string>
+    <string name="pay_benefit_quicklog">Ulang rekod dengan satu ketikan, dari skrin utama</string>
+    <string name="pay_benefit_report">Laporan PDF kemas untuk diberi kepada doktor</string>
+    <string name="pay_compare_caption">APA ANDA DAPAT</string>
+    <string name="pay_compare_free">PERCUMA</string>
+    <string name="pay_compare_pro">PRO</string>
+    <string name="pay_compare_logging">Rekod tanpa had &amp; minuman sendiri</string>
+    <string name="pay_compare_export">Eksport, sandaran &amp; widget</string>
+    <string name="pay_compare_darkmode">Mod gelap, kunci apl &amp; peringatan</string>
+    <string name="pay_compare_history">Sejarah melangkaui 90 hari</string>
+    <string name="pay_compare_bac">Anggaran kandungan alkohol &amp; jubin rekod pantas</string>
+    <string name="pay_compare_insights">Cerapan lanjutan, PDF &amp; penyegerakan peribadi</string>
+    <string name="pay_plan_weekly">Mingguan</string>
+    <string name="pay_plan_monthly">Bulanan</string>
+    <string name="pay_plan_annual">Tahunan</string>
+    <string name="pay_plan_lifetime">Seumur hidup</string>
+    <string name="pay_price_line_weekly">%1$s seminggu</string>
+    <string name="pay_price_line_monthly">%1$s sebulan</string>
+    <string name="pay_price_line_annual">%1$s setahun</string>
+    <string name="pay_price_line_lifetime">%1$s sekali bayar, milik anda selamanya</string>
+    <string name="pay_badge_trial">%1$d HARI PERCUMA</string>
+    <string name="pay_badge_save">JIMAT %1$d%%</string>
+    <string name="pay_badge_best">NILAI TERBAIK</string>
+    <string name="pay_loading">Menyemak harga hari ini dengan kedai…</string>
+    <string name="pay_unavailable">Kedai tidak menjawab buat masa ini. Rekod, eksport dan sandaran tetap berfungsi seperti biasa.</string>
+    <string name="pay_retry">Cuba lagi</string>
+    <string name="pay_faq_caption">SOALAN, DIJAWAB</string>
+    <string name="pay_faq_q_trial">Bagaimana percubaan percuma berfungsi?</string>
+    <string name="pay_faq_a_trial">Semua ciri Pro milik anda selama %1$d hari. Batalkan bila-bila masa sebelum ia tamat dan tiada apa dicaj.</string>
+    <string name="pay_faq_q_after">Apa jadi apabila ia tamat?</string>
+    <string name="pay_faq_a_after">Pelan yang anda pilih bermula, pada harga yang tertera pada kadnya, tidak pernah lebih tinggi. Kami ingatkan 2 hari lebih awal, supaya tiada apa yang mengejutkan.</string>
+    <string name="pay_faq_q_logs">Adakah rekod saya akan dikunci suatu hari nanti?</string>
+    <string name="pay_faq_a_logs">Tidak. Rekod, minuman sendiri, statistik minggu ini, widget, eksport CSV, sandaran, mod gelap, kunci apl dan peringatan percuma selamanya. Jika anda berhenti membayar, segala yang anda tulis kekal milik anda dan kekal boleh dibaca.</string>
+    <string name="pay_faq_q_cancel">Boleh saya batalkan bila-bila masa?</string>
+    <string name="pay_faq_a_cancel">Sentiasa. Urus atau batalkan daripada langganan %1$s anda, dan data anda kekal di sini, dalam telefon anda.</string>
+    <string name="pay_cta_trial">Mulakan %1$d hari percuma saya</string>
+    <string name="pay_cta_plan">Teruskan, %1$s</string>
+    <string name="pay_cta_lifetime">Buka Pro selamanya</string>
+    <string name="pay_cta_default">Teruskan</string>
+    <string name="pay_sub_trial">%1$d hari percuma, kemudian %2$s. Tiada apa dicaj hari ini.</string>
+    <string name="pay_sub_recurring">Diperbaharui pada %1$s sehingga anda batalkan. Satu ketikan dalam Tetapan.</string>
+    <string name="pay_sub_lifetime">Satu bayaran. Tidak pernah bertukar menjadi langganan.</string>
+    <string name="pay_restore">Pulihkan</string>
+    <string name="pay_terms">Terma</string>
+    <string name="pay_privacy">Privasi</string>
+
+    <!-- 16. Settings (main screen) -->
+    <string name="set_pro_active">Pro, terima kasih kerana menyokong kami.</string>
+    <string name="set_pro_banner_title">Lebih cerapan, kurang usaha.</string>
+    <string name="set_pro_banner_sub">Hari bebas alkohol pintar · Jubin catatan pantas · Monitor BAC</string>
+    <string name="set_section_you">ANDA</string>
+    <string name="set_section_insights">CERAPAN &amp; PENYEGERAKAN</string>
+    <string name="set_section_appearance">PENAMPILAN</string>
+    <string name="set_section_data">DATA ANDA</string>
+    <string name="set_section_privacy">PRIVASI &amp; NADA</string>
+    <string name="set_section_support">SOKONGAN</string>
+    <string name="set_profile">Profil</string>
+    <string name="set_profile_not_set">Belum ditetapkan</string>
+    <string name="set_profile_summary">%1$s %2$s · %3$s</string>
+    <string name="set_units">Unit</string>
+    <string name="set_units_summary">%1$s · %2$s</string>
+    <string name="set_guideline">Garis panduan alkohol</string>
+    <string name="set_guideline_value">%1$d / hari</string>
+    <string name="set_ask_cost">Tanya harga minuman</string>
+    <string name="set_show_calories">Tunjuk kalori</string>
+    <string name="set_auto_dry">Kesan hari bebas alkohol secara automatik</string>
+    <string name="set_notifications">Pemberitahuan</string>
+    <string name="set_notif_none">Tiada</string>
+    <plurals name="set_notif_count">
+        <item quantity="other">%1$d setiap hari</item>
+    </plurals>
+    <string name="set_health_sync">Penyegerakan Kesihatan</string>
+    <string name="set_health_connected">Bersambung</string>
+    <string name="set_health_off">Mati</string>
+    <string name="set_quick_log">Jubin catatan pantas</string>
+    <string name="set_quick_log_setup">Sediakan</string>
+    <plurals name="set_quick_log_count">
+        <item quantity="other">%1$d minuman</item>
+    </plurals>
+    <string name="set_dark_mode">Mod Gelap</string>
+    <string name="set_app_icon">Ikon Aplikasi</string>
+    <string name="set_icon_default">Lalai</string>
+    <string name="set_icon_gift">Hadiah</string>
+    <string name="set_icon_holiday">Cuti</string>
+    <string name="set_language">Bahasa</string>
+    <string name="set_language_value">Bahasa Melayu</string>
+    <string name="set_backup_title">Telah disandarkan</string>
+    <string name="set_backup_title_none">Belum disandarkan</string>
+    <string name="set_backup_detail_never_android">Cipta satu di bawah · pada peranti ini · eksport sentiasa percuma</string>
+    <string name="set_backup_detail_dated">%1$s · pada peranti ini · eksport sentiasa percuma</string>
+    <string name="set_backup_row">Sandaran, eksport &amp; import</string>
+    <string name="set_backup_free">Percuma</string>
+    <string name="set_app_lock">Kunci Aplikasi</string>
+    <string name="set_app_lock_sub">Buka kunci sebelum apa-apa dipaparkan.</string>
+    <string name="set_discreet">Pemberitahuan berhemah</string>
+    <string name="set_discreet_sub">Peringatan pada skrin kunci tidak sekali-kali menyebut alkohol.</string>
+    <string name="set_day_ends">Hari berakhir pada</string>
+    <string name="set_day_ends_sub">Minuman pada pukul 1 pagi dikira untuk malam sebelumnya.</string>
+    <string name="set_cutoff_midnight">Tengah malam</string>
+    <string name="set_cutoff_2am">2 pagi</string>
+    <string name="set_cutoff_4am">4 pagi</string>
+    <string name="set_tone">Nada</string>
+    <string name="set_tone_icon_sample">Aa</string>
+    <string name="set_tone_neutral">Neutral</string>
+    <string name="set_tone_push">Dorong</string>
+    <string name="set_tone_numbers">Nombor</string>
+    <string name="set_tone_sub_neutral">Nombor dan pengiktirafan lembut, tidak sekali-kali penilaian.</string>
+    <string name="set_tone_sub_push">Mengutamakan rentetan, dengan penegasan lebih kuat apabila melebihi sasaran.</string>
+    <string name="set_tone_sub_numbers">Lejar semata-mata, setiap perkataan penilaian dan pertimbangan warna dimatikan.</string>
+    <string name="set_contact">Hubungi Sokongan</string>
+    <string name="set_about">Tentang Alcohol Tracker</string>
+    <string name="set_about_version_value">1.0</string>
+    <string name="set_customer_id">ID Pelanggan</string>
+    <string name="set_copy">Salin</string>
+    <string name="set_footer">Dibina dengan berpada.\nData anda tidak pernah meninggalkan telefon ini.</string>
+    <string name="support_email_subject">Sokongan Alcohol Tracker</string>
+
+    <!-- 17. Settings → Profile -->
+    <string name="profile_headline">Badan anda, nombor anda.</string>
+    <string name="profile_body">Minuman yang sama memberi kesan berbeza pada setiap badan. Dua butiran ringkas, dan anggaran anda berhenti menjadi purata dan mula menjadi milik anda.</string>
+    <string name="profile_privacy_note">Sepuluh saat, sekali sahaja. Tiada apa-apa di sini meninggalkan telefon ini.</string>
+    <string name="profile_sex_label">Jantina</string>
+    <string name="profile_sex_female">Perempuan</string>
+    <string name="profile_sex_male">Lelaki</string>
+    <string name="profile_weight_label">Berat badan</string>
+    <string name="profile_weight_kg">kg</string>
+    <string name="profile_weight_lb">lb</string>
+    <string name="profile_weight_placeholder">Anggaran terbaik anda pun memadai</string>
+    <string name="profile_cta">Jadikan ia milik saya</string>
+    <string name="profile_footer">Ubah mana-mana bila-bila masa, anggaran melaras serta-merta.</string>
+
+    <!-- 18. Settings → Units -->
+    <string name="units_energy_label">Tenaga</string>
+    <string name="units_kcal">kcal</string>
+    <string name="units_kj">kJ</string>
+    <string name="units_serving_label">Saiz hidangan</string>
+    <string name="units_millilitres">Mililiter</string>
+    <string name="units_ounces">Auns</string>
+    <string name="units_note">Ini hanya mengubah cara nombor dibaca, bukan apa yang anda catat.</string>
+
+    <!-- 19. Settings → Notifications (screen + create sheet) -->
+    <string name="notif_empty_title">Tiada yang dijadualkan.</string>
+    <string name="notif_empty_body">Petang anda milik anda sendiri. Jika satu peringatan harian yang lembut membantu, tambah satu di bawah.</string>
+    <string name="notif_repeat_hint">Setiap peringatan berulang setiap hari. Ketik − untuk membuang satu.</string>
+    <string name="notif_reminder_sub">%1$s · %2$s</string>
+    <string name="notif_create_cta">Cipta pemberitahuan</string>
+    <string name="sheet_notif_title_placeholder">Tajuk, cth. Pesanan Terakhir</string>
+    <string name="sheet_notif_time_label">Masa peringatan</string>
+    <string name="sheet_notif_message_placeholder">Mesej (pilihan)</string>
+    <string name="sheet_notif_repeat_note">Berulang setiap hari pada masa yang dipilih.</string>
+    <string name="sheet_notif_cta">Cipta</string>
+
+    <!-- 20. Settings → BAC Monitor -->
+    <string name="set_bac_row_sub">Anggaran BAC, masa ke sifar, dan kad status berterusan.</string>
+    <string name="set_bac_unit_label">Unit BAC</string>
+    <string name="set_bac_unit_percent" formatted="false">%</string>
+    <string name="set_bac_unit_permille">‰</string>
+    <string name="set_bac_preview_title">Pratonton kad status</string>
+    <string name="set_bac_preview_sub">Pemberitahuan berterusan yang senyap, sementara BAC menurun.</string>
+    <string name="set_bac_disclaimer">Anggaran ini maklumat sahaja. Jangan sekali-kali gunakannya untuk memutuskan sama ada selamat memandu.</string>
+
+    <!-- 21. Settings → Quick log tiles / Apple Watch -->
+    <string name="push_title_quick_log">Jubin catatan pantas</string>
+    <string name="quicklog_mock_caption">CATATAN PANTAS</string>
+    <string name="quicklog_mock_footer">satu ketikan · dicatat</string>
+    <string name="quicklog_section_caption">MINUMAN SIMPANAN SEBAGAI JUBIN</string>
+    <string name="quicklog_selected_count">%1$d daripada %2$d dipilih</string>
+    <string name="quicklog_empty_title">Belum ada minuman simpanan.</string>
+    <string name="quicklog_empty_sub">Cipta satu dan ia berada satu ketikan sahaja, sehingga empat muat.</string>
+    <string name="quicklog_drink_meta">%1$d ml · %2$s%%</string>
+
+    <!-- 22. Settings → Backup & Restore -->
+    <string name="push_title_backup">Sandaran &amp; Pulihkan</string>
+    <string name="backup_status_dated">Disandarkan, %1$s, pada peranti ini.</string>
+    <string name="backup_status_none_android">Belum ada sandaran — cipta satu di bawah.</string>
+    <string name="backup_whats_here">Apa yang ada pada telefon ini</string>
+    <plurals name="backup_count_logs">
+        <item quantity="other">catatan minuman</item>
+    </plurals>
+    <plurals name="backup_count_dry">
+        <item quantity="other">hari bebas alkohol</item>
+    </plurals>
+    <string name="backup_count_profile">profil</string>
+    <string name="backup_export">Eksport Data</string>
+    <string name="backup_import">Import Data</string>
+    <string name="backup_create">Cipta Sandaran</string>
+    <string name="backup_restore">Pulihkan daripada Sandaran</string>
+    <string name="backup_merge_note">Import bergabung dengan apa yang ada, pendua dilangkau secara senyap.</string>
+    <string name="backup_danger_zone">ZON BAHAYA</string>
+    <string name="backup_clear_all">Padam Semua Data</string>
+    <string name="backup_clear_note">Kekal, dan tidak boleh dibatalkan. Eksport satu salinan dahulu jika ia penting.</string>
+
+    <!-- 23. Settings → About -->
+    <string name="push_title_about">Tentang</string>
+    <string name="about_version">Versi %1$s · %2$s</string>
+    <string name="about_privacy">Dasar Privasi</string>
+    <string name="about_terms">Terma Perkhidmatan</string>
+    <string name="about_ack_caption">PENGHARGAAN</string>
+    <string name="about_ack_role_db">pangkalan data setempat</string>
+    <string name="about_ack_role_ui_android">antara muka pengguna</string>
+    <string name="about_ack_role_settings_android">tetapan</string>
+    <string name="about_footer">Karya gelas dan titisan dilukis dalam kod,\ndengan berpada.</string>
+
+    <!-- 24. Settings → App Icon -->
+    <string name="icon_intro">Aplikasi yang sama, kot yang berbeza. Pilih mana-mana yang sesuai dengan Skrin Utama anda.</string>
+    <string name="icon_relaunch_note">Menukar ikon mungkin menutup aplikasi seketika sementara pelancar dikemas kini.</string>
+
+    <!-- 25. Settings → BAC Trends -->
+    <string name="push_title_trends">Trend BAC</string>
+    <string name="trends_title">Anggaran BAC puncak</string>
+    <string name="trends_range">7 hari lepas</string>
+    <string name="trends_axis_start">6 hari lalu</string>
+    <string name="trends_axis_end">hari ini</string>
+    <string name="trends_note" formatted="false">Lengkung itu menurun apabila badan anda menghapuskan kira-kira 0.015% sejam. Minggu yang rata ialah minggu yang baik.</string>
+    <string name="trends_empty_title">Belum ada lengkung.</string>
+    <string name="trends_empty_body">Tambah profil anda dan catat satu minuman, garis trend anda bermula dengan tuangan pertama.</string>
+
+    <!-- 26. Settings → Alcohol guideline -->
+    <string name="push_title_guideline">Garis Panduan Alkohol</string>
+    <string name="guideline_intro">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_intro__us">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_intro__gb">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_intro__au">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_intro__ca">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_intro__jp">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_intro__dk">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_intro__vn">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_intro__who">Garis panduan risiko rendah WHO mencadangkan sehingga 2 %1$s sehari, dengan hari bebas alkohol yang tetap. Tetapkan apa yang sesuai untuk anda.</string>
+    <string name="guideline_daily_target">Sasaran harian</string>
+    <string name="guideline_weekly_target">Sasaran mingguan</string>
+    <plurals name="guideline_target_units">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__us">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__gb">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__au">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__ca">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__jp">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__dk">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__vn">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_target_units__who">
+        <item quantity="other">%1$d %2$s</item>
+    </plurals>
+    <plurals name="guideline_monthly_note">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__us">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__gb">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__au">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__ca">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__jp">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__dk">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__vn">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+    <plurals name="guideline_monthly_note__who">
+        <item quantity="other">Sasaran bulanan anda mengikut secara automatik: %1$d %2$s. Garis panduan WHO ialah rujukan, bukan penghakiman.</item>
+    </plurals>
+
+    <!-- 27. Dialogs -->
+    <string name="dialog_delete_title">Buang minuman ini?</string>
+    <string name="dialog_delete_body">Ia meninggalkan diari anda, dan nombor anda kembali turun.</string>
+    <string name="dialog_delete_keep">Kekalkan</string>
+    <string name="dialog_delete_remove">Buang</string>
+    <string name="dialog_clear_title">Padam semua data?</string>
+    <string name="dialog_clear_body">Setiap catatan, hari bebas alkohol dan tetapan, hilang selamanya. Eksport satu salinan dahulu jika anda mahukannya.</string>
+    <string name="dialog_clear_delete">Padam</string>
+    <string name="dialog_health_title">Benarkan “%1$s” menulis pengambilan alkohol ke %2$s?</string>
+    <string name="dialog_health_deny">Jangan Benarkan</string>
+    <string name="dialog_health_allow">Benarkan</string>
+
+    <!-- 28. Toasts -->
+    <string name="toast_quick_logged">%1$s dicatat, %2$.1f %3$s.</string>
+    <string name="toast_logged">Dicatat, %1$.1f %2$s.</string>
+    <string name="action_undo">Buat asal</string>
+    <string name="toast_relogged">Sama seperti tadi, dicatat untuk hari ini.</string>
+    <string name="toast_entry_removed">Dibuang daripada diari anda.</string>
+    <string name="toast_dry_marked">Hari bebas alkohol ditanda. Kemenangan senyap dikira dua kali.</string>
+    <string name="toast_day_has_drinks">Hari ini sudah ada minuman yang dicatat.</string>
+    <string name="toast_day_has_drinks_cal">Hari itu ada minuman yang dicatat.</string>
+    <string name="toast_custom_saved">Disimpan, satu ketikan sahaja lain kali.</string>
+    <string name="toast_profile_incomplete">Masukkan berat dan jantina, BAC memerlukan kedua-duanya.</string>
+    <string name="toast_profile_saved">Disimpan, anggaran BAC anda kini lebih tajam.</string>
+    <string name="toast_reminder_scheduled">Dijadualkan, satu peringatan lembut, setiap hari.</string>
+    <string name="toast_reminder_silent">Disimpan, tetapi %1$s akan membiarkannya senyap.</string>
+    <string name="toast_icon_updated">Ikon dikemas kini, sesuai dengan anda.</string>
+    <string name="toast_customer_id_copied">Disalin, tampalkannya ke dalam mana-mana e-mel sokongan.</string>
+    <string name="toast_pro_welcome">Selamat datang ke Pro, semuanya, terbuka.</string>
+    <string name="toast_restore_success">Selamat kembali, semuanya terbuka.</string>
+    <string name="toast_restore_none">Tiada apa-apa untuk dipulihkan, semuanya sudah teratur.</string>
+    <string name="toast_purchase_unavailable">Pembelian tidak tersedia buat masa ini.</string>
+    <string name="toast_health_connected">Minuman kini mengalir senyap ke %1$s.</string>
+    <string name="toast_backup_created">Sandaran dicipta pada peranti ini.</string>
+    <string name="toast_backup_restored_android">Dipulihkan, pendua dilangkau secara senyap.</string>
+    <string name="toast_backup_none_android">Belum ada sandaran pada peranti ini.</string>
+    <string name="toast_export_file_android">Fail sandaran disimpan, simpan di tempat yang selamat.</string>
+    <string name="toast_file_unreadable">Fail itu tidak dapat dibaca.</string>
+    <plurals name="toast_import_result">
+        <item quantity="other">Diimport %1$d, dilangkau %2$d pendua.</item>
+    </plurals>
+    <string name="toast_import_ok_android">Diimport, pendua dilangkau secara senyap.</string>
+    <string name="toast_import_invalid_android">Itu tidak kelihatan seperti fail sandaran.</string>
+    <string name="toast_cleared">Helaian kosong. Layan ia dengan baik.</string>
+    <string name="toast_csv_ready_android">Sedia untuk dikongsi.</string>
+
+    <!-- 29. System notifications -->
+    <string name="notif_channel_reminders">Peringatan harian</string>
+    <string name="notif_channel_reminders_desc">Peringatan harian yang anda cipta dalam Tetapan.</string>
+    <string name="notif_channel_bac">Status anggaran</string>
+    <string name="notif_channel_bac_desc">Satu kad senyap sementara anggaran menurun.</string>
+    <string name="notif_discreet_title">Semakan petang</string>
+    <string name="notif_discreet_body">Nota sepuluh saat mengekalkan gambaran yang jujur.</string>
+    <string name="notif_reminder_body_fallback">Nota ringkas mengekalkan gambaran yang jujur.</string>
+    <string name="notif_bac_discreet_title">Sedang menurun</string>
+    <string name="notif_bac_discreet_body">Kira-kira %1$s ke sifar.</string>
+    <string name="notif_bac_title">Anggaran BAC %1$s</string>
+    <string name="notif_bac_body">%1$s ke sifar. Bukan lampu hijau untuk memandu.</string>
+
+    <!-- 30. Accessibility labels and hints -->
+    <string name="a11y_prev_day">Hari sebelumnya</string>
+    <string name="a11y_open_calendar">Buka kalendar</string>
+    <string name="a11y_next_day">Hari seterusnya</string>
+    <string name="a11y_log_quick">Catat %1$s, %2$.1f %3$s</string>
+    <string name="a11y_units_info">Apa itu %1$s?</string>
+    <string name="a11y_units_info__us">Apa itu %1$s?</string>
+    <string name="a11y_units_info__gb">Apa itu %1$s?</string>
+    <string name="a11y_units_info__au">Apa itu %1$s?</string>
+    <string name="a11y_units_info__ca">Apa itu %1$s?</string>
+    <string name="a11y_units_info__jp">Apa itu %1$s?</string>
+    <string name="a11y_units_info__dk">Apa itu %1$s?</string>
+    <string name="a11y_units_info__vn">Apa itu %1$s?</string>
+    <string name="a11y_units_info__who">Apa itu %1$s?</string>
+    <string name="a11y_intake_ring">%1$.1f daripada %2$d %3$s hari ini</string>
+    <string name="a11y_mini_progress">%1$s: %2$.1f daripada %3$d %4$s</string>
+    <string name="a11y_back">Kembali</string>
+    <string name="a11y_close">Tutup</string>
+    <string name="a11y_prev_month">Bulan sebelumnya</string>
+    <string name="a11y_next_month">Bulan seterusnya</string>
+    <string name="a11y_cal_day">Hari %1$d</string>
+    <string name="a11y_cal_day_logged">Hari %1$d, ada minuman dicatat</string>
+    <string name="a11y_cal_day_dry">Hari %1$d, hari bebas alkohol</string>
+    <string name="a11y_cal_day_logged_dry">Hari %1$d, ada minuman dicatat, hari bebas alkohol</string>
+    <string name="a11y_prev_period">Tempoh sebelumnya</string>
+    <string name="a11y_next_period">Tempoh seterusnya</string>
+    <plurals name="a11y_dry_ring">
+        <item quantity="other">%1$d hari bebas alkohol, %2$d peratus daripada tempoh ini</item>
+    </plurals>
+    <string name="a11y_remove_reminder">Buang %1$s</string>
+    <string name="a11y_toggle_on">Hidup</string>
+    <string name="a11y_toggle_off">Mati</string>
+    <string name="a11y_fab_add">Tambah</string>
+    <string name="a11y_fab_close">Tutup tindakan</string>
+    <string name="a11y_fab_hint">Catat minuman atau tanda hari bebas alkohol</string>
+
+    <!-- Units config - unit noun forms (punch-list A1/A2/A2b) -->
+    <string name="units_noun_unit_sg">unit</string>
+    <string name="units_noun_unit_pl">unit</string>
+    <string name="units_noun_unit_short">unit</string>
+    <string name="units_noun_unit_abbr">u</string>
+    <string name="units_noun_unit_indef">unit</string>
+    <string name="units_noun_std_sg">minuman standard</string>
+    <string name="units_noun_std_pl">minuman standard</string>
+    <string name="units_noun_std_short">minuman</string>
+    <string name="units_noun_std_abbr">SD</string>
+    <string name="units_noun_std_indef">minuman standard</string>
+    <string name="units_noun_local_sg">minuman standard</string>
+    <string name="units_noun_local_pl">minuman standard</string>
+    <string name="units_noun_local_short">minuman</string>
+    <string name="units_noun_local_abbr">SD</string>
+    <string name="units_noun_local_indef">minuman standard</string>
+
+    <!-- Short tab captions - the full word stays the screen H1 (punch-list B1) -->
+    <string name="tab_diary_short">Diari</string>
+    <string name="tab_statistics_short">Statistik</string>
+    <string name="tab_settings_short">Tetapan</string>
+</resources>
