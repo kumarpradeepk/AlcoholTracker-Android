@@ -71,6 +71,7 @@ import com.mtss.alcoholtracker.ui.screens.SheetHost
 import com.mtss.alcoholtracker.ui.screens.StatisticsScreen
 import com.mtss.alcoholtracker.ui.screens.WelcomeScreen
 import com.mtss.alcoholtracker.ui.theme.AlcoholTrackerTheme
+import com.mtss.alcoholtracker.ui.theme.AppTheme
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
 import com.mtss.alcoholtracker.ui.theme.Motion
 import com.mtss.alcoholtracker.ui.theme.text
@@ -87,7 +88,10 @@ fun Root(vm: AppViewModel) {
         Formatters.bind(context)
         AlcoholMath.bind(UnitsConfig.countryFor(context))
     }
-    AlcoholTrackerTheme(darkChoice = settings.darkChoice) {
+    AlcoholTrackerTheme(
+        theme = AppTheme.from(settings.themeId),
+        darkChoice = settings.darkChoice
+    ) {
         val c = LocalAppColors.current
         Box(Modifier.fillMaxSize().background(c.bg)) {
             Box(
@@ -166,7 +170,7 @@ fun Root(vm: AppViewModel) {
                     Text(
                         stringResource(R.string.app_name),
                         style = text(15.sp, FontWeight.SemiBold, letterSpacing = 0.4.sp),
-                        color = c.sec,
+                        color = c.muted,
                         modifier = Modifier.padding(top = 18.dp)
                     )
                 }
@@ -186,7 +190,7 @@ fun Root(vm: AppViewModel) {
                     Text(
                         stringResource(R.string.lock_tap_to_unlock),
                         style = text(15.sp, FontWeight.SemiBold),
-                        color = c.sec,
+                        color = c.muted,
                         modifier = Modifier.padding(top = 18.dp)
                     )
                 }
@@ -239,11 +243,11 @@ private fun FabCluster(vm: AppViewModel, modifier: Modifier = Modifier) {
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         if (actionAlpha > 0.01f) {
-            FabAction(stringResource(R.string.action_dry_day), c.moss, actionAlpha, actionTy) {
+            FabAction(stringResource(R.string.action_dry_day), c.b1, actionAlpha, actionTy) {
                 vm.fabOpen = false
                 vm.markDry(vm.selectedDay())
             }
-            FabAction(stringResource(R.string.action_log_drink), c.tide, actionAlpha, actionTy) {
+            FabAction(stringResource(R.string.action_log_drink), c.accent, actionAlpha, actionTy) {
                 vm.fabOpen = false
                 vm.startLog()
             }
@@ -253,7 +257,7 @@ private fun FabCluster(vm: AppViewModel, modifier: Modifier = Modifier) {
                 .size(58.dp)
                 .shadow(10.dp, CircleShape, spotColor = Color.Black.copy(alpha = 0.4f))
                 .clip(CircleShape)
-                .background(c.tide)
+                .background(c.accent)
                 .pressable(pressedScale = 0.9f) { vm.fabOpen = !vm.fabOpen },
             contentAlignment = Alignment.Center
         ) {
@@ -274,7 +278,7 @@ private fun FabAction(label: String, color: Color, alpha: Float, ty: Float, onCl
             .height(42.dp)
             .shadow(10.dp, RoundedCornerShape(21.dp), spotColor = Color.Black.copy(alpha = 0.35f))
             .clip(RoundedCornerShape(21.dp))
-            .background(c.card)
+            .background(c.surface)
             .pressable(pressedScale = 0.95f, onClick = onClick)
             .padding(horizontal = 18.dp),
         contentAlignment = Alignment.Center
@@ -289,7 +293,7 @@ private fun TabBar(vm: AppViewModel, modifier: Modifier = Modifier) {
     Row(
         modifier
             .fillMaxWidth()
-            .background(c.glass)
+            .background(c.surface)
             .windowInsetsPadding(WindowInsets.navigationBars)
             .padding(horizontal = 14.dp)
             .padding(top = 10.dp, bottom = 10.dp)
@@ -354,7 +358,7 @@ private fun androidx.compose.foundation.layout.RowScope.TabItem(
     val c = LocalAppColors.current
     val selected = vm.tab == tab
     val color by androidx.compose.animation.animateColorAsState(
-        if (selected) c.tide else c.ter, tween(300), label = "tabColor"
+        if (selected) c.accent else c.faint, tween(300), label = "tabColor"
     )
     // Pop when this tab becomes selected.
     val pop = remember { Animatable(1f) }

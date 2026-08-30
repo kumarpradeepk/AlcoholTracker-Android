@@ -68,6 +68,8 @@ data class Settings(
     val pro: Boolean = false,
     val onboardingDone: Boolean = false,
     val darkChoice: DarkChoice = DarkChoice.SYSTEM,
+    /** Theme id from `ui.theme.AppTheme`; stored as its stable slug. */
+    val themeId: String = "kiln",
     val goals: Set<Int> = emptySet(),
     val baselineAnswer: Int = -1,
     val customerId: String = "",
@@ -106,6 +108,7 @@ class SettingsRepository(private val context: Context) {
         val pro = booleanPreferencesKey("pro")
         val onboardingDone = booleanPreferencesKey("onboardingDone")
         val darkChoice = stringPreferencesKey("darkChoice")
+        val themeId = stringPreferencesKey("themeId")
         val goals = stringPreferencesKey("goals")
         val baselineAnswer = intPreferencesKey("baselineAnswer")
         val customerId = stringPreferencesKey("customerId")
@@ -138,6 +141,7 @@ class SettingsRepository(private val context: Context) {
             darkChoice = p[K.darkChoice]?.let { raw ->
                 DarkChoice.entries.firstOrNull { it.name == raw }
             } ?: DarkChoice.SYSTEM,
+            themeId = p[K.themeId] ?: "kiln",
             goals = (p[K.goals] ?: "").split(',')
                 .mapNotNull { it.toIntOrNull() }.toSet(),
             baselineAnswer = p[K.baselineAnswer] ?: -1,
@@ -173,6 +177,7 @@ class SettingsRepository(private val context: Context) {
                 darkChoice = p[K.darkChoice]?.let { raw ->
                     DarkChoice.entries.firstOrNull { it.name == raw }
                 } ?: DarkChoice.SYSTEM,
+                themeId = p[K.themeId] ?: "kiln",
                 goals = (p[K.goals] ?: "").split(',')
                     .mapNotNull { it.toIntOrNull() }.toSet(),
                 baselineAnswer = p[K.baselineAnswer] ?: -1,
@@ -202,6 +207,7 @@ class SettingsRepository(private val context: Context) {
             p[K.pro] = s.pro
             p[K.onboardingDone] = s.onboardingDone
             p[K.darkChoice] = s.darkChoice.name
+            p[K.themeId] = s.themeId
             p[K.goals] = s.goals.joinToString(",")
             p[K.baselineAnswer] = s.baselineAnswer
             p[K.customerId] = s.customerId

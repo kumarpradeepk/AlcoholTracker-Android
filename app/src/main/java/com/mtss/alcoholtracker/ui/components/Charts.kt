@@ -57,7 +57,7 @@ fun ProgressRing(
             val sw = strokeWidth.toPx()
             val inset = sw / 2f
             drawArc(
-                color = c.card2,
+                color = c.surface2,
                 startAngle = 0f, sweepAngle = 360f, useCenter = false,
                 topLeft = Offset(inset, inset),
                 size = Size(size.width - sw, size.height - sw),
@@ -117,7 +117,7 @@ fun BarChart(
                 if (averageFraction != null) {
                     val y = size.height * (1f - averageFraction.coerceIn(0f, 0.96f))
                     drawLine(
-                        c.ter, Offset(0f, y), Offset(size.width, y),
+                        c.faint, Offset(0f, y), Offset(size.width, y),
                         strokeWidth = 1.5.dp.toPx(),
                         pathEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 8f))
                     )
@@ -133,7 +133,7 @@ fun BarChart(
                     Text(
                         bar.label,
                         style = text(9.sp),
-                        color = c.ter,
+                        color = c.faint,
                         textAlign = TextAlign.Center,
                         maxLines = 1,
                         modifier = Modifier.weight(1f)
@@ -165,12 +165,12 @@ fun TrendChart(
             lineTo(pts.last().x, size.height)
             close()
         }
-        drawPath(area, c.tide.copy(alpha = 0.18f))
+        drawPath(area, c.accent.copy(alpha = 0.18f))
         val line = Path().apply {
             moveTo(pts.first().x, pts.first().y)
             pts.drop(1).forEach { lineTo(it.x, it.y) }
         }
-        drawPath(line, c.tide, style = Stroke(2.5.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round))
+        drawPath(line, c.accent, style = Stroke(2.5.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round))
     }
 }
 
@@ -184,9 +184,9 @@ fun ShareBar(fraction: Float, modifier: Modifier = Modifier) {
         if (reduced) anim.snapTo(fraction) else anim.animateTo(fraction, tween(800, easing = Motion.BarGrow))
     }
     Canvas(modifier.fillMaxWidth().height(6.dp)) {
-        drawRoundRect(c.card2, cornerRadius = androidx.compose.ui.geometry.CornerRadius(3.dp.toPx()))
+        drawRoundRect(c.surface2, cornerRadius = androidx.compose.ui.geometry.CornerRadius(3.dp.toPx()))
         drawRoundRect(
-            c.tide,
+            c.accent,
             size = Size(size.width * anim.value.coerceIn(0.04f, 1f), size.height),
             cornerRadius = androidx.compose.ui.geometry.CornerRadius(3.dp.toPx())
         )

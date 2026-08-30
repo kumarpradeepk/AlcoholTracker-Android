@@ -52,6 +52,7 @@ import com.mtss.alcoholtracker.ui.components.PrimaryButton
 import com.mtss.alcoholtracker.ui.components.pressable
 import com.mtss.alcoholtracker.ui.components.riseIn
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
+import com.mtss.alcoholtracker.ui.theme.display
 import com.mtss.alcoholtracker.ui.theme.text
 
 /** The store whose subscription screen the FAQ points at. Brand name, not copy. */
@@ -145,26 +146,26 @@ fun PaywallScreen(vm: AppViewModel) {
             Spacer(Modifier.height(20.dp))
             Text(
                 stringResource(R.string.pay_title),
-                style = text(29.sp, FontWeight.Bold, letterSpacing = (-0.5).sp), color = c.ink
+                style = display(29.sp, tabular = false, letterSpacing = (-0.5).sp), color = c.text
             )
             Text(
                 stringResource(R.string.pay_sub),
-                style = text(15.5.sp), color = c.sec, lineHeight = 22.sp,
+                style = text(15.5.sp), color = c.muted, lineHeight = 22.sp,
                 modifier = Modifier.padding(top = 6.dp)
             )
             Row(
                 Modifier
                     .padding(top = 12.dp)
                     .clip(RoundedCornerShape(12.dp))
-                    .background(c.mossSoft)
+                    .background(c.surface2)
                     .padding(horizontal = 12.dp, vertical = 7.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(Modifier.size(7.dp).clip(CircleShape).background(c.moss))
+                Box(Modifier.size(7.dp).clip(CircleShape).background(c.b1))
                 Text(
                     stringResource(R.string.pay_no_ads),
-                    style = text(12.5.sp, FontWeight.SemiBold), color = c.moss
+                    style = text(12.5.sp, FontWeight.SemiBold), color = c.b1
                 )
             }
 
@@ -178,8 +179,8 @@ fun PaywallScreen(vm: AppViewModel) {
                         horizontalArrangement = Arrangement.spacedBy(12.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Box(Modifier.size(7.dp).clip(CircleShape).background(c.tide))
-                        Text(stringResource(b), style = text(15.sp), color = c.ink)
+                        Box(Modifier.size(7.dp).clip(CircleShape).background(c.accent))
+                        Text(stringResource(b), style = text(15.sp), color = c.text)
                     }
                 }
             }
@@ -191,39 +192,39 @@ fun PaywallScreen(vm: AppViewModel) {
                         Text(
                             stringResource(R.string.pay_compare_caption),
                             style = text(11.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp),
-                            color = c.ter, modifier = Modifier.weight(1f)
+                            color = c.faint, modifier = Modifier.weight(1f)
                         )
                         Text(
                             stringResource(R.string.pay_compare_free),
                             style = text(11.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp),
-                            color = c.ter, textAlign = TextAlign.Center,
+                            color = c.faint, textAlign = TextAlign.Center,
                             modifier = Modifier.width(44.dp)
                         )
                         Text(
                             stringResource(R.string.pay_compare_pro),
                             style = text(11.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp),
-                            color = c.ter, textAlign = TextAlign.Center,
+                            color = c.faint, textAlign = TextAlign.Center,
                             modifier = Modifier.width(44.dp)
                         )
                     }
                     COMP_ROWS.forEach { (label, free, pro) ->
                         Column {
-                            Box(Modifier.fillMaxWidth().height(0.5.dp).background(c.hair))
+                            Box(Modifier.fillMaxWidth().height(0.5.dp).background(c.line))
                             Row(
                                 Modifier.padding(vertical = 10.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Text(
-                                    stringResource(label), style = text(14.sp), color = c.ink,
+                                    stringResource(label), style = text(14.sp), color = c.text,
                                     modifier = Modifier.weight(1f)
                                 )
                                 Box(Modifier.width(44.dp), contentAlignment = Alignment.Center) {
-                                    if (free) CheckMark(color = c.moss, size = 12.dp)
-                                    else Text("—", color = c.ter)
+                                    if (free) CheckMark(color = c.b1, size = 12.dp)
+                                    else Text("—", color = c.faint)
                                 }
                                 Box(Modifier.width(44.dp), contentAlignment = Alignment.Center) {
-                                    if (pro) CheckMark(color = c.tide, size = 12.dp)
-                                    else Text("—", color = c.ter)
+                                    if (pro) CheckMark(color = c.accent, size = 12.dp)
+                                    else Text("—", color = c.faint)
                                 }
                             }
                         }
@@ -236,7 +237,7 @@ fun PaywallScreen(vm: AppViewModel) {
                 store.loading && plans.isEmpty() ->
                     Text(
                         stringResource(R.string.pay_loading),
-                        style = text(14.sp), color = c.ter,
+                        style = text(14.sp), color = c.faint,
                         modifier = Modifier.padding(top = 24.dp)
                     )
 
@@ -244,11 +245,11 @@ fun PaywallScreen(vm: AppViewModel) {
                     Column(Modifier.padding(top = 24.dp)) {
                         Text(
                             stringResource(R.string.pay_unavailable),
-                            style = text(14.sp), color = c.sec, lineHeight = 20.sp
+                            style = text(14.sp), color = c.muted, lineHeight = 20.sp
                         )
                         Text(
                             stringResource(R.string.pay_retry),
-                            style = text(14.sp, FontWeight.SemiBold), color = c.tide,
+                            style = text(14.sp, FontWeight.SemiBold), color = c.accent,
                             modifier = Modifier.padding(top = 10.dp).pressable { vm.pro.refresh() }
                         )
                     }
@@ -267,7 +268,7 @@ fun PaywallScreen(vm: AppViewModel) {
             // FAQ
             Text(
                 stringResource(R.string.pay_faq_caption),
-                style = text(13.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.ter,
+                style = text(13.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.faint,
                 modifier = Modifier.padding(top = 22.dp)
             )
             AppCard(Modifier.padding(top = 8.dp), radius = 20.dp, padding = 0.dp) {
@@ -281,7 +282,7 @@ fun PaywallScreen(vm: AppViewModel) {
                                 .padding(vertical = 12.dp)
                                 .animateContentSize(tween(400))
                         ) {
-                            if (i > 0) Box(Modifier.fillMaxWidth().height(0.5.dp).background(c.hair))
+                            if (i > 0) Box(Modifier.fillMaxWidth().height(0.5.dp).background(c.line))
                             Row(
                                 Modifier
                                     .fillMaxWidth()
@@ -290,16 +291,16 @@ fun PaywallScreen(vm: AppViewModel) {
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Text(
-                                    q, style = text(14.5.sp, FontWeight.Medium), color = c.ink,
+                                    q, style = text(14.5.sp, FontWeight.Medium), color = c.text,
                                     modifier = Modifier.weight(1f)
                                 )
                                 Box(Modifier.size(16.dp).rotate(rot), contentAlignment = Alignment.Center) {
-                                    Text("+", style = text(18.sp), color = c.ter)
+                                    Text("+", style = text(18.sp), color = c.faint)
                                 }
                             }
                             if (open) {
                                 Text(
-                                    a, style = text(13.5.sp), color = c.sec, lineHeight = 20.sp,
+                                    a, style = text(13.5.sp), color = c.muted, lineHeight = 20.sp,
                                     modifier = Modifier.padding(top = 8.dp)
                                 )
                             }
@@ -316,10 +317,10 @@ fun PaywallScreen(vm: AppViewModel) {
                 .padding(top = 48.dp, end = 18.dp)
                 .size(34.dp)
                 .clip(CircleShape)
-                .background(c.card2)
+                .background(c.surface2)
                 .pressable(pressedScale = 0.9f) { vm.closePaywall() },
             contentAlignment = Alignment.Center
-        ) { CloseGlyph(c.sec) }
+        ) { CloseGlyph(c.muted) }
 
         // Bottom CTA
         Column(
@@ -336,7 +337,7 @@ fun PaywallScreen(vm: AppViewModel) {
             )
             reassurance(selected)?.let { line ->
                 Text(
-                    line, style = text(12.5.sp), color = c.sec, textAlign = TextAlign.Center,
+                    line, style = text(12.5.sp), color = c.muted, textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth().padding(top = 9.dp)
                 )
             }
@@ -345,17 +346,17 @@ fun PaywallScreen(vm: AppViewModel) {
                 horizontalArrangement = Arrangement.spacedBy(24.dp, Alignment.CenterHorizontally)
             ) {
                 Text(
-                    stringResource(R.string.pay_restore), style = text(13.sp), color = c.ter,
+                    stringResource(R.string.pay_restore), style = text(13.sp), color = c.faint,
                     modifier = Modifier.pressable { vm.restorePurchases() }
                 )
                 Text(
-                    stringResource(R.string.pay_terms), style = text(13.sp), color = c.ter,
+                    stringResource(R.string.pay_terms), style = text(13.sp), color = c.faint,
                     modifier = Modifier.pressable {
                         vm.hostActions?.openUrl("https://alcoholtracker.app/terms")
                     }
                 )
                 Text(
-                    stringResource(R.string.pay_privacy), style = text(13.sp), color = c.ter,
+                    stringResource(R.string.pay_privacy), style = text(13.sp), color = c.faint,
                     modifier = Modifier.pressable {
                         vm.hostActions?.openUrl("https://alcoholtracker.app/privacy")
                     }
@@ -378,8 +379,8 @@ private fun PlanRow(plan: ProPlan, selected: Boolean, onClick: () -> Unit) {
         Modifier
             .fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
-            .background(if (selected) c.tideSoft else c.card)
-            .border(1.5.dp, if (selected) c.tide else Color.Transparent, RoundedCornerShape(20.dp))
+            .background(if (selected) c.surface2 else c.surface)
+            .border(1.5.dp, if (selected) c.accent else Color.Transparent, RoundedCornerShape(20.dp))
             .pressable(pressedScale = 0.98f, onClick = onClick)
             .padding(horizontal = 16.dp, vertical = 15.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -389,18 +390,18 @@ private fun PlanRow(plan: ProPlan, selected: Boolean, onClick: () -> Unit) {
             Modifier
                 .size(22.dp)
                 .clip(CircleShape)
-                .background(if (selected) c.tide else Color.Transparent)
-                .border(1.5.dp, if (selected) c.tide else c.hair, CircleShape),
+                .background(if (selected) c.accent else Color.Transparent)
+                .border(1.5.dp, if (selected) c.accent else c.line, CircleShape),
             contentAlignment = Alignment.Center
         ) { if (selected) CheckMark(size = 10.dp) }
         Column(Modifier.weight(1f)) {
             Text(
                 stringResource(plan.cadence.nameRes()),
-                style = text(16.sp, FontWeight.SemiBold), color = c.ink
+                style = text(16.sp, FontWeight.SemiBold), color = c.text
             )
             Text(
                 stringResource(plan.cadence.priceLineRes(), plan.price),
-                style = text(13.sp), color = c.sec, modifier = Modifier.padding(top = 1.dp)
+                style = text(13.sp), color = c.muted, modifier = Modifier.padding(top = 1.dp)
             )
         }
         when {
@@ -417,13 +418,13 @@ private fun Badge(label: String, good: Boolean) {
     Box(
         Modifier
             .clip(RoundedCornerShape(8.dp))
-            .background(if (good) c.mossSoft else c.amberSoft)
+            .background(if (good) c.surface2 else c.surface2)
             .padding(horizontal = 8.dp, vertical = 4.dp)
     ) {
         Text(
             label,
             style = text(10.sp, FontWeight.Bold, letterSpacing = 0.5.sp),
-            color = if (good) c.moss else c.amber
+            color = if (good) c.b1 else c.b2
         )
     }
 }

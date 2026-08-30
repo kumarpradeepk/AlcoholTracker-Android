@@ -42,6 +42,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.layout.fillMaxHeight
+import com.mtss.alcoholtracker.data.DarkChoice
+import com.mtss.alcoholtracker.ui.theme.AppTheme
+import com.mtss.alcoholtracker.ui.theme.colorsFor
+import com.mtss.alcoholtracker.ui.theme.LocalAppGeometry
 import com.mtss.alcoholtracker.R
 import com.mtss.alcoholtracker.domain.AlcoholMath
 import com.mtss.alcoholtracker.domain.rememberUnits
@@ -68,6 +73,7 @@ import com.mtss.alcoholtracker.ui.components.riseIn
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
 import com.mtss.alcoholtracker.ui.theme.LocalReducedMotion
 import com.mtss.alcoholtracker.ui.theme.Motion
+import com.mtss.alcoholtracker.ui.theme.display
 import com.mtss.alcoholtracker.ui.theme.text
 import com.mtss.alcoholtracker.util.Formatters
 
@@ -96,11 +102,11 @@ fun PushHost(vm: AppViewModel) {
                         .size(36.dp)
                         .shadow(if (c.isDark) 0.dp else 4.dp, CircleShape)
                         .clip(CircleShape)
-                        .background(c.card)
+                        .background(c.surface)
                         .pressable(pressedScale = 0.88f) { vm.closePush() },
                     contentAlignment = Alignment.Center
-                ) { Chevron(ChevronDirection.LEFT, c.sec, 13.dp) }
-                Text(pushTitle(push), style = text(20.sp, FontWeight.Bold, letterSpacing = (-0.3).sp), color = c.ink)
+                ) { Chevron(ChevronDirection.LEFT, c.muted, 13.dp) }
+                Text(pushTitle(push), style = display(20.sp, tabular = false, letterSpacing = (-0.3).sp), color = c.text)
             }
             Column(
                 Modifier
@@ -118,6 +124,7 @@ fun PushHost(vm: AppViewModel) {
                     PushScreen.BACKUP -> BackupPush(vm)
                     PushScreen.ABOUT -> AboutPush(vm)
                     PushScreen.ICON -> IconPush(vm)
+                    PushScreen.THEME -> ThemePush(vm)
                     PushScreen.TRENDS -> TrendsPush(vm)
                     PushScreen.GUIDE -> GuidePush(vm)
                 }
@@ -150,12 +157,12 @@ private fun StepperValue(label: String, value: Int) {
         append(label)
         if (at >= 0) {
             addStyle(
-                SpanStyle(fontSize = 30.sp, fontWeight = FontWeight.Bold, color = c.ink),
+                SpanStyle(fontSize = 30.sp, fontWeight = FontWeight.Bold, color = c.text),
                 at, at + digits.length
             )
         }
     }
-    Text(styled, style = text(14.sp, FontWeight.Medium), color = c.sec)
+    Text(styled, style = text(14.sp, FontWeight.Medium), color = c.muted)
 }
 
 @Composable
@@ -168,6 +175,7 @@ private fun pushTitle(push: PushScreen): String = when (push) {
     PushScreen.BACKUP -> stringResource(R.string.push_title_backup)
     PushScreen.ABOUT -> stringResource(R.string.push_title_about)
     PushScreen.ICON -> stringResource(R.string.set_app_icon)
+    PushScreen.THEME -> stringResource(R.string.push_title_theme)
     PushScreen.TRENDS -> stringResource(R.string.push_title_trends)
     PushScreen.GUIDE -> stringResource(R.string.push_title_guideline)
 }
@@ -182,21 +190,21 @@ private fun ProfilePush(vm: AppViewModel) {
         Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
             SwirlingGlass(width = 58.dp, height = 76.dp)
             Column {
-                Text(stringResource(R.string.profile_headline), style = text(19.sp, FontWeight.Bold, letterSpacing = (-0.2).sp), color = c.ink)
+                Text(stringResource(R.string.profile_headline), style = display(19.sp, tabular = false, letterSpacing = (-0.2).sp), color = c.text)
                 Text(
                     stringResource(R.string.profile_body),
-                    style = text(13.5.sp), color = c.sec, lineHeight = 20.sp,
+                    style = text(13.5.sp), color = c.muted, lineHeight = 20.sp,
                     modifier = Modifier.padding(top = 5.dp)
                 )
             }
         }
         Text(
             stringResource(R.string.profile_privacy_note),
-            style = text(12.5.sp), color = c.ter, modifier = Modifier.padding(top = 12.dp, start = 2.dp)
+            style = text(12.5.sp), color = c.faint, modifier = Modifier.padding(top = 12.dp, start = 2.dp)
         )
         SettingsCard(top = 16.dp) {
             Column(Modifier.padding(16.dp)) {
-                Text(stringResource(R.string.profile_sex_label), style = text(13.sp, FontWeight.SemiBold), color = c.sec)
+                Text(stringResource(R.string.profile_sex_label), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
                 Segmented(
                     options = listOf(
                         stringResource(R.string.profile_sex_female),
@@ -211,7 +219,7 @@ private fun ProfilePush(vm: AppViewModel) {
         SettingsCard(top = 12.dp) {
             Column(Modifier.padding(16.dp)) {
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                    Text(stringResource(R.string.profile_weight_label), style = text(13.sp, FontWeight.SemiBold), color = c.sec)
+                    Text(stringResource(R.string.profile_weight_label), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
                     Segmented(
                         options = listOf(
                             stringResource(R.string.profile_weight_kg),
@@ -242,7 +250,7 @@ private fun ProfilePush(vm: AppViewModel) {
         )
         Text(
             stringResource(R.string.profile_footer),
-            style = text(12.5.sp), color = c.ter, textAlign = TextAlign.Center,
+            style = text(12.5.sp), color = c.faint, textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(top = 10.dp)
         )
     }
@@ -257,7 +265,7 @@ private fun UnitsPush(vm: AppViewModel) {
     Column(Modifier.riseIn(durationMillis = 400)) {
         SettingsCard(top = 0.dp) {
             Column(Modifier.padding(16.dp)) {
-                Text(stringResource(R.string.units_energy_label), style = text(13.sp, FontWeight.SemiBold), color = c.sec)
+                Text(stringResource(R.string.units_energy_label), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
                 Segmented(
                     options = listOf(
                         stringResource(R.string.units_kcal),
@@ -271,7 +279,7 @@ private fun UnitsPush(vm: AppViewModel) {
         }
         SettingsCard(top = 12.dp) {
             Column(Modifier.padding(16.dp)) {
-                Text(stringResource(R.string.units_serving_label), style = text(13.sp, FontWeight.SemiBold), color = c.sec)
+                Text(stringResource(R.string.units_serving_label), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
                 Segmented(
                     options = listOf(
                         stringResource(R.string.units_millilitres),
@@ -285,7 +293,7 @@ private fun UnitsPush(vm: AppViewModel) {
         }
         Text(
             stringResource(R.string.units_note),
-            style = text(13.sp), color = c.ter, lineHeight = 19.sp,
+            style = text(13.sp), color = c.faint, lineHeight = 19.sp,
             modifier = Modifier.padding(top = 14.dp, start = 4.dp)
         )
     }
@@ -309,28 +317,28 @@ private fun NotifsPush(vm: AppViewModel) {
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column(Modifier.weight(1f)) {
-                            Text(n.title, style = text(15.sp, FontWeight.SemiBold), color = c.ink)
+                            Text(n.title, style = text(15.sp, FontWeight.SemiBold), color = c.text)
                             Text(
                                 if (n.message.isNotEmpty())
                                     stringResource(R.string.notif_reminder_sub, Formatters.time(n.timeMinutes), n.message)
                                 else Formatters.time(n.timeMinutes),
-                                style = text(13.sp), color = c.sec, modifier = Modifier.padding(top = 2.dp)
+                                style = text(13.sp), color = c.muted, modifier = Modifier.padding(top = 2.dp)
                             )
                         }
                         Box(
                             Modifier
                                 .size(28.dp)
                                 .clip(CircleShape)
-                                .background(c.card2)
+                                .background(c.surface2)
                                 .pressable(pressedScale = 0.85f) { vm.removeReminder(n) },
                             contentAlignment = Alignment.Center
-                        ) { Text("−", style = text(17.sp), color = c.danger) }
+                        ) { Text("−", style = text(17.sp), color = c.b3) }
                     }
                 }
             }
             Text(
                 stringResource(R.string.notif_repeat_hint),
-                style = text(12.5.sp), color = c.ter, modifier = Modifier.padding(top = 10.dp, start = 4.dp)
+                style = text(12.5.sp), color = c.faint, modifier = Modifier.padding(top = 10.dp, start = 4.dp)
             )
         } else {
             Column(
@@ -343,15 +351,15 @@ private fun NotifsPush(vm: AppViewModel) {
                         Box(
                             Modifier
                                 .size((56 + 40 * ripple).dp)
-                                .border(1.5.dp, c.tide.copy(alpha = 1f - ripple), CircleShape)
+                                .border(1.5.dp, c.accent.copy(alpha = 1f - ripple), CircleShape)
                         )
                     }
                     DropletMark(26.dp)
                 }
-                Text(stringResource(R.string.notif_empty_title), style = text(18.sp, FontWeight.SemiBold), color = c.ink, modifier = Modifier.padding(top = 18.dp))
+                Text(stringResource(R.string.notif_empty_title), style = display(18.sp, tabular = false), color = c.text, modifier = Modifier.padding(top = 18.dp))
                 Text(
                     stringResource(R.string.notif_empty_body),
-                    style = text(14.sp), color = c.sec, textAlign = TextAlign.Center, lineHeight = 21.sp,
+                    style = text(14.sp), color = c.muted, textAlign = TextAlign.Center, lineHeight = 21.sp,
                     modifier = Modifier.padding(top = 7.dp).width(260.dp)
                 )
             }
@@ -378,10 +386,10 @@ private fun BacPush(vm: AppViewModel) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(Modifier.weight(1f)) {
-                    Text(stringResource(R.string.bac_monitor), style = text(15.5.sp), color = c.ink)
+                    Text(stringResource(R.string.bac_monitor), style = text(15.5.sp), color = c.text)
                     Text(
                         stringResource(R.string.set_bac_row_sub),
-                        style = text(12.5.sp), color = c.sec, modifier = Modifier.padding(top = 2.dp)
+                        style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 2.dp)
                     )
                 }
                 AppSwitch(settings.bacOn) { vm.updateSettings { it.copy(bacOn = !it.bacOn) } }
@@ -392,7 +400,7 @@ private fun BacPush(vm: AppViewModel) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(stringResource(R.string.set_bac_unit_label), style = text(15.5.sp), color = c.ink)
+                Text(stringResource(R.string.set_bac_unit_label), style = text(15.5.sp), color = c.text)
                 Segmented(
                     options = listOf(
                         stringResource(R.string.set_bac_unit_percent),
@@ -412,32 +420,32 @@ private fun BacPush(vm: AppViewModel) {
                 .fillMaxWidth()
                 .shadow(if (c.isDark) 0.dp else 5.dp, RoundedCornerShape(20.dp), spotColor = Color.Black.copy(alpha = 0.2f))
                 .clip(RoundedCornerShape(20.dp))
-                .background(c.card)
+                .background(c.surface)
                 .pressable(pressedScale = 0.98f) { vm.openSheet(Sheet.LivePreview) }
                 .padding(horizontal = 16.dp, vertical = 15.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(Modifier.weight(1f)) {
-                Text(stringResource(R.string.set_bac_preview_title), style = text(15.5.sp), color = c.ink)
+                Text(stringResource(R.string.set_bac_preview_title), style = text(15.5.sp), color = c.text)
                 Text(
                     stringResource(R.string.set_bac_preview_sub),
-                    style = text(12.5.sp), color = c.sec, modifier = Modifier.padding(top = 2.dp)
+                    style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 2.dp)
                 )
             }
-            Chevron(ChevronDirection.RIGHT, c.ter, 11.dp)
+            Chevron(ChevronDirection.RIGHT, c.faint, 11.dp)
         }
         Box(
             Modifier
                 .padding(top = 14.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(16.dp))
-                .background(c.amberSoft)
+                .background(c.surface2)
                 .padding(horizontal = 16.dp, vertical = 13.dp)
         ) {
             Text(
                 stringResource(R.string.set_bac_disclaimer),
-                style = text(13.sp, FontWeight.Medium), color = c.amber, lineHeight = 19.sp
+                style = text(13.sp, FontWeight.Medium), color = c.b2, lineHeight = 19.sp
             )
         }
     }
@@ -472,8 +480,8 @@ private fun QuickLogPush(vm: AppViewModel) {
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(stringResource(R.string.quicklog_section_caption), style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.ter)
-            Text(stringResource(R.string.quicklog_selected_count, selected, 4), style = text(12.5.sp), color = c.sec)
+            Text(stringResource(R.string.quicklog_section_caption), style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.faint)
+            Text(stringResource(R.string.quicklog_selected_count, selected, 4), style = text(12.5.sp), color = c.muted)
         }
         if (saved.isNotEmpty()) {
             SettingsCard(top = 8.dp) {
@@ -492,12 +500,12 @@ private fun QuickLogPush(vm: AppViewModel) {
                             Modifier
                                 .size(22.dp)
                                 .clip(CircleShape)
-                                .background(if (w.quickAccess) c.tide else Color.Transparent)
-                                .border(1.5.dp, if (w.quickAccess) c.tide else c.hair, CircleShape),
+                                .background(if (w.quickAccess) c.accent else Color.Transparent)
+                                .border(1.5.dp, if (w.quickAccess) c.accent else c.line, CircleShape),
                             contentAlignment = Alignment.Center
                         ) { if (w.quickAccess) CheckMark(size = 9.dp) }
-                        Text(w.name, style = text(15.sp, FontWeight.Medium), color = c.ink, modifier = Modifier.weight(1f))
-                        Text(stringResource(R.string.quicklog_drink_meta, w.ml.toInt(), w.abv.toString()), style = text(13.sp), color = c.sec)
+                        Text(w.name, style = text(15.sp, FontWeight.Medium), color = c.text, modifier = Modifier.weight(1f))
+                        Text(stringResource(R.string.quicklog_drink_meta, w.ml.toInt(), w.abv.toString()), style = text(13.sp), color = c.muted)
                     }
                 }
             }
@@ -507,10 +515,10 @@ private fun QuickLogPush(vm: AppViewModel) {
                     Modifier.fillMaxWidth().padding(20.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Text(stringResource(R.string.quicklog_empty_title), style = text(14.5.sp, FontWeight.SemiBold), color = c.ink)
+                    Text(stringResource(R.string.quicklog_empty_title), style = text(14.5.sp, FontWeight.SemiBold), color = c.text)
                     Text(
                         stringResource(R.string.quicklog_empty_sub),
-                        style = text(13.sp), color = c.sec, textAlign = TextAlign.Center, lineHeight = 20.sp,
+                        style = text(13.sp), color = c.muted, textAlign = TextAlign.Center, lineHeight = 20.sp,
                         modifier = Modifier.padding(top = 5.dp)
                     )
                 }
@@ -526,14 +534,15 @@ private fun QuickLogPush(vm: AppViewModel) {
 
 @Composable
 private fun WPill(label: String, moss: Boolean = false) {
+    val c = LocalAppColors.current
     Box(
         Modifier
             .size(92.dp, 26.dp)
             .clip(RoundedCornerShape(13.dp))
-            .background(if (moss) Color(0x388CB694) else Color(0x407EB0CC)),
+            .background(if (moss) c.b1.copy(alpha = 0.22f) else c.accent.copy(alpha = 0.25f)),
         contentAlignment = Alignment.Center
     ) {
-        Text(label, style = text(10.sp, FontWeight.SemiBold), color = if (moss) Color(0xFFA9CBB0) else Color(0xFF9FC6DC))
+        Text(label, style = text(10.sp, FontWeight.SemiBold), color = if (moss) c.b1 else c.accent)
     }
 }
 
@@ -550,12 +559,12 @@ private fun BackupPush(vm: AppViewModel) {
             Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(16.dp))
-                .background(c.mossSoft)
+                .background(c.surface2)
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             horizontalArrangement = Arrangement.spacedBy(10.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Box(Modifier.size(8.dp).clip(CircleShape).background(c.moss))
+            Box(Modifier.size(8.dp).clip(CircleShape).background(c.b1))
             Text(
                 if (settings.lastBackupAt > 0)
                     stringResource(
@@ -563,16 +572,16 @@ private fun BackupPush(vm: AppViewModel) {
                         Formatters.dateTimeShort(settings.lastBackupAt)
                     )
                 else stringResource(R.string.backup_status_none_android),
-                style = text(13.5.sp, FontWeight.SemiBold), color = c.moss
+                style = text(13.5.sp, FontWeight.SemiBold), color = c.b1
             )
         }
         SettingsCard(top = 12.dp) {
             Column(Modifier.padding(16.dp)) {
-                Text(stringResource(R.string.backup_whats_here), style = text(13.sp, FontWeight.SemiBold), color = c.sec)
+                Text(stringResource(R.string.backup_whats_here), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
                 Row(Modifier.padding(top = 12.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                    CountTile("${logs.size}", pluralStringResource(R.plurals.backup_count_logs, logs.size), c.ink, Modifier.weight(1f))
-                    CountTile("${dry.size}", pluralStringResource(R.plurals.backup_count_dry, dry.size), c.moss, Modifier.weight(1f))
-                    CountTile("1", stringResource(R.string.backup_count_profile), c.ink, Modifier.weight(1f))
+                    CountTile("${logs.size}", pluralStringResource(R.plurals.backup_count_logs, logs.size), c.text, Modifier.weight(1f))
+                    CountTile("${dry.size}", pluralStringResource(R.plurals.backup_count_dry, dry.size), c.b1, Modifier.weight(1f))
+                    CountTile("1", stringResource(R.string.backup_count_profile), c.text, Modifier.weight(1f))
                 }
             }
         }
@@ -587,12 +596,12 @@ private fun BackupPush(vm: AppViewModel) {
         }
         Text(
             stringResource(R.string.backup_merge_note),
-            style = text(12.5.sp), color = c.ter, lineHeight = 19.sp,
+            style = text(12.5.sp), color = c.faint, lineHeight = 19.sp,
             modifier = Modifier.padding(top = 10.dp, start = 4.dp)
         )
         Text(
             stringResource(R.string.backup_danger_zone),
-            style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.danger,
+            style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.b3,
             modifier = Modifier.padding(top = 22.dp, start = 4.dp)
         )
         SettingsCard(top = 8.dp) {
@@ -604,12 +613,12 @@ private fun BackupPush(vm: AppViewModel) {
                     .padding(horizontal = 16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(stringResource(R.string.backup_clear_all), style = text(15.5.sp, FontWeight.Medium), color = c.danger)
+                Text(stringResource(R.string.backup_clear_all), style = text(15.5.sp, FontWeight.Medium), color = c.b3)
             }
         }
         Text(
             stringResource(R.string.backup_clear_note),
-            style = text(12.5.sp), color = c.ter, lineHeight = 19.sp,
+            style = text(12.5.sp), color = c.faint, lineHeight = 19.sp,
             modifier = Modifier.padding(top = 10.dp, start = 4.dp)
         )
     }
@@ -619,11 +628,11 @@ private fun BackupPush(vm: AppViewModel) {
 private fun CountTile(value: String, label: String, valueColor: Color, modifier: Modifier = Modifier) {
     val c = LocalAppColors.current
     Column(
-        modifier.clip(RoundedCornerShape(14.dp)).background(c.card2).padding(12.dp),
+        modifier.clip(RoundedCornerShape(14.dp)).background(c.surface2).padding(12.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(value, style = text(19.sp, FontWeight.Bold, tabular = true), color = valueColor)
-        Text(label, style = text(11.5.sp), color = c.sec, modifier = Modifier.padding(top = 2.dp))
+        Text(value, style = display(19.sp), color = valueColor)
+        Text(label, style = text(11.5.sp), color = c.muted, modifier = Modifier.padding(top = 2.dp))
     }
 }
 
@@ -638,7 +647,7 @@ private fun ActionRow(label: String, onClick: () -> Unit) {
             .padding(horizontal = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(label, style = text(15.5.sp, FontWeight.Medium), color = c.tide)
+        Text(label, style = text(15.5.sp, FontWeight.Medium), color = c.accent)
     }
 }
 
@@ -650,10 +659,10 @@ private fun AboutPush(vm: AppViewModel) {
     Column(Modifier.riseIn(durationMillis = 400)) {
         Column(Modifier.fillMaxWidth().padding(top = 14.dp, bottom = 6.dp), horizontalAlignment = Alignment.CenterHorizontally) {
             DropletMark(44.dp)
-            Text(stringResource(R.string.app_name), style = text(17.sp, FontWeight.Bold), color = c.ink, modifier = Modifier.padding(top = 16.dp))
+            Text(stringResource(R.string.app_name), style = display(17.sp, tabular = false), color = c.text, modifier = Modifier.padding(top = 16.dp))
             Text(
                 stringResource(R.string.about_version, stringResource(R.string.set_about_version_value), "Still Water"),
-                style = text(13.sp), color = c.sec, modifier = Modifier.padding(top = 3.dp)
+                style = text(13.sp), color = c.muted, modifier = Modifier.padding(top = 3.dp)
             )
         }
         SettingsCard(top = 16.dp) {
@@ -663,7 +672,7 @@ private fun AboutPush(vm: AppViewModel) {
         }
         Text(
             stringResource(R.string.about_ack_caption),
-            style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.ter,
+            style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.faint,
             modifier = Modifier.padding(top = 20.dp, start = 4.dp)
         )
         SettingsCard(top = 8.dp) {
@@ -675,7 +684,7 @@ private fun AboutPush(vm: AppViewModel) {
         }
         Text(
             stringResource(R.string.about_footer),
-            style = text(12.sp), color = c.ter, textAlign = TextAlign.Center, lineHeight = 19.sp,
+            style = text(12.sp), color = c.faint, textAlign = TextAlign.Center, lineHeight = 19.sp,
             modifier = Modifier.fillMaxWidth().padding(top = 20.dp)
         )
     }
@@ -688,8 +697,8 @@ private fun AckRow(name: String, role: String) {
         Modifier.fillMaxWidth().heightIn(min = 48.dp).padding(horizontal = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(name, style = text(15.sp), color = c.ink, modifier = Modifier.weight(1f))
-        Text(role, style = text(13.sp), color = c.ter)
+        Text(name, style = text(15.sp), color = c.text, modifier = Modifier.weight(1f))
+        Text(role, style = text(13.sp), color = c.faint)
     }
 }
 
@@ -700,14 +709,14 @@ private fun IconPush(vm: AppViewModel) {
     val c = LocalAppColors.current
     val settings by vm.settings.collectAsState()
     val options = listOf(
-        Triple(stringResource(R.string.set_icon_default), c.tide, Color.White),
+        Triple(stringResource(R.string.set_icon_default), c.accent, Color.White),
         Triple(stringResource(R.string.set_icon_gift), Color(0xFFF5EBDA), Color(0xFFB97F2E)),
         Triple(stringResource(R.string.set_icon_holiday), Color(0xFF22333D), Color(0xFF8CB694))
     )
     Column(Modifier.riseIn(durationMillis = 400)) {
         Text(
             stringResource(R.string.icon_intro),
-            style = text(14.sp), color = c.sec, lineHeight = 21.sp
+            style = text(14.sp), color = c.muted, lineHeight = 21.sp
         )
         Row(
             Modifier.fillMaxWidth().padding(top = 18.dp),
@@ -728,16 +737,16 @@ private fun IconPush(vm: AppViewModel) {
                             .shadow(if (c.isDark) 0.dp else 8.dp, RoundedCornerShape(20.dp))
                             .clip(RoundedCornerShape(20.dp))
                             .background(tileBg)
-                            .border(2.5.dp, if (sel) c.tide else Color.Transparent, RoundedCornerShape(20.dp)),
+                            .border(2.5.dp, if (sel) c.accent else Color.Transparent, RoundedCornerShape(20.dp)),
                         contentAlignment = Alignment.Center
                     ) { DropletMark(30.dp, color = drop, breathing = false) }
-                    Text(name, style = text(13.sp, FontWeight.SemiBold), color = c.sec)
+                    Text(name, style = text(13.sp, FontWeight.SemiBold), color = c.muted)
                 }
             }
         }
         Text(
             stringResource(R.string.icon_relaunch_note),
-            style = text(12.sp), color = c.ter, textAlign = TextAlign.Center,
+            style = text(12.sp), color = c.faint, textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(top = 14.dp)
         )
         PrimaryButton(
@@ -771,18 +780,18 @@ private fun TrendsPush(vm: AppViewModel) {
         if (!empty) {
             SettingsCard(top = 0.dp) {
                 Column(Modifier.padding(18.dp)) {
-                    Text(stringResource(R.string.trends_title), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
-                    Text(stringResource(R.string.trends_range), style = text(12.5.sp), color = c.sec, modifier = Modifier.padding(top = 3.dp))
+                    Text(stringResource(R.string.trends_title), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                    Text(stringResource(R.string.trends_range), style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 3.dp))
                     TrendChart(values = values, chartHeight = 120.dp, modifier = Modifier.padding(top = 12.dp))
                     Row(Modifier.fillMaxWidth().padding(top = 4.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text(stringResource(R.string.trends_axis_start), style = text(10.5.sp), color = c.ter)
-                        Text(stringResource(R.string.trends_axis_end), style = text(10.5.sp), color = c.ter)
+                        Text(stringResource(R.string.trends_axis_start), style = text(10.5.sp), color = c.faint)
+                        Text(stringResource(R.string.trends_axis_end), style = text(10.5.sp), color = c.faint)
                     }
                 }
             }
             Text(
                 stringResource(R.string.trends_note),
-                style = text(13.sp), color = c.sec, lineHeight = 20.sp,
+                style = text(13.sp), color = c.muted, lineHeight = 20.sp,
                 modifier = Modifier.padding(top = 14.dp, start = 4.dp)
             )
         } else {
@@ -791,10 +800,10 @@ private fun TrendsPush(vm: AppViewModel) {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 SwirlingGlass(width = 72.dp, height = 96.dp)
-                Text(stringResource(R.string.trends_empty_title), style = text(17.sp, FontWeight.SemiBold), color = c.ink, modifier = Modifier.padding(top = 18.dp))
+                Text(stringResource(R.string.trends_empty_title), style = display(17.sp, tabular = false), color = c.text, modifier = Modifier.padding(top = 18.dp))
                 Text(
                     stringResource(R.string.trends_empty_body),
-                    style = text(14.sp), color = c.sec, textAlign = TextAlign.Center, lineHeight = 21.sp,
+                    style = text(14.sp), color = c.muted, textAlign = TextAlign.Center, lineHeight = 21.sp,
                     modifier = Modifier.padding(top = 7.dp).width(250.dp)
                 )
             }
@@ -812,11 +821,11 @@ private fun GuidePush(vm: AppViewModel) {
     Column(Modifier.riseIn(durationMillis = 400)) {
         Text(
             unitsString(R.string.guideline_intro, units.noun.plural),
-            style = text(14.sp), color = c.sec, lineHeight = 21.sp
+            style = text(14.sp), color = c.muted, lineHeight = 21.sp
         )
         SettingsCard(top = 16.dp) {
             Column(Modifier.padding(16.dp)) {
-                Text(stringResource(R.string.guideline_daily_target), style = text(13.sp, FontWeight.SemiBold), color = c.sec)
+                Text(stringResource(R.string.guideline_daily_target), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
                 Box(Modifier.padding(top = 10.dp)) {
                     StepperRow(
                         valueText = {
@@ -841,7 +850,7 @@ private fun GuidePush(vm: AppViewModel) {
         }
         SettingsCard(top = 12.dp) {
             Column(Modifier.padding(16.dp)) {
-                Text(stringResource(R.string.guideline_weekly_target), style = text(13.sp, FontWeight.SemiBold), color = c.sec)
+                Text(stringResource(R.string.guideline_weekly_target), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
                 Box(Modifier.padding(top = 10.dp)) {
                     StepperRow(
                         valueText = {
@@ -871,8 +880,138 @@ private fun GuidePush(vm: AppViewModel) {
                 settings.monthlyGoal,
                 units.noun.forCount(settings.monthlyGoal.toDouble())
             ),
-            style = text(13.sp), color = c.ter, lineHeight = 20.sp,
+            style = text(13.sp), color = c.faint, lineHeight = 20.sp,
             modifier = Modifier.padding(top = 14.dp, start = 4.dp)
+        )
+    }
+}
+
+
+// ── Theme ────────────────────────────────────────────────────────────────
+
+/**
+ * The canvas's theme card list. Each row previews the theme in its *own*
+ * colours rather than the active one, so the choice is legible before it is
+ * made — that is why the swatches are literals here and not tokens.
+ */
+private data class ThemeOption(
+    val theme: AppTheme,
+    @androidx.annotation.StringRes val nameRes: Int,
+    @androidx.annotation.StringRes val descRes: Int
+)
+
+private val THEME_OPTIONS = listOf(
+    ThemeOption(AppTheme.KILN, R.string.theme_kiln, R.string.theme_kiln_desc),
+    ThemeOption(AppTheme.NOCTURNE, R.string.theme_nocturne, R.string.theme_nocturne_desc),
+    ThemeOption(AppTheme.COASTER, R.string.theme_coaster, R.string.theme_coaster_desc)
+)
+
+@Composable
+private fun ThemePush(vm: AppViewModel) {
+    val c = LocalAppColors.current
+    val g = LocalAppGeometry.current
+    val settings by vm.settings.collectAsState()
+    val active = AppTheme.from(settings.themeId)
+
+    Column(Modifier.riseIn(durationMillis = 400)) {
+        Text(
+            stringResource(R.string.theme_intro),
+            style = text(13.sp), color = c.muted, lineHeight = 20.sp
+        )
+
+        Text(
+            stringResource(R.string.theme_caption),
+            style = text(9.sp, FontWeight.Bold, letterSpacing = 1.1.sp),
+            color = c.faint,
+            modifier = Modifier.padding(top = 18.dp, bottom = 8.dp)
+        )
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            THEME_OPTIONS.forEachIndexed { i, option ->
+                val selected = option.theme == active
+                // Preview swatches: the theme's own light ground, accent and
+                // gold, so each card shows what it is rather than what is on.
+                val preview = colorsFor(option.theme, dark = false)
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .riseIn(delayMillis = i * 45, durationMillis = 420)
+                        .clip(RoundedCornerShape(g.r))
+                        .background(c.surface)
+                        .border(
+                            if (selected) 1.5.dp else 1.dp,
+                            if (selected) c.accent else c.line,
+                            RoundedCornerShape(g.r)
+                        )
+                        .pressable(pressedScale = 0.98f) { vm.applyTheme(option.theme.id) }
+                        .padding(horizontal = 12.dp, vertical = 11.dp),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(
+                        Modifier
+                            .size(46.dp)
+                            .clip(RoundedCornerShape(10.dp))
+                    ) {
+                        Box(Modifier.weight(1f).fillMaxHeight().background(preview.bg))
+                        Box(Modifier.weight(1f).fillMaxHeight().background(preview.accent))
+                        Box(Modifier.weight(1f).fillMaxHeight().background(preview.accent2))
+                    }
+                    Column(Modifier.weight(1f)) {
+                        Text(
+                            stringResource(option.nameRes),
+                            style = text(14.sp, FontWeight.Bold), color = c.text
+                        )
+                        Text(
+                            stringResource(option.descRes),
+                            style = text(11.5.sp), color = c.muted,
+                            modifier = Modifier.padding(top = 1.dp)
+                        )
+                    }
+                    Box(
+                        Modifier
+                            .size(20.dp)
+                            .clip(CircleShape)
+                            .background(if (selected) c.accent else Color.Transparent)
+                            .border(1.5.dp, if (selected) c.accent else c.line, CircleShape),
+                        contentAlignment = Alignment.Center
+                    ) { if (selected) CheckMark(color = c.onAccent, size = 9.dp) }
+                }
+            }
+        }
+
+        Text(
+            stringResource(R.string.theme_scheme_caption),
+            style = text(9.sp, FontWeight.Bold, letterSpacing = 1.1.sp),
+            color = c.faint,
+            modifier = Modifier.padding(top = 22.dp, bottom = 8.dp)
+        )
+        // Light/dark is a separate axis: every theme is designed in both, so
+        // this never disables and never depends on which theme is active.
+        Segmented(
+            options = listOf(
+                stringResource(R.string.theme_scheme_system),
+                stringResource(R.string.theme_scheme_light),
+                stringResource(R.string.theme_scheme_dark)
+            ),
+            selectedIndex = when (settings.darkChoice) {
+                DarkChoice.SYSTEM -> 0
+                DarkChoice.LIGHT -> 1
+                DarkChoice.DARK -> 2
+            },
+            itemPadding = 10.dp,
+            fontSize = 13.sp,
+            modifier = Modifier.fillMaxWidth(),
+            onSelect = { i ->
+                vm.updateSettings {
+                    it.copy(
+                        darkChoice = when (i) {
+                            0 -> DarkChoice.SYSTEM
+                            1 -> DarkChoice.LIGHT
+                            else -> DarkChoice.DARK
+                        }
+                    )
+                }
+            }
         )
     }
 }

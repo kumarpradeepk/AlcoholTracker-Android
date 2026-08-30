@@ -41,6 +41,7 @@ import com.mtss.alcoholtracker.ui.components.PrimaryButton
 import com.mtss.alcoholtracker.ui.components.pressable
 import com.mtss.alcoholtracker.ui.components.riseIn
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
+import com.mtss.alcoholtracker.ui.theme.display
 import com.mtss.alcoholtracker.ui.theme.text
 
 /** Goal rows, in the order the view model indexes them. */
@@ -82,19 +83,19 @@ fun WelcomeScreen(vm: AppViewModel) {
             Spacer(Modifier.height(32.dp))
             Text(
                 stringResource(R.string.ob_welcome_title),
-                style = text(30.sp, FontWeight.Bold, letterSpacing = (-0.4).sp),
-                color = c.ink,
+                style = display(30.sp, tabular = false, letterSpacing = (-0.4).sp),
+                color = c.text,
                 textAlign = TextAlign.Center,
                 lineHeight = 34.sp
             )
             Text(
                 stringResource(R.string.ob_welcome_sub),
-                style = text(17.sp), color = c.sec,
+                style = text(17.sp), color = c.muted,
                 modifier = Modifier.padding(top = 10.dp)
             )
             Text(
                 stringResource(R.string.ob_welcome_body),
-                style = text(15.sp), color = c.sec, textAlign = TextAlign.Center,
+                style = text(15.sp), color = c.muted, textAlign = TextAlign.Center,
                 lineHeight = 22.sp,
                 modifier = Modifier.padding(top = 18.dp).widthIn(max = 290.dp)
             )
@@ -105,7 +106,7 @@ fun WelcomeScreen(vm: AppViewModel) {
                     .riseIn(delayMillis = 250, durationMillis = 600)
                     .shadow(12.dp, RoundedCornerShape(22.dp), spotColor = Color.Black.copy(alpha = 0.25f))
                     .clip(RoundedCornerShape(22.dp))
-                    .background(c.card)
+                    .background(c.surface)
                     .padding(14.dp),
                 horizontalArrangement = Arrangement.spacedBy(14.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -119,13 +120,13 @@ fun WelcomeScreen(vm: AppViewModel) {
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.spacedBy(5.dp, Alignment.CenterVertically)
                 ) {
-                    MiniPill(stringResource(R.string.drink_cat_beer), Color(0xFF9FC6DC), Color(0x407EB0CC))
-                    MiniPill(stringResource(R.string.drink_cat_wine), Color(0xFFA9CBB0), Color(0x388CB694))
+                    MiniPill(stringResource(R.string.drink_cat_beer), c.accent, c.accent.copy(alpha = 0.25f))
+                    MiniPill(stringResource(R.string.drink_cat_wine), c.b1, c.b1.copy(alpha = 0.22f))
                 }
                 Column {
-                    Text(stringResource(R.string.ob_welcome_quick_caption), style = text(13.sp, FontWeight.SemiBold), color = c.ink)
-                    Text(stringResource(R.string.ob_welcome_bac_example), style = text(12.sp), color = c.sec, modifier = Modifier.padding(top = 3.dp))
-                    Text(stringResource(R.string.ob_welcome_sober_example), style = text(12.sp), color = c.moss, modifier = Modifier.padding(top = 1.dp))
+                    Text(stringResource(R.string.ob_welcome_quick_caption), style = text(13.sp, FontWeight.SemiBold), color = c.text)
+                    Text(stringResource(R.string.ob_welcome_bac_example), style = text(12.sp), color = c.muted, modifier = Modifier.padding(top = 3.dp))
+                    Text(stringResource(R.string.ob_welcome_sober_example), style = text(12.sp), color = c.b1, modifier = Modifier.padding(top = 1.dp))
                 }
             }
         }
@@ -133,9 +134,9 @@ fun WelcomeScreen(vm: AppViewModel) {
             Modifier.fillMaxWidth().padding(bottom = 18.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally)
         ) {
-            Box(Modifier.size(20.dp, 6.dp).clip(RoundedCornerShape(3.dp)).background(c.tide))
-            Box(Modifier.size(6.dp).clip(CircleShape).background(c.hair))
-            Box(Modifier.size(6.dp).clip(CircleShape).background(c.hair))
+            Box(Modifier.size(20.dp, 6.dp).clip(RoundedCornerShape(3.dp)).background(c.accent))
+            Box(Modifier.size(6.dp).clip(CircleShape).background(c.line))
+            Box(Modifier.size(6.dp).clip(CircleShape).background(c.line))
         }
         PrimaryButton(stringResource(R.string.ob_get_started), onClick = { vm.toGoals() })
     }
@@ -227,29 +228,29 @@ private fun OnboardingScaffold(
             Modifier
                 .size(36.dp)
                 .clip(CircleShape)
-                .background(c.card2)
+                .background(c.surface2)
                 .pressable(pressedScale = 0.9f, onClick = onBack),
             contentAlignment = Alignment.Center
-        ) { Chevron(ChevronDirection.LEFT, c.sec, 14.dp) }
+        ) { Chevron(ChevronDirection.LEFT, c.muted, 14.dp) }
         Row(
             Modifier.fillMaxWidth().padding(top = 18.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(step, style = text(12.sp, FontWeight.SemiBold, letterSpacing = 1.sp), color = c.ter)
+            Text(step, style = text(12.sp, FontWeight.SemiBold, letterSpacing = 1.sp), color = c.faint)
             Text(
-                stringResource(R.string.ob_skip), style = text(14.sp, FontWeight.Medium), color = c.ter,
+                stringResource(R.string.ob_skip), style = text(14.sp, FontWeight.Medium), color = c.faint,
                 modifier = Modifier.pressable(onClick = onSkip).padding(4.dp)
             )
         }
         Text(
             title,
-            style = text(27.sp, FontWeight.Bold, letterSpacing = (-0.4).sp),
-            color = c.ink, lineHeight = 32.sp,
+            style = display(27.sp, tabular = false, letterSpacing = (-0.4).sp),
+            color = c.text, lineHeight = 32.sp,
             modifier = Modifier.padding(top = 6.dp)
         )
         Text(
-            subtitle, style = text(15.sp), color = c.sec, lineHeight = 21.sp,
+            subtitle, style = text(15.sp), color = c.muted, lineHeight = 21.sp,
             modifier = Modifier.padding(top = 6.dp)
         )
         Column(
@@ -280,8 +281,8 @@ private fun SelectRow(
             .fillMaxWidth()
             .riseIn(delayMillis = delay)
             .clip(RoundedCornerShape(18.dp))
-            .background(if (selected) c.tideSoft else c.card)
-            .border(1.5.dp, if (selected) c.tide else Color.Transparent, RoundedCornerShape(18.dp))
+            .background(if (selected) c.surface2 else c.surface)
+            .border(1.5.dp, if (selected) c.accent else Color.Transparent, RoundedCornerShape(18.dp))
             .pressable(pressedScale = 0.97f, onClick = onClick)
             .padding(horizontal = 16.dp, vertical = 14.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -291,8 +292,8 @@ private fun SelectRow(
             Modifier
                 .size(24.dp)
                 .clip(CircleShape)
-                .background(if (selected) c.tide else Color.Transparent)
-                .border(1.5.dp, if (selected) c.tide else c.hair, CircleShape),
+                .background(if (selected) c.accent else Color.Transparent)
+                .border(1.5.dp, if (selected) c.accent else c.line, CircleShape),
             contentAlignment = Alignment.Center
         ) {
             if (selected) {
@@ -300,6 +301,6 @@ private fun SelectRow(
                 else CheckMark(size = 11.dp)
             }
         }
-        Text(label, style = text(16.sp, FontWeight.Medium), color = c.ink)
+        Text(label, style = text(16.sp, FontWeight.Medium), color = c.text)
     }
 }

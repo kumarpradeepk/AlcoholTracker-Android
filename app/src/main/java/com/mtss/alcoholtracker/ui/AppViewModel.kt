@@ -56,6 +56,7 @@ enum class PushScreen(@StringRes val titleRes: Int) {
     BACKUP(R.string.push_title_backup),
     ABOUT(R.string.push_title_about),
     ICON(R.string.set_app_icon),
+    THEME(R.string.push_title_theme),
     TRENDS(R.string.push_title_trends),
     GUIDE(R.string.push_title_guideline)
 }
@@ -634,6 +635,13 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         closePush()
         toast(R.string.toast_profile_saved)
         return true
+    }
+
+    /** Switches the whole token set. Persisted immediately; no confirm step. */
+    fun applyTheme(themeId: String) {
+        if (settings.value.themeId == themeId) return
+        updateSettings { it.copy(themeId = themeId) }
+        Haptics.tick(getApplication())
     }
 
     fun applyIconChoice(index: Int) {

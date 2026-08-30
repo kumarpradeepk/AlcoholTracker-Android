@@ -854,4 +854,21 @@
     <string name="drink_cat_spirit">Spirit</string>
     <string name="drink_cat_cocktail">Cocktail</string>
     <string name="drink_cat_other">Other</string>
+    <!-- Theme picker (Coaster Prototype). Theme names are brand nouns and are
+         not translated; the descriptions and the scheme labels are copy. -->
+    <string name="set_theme">Theme</string>
+    <string name="push_title_theme">Theme</string>
+    <string name="theme_intro">Three complete looks. Each is designed in light and dark independently, so the two choices below are separate.</string>
+    <string name="theme_kiln" translatable="false">Kiln</string>
+    <string name="theme_kiln_desc">Warm stone and struck brass</string>
+    <string name="theme_nocturne" translatable="false">Nocturne</string>
+    <string name="theme_nocturne_desc">Graphite, ivory for banked days</string>
+    <string name="theme_coaster" translatable="false">Coaster</string>
+    <string name="theme_coaster_desc">Kraft paper, ink and honey</string>
+    <string name="theme_caption">THEME</string>
+    <string name="theme_scheme_caption">LIGHT OR DARK</string>
+    <string name="theme_scheme_system">System</string>
+    <string name="theme_scheme_light">Light</string>
+    <string name="theme_scheme_dark">Dark</string>
+    <string name="toast_theme_applied">Theme applied</string>
 </resources>

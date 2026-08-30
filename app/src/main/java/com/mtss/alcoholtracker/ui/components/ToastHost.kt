@@ -56,7 +56,7 @@ fun ToastHost(
                 Modifier
                     .widthIn(max = 340.dp)
                     .shadow(14.dp, RoundedCornerShape(22.dp), spotColor = androidx.compose.ui.graphics.Color.Black.copy(alpha = 0.5f))
-                    .background(c.ink, RoundedCornerShape(22.dp))
+                    .background(c.text, RoundedCornerShape(22.dp))
                     .padding(horizontal = 18.dp, vertical = 11.dp),
                 horizontalArrangement = Arrangement.spacedBy(14.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -70,7 +70,7 @@ fun ToastHost(
                     Text(
                         stringResource(R.string.action_undo),
                         style = text(14.sp, FontWeight.Bold),
-                        color = c.amber,
+                        color = c.b2,
                         modifier = Modifier.clickable(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,
