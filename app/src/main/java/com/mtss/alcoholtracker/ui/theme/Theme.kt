@@ -2,7 +2,6 @@ package com.mtss.alcoholtracker.ui.theme
 
 import android.provider.Settings
 import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -15,12 +14,12 @@ import androidx.compose.ui.platform.LocalContext
 import com.mtss.alcoholtracker.data.DarkChoice
 
 /**
- * Resolves the user's theme and light/dark choice into the token set the whole
- * app reads, then publishes it.
+ * Resolves the theme family and the light/dark choice into the token set the
+ * whole app reads.
  *
- * Two independent axes, exactly as the canvas has them: **which theme** (Kiln /
- * Nocturne / Coaster) and **which scheme** (System / Light / Dark). Every theme
- * is designed in both schemes, so the two never need to agree.
+ * Two independent axes, exactly as the canvas has them: **which family**
+ * (Warm / Mono) and **which scheme** (System / Light / Dark). Every family is
+ * designed in both schemes, so the two never need to agree.
  */
 @Composable
 fun AlcoholTrackerTheme(
@@ -33,15 +32,21 @@ fun AlcoholTrackerTheme(
         DarkChoice.LIGHT -> false
         DarkChoice.DARK -> true
     }
-    val target = colorsFor(theme, dark)
+    val target = Palettes.of(theme, dark)
 
-    // The ground and the ink cross-fade when either axis changes, so switching
-    // theme reads as one deliberate move rather than a flash of a new app.
-    val bg by animateColorAsState(target.bg, tween(420), label = "bg")
-    val text by animateColorAsState(target.text, tween(420), label = "text")
-    val surface by animateColorAsState(target.surface, tween(420), label = "surface")
-    val accent by animateColorAsState(target.accent, tween(420), label = "accent")
-    val colors = target.copy(bg = bg, text = text, surface = surface, accent = accent)
+    // The canvas puts `transition:background-color .3s,color .3s,border-color
+    // .3s,fill .3s,stroke .3s` on *every* element, so a change of family or
+    // scheme is a cross-fade of the whole surface rather than a hard cut.
+    val page by animateColorAsState(target.page, Motion.theme(), label = "page")
+    val card by animateColorAsState(target.card, Motion.theme(), label = "card")
+    val elev by animateColorAsState(target.elev, Motion.theme(), label = "elev")
+    val ink by animateColorAsState(target.ink, Motion.theme(), label = "ink")
+    val sub by animateColorAsState(target.sub, Motion.theme(), label = "sub")
+    val line by animateColorAsState(target.line, Motion.theme(), label = "line")
+    val acc by animateColorAsState(target.acc, Motion.theme(), label = "acc")
+    val colors = target.copy(
+        page = page, card = card, elev = elev, ink = ink, sub = sub, line = line, acc = acc
+    )
 
     val context = LocalContext.current
     val reduced = remember {
@@ -53,22 +58,20 @@ fun AlcoholTrackerTheme(
 
     val scheme = if (dark) {
         darkColorScheme(
-            primary = colors.accent, onPrimary = colors.onAccent,
-            background = colors.bg, surface = colors.surface,
-            onBackground = colors.text, onSurface = colors.text
+            primary = colors.acc, onPrimary = colors.accInk,
+            background = colors.page, surface = colors.card,
+            onBackground = colors.ink, onSurface = colors.ink
         )
     } else {
         lightColorScheme(
-            primary = colors.accent, onPrimary = colors.onAccent,
-            background = colors.bg, surface = colors.surface,
-            onBackground = colors.text, onSurface = colors.text
+            primary = colors.acc, onPrimary = colors.accInk,
+            background = colors.page, surface = colors.card,
+            onBackground = colors.ink, onSurface = colors.ink
         )
     }
 
     CompositionLocalProvider(
         LocalAppColors provides colors,
-        LocalAppGeometry provides geometryFor(theme),
-        LocalAppFonts provides fontsFor(theme),
         LocalReducedMotion provides reduced
     ) {
         MaterialTheme(colorScheme = scheme, content = content)

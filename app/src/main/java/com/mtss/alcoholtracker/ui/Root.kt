@@ -93,7 +93,7 @@ fun Root(vm: AppViewModel) {
         darkChoice = settings.darkChoice
     ) {
         val c = LocalAppColors.current
-        Box(Modifier.fillMaxSize().background(c.bg)) {
+        Box(Modifier.fillMaxSize().background(c.page)) {
             Box(
                 Modifier
                     .fillMaxSize()
@@ -162,7 +162,7 @@ fun Root(vm: AppViewModel) {
                 Column(
                     Modifier
                         .fillMaxSize()
-                        .background(c.bg),
+                        .background(c.page),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
@@ -170,7 +170,7 @@ fun Root(vm: AppViewModel) {
                     Text(
                         stringResource(R.string.app_name),
                         style = text(15.sp, FontWeight.SemiBold, letterSpacing = 0.4.sp),
-                        color = c.muted,
+                        color = c.sub,
                         modifier = Modifier.padding(top = 18.dp)
                     )
                 }
@@ -181,7 +181,7 @@ fun Root(vm: AppViewModel) {
                 Column(
                     Modifier
                         .fillMaxSize()
-                        .background(c.bg)
+                        .background(c.page)
                         .pressable(pressedScale = 1f) { vm.hostActions?.showBiometricPrompt() },
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
@@ -190,7 +190,7 @@ fun Root(vm: AppViewModel) {
                     Text(
                         stringResource(R.string.lock_tap_to_unlock),
                         style = text(15.sp, FontWeight.SemiBold),
-                        color = c.muted,
+                        color = c.sub,
                         modifier = Modifier.padding(top = 18.dp)
                     )
                 }
@@ -235,19 +235,19 @@ private fun FabCluster(vm: AppViewModel, modifier: Modifier = Modifier) {
     val c = LocalAppColors.current
     val open = vm.fabOpen
     val actionAlpha by animateFloatAsState(if (open) 1f else 0f, tween(300), label = "fabA")
-    val actionTy by animateFloatAsState(if (open) 0f else 16f, tween(380, easing = Motion.SpringyMild), label = "fabTy")
-    val rot by animateFloatAsState(if (open) -22f else 0f, tween(400, easing = Motion.Springy), label = "fabRot")
+    val actionTy by animateFloatAsState(if (open) 0f else 16f, tween(380, easing = Motion.Overshoot), label = "fabTy")
+    val rot by animateFloatAsState(if (open) -22f else 0f, tween(400, easing = Motion.OvershootPop), label = "fabRot")
     Column(
         modifier.padding(end = 20.dp, bottom = 112.dp),
         horizontalAlignment = Alignment.End,
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         if (actionAlpha > 0.01f) {
-            FabAction(stringResource(R.string.action_dry_day), c.b1, actionAlpha, actionTy) {
+            FabAction(stringResource(R.string.action_dry_day), c.moss, actionAlpha, actionTy) {
                 vm.fabOpen = false
                 vm.markDry(vm.selectedDay())
             }
-            FabAction(stringResource(R.string.action_log_drink), c.accent, actionAlpha, actionTy) {
+            FabAction(stringResource(R.string.action_log_drink), c.acc, actionAlpha, actionTy) {
                 vm.fabOpen = false
                 vm.startLog()
             }
@@ -257,7 +257,7 @@ private fun FabCluster(vm: AppViewModel, modifier: Modifier = Modifier) {
                 .size(58.dp)
                 .shadow(10.dp, CircleShape, spotColor = Color.Black.copy(alpha = 0.4f))
                 .clip(CircleShape)
-                .background(c.accent)
+                .background(c.acc)
                 .pressable(pressedScale = 0.9f) { vm.fabOpen = !vm.fabOpen },
             contentAlignment = Alignment.Center
         ) {
@@ -278,7 +278,7 @@ private fun FabAction(label: String, color: Color, alpha: Float, ty: Float, onCl
             .height(42.dp)
             .shadow(10.dp, RoundedCornerShape(21.dp), spotColor = Color.Black.copy(alpha = 0.35f))
             .clip(RoundedCornerShape(21.dp))
-            .background(c.surface)
+            .background(c.card)
             .pressable(pressedScale = 0.95f, onClick = onClick)
             .padding(horizontal = 18.dp),
         contentAlignment = Alignment.Center
@@ -293,7 +293,7 @@ private fun TabBar(vm: AppViewModel, modifier: Modifier = Modifier) {
     Row(
         modifier
             .fillMaxWidth()
-            .background(c.surface)
+            .background(c.card)
             .windowInsetsPadding(WindowInsets.navigationBars)
             .padding(horizontal = 14.dp)
             .padding(top = 10.dp, bottom = 10.dp)
@@ -337,10 +337,10 @@ private fun TabBar(vm: AppViewModel, modifier: Modifier = Modifier) {
             Canvas(Modifier.size(22.dp, 19.dp).scale(pop)) {
                 val w = size.width; val h = size.height
                 drawLine(color, Offset(0f, h * 0.3f), Offset(w, h * 0.3f), 2.dp.toPx(), StrokeCap.Round)
-                drawCircle(c.bg, 3.dp.toPx(), Offset(w * 0.36f, h * 0.3f))
+                drawCircle(c.page, 3.dp.toPx(), Offset(w * 0.36f, h * 0.3f))
                 drawCircle(color, 3.dp.toPx(), Offset(w * 0.36f, h * 0.3f), style = Stroke(2.dp.toPx()))
                 drawLine(color, Offset(0f, h * 0.7f), Offset(w, h * 0.7f), 2.dp.toPx(), StrokeCap.Round)
-                drawCircle(c.bg, 3.dp.toPx(), Offset(w * 0.64f, h * 0.7f))
+                drawCircle(c.page, 3.dp.toPx(), Offset(w * 0.64f, h * 0.7f))
                 drawCircle(color, 3.dp.toPx(), Offset(w * 0.64f, h * 0.7f), style = Stroke(2.dp.toPx()))
             }
         }
@@ -358,14 +358,14 @@ private fun androidx.compose.foundation.layout.RowScope.TabItem(
     val c = LocalAppColors.current
     val selected = vm.tab == tab
     val color by androidx.compose.animation.animateColorAsState(
-        if (selected) c.accent else c.faint, tween(300), label = "tabColor"
+        if (selected) c.acc else c.sub, tween(300), label = "tabColor"
     )
     // Pop when this tab becomes selected.
     val pop = remember { Animatable(1f) }
     LaunchedEffect(selected) {
         if (selected) {
             pop.snapTo(0.72f)
-            pop.animateTo(1f, tween(500, easing = Motion.Springy))
+            pop.animateTo(1f, tween(500, easing = Motion.OvershootPop))
         }
     }
     Column(

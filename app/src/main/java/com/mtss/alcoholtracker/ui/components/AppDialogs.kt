@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
-import com.mtss.alcoholtracker.ui.theme.display
+import com.mtss.alcoholtracker.ui.theme.figure
 import com.mtss.alcoholtracker.ui.theme.text
 
 /**
@@ -48,15 +48,15 @@ fun ConfirmDialog(
                 .width(282.dp)
                 .shadow(24.dp, RoundedCornerShape(22.dp))
                 .clip(RoundedCornerShape(22.dp))
-                .background(c.surface)
+                .background(c.card)
                 .padding(22.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(title, style = display(17.sp, tabular = false), color = c.text, textAlign = TextAlign.Center)
+            Text(title, style = figure(17.sp, tabular = false), color = c.ink, textAlign = TextAlign.Center)
             Text(
                 body,
                 style = text(13.5.sp),
-                color = c.muted,
+                color = c.sub,
                 textAlign = TextAlign.Center,
                 lineHeight = 20.sp,
                 modifier = Modifier.padding(top = 8.dp)
@@ -70,18 +70,18 @@ fun ConfirmDialog(
                         .weight(1f)
                         .height(44.dp)
                         .clip(RoundedCornerShape(22.dp))
-                        .background(c.surface2)
+                        .background(c.elev)
                         .pressable(pressedScale = 0.95f, onClick = onCancel),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(cancelLabel, style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                    Text(cancelLabel, style = text(15.sp, FontWeight.SemiBold), color = c.ink)
                 }
                 Box(
                     Modifier
                         .weight(1f)
                         .height(44.dp)
                         .clip(RoundedCornerShape(22.dp))
-                        .background(if (destructive) c.b3 else c.accent)
+                        .background(if (destructive) c.danger else c.acc)
                         .pressable(pressedScale = 0.95f, onClick = onConfirm),
                     contentAlignment = Alignment.Center
                 ) {

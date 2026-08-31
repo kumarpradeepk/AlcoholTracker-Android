@@ -74,6 +74,9 @@ dependencies {
     // in the dashboard, never in a release.
     implementation("com.revenuecat.purchases:purchases:8.25.0")
 
+    // The phone/watch bridge. Same library the :wear module uses.
+    implementation("com.google.android.gms:play-services-wearable:18.2.0")
+
     debugImplementation(composeBom)
     debugImplementation("androidx.compose.ui:ui-tooling")
 }

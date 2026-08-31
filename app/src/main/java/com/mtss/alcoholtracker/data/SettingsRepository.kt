@@ -68,8 +68,8 @@ data class Settings(
     val pro: Boolean = false,
     val onboardingDone: Boolean = false,
     val darkChoice: DarkChoice = DarkChoice.SYSTEM,
-    /** Theme id from `ui.theme.AppTheme`; stored as its stable slug. */
-    val themeId: String = "kiln",
+    /** Theme family from `ui.theme.AppTheme`; stored as its stable slug. */
+    val themeId: String = "warm",
     val goals: Set<Int> = emptySet(),
     val baselineAnswer: Int = -1,
     val customerId: String = "",
@@ -141,7 +141,7 @@ class SettingsRepository(private val context: Context) {
             darkChoice = p[K.darkChoice]?.let { raw ->
                 DarkChoice.entries.firstOrNull { it.name == raw }
             } ?: DarkChoice.SYSTEM,
-            themeId = p[K.themeId] ?: "kiln",
+            themeId = p[K.themeId] ?: "warm",
             goals = (p[K.goals] ?: "").split(',')
                 .mapNotNull { it.toIntOrNull() }.toSet(),
             baselineAnswer = p[K.baselineAnswer] ?: -1,
@@ -177,7 +177,7 @@ class SettingsRepository(private val context: Context) {
                 darkChoice = p[K.darkChoice]?.let { raw ->
                     DarkChoice.entries.firstOrNull { it.name == raw }
                 } ?: DarkChoice.SYSTEM,
-                themeId = p[K.themeId] ?: "kiln",
+                themeId = p[K.themeId] ?: "warm",
                 goals = (p[K.goals] ?: "").split(',')
                     .mapNotNull { it.toIntOrNull() }.toSet(),
                 baselineAnswer = p[K.baselineAnswer] ?: -1,

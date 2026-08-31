@@ -51,7 +51,7 @@ import com.mtss.alcoholtracker.ui.components.DropletMark
 import com.mtss.alcoholtracker.ui.components.Segmented
 import com.mtss.alcoholtracker.ui.components.pressable
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
-import com.mtss.alcoholtracker.ui.theme.display
+import com.mtss.alcoholtracker.ui.theme.figure
 import com.mtss.alcoholtracker.ui.theme.text
 import com.mtss.alcoholtracker.util.Formatters
 import java.text.SimpleDateFormat
@@ -76,7 +76,7 @@ fun SettingsScreen(vm: AppViewModel) {
     ) {
         Text(
             stringResource(R.string.tab_settings),
-            style = display(32.sp, tabular = false, letterSpacing = (-0.5).sp), color = c.text,
+            style = figure(32.sp, tabular = false), color = c.ink,
             modifier = Modifier.padding(top = 18.dp)
         )
 
@@ -86,7 +86,7 @@ fun SettingsScreen(vm: AppViewModel) {
                     .padding(top = 14.dp)
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(20.dp))
-                    .background(c.surface2)
+                    .background(c.elev)
                     .pressable(pressedScale = 0.98f) { vm.openPaywall() }
                     .padding(horizontal = 16.dp, vertical = 14.dp),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -94,13 +94,13 @@ fun SettingsScreen(vm: AppViewModel) {
             ) {
                 DropletMark(22.dp, breathing = false)
                 Column(Modifier.weight(1f)) {
-                    Text(stringResource(R.string.set_pro_banner_title), style = text(14.5.sp, FontWeight.SemiBold), color = c.text)
+                    Text(stringResource(R.string.set_pro_banner_title), style = text(14.5.sp, FontWeight.SemiBold), color = c.ink)
                     Text(
                         stringResource(R.string.set_pro_banner_sub),
-                        style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 1.dp)
+                        style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 1.dp)
                     )
                 }
-                Chevron(ChevronDirection.RIGHT, c.faint, 12.dp)
+                Chevron(ChevronDirection.RIGHT, c.sub, 12.dp)
             }
         } else {
             Row(
@@ -108,13 +108,13 @@ fun SettingsScreen(vm: AppViewModel) {
                     .padding(top = 14.dp)
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(16.dp))
-                    .background(c.surface2)
+                    .background(c.elev)
                     .padding(horizontal = 16.dp, vertical = 11.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(Modifier.size(8.dp).clip(CircleShape).background(c.b1))
-                Text(stringResource(R.string.set_pro_active), style = text(13.5.sp, FontWeight.SemiBold), color = c.b1)
+                Box(Modifier.size(8.dp).clip(CircleShape).background(c.moss))
+                Text(stringResource(R.string.set_pro_active), style = text(13.5.sp, FontWeight.SemiBold), color = c.moss)
             }
         }
 
@@ -133,7 +133,7 @@ fun SettingsScreen(vm: AppViewModel) {
                     }
                 )
             else stringResource(R.string.set_profile_not_set),
-                icon = { IconBox(c.surface2) { Box(Modifier.size(10.dp).clip(CircleShape).background(c.accent)) } }
+                icon = { IconBox(c.elev) { Box(Modifier.size(10.dp).clip(CircleShape).background(c.acc)) } }
             ) { vm.openPush(PushScreen.PROFILE) }
             Divider1()
             NavRow(stringResource(R.string.set_units), value = stringResource(
@@ -141,20 +141,20 @@ fun SettingsScreen(vm: AppViewModel) {
                 stringResource(if (settings.energyKcal) R.string.units_kcal else R.string.units_kj),
                 if (settings.servingMl) "ml" else "oz"
             ),
-                icon = { IconBox(c.surface2) { Box(Modifier.size(10.dp).clip(RoundedCornerShape(3.dp)).background(c.b1)) } }
+                icon = { IconBox(c.elev) { Box(Modifier.size(10.dp).clip(RoundedCornerShape(3.dp)).background(c.moss)) } }
             ) { vm.openPush(PushScreen.UNITS) }
             Divider1()
             NavRow(stringResource(R.string.set_guideline), value = stringResource(R.string.set_guideline_value, settings.dailyGoal),
-                icon = { IconBox(c.surface2) { DropletMark(10.dp, color = c.b2, breathing = false) } }
+                icon = { IconBox(c.elev) { DropletMark(10.dp, color = c.amber, breathing = false) } }
             ) { vm.openPush(PushScreen.GUIDE) }
             Divider1()
             ToggleRow(stringResource(R.string.set_ask_cost),
-                icon = { IconBox(c.surface2) { Text("$", style = text(13.sp, FontWeight.Bold), color = c.accent) } },
+                icon = { IconBox(c.elev) { Text("$", style = text(13.sp, FontWeight.Bold), color = c.acc) } },
                 checked = settings.askCost
             ) { vm.updateSettings { it.copy(askCost = !it.askCost) } }
             Divider1()
             ToggleRow(stringResource(R.string.set_show_calories),
-                icon = { IconBox(c.surface2) { RingDot(c.b2) } },
+                icon = { IconBox(c.elev) { RingDot(c.amber) } },
                 checked = settings.showCalories
             ) { vm.updateSettings { it.copy(showCalories = !it.showCalories) } }
         }
@@ -167,8 +167,8 @@ fun SettingsScreen(vm: AppViewModel) {
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                IconBox(c.surface2) { CheckMark(color = c.b1, size = 10.dp) }
-                Text(stringResource(R.string.set_auto_dry), style = text(15.5.sp), color = c.text, modifier = Modifier.weight(1f))
+                IconBox(c.elev) { CheckMark(color = c.moss, size = 10.dp) }
+                Text(stringResource(R.string.set_auto_dry), style = text(15.5.sp), color = c.ink, modifier = Modifier.weight(1f))
                 if (!settings.pro) SmallProChip()
                 AppSwitch(settings.autoDry && settings.pro) {
                     if (settings.pro) vm.updateSettings { it.copy(autoDry = !it.autoDry) }
@@ -177,7 +177,7 @@ fun SettingsScreen(vm: AppViewModel) {
             }
             Divider1()
             NavRow(stringResource(R.string.bac_monitor), value = null,
-                icon = { IconBox(c.surface2) { Text("%", style = text(12.sp, FontWeight.Bold), color = c.accent) } },
+                icon = { IconBox(c.elev) { Text("%", style = text(12.sp, FontWeight.Bold), color = c.acc) } },
                 trailing = { if (!settings.pro) SmallProChip() }
             ) { if (settings.pro) vm.openPush(PushScreen.BAC) else vm.openPaywall() }
             Divider1()
@@ -185,13 +185,13 @@ fun SettingsScreen(vm: AppViewModel) {
                 value = if (reminders.isNotEmpty())
                     pluralStringResource(R.plurals.set_notif_count, reminders.size, reminders.size)
                 else stringResource(R.string.set_notif_none),
-                icon = { IconBox(c.surface2) { BellGlyph(c.b2) } }
+                icon = { IconBox(c.elev) { BellGlyph(c.amber) } }
             ) { vm.openPush(PushScreen.NOTIFS) }
             Divider1()
             NavRow(stringResource(R.string.set_health_sync),
                 value = if (settings.healthConnected) stringResource(R.string.set_health_connected)
                 else stringResource(R.string.set_health_off),
-                icon = { IconBox(c.b3.copy(alpha = 0.14f)) { PlusGlyph(c.b3) } }
+                icon = { IconBox(c.danger.copy(alpha = 0.14f)) { PlusGlyph(c.danger) } }
             ) { if (settings.pro) vm.openSheet(Sheet.Health) else vm.openPaywall() }
             Divider1()
             NavRow(stringResource(R.string.set_quick_log),
@@ -199,20 +199,19 @@ fun SettingsScreen(vm: AppViewModel) {
                     if (it > 0) pluralStringResource(R.plurals.set_quick_log_count, it, it)
                     else stringResource(R.string.set_quick_log_setup)
                 },
-                icon = { IconBox(c.surface2) { TileGlyph(c.muted) } }
+                icon = { IconBox(c.elev) { TileGlyph(c.sub) } }
             ) { if (settings.pro) vm.openPush(PushScreen.QUICKLOG) else vm.openPaywall() }
         }
 
         // APPEARANCE
         Section(stringResource(R.string.set_section_appearance))
         SettingsCard {
-            // Theme and light/dark are one destination now: three complete
-             // looks each designed in both schemes, so a single toggle could no
-             // longer express the choice.
+            // Family and scheme are one destination: two complete looks, each
+            // designed in both schemes, which a single toggle cannot express.
             NavRow(
                 stringResource(R.string.set_theme),
                 value = themeSummary(settings.themeId, settings.darkChoice),
-                icon = { IconBox(c.surface2) { MoonGlyph(c.muted) } }
+                icon = { IconBox(c.elev) { MoonGlyph(c.sub) } }
             ) { vm.openPush(PushScreen.THEME) }
             Divider1()
             NavRow(stringResource(R.string.set_app_icon), value = listOf(
@@ -220,11 +219,11 @@ fun SettingsScreen(vm: AppViewModel) {
                 stringResource(R.string.set_icon_gift),
                 stringResource(R.string.set_icon_holiday)
             ).getOrElse(settings.iconIndex) { stringResource(R.string.set_icon_default) },
-                icon = { IconBox(c.surface2) { SquareGlyph(c.accent) } }
+                icon = { IconBox(c.elev) { SquareGlyph(c.acc) } }
             ) { vm.openPush(PushScreen.ICON) }
             Divider1()
             NavRow(stringResource(R.string.set_language), value = stringResource(R.string.set_language_value),
-                icon = { IconBox(c.surface2) { GlobeGlyph(c.b1) } }
+                icon = { IconBox(c.elev) { GlobeGlyph(c.moss) } }
             ) { vm.hostActions?.openLanguageSettings() }
         }
 
@@ -236,20 +235,20 @@ fun SettingsScreen(vm: AppViewModel) {
                 .fillMaxWidth()
                 .shadow(if (c.isDark) 0.dp else 5.dp, RoundedCornerShape(20.dp), spotColor = Color.Black.copy(alpha = 0.2f))
                 .clip(RoundedCornerShape(20.dp))
-                .background(c.surface)
+                .background(c.card)
                 .padding(horizontal = 16.dp, vertical = 13.dp),
             horizontalArrangement = Arrangement.spacedBy(11.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
-                Modifier.size(24.dp).clip(CircleShape).background(c.surface2),
+                Modifier.size(24.dp).clip(CircleShape).background(c.elev),
                 contentAlignment = Alignment.Center
-            ) { CheckMark(color = c.b1, size = 9.dp) }
+            ) { CheckMark(color = c.moss, size = 9.dp) }
             Column {
                 Text(
                     if (settings.lastBackupAt > 0) stringResource(R.string.set_backup_title)
                     else stringResource(R.string.set_backup_title_none),
-                    style = text(14.5.sp, FontWeight.SemiBold), color = c.text
+                    style = text(14.5.sp, FontWeight.SemiBold), color = c.ink
                 )
                 Text(
                     if (settings.lastBackupAt > 0)
@@ -258,14 +257,14 @@ fun SettingsScreen(vm: AppViewModel) {
                             Formatters.dateTimeShort(settings.lastBackupAt)
                         )
                     else stringResource(R.string.set_backup_detail_never_android),
-                    style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 1.dp)
+                    style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 1.dp)
                 )
             }
         }
         SettingsCard(top = 8.dp) {
             NavRow(stringResource(R.string.set_backup_row), value = null,
-                icon = { IconBox(c.surface2) { UpGlyph(c.accent) } },
-                trailing = { Text(stringResource(R.string.set_backup_free), style = text(12.5.sp, FontWeight.SemiBold), color = c.b1) }
+                icon = { IconBox(c.elev) { UpGlyph(c.acc) } },
+                trailing = { Text(stringResource(R.string.set_backup_free), style = text(12.5.sp, FontWeight.SemiBold), color = c.moss) }
             ) { vm.openPush(PushScreen.BACKUP) }
         }
 
@@ -275,13 +274,13 @@ fun SettingsScreen(vm: AppViewModel) {
             SubtitledToggleRow(
                 stringResource(R.string.set_app_lock), stringResource(R.string.set_app_lock_sub),
                 checked = settings.appLock,
-                icon = { IconBox(c.surface2) { LockBodyGlyph(c.muted) } }
+                icon = { IconBox(c.elev) { LockBodyGlyph(c.sub) } }
             ) { vm.updateSettings { it.copy(appLock = !it.appLock) } }
             Divider1()
             SubtitledToggleRow(
                 stringResource(R.string.set_discreet), stringResource(R.string.set_discreet_sub),
                 checked = settings.discreet,
-                icon = { IconBox(c.surface2) { EyeOffGlyph(c.muted) } }
+                icon = { IconBox(c.elev) { EyeOffGlyph(c.sub) } }
             ) { vm.updateSettings { it.copy(discreet = !it.discreet) } }
             Divider1()
             Row(
@@ -293,19 +292,19 @@ fun SettingsScreen(vm: AppViewModel) {
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                IconBox(c.surface2) { ClockGlyph(c.muted) }
+                IconBox(c.elev) { ClockGlyph(c.sub) }
                 Column(Modifier.weight(1f)) {
-                    Text(stringResource(R.string.set_day_ends), style = text(15.5.sp), color = c.text)
-                    Text(stringResource(R.string.set_day_ends_sub), style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 1.dp))
+                    Text(stringResource(R.string.set_day_ends), style = text(15.5.sp), color = c.ink)
+                    Text(stringResource(R.string.set_day_ends_sub), style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 1.dp))
                 }
-                Text(cutoffLabel(settings.cutoff), style = text(14.5.sp, FontWeight.SemiBold), color = c.accent)
+                Text(cutoffLabel(settings.cutoff), style = text(14.5.sp, FontWeight.SemiBold), color = c.acc)
             }
         }
         SettingsCard(top = 8.dp) {
             Column(Modifier.padding(horizontal = 16.dp, vertical = 14.dp)) {
                 Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
-                    IconBox(c.surface2) { Text(stringResource(R.string.set_tone_icon_sample), style = text(11.sp, FontWeight.Bold), color = c.accent) }
-                    Text(stringResource(R.string.set_tone), style = text(15.5.sp), color = c.text)
+                    IconBox(c.elev) { Text(stringResource(R.string.set_tone_icon_sample), style = text(11.sp, FontWeight.Bold), color = c.acc) }
+                    Text(stringResource(R.string.set_tone), style = text(15.5.sp), color = c.ink)
                 }
                 Segmented(
                     options = Tone.entries.map { toneLabel(it) },
@@ -321,7 +320,7 @@ fun SettingsScreen(vm: AppViewModel) {
                         Tone.PUSH -> stringResource(R.string.set_tone_sub_push)
                         Tone.NEUTRAL -> stringResource(R.string.set_tone_sub_neutral)
                     },
-                    style = text(12.5.sp), color = c.faint, modifier = Modifier.padding(top = 8.dp)
+                    style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 8.dp)
                 )
             }
         }
@@ -330,11 +329,11 @@ fun SettingsScreen(vm: AppViewModel) {
         Section(stringResource(R.string.set_section_support))
         SettingsCard {
             NavRow(stringResource(R.string.set_contact), value = null,
-                icon = { IconBox(c.surface2) { MailGlyph(c.accent) } }
+                icon = { IconBox(c.elev) { MailGlyph(c.acc) } }
             ) { vm.hostActions?.contactSupport(settings.customerId) }
             Divider1()
             NavRow(stringResource(R.string.set_about), value = stringResource(R.string.set_about_version_value),
-                icon = { IconBox(c.surface2) { Text("i", style = text(12.sp, FontWeight.SemiBold).copy(fontFamily = androidx.compose.ui.text.font.FontFamily.Serif, fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = c.muted) } }
+                icon = { IconBox(c.elev) { Text("i", style = text(12.sp, FontWeight.SemiBold).copy(fontFamily = androidx.compose.ui.text.font.FontFamily.Serif, fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = c.sub) } }
             ) { vm.openPush(PushScreen.ABOUT) }
             Divider1()
             Row(
@@ -344,11 +343,11 @@ fun SettingsScreen(vm: AppViewModel) {
             ) {
                 val customerIdLabel = stringResource(R.string.set_customer_id)
                 val copiedMessage = stringResource(R.string.toast_customer_id_copied)
-                IconBox(c.surface2) { Text("#", style = text(12.sp, FontWeight.Bold), color = c.muted) }
-                Text(customerIdLabel, style = text(15.5.sp), color = c.muted, modifier = Modifier.weight(1f))
-                Text(settings.customerId, style = text(13.sp, tabular = true), color = c.faint)
+                IconBox(c.elev) { Text("#", style = text(12.sp, FontWeight.Bold), color = c.sub) }
+                Text(customerIdLabel, style = text(15.5.sp), color = c.sub, modifier = Modifier.weight(1f))
+                Text(settings.customerId, style = text(13.sp, tabular = true), color = c.sub)
                 Text(
-                    stringResource(R.string.set_copy), style = text(13.5.sp, FontWeight.SemiBold), color = c.accent,
+                    stringResource(R.string.set_copy), style = text(13.5.sp, FontWeight.SemiBold), color = c.acc,
                     modifier = Modifier
                         .pressable {
                             val cm = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
@@ -362,7 +361,7 @@ fun SettingsScreen(vm: AppViewModel) {
 
         Text(
             stringResource(R.string.set_footer),
-            style = text(12.sp), color = c.faint, textAlign = TextAlign.Center, lineHeight = 19.sp,
+            style = text(12.sp), color = c.sub, textAlign = TextAlign.Center, lineHeight = 19.sp,
             modifier = Modifier.fillMaxWidth().padding(top = 22.dp)
         )
     }
@@ -372,14 +371,13 @@ fun SettingsScreen(vm: AppViewModel) {
 // The enums in data/SettingsRepository.kt carry English labels; the display
 // wording lives in the resource catalogue, resolved by enum value here.
 
-/** "Kiln · System" — the theme name plus which scheme it is being shown in. */
+/** "Warm · System" — the family plus the scheme it is being shown in. */
 @Composable
 private fun themeSummary(themeId: String, darkChoice: DarkChoice): String {
-    val theme = stringResource(
+    val family = stringResource(
         when (AppTheme.from(themeId)) {
-            AppTheme.KILN -> R.string.theme_kiln
-            AppTheme.NOCTURNE -> R.string.theme_nocturne
-            AppTheme.COASTER -> R.string.theme_coaster
+            AppTheme.WARM -> R.string.theme_warm
+            AppTheme.MONO -> R.string.theme_mono
         }
     )
     val scheme = stringResource(
@@ -389,7 +387,7 @@ private fun themeSummary(themeId: String, darkChoice: DarkChoice): String {
             DarkChoice.DARK -> R.string.theme_scheme_dark
         }
     )
-    return "$theme \u00B7 $scheme"
+    return "$family \u00B7 $scheme"
 }
 
 @Composable
@@ -413,7 +411,7 @@ fun Section(label: String) {
     val c = LocalAppColors.current
     Text(
         label,
-        style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.faint,
+        style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.sub,
         modifier = Modifier.padding(top = 20.dp, start = 4.dp)
     )
 }
@@ -427,7 +425,7 @@ fun SettingsCard(top: androidx.compose.ui.unit.Dp = 8.dp, content: @Composable a
             .fillMaxWidth()
             .shadow(if (c.isDark) 0.dp else 5.dp, RoundedCornerShape(20.dp), spotColor = Color.Black.copy(alpha = 0.2f))
             .clip(RoundedCornerShape(20.dp))
-            .background(c.surface),
+            .background(c.card),
         content = content
     )
 }
@@ -471,10 +469,10 @@ fun NavRow(
         verticalAlignment = Alignment.CenterVertically
     ) {
         icon()
-        Text(title, style = text(15.5.sp), color = c.text, modifier = Modifier.weight(1f))
+        Text(title, style = text(15.5.sp), color = c.ink, modifier = Modifier.weight(1f))
         if (trailing != null) trailing()
-        if (value != null) Text(value, style = text(14.sp), color = c.muted)
-        Chevron(ChevronDirection.RIGHT, c.faint, 11.dp)
+        if (value != null) Text(value, style = text(14.sp), color = c.sub)
+        Chevron(ChevronDirection.RIGHT, c.sub, 11.dp)
     }
 }
 
@@ -492,7 +490,7 @@ fun ToggleRow(
         verticalAlignment = Alignment.CenterVertically
     ) {
         icon()
-        Text(title, style = text(15.5.sp), color = c.text, modifier = Modifier.weight(1f))
+        Text(title, style = text(15.5.sp), color = c.ink, modifier = Modifier.weight(1f))
         AppSwitch(checked, onToggle)
     }
 }
@@ -513,8 +511,8 @@ fun SubtitledToggleRow(
     ) {
         icon()
         Column(Modifier.weight(1f)) {
-            Text(title, style = text(15.5.sp), color = c.text)
-            Text(subtitle, style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 1.dp))
+            Text(title, style = text(15.5.sp), color = c.ink)
+            Text(subtitle, style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 1.dp))
         }
         AppSwitch(checked, onToggle)
     }
@@ -524,9 +522,9 @@ fun SubtitledToggleRow(
 fun SmallProChip() {
     val c = LocalAppColors.current
     Box(
-        Modifier.clip(RoundedCornerShape(7.dp)).background(c.surface2).padding(horizontal = 7.dp, vertical = 3.dp)
+        Modifier.clip(RoundedCornerShape(7.dp)).background(c.elev).padding(horizontal = 7.dp, vertical = 3.dp)
     ) {
-        Text(stringResource(R.string.badge_pro), style = text(10.sp, FontWeight.Bold, letterSpacing = 0.4.sp), color = c.accent)
+        Text(stringResource(R.string.badge_pro), style = text(10.sp, FontWeight.Bold, letterSpacing = 0.4.sp), color = c.acc)
     }
 }
 

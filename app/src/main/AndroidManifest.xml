@@ -87,5 +87,15 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <!-- Receives pours the watch made while the phone app was closed. -->
+        <service
+            android:name=".wear.WearInboxService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/alcohol" />
+            </intent-filter>
+        </service>
     </application>
 </manifest>

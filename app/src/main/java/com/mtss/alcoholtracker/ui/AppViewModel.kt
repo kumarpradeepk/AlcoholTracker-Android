@@ -35,6 +35,8 @@ import com.mtss.alcoholtracker.util.Formatters
 import com.mtss.alcoholtracker.notifications.BacStatusNotifier
 import com.mtss.alcoholtracker.notifications.ReminderScheduler
 import com.mtss.alcoholtracker.util.CsvExport
+import com.mtss.alcoholtracker.wear.PendingWearActions
+import com.mtss.alcoholtracker.wear.WearBridge
 import com.mtss.alcoholtracker.util.Haptics
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -145,14 +147,92 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
             if (locked) hostActions?.showBiometricPrompt()
         }
         viewModelScope.launch {
-            // Keep the settling notification honest as logs/settings change.
-            logs.collect { refreshBacNotification() }
+            // Keep the settling notification and the watch honest as logs change.
+            logs.collect {
+                refreshBacNotification()
+                publishToWatch()
+            }
+        }
+        viewModelScope.launch {
+            settings.collect { publishToWatch() }
         }
     }
 
     fun onAppForegrounded() {
         if (!lockChecked) return
         refreshBacNotification()
+        drainWearActions()
+        publishToWatch()
+    }
+
+    // ── Watch bridge ─────────────────────────────────────────────────────
+
+    /**
+     * Replays anything the watch did while this app was closed.
+     *
+     * A watch log goes through [quickLog] rather than straight to the DAO, so
+     * the dry-day un-banking, the haptic-free toast and the BAC refresh all
+     * happen exactly once and by the same route as a phone log.
+     */
+    fun drainWearActions() {
+        PendingWearActions.drain().forEach { action ->
+            when (action) {
+                is WearBridge.Action.Log -> quickLog(
+                    PickedDrink(action.name, action.abv, action.ml, action.cost.takeIf { it > 0 })
+                )
+                is WearBridge.Action.Undo -> undoLast()
+                is WearBridge.Action.Dry ->
+                    if (action.value) markDry(todayKey()) else unDry(todayKey())
+            }
+        }
+    }
+
+    /** Pushes the figures the watch renders. Cheap; safe to call often. */
+    fun publishToWatch() {
+        val app = getApplication<Application>()
+        val s = settings.value
+        val today = todayKey()
+        val units = unitNoun()
+        val bac = bacNow()
+        WearBridge.publish(
+            app,
+            WearBridge.Snapshot(
+                dayUnits = dayUnits(today),
+                dailyGoal = s.dailyGoal,
+                weekUnits = weekUnits(),
+                weeklyGoal = s.weeklyGoal,
+                gramsPerUnit = AlcoholMath.gramsPerUnit,
+                unitNoun = units.plural,
+                dayLabel = Formatters.dayTitle(app, today, today),
+                remainLine = remainingLine(app, dayUnits(today), s.tone, s.dailyGoal, units),
+                weekLine = str(R.string.diary_mini_value, weekUnits(), s.weeklyGoal),
+                isDryToday = dryDays.value.contains(today) && dayLogs(today).isEmpty(),
+                dayHasDrinks = dayLogs(today).isNotEmpty(),
+                quick = quickItems().map {
+                    WearBridge.Quick(it.name, it.ml, it.abv, it.cost ?: 0.0)
+                },
+                pro = s.pro,
+                bacOn = s.bacOn,
+                bacValue = bac?.let {
+                    if (s.bacUnitPercent) str(R.string.bac_value_percent, it.percent)
+                    else str(R.string.bac_value_permille, it.percent * 10)
+                }.orEmpty(),
+                bacStatus = bac?.let {
+                    str(
+                        when (it.status) {
+                            AlcoholMath.BacStatus.RISING -> R.string.bac_status_rising
+                            AlcoholMath.BacStatus.SETTLING -> R.string.bac_status_settling
+                            AlcoholMath.BacStatus.CLEAR -> R.string.bac_status_clear
+                        }
+                    )
+                }.orEmpty(),
+                bacBand = when (bac?.status) {
+                    AlcoholMath.BacStatus.RISING -> 1
+                    AlcoholMath.BacStatus.SETTLING -> 2
+                    else -> 0
+                }
+            )
+        )
     }
 
     fun onUnlocked() {
@@ -291,15 +371,37 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     /** Top-3 most frequent drinks, falling back to the first presets. */
+    /**
+     * "The usual?" — the five drinks this user pours most, most-logged first.
+     *
+     * Two rules, both from what the row is for: the drink is ranked by how
+     * often it appears, and the serve it offers is the one that appears most
+     * often *for that drink* — not the last one poured, which would let a
+     * single odd measure hijack the tile. Ties break towards the more recent.
+     *
+     * Returns empty when there is no history. The row is derived from the
+     * user's own log and shows presets to nobody; the Diary hides the section
+     * rather than seeding it with drinks they never chose.
+     */
     fun quickItems(): List<PickedDrink> {
-        val freq = logs.value.groupBy { it.name }
-        val top = freq.entries.sortedByDescending { it.value.size }.take(3)
-            .map { (n, l) ->
-                val last = l.maxBy { it.atMillis }
-                PickedDrink(n, last.abv, last.ml, last.cost.takeIf { c -> c > 0 })
+        val recency = compareByDescending<List<DrinkLog>> { rows -> rows.maxOf { it.atMillis } }
+        val byCount = compareByDescending<List<DrinkLog>> { it.size }
+
+        return logs.value.groupBy { it.name }.entries
+            .sortedWith(compareBy(byCount.then(recency)) { it.value })
+            .take(QUICK_TILES)
+            .map { (name, rows) ->
+                val serve = rows.groupBy { it.ml to it.abv }.values
+                    .sortedWith(byCount.then(recency))
+                    .first()
+                val (ml, abv) = serve.first().ml to serve.first().abv
+                // The price they usually pay for *that* serve, ignoring the
+                // rows where cost was left blank.
+                val cost = serve.map { it.cost }.filter { it > 0.0 }
+                    .groupBy { it }
+                    .maxByOrNull { it.value.size }?.key
+                PickedDrink(name, abv, ml, cost)
             }
-        if (top.isNotEmpty()) return top
-        return DrinkPresets.ALL.take(3).map { PickedDrink(it.name, it.abv, it.ml, it.cost) }
     }
 
     // ── Sheets / push / dialogs / toasts ─────────────────────────────────
@@ -788,6 +890,9 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         getApplication<Application>().getString(id, *args)
 
     companion object {
+        /** How many tiles "The usual?" offers, per the canvas's chip row. */
+        const val QUICK_TILES = 5
+
         /** Product names, deliberately excluded from the inventory as brand identity. */
         const val HEALTH_CONNECT = "Health Connect"
         const val PLATFORM = "Android"

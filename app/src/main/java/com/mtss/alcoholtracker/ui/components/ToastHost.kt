@@ -48,7 +48,7 @@ fun ToastHost(
     Box(modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
         AnimatedVisibility(
             visible = toast != null,
-            enter = slideInVertically(tween(400, easing = Motion.Springy)) { it / 2 } + fadeIn(tween(250)),
+            enter = slideInVertically(tween(400, easing = Motion.OvershootPop)) { it / 2 } + fadeIn(tween(250)),
             exit = slideOutVertically(tween(220)) { it / 3 } + fadeOut(tween(200))
         ) {
             val data = toast ?: last ?: return@AnimatedVisibility
@@ -56,7 +56,7 @@ fun ToastHost(
                 Modifier
                     .widthIn(max = 340.dp)
                     .shadow(14.dp, RoundedCornerShape(22.dp), spotColor = androidx.compose.ui.graphics.Color.Black.copy(alpha = 0.5f))
-                    .background(c.text, RoundedCornerShape(22.dp))
+                    .background(c.ink, RoundedCornerShape(22.dp))
                     .padding(horizontal = 18.dp, vertical = 11.dp),
                 horizontalArrangement = Arrangement.spacedBy(14.dp),
                 verticalAlignment = Alignment.CenterVertically
@@ -64,13 +64,13 @@ fun ToastHost(
                 Text(
                     data.message,
                     style = text(14.sp, FontWeight.Medium),
-                    color = c.bg
+                    color = c.page
                 )
                 if (data.undoable) {
                     Text(
                         stringResource(R.string.action_undo),
                         style = text(14.sp, FontWeight.Bold),
-                        color = c.b2,
+                        color = c.amber,
                         modifier = Modifier.clickable(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null,

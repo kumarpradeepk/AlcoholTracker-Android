@@ -66,7 +66,7 @@ import com.mtss.alcoholtracker.ui.components.pressable
 import com.mtss.alcoholtracker.ui.components.riseIn
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
 import com.mtss.alcoholtracker.ui.theme.Motion
-import com.mtss.alcoholtracker.ui.theme.display
+import com.mtss.alcoholtracker.ui.theme.figure
 import com.mtss.alcoholtracker.ui.theme.text
 import com.mtss.alcoholtracker.util.Formatters
 import kotlin.math.roundToInt
@@ -101,21 +101,21 @@ fun StatisticsScreen(vm: AppViewModel) {
         ) {
             Text(
                 stringResource(R.string.tab_statistics),
-                style = display(32.sp, tabular = false, letterSpacing = (-0.5).sp), color = c.text
+                style = figure(32.sp, tabular = false), color = c.ink
             )
             Row(
                 Modifier
                     .height(36.dp)
                     .shadow(if (c.isDark) 0.dp else 4.dp, RoundedCornerShape(18.dp), spotColor = Color.Black.copy(alpha = 0.25f))
                     .clip(RoundedCornerShape(18.dp))
-                    .background(c.surface)
+                    .background(c.card)
                     .pressable(pressedScale = 0.92f) { vm.openSheet(Sheet.Export) }
                     .padding(horizontal = 14.dp),
                 horizontalArrangement = Arrangement.spacedBy(6.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                ExportGlyph(c.accent)
-                Text(stringResource(R.string.action_export), style = text(13.5.sp, FontWeight.SemiBold), color = c.accent)
+                ExportGlyph(c.acc)
+                Text(stringResource(R.string.action_export), style = text(13.5.sp, FontWeight.SemiBold), color = c.acc)
             }
         }
 
@@ -125,12 +125,12 @@ fun StatisticsScreen(vm: AppViewModel) {
                 .padding(top = 16.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(14.dp))
-                .background(c.surface2)
+                .background(c.elev)
                 .padding(3.dp)
         ) {
             val segW = maxWidth / 5
             val idx = StatsPeriod.entries.indexOf(vm.period)
-            val x by animateFloatAsState(idx.toFloat(), tween(380, easing = Motion.SpringyMild), label = "thumb")
+            val x by animateFloatAsState(idx.toFloat(), tween(380, easing = Motion.Overshoot), label = "thumb")
             Box(
                 Modifier
                     .offset(x = segW * x)
@@ -138,7 +138,7 @@ fun StatisticsScreen(vm: AppViewModel) {
                     .height(32.dp)
                     .shadow(if (c.isDark) 0.dp else 3.dp, RoundedCornerShape(11.dp))
                     .clip(RoundedCornerShape(11.dp))
-                    .background(c.surface)
+                    .background(c.card)
             )
             Row {
                 StatsPeriod.entries.forEach { p ->
@@ -154,9 +154,9 @@ fun StatisticsScreen(vm: AppViewModel) {
                         Text(
                             stringResource(p.labelRes),
                             style = text(13.sp, FontWeight.SemiBold),
-                            color = if (sel) c.text else c.muted
+                            color = if (sel) c.ink else c.sub
                         )
-                        if (p.locked && !settings.pro) LockGlyph(c.faint)
+                        if (p.locked && !settings.pro) LockGlyph(c.sub)
                     }
                 }
             }
@@ -172,18 +172,18 @@ fun StatisticsScreen(vm: AppViewModel) {
                 onClick = { vm.pageBack++ }, size = 34.dp,
                 contentDescription = stringResource(R.string.a11y_prev_period)
             ) {
-                Chevron(ChevronDirection.LEFT, c.muted, 12.dp)
+                Chevron(ChevronDirection.LEFT, c.sub, 12.dp)
             }
-            Text(range.label, style = text(14.5.sp, FontWeight.SemiBold), color = c.text)
+            Text(range.label, style = text(14.5.sp, FontWeight.SemiBold), color = c.ink)
             RoundIconButton(
                 onClick = { if (vm.pageBack > 0) vm.pageBack-- },
                 size = 34.dp, enabled = vm.pageBack > 0,
                 contentDescription = stringResource(R.string.a11y_next_period)
-            ) { Chevron(ChevronDirection.RIGHT, c.muted, 12.dp) }
+            ) { Chevron(ChevronDirection.RIGHT, c.sub, 12.dp) }
         }
         if (vm.period == StatsPeriod.CUSTOM) {
             Text(
-                stringResource(R.string.stats_edit_range), style = text(13.sp), color = c.accent,
+                stringResource(R.string.stats_edit_range), style = text(13.sp), color = c.acc,
                 modifier = Modifier
                     .align(Alignment.CenterHorizontally)
                     .padding(top = 8.dp)
@@ -194,7 +194,7 @@ fun StatisticsScreen(vm: AppViewModel) {
             Text(
                 verdict,
                 style = text(13.5.sp, FontWeight.SemiBold),
-                color = if (verdictDown) c.b1 else c.muted,
+                color = if (verdictDown) c.moss else c.sub,
                 modifier = Modifier.align(Alignment.CenterHorizontally).padding(top = 10.dp)
             )
         }
@@ -241,10 +241,10 @@ fun StatisticsScreen(vm: AppViewModel) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     unitsString(R.string.stats_units_chart_title, units.noun.plural),
-                    style = text(15.sp, FontWeight.SemiBold), color = c.text
+                    style = text(15.sp, FontWeight.SemiBold), color = c.ink
                 )
                 Row(horizontalArrangement = Arrangement.spacedBy(7.dp), verticalAlignment = Alignment.CenterVertically) {
-                    Text(stringResource(R.string.stats_daily_average), style = text(12.sp), color = c.muted)
+                    Text(stringResource(R.string.stats_daily_average), style = text(12.sp), color = c.sub)
                     AppSwitch(vm.avgUnits) { vm.avgUnits = !vm.avgUnits }
                 }
             }
@@ -252,7 +252,7 @@ fun StatisticsScreen(vm: AppViewModel) {
                 val maxU = maxOf(0.1, range.buckets.maxOf { it.units })
                 BarChart(
                     bars = range.buckets.map {
-                        BarDatum(it.label, (it.units / maxU).toFloat(), if (it.overDaily) c.b2 else c.accent)
+                        BarDatum(it.label, (it.units / maxU).toFloat(), if (it.overDaily) c.amber else c.acc)
                     },
                     chartHeight = 132.dp,
                     averageFraction = if (vm.avgUnits) ((range.totalUnits / range.days) / maxU).toFloat() else null,
@@ -261,11 +261,11 @@ fun StatisticsScreen(vm: AppViewModel) {
                 Row(Modifier.fillMaxWidth().padding(top = 10.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text(
                         stringResource(R.string.stats_units_total, range.totalUnits, units.noun.plural),
-                        style = text(12.5.sp), color = c.muted
+                        style = text(12.5.sp), color = c.sub
                     )
                     Text(
                         stringResource(R.string.stats_units_per_day, range.totalUnits / range.days),
-                        style = text(12.5.sp, tabular = true), color = c.muted
+                        style = text(12.5.sp, tabular = true), color = c.sub
                     )
                 }
             } else {
@@ -274,7 +274,7 @@ fun StatisticsScreen(vm: AppViewModel) {
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.Center
                 ) {
-                    Text(stringResource(R.string.stats_units_empty), style = text(13.5.sp), color = c.muted)
+                    Text(stringResource(R.string.stats_units_empty), style = text(13.5.sp), color = c.sub)
                 }
             }
         }
@@ -282,9 +282,9 @@ fun StatisticsScreen(vm: AppViewModel) {
         // Spending chart
         AppCard(Modifier.padding(top = 12.dp).riseIn(delayMillis = 140), padding = 16.dp) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                Text(stringResource(R.string.stats_spend_chart_title), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                Text(stringResource(R.string.stats_spend_chart_title), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
                 Row(horizontalArrangement = Arrangement.spacedBy(7.dp), verticalAlignment = Alignment.CenterVertically) {
-                    Text(stringResource(R.string.stats_daily_average), style = text(12.sp), color = c.muted)
+                    Text(stringResource(R.string.stats_daily_average), style = text(12.sp), color = c.sub)
                     AppSwitch(vm.avgSpend) { vm.avgSpend = !vm.avgSpend }
                 }
             }
@@ -292,7 +292,7 @@ fun StatisticsScreen(vm: AppViewModel) {
                 val maxSp = maxOf(0.1, range.buckets.maxOf { it.spend })
                 BarChart(
                     bars = range.buckets.map {
-                        BarDatum("", (it.spend / maxSp).toFloat(), c.b2.copy(alpha = 0.7f))
+                        BarDatum("", (it.spend / maxSp).toFloat(), c.amber.copy(alpha = 0.7f))
                     },
                     chartHeight = 110.dp,
                     averageFraction = if (vm.avgSpend) ((range.totalSpend / range.days) / maxSp).toFloat() else null,
@@ -301,16 +301,16 @@ fun StatisticsScreen(vm: AppViewModel) {
                 Row(Modifier.fillMaxWidth().padding(top = 10.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text(
                         stringResource(R.string.stats_spend_total, Formatters.money(range.totalSpend)),
-                        style = text(12.5.sp, tabular = true), color = c.muted
+                        style = text(12.5.sp, tabular = true), color = c.sub
                     )
                     Text(
                         stringResource(R.string.stats_spend_per_day, Formatters.money(range.totalSpend / range.days)),
-                        style = text(12.5.sp, tabular = true), color = c.muted
+                        style = text(12.5.sp, tabular = true), color = c.sub
                     )
                 }
             } else {
                 Box(Modifier.fillMaxWidth().height(90.dp), contentAlignment = Alignment.Center) {
-                    Text(stringResource(R.string.stats_spend_empty), style = text(13.5.sp), color = c.muted)
+                    Text(stringResource(R.string.stats_spend_empty), style = text(13.5.sp), color = c.sub)
                 }
             }
         }
@@ -322,12 +322,12 @@ fun StatisticsScreen(vm: AppViewModel) {
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(stringResource(R.string.stats_money_saved_title), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                Text(stringResource(R.string.stats_money_saved_title), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
                 Row(horizontalArrangement = Arrangement.spacedBy(5.dp), verticalAlignment = Alignment.CenterVertically) {
                     // The symbol is config, and it is a suffix in fr/de/pl/da (A3).
                     Text(
                         stringResource(R.string.stats_baseline_label, currency.symbol),
-                        style = text(12.5.sp), color = c.muted
+                        style = text(12.5.sp), color = c.sub
                     )
                     AppTextField(
                         value = settings.baseline,
@@ -341,7 +341,7 @@ fun StatisticsScreen(vm: AppViewModel) {
             }
             Text(
                 StatsEngine.savedLine(context, settings.baseline.toDoubleOrNull() ?: 0.0, range),
-                style = text(13.5.sp), color = c.muted, lineHeight = 20.sp,
+                style = text(13.5.sp), color = c.sub, lineHeight = 20.sp,
                 modifier = Modifier.padding(top = 10.dp)
             )
         }
@@ -356,29 +356,29 @@ fun StatisticsScreen(vm: AppViewModel) {
                     padding = 16.dp
                 ) {
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                        Text(stringResource(R.string.stats_breakdown_title), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                        Text(stringResource(R.string.stats_breakdown_title), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
                         ProBadge { vm.openPaywall() }
                     }
                     Text(
                         stringResource(R.string.stats_breakdown_locked),
-                        style = text(13.5.sp), color = c.muted, lineHeight = 20.sp,
+                        style = text(13.5.sp), color = c.sub, lineHeight = 20.sp,
                         modifier = Modifier.padding(top = 6.dp)
                     )
                 }
             }
             range.breakdown.isEmpty() -> {
                 AppCard(Modifier.padding(top = 12.dp), padding = 16.dp) {
-                    Text(stringResource(R.string.stats_breakdown_title), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                    Text(stringResource(R.string.stats_breakdown_title), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
                     Text(
                         stringResource(R.string.stats_breakdown_empty),
-                        style = text(13.5.sp), color = c.muted, lineHeight = 20.sp,
+                        style = text(13.5.sp), color = c.sub, lineHeight = 20.sp,
                         modifier = Modifier.padding(top = 6.dp)
                     )
                 }
             }
             else -> {
                 AppCard(Modifier.padding(top = 12.dp), padding = 16.dp) {
-                    Text(stringResource(R.string.stats_breakdown_title), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                    Text(stringResource(R.string.stats_breakdown_title), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
                     range.breakdown.forEachIndexed { i, row ->
                         Column(Modifier.padding(top = 12.dp).riseIn(delayMillis = i * 40, durationMillis = 450)) {
                             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -388,12 +388,12 @@ fun StatisticsScreen(vm: AppViewModel) {
                                             R.plurals.stats_breakdown_row,
                                             row.pours, row.name, row.pours
                                         ),
-                                        style = text(13.5.sp, FontWeight.SemiBold), color = c.text
+                                        style = text(13.5.sp, FontWeight.SemiBold), color = c.ink
                                     )
                                 }
                                 Text(
                                     stringResource(R.string.stats_breakdown_pct, row.pct),
-                                    style = text(13.5.sp, FontWeight.SemiBold, tabular = true), color = c.accent
+                                    style = text(13.5.sp, FontWeight.SemiBold, tabular = true), color = c.acc
                                 )
                             }
                             ShareBar(fraction = row.pct / 100f, modifier = Modifier.padding(top = 5.dp))
@@ -406,7 +406,7 @@ fun StatisticsScreen(vm: AppViewModel) {
                             range.breakdown.first().pct,
                             units.noun.plural
                         ),
-                        style = text(13.sp), color = c.muted, modifier = Modifier.padding(top = 12.dp)
+                        style = text(13.sp), color = c.sub, modifier = Modifier.padding(top = 12.dp)
                     )
                 }
             }
@@ -419,14 +419,14 @@ fun StatisticsScreen(vm: AppViewModel) {
                     progress = range.dryPct / 100f,
                     diameter = 84.dp,
                     strokeWidth = 8.dp,
-                    color = c.b1
+                    color = c.moss
                 ) {
                     Text(
                         stringResource(
                             R.string.stats_dry_ring_pct,
                             animatedValue(range.dryPct.toDouble()).roundToInt()
                         ),
-                        style = text(16.sp, FontWeight.Bold, tabular = true), color = c.text
+                        style = text(16.sp, FontWeight.Bold, tabular = true), color = c.ink
                     )
                 }
                 Column(Modifier.weight(1f)) {
@@ -440,7 +440,7 @@ fun StatisticsScreen(vm: AppViewModel) {
                                 else -> R.string.stats_dry_title_none
                             }
                         ),
-                        style = text(15.sp, FontWeight.SemiBold), color = c.text
+                        style = text(15.sp, FontWeight.SemiBold), color = c.ink
                     )
                     Text(
                         when {
@@ -452,7 +452,7 @@ fun StatisticsScreen(vm: AppViewModel) {
                                 stringResource(R.string.stats_dry_body_positive, range.dryPct)
                             else -> stringResource(R.string.stats_dry_body_none)
                         },
-                        style = text(13.sp), color = c.muted, lineHeight = 20.sp,
+                        style = text(13.sp), color = c.sub, lineHeight = 20.sp,
                         modifier = Modifier.padding(top = 5.dp)
                     )
                 }
@@ -476,18 +476,18 @@ private fun StatTileBig(
             .riseIn(delayMillis = delay, durationMillis = 450)
             .shadow(if (c.isDark) 0.dp else 5.dp, RoundedCornerShape(18.dp), spotColor = Color.Black.copy(alpha = 0.2f))
             .clip(RoundedCornerShape(18.dp))
-            .background(c.surface)
+            .background(c.card)
             .padding(14.dp)
     ) {
-        Text(label, style = text(12.sp, FontWeight.SemiBold), color = c.muted)
+        Text(label, style = text(12.sp, FontWeight.SemiBold), color = c.sub)
         Row(Modifier.padding(top = 4.dp), verticalAlignment = Alignment.Bottom, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-            Text(value, style = display(20.sp), color = c.text)
+            Text(value, style = figure(20.sp, tabular = true), color = c.ink)
             if (unit.isNotEmpty()) {
-                Text(unit, style = text(12.sp, FontWeight.Medium), color = c.muted, modifier = Modifier.padding(bottom = 2.dp))
+                Text(unit, style = text(12.sp, FontWeight.Medium), color = c.sub, modifier = Modifier.padding(bottom = 2.dp))
             }
         }
         if (footnote != null) {
-            Text(footnote, style = text(11.sp), color = c.faint, modifier = Modifier.padding(top = 2.dp))
+            Text(footnote, style = text(11.sp), color = c.sub, modifier = Modifier.padding(top = 2.dp))
         }
     }
 }

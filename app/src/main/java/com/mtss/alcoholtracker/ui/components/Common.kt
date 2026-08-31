@@ -55,7 +55,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.Canvas
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
-import com.mtss.alcoholtracker.ui.theme.LocalAppGeometry
+import com.mtss.alcoholtracker.ui.theme.Radii
 import com.mtss.alcoholtracker.ui.theme.LocalReducedMotion
 import com.mtss.alcoholtracker.ui.theme.Motion
 import com.mtss.alcoholtracker.ui.theme.text
@@ -71,7 +71,7 @@ fun Modifier.pressable(
     val pressed by interaction.collectIsPressedAsState()
     val scale by animateFloatAsState(
         targetValue = if (pressed) pressedScale else 1f,
-        animationSpec = tween(280, easing = Motion.Springy),
+        animationSpec = tween(280, easing = Motion.OvershootPop),
         label = "press"
     )
     this
@@ -128,12 +128,12 @@ fun AppCard(
     val c = LocalAppColors.current
     // A card in this system is a plane with an edge, not a floating slab: the
     // canvas draws every surface with a 1px line and no shadow anywhere.
-    val shape = RoundedCornerShape(radius ?: LocalAppGeometry.current.r)
+    val shape = RoundedCornerShape(radius ?: Radii.CARD.dp)
     Column(
         modifier
             .fillMaxWidth()
             .clip(shape)
-            .background(color ?: c.surface)
+            .background(color ?: c.card)
             .then(if (bordered) Modifier.border(1.dp, c.line, shape) else Modifier)
             .padding(padding),
         content = content
@@ -146,7 +146,7 @@ fun SectionLabel(label: String, modifier: Modifier = Modifier) {
     Text(
         label,
         style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp),
-        color = c.faint,
+        color = c.sub,
         modifier = modifier.padding(start = 4.dp)
     )
 }
@@ -215,13 +215,13 @@ fun RoundIconButton(
     // Square-ish with the theme's small radius, matching the canvas's day-nav
     // and sheet-close controls. Variants on a sunken well drop the border that
     // would otherwise double against it.
-    val iconShape = RoundedCornerShape(LocalAppGeometry.current.rs)
+    val iconShape = RoundedCornerShape(Radii.TILE.dp)
     Box(
         modifier
             .size(size)
             .alpha(if (!enabled && dimmedWhenDisabled) 0.3f else 1f)
             .clip(iconShape)
-            .background(if (onCard2) c.surface2 else c.surface)
+            .background(if (onCard2) c.elev else c.card)
             .then(if (onCard2) Modifier else Modifier.border(1.dp, c.line, iconShape))
             .pressable(pressedScale = 0.88f, enabled = enabled, onClick = onClick)
             // The callers all pass a localized a11y label; it was being dropped
@@ -250,20 +250,20 @@ fun PrimaryButton(
     textColor: Color? = null
 ) {
     val c = LocalAppColors.current
-    val shape = RoundedCornerShape(LocalAppGeometry.current.rl)
+    val shape = RoundedCornerShape(Radii.BANNER.dp)
     Box(
         modifier
             .fillMaxWidth()
             .height(height)
             .alpha(if (enabled) 1f else 0.45f)
             .clip(shape)
-            .background(color ?: c.accent)
+            .background(color ?: c.acc)
             .pressable(pressedScale = 0.97f, onClick = { if (enabled) onClick() }),
         contentAlignment = Alignment.Center
     ) {
         // Never hardcode white: Nocturne's accent is ivory and Kiln's dark
         // accent is a mid rust, so the label colour comes from the pair.
-        Text(label, style = text(15.sp, FontWeight.Bold), color = textColor ?: c.onAccent)
+        Text(label, style = text(15.sp, FontWeight.Bold), color = textColor ?: c.accInk)
     }
 }
 
@@ -282,12 +282,12 @@ fun SoftButton(
         modifier
             .fillMaxWidth()
             .height(height)
-            .clip(RoundedCornerShape(LocalAppGeometry.current.rs))
-            .background(container ?: c.surface2)
+            .clip(RoundedCornerShape(Radii.TILE.dp))
+            .background(container ?: c.elev)
             .pressable(pressedScale = 0.97f, onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
-        Text(label, style = text(14.sp, FontWeight.Bold), color = contentColor ?: c.text)
+        Text(label, style = text(14.sp, FontWeight.Bold), color = contentColor ?: c.ink)
     }
 }
 
@@ -295,12 +295,12 @@ fun SoftButton(
 @Composable
 fun AppSwitch(checked: Boolean, onToggle: () -> Unit) {
     val c = LocalAppColors.current
-    val knobX by animateFloatAsState(if (checked) 19f else 2f, tween(300, easing = Motion.SpringyMild), label = "knob")
+    val knobX by animateFloatAsState(if (checked) 19f else 2f, tween(300, easing = Motion.Overshoot), label = "knob")
     val track by androidx.compose.animation.animateColorAsState(
-        if (checked) c.accent else c.surface2, tween(300), label = "track"
+        if (checked) c.acc else c.elev, tween(300), label = "track"
     )
     val knobColor by androidx.compose.animation.animateColorAsState(
-        if (checked) c.onAccent else c.surface, tween(300), label = "knobColor"
+        if (checked) c.accInk else c.card, tween(300), label = "knobColor"
     )
     Box(
         Modifier
@@ -334,11 +334,10 @@ fun Segmented(
     onSelect: (Int) -> Unit
 ) {
     val c = LocalAppColors.current
-    val g = LocalAppGeometry.current
-    Row(
+        Row(
         modifier
-            .clip(RoundedCornerShape(g.rs))
-            .background(c.surface2)
+            .clip(RoundedCornerShape(Radii.TILE.dp))
+            .background(c.elev)
             .padding(2.dp)
     ) {
         options.forEachIndexed { i, label ->
@@ -346,8 +345,8 @@ fun Segmented(
             Box(
                 Modifier
                     .weight(1f)
-                    .clip(RoundedCornerShape(g.rs))
-                    .background(if (sel) c.accent else Color.Transparent)
+                    .clip(RoundedCornerShape(Radii.TILE.dp))
+                    .background(if (sel) c.acc else Color.Transparent)
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null
@@ -358,7 +357,7 @@ fun Segmented(
                 Text(
                     label,
                     style = text(fontSize, FontWeight.SemiBold),
-                    color = if (sel) c.onAccent else c.muted
+                    color = if (sel) c.accInk else c.sub
                 )
             }
         }
@@ -382,19 +381,19 @@ fun StepperRow(
             Modifier
                 .size(44.dp)
                 .clip(CircleShape)
-                .background(c.surface2)
+                .background(c.elev)
                 .pressable(pressedScale = 0.86f, onClick = onMinus),
             contentAlignment = Alignment.Center
-        ) { Text("−", style = text(22.sp), color = c.muted) }
+        ) { Text("−", style = text(22.sp), color = c.sub) }
         valueText()
         Box(
             Modifier
                 .size(44.dp)
                 .clip(CircleShape)
-                .background(c.surface2)
+                .background(c.elev)
                 .pressable(pressedScale = 0.86f, onClick = onPlus),
             contentAlignment = Alignment.Center
-        ) { Text("+", style = text(22.sp), color = c.muted) }
+        ) { Text("+", style = text(22.sp), color = c.sub) }
     }
 }
 
@@ -413,7 +412,7 @@ fun DropletMark(size: Dp, color: Color? = null, breathing: Boolean = true) {
             .scale(scale)
             .rotate(45f)
             .clip(RoundedCornerShape(topStart = size * 0.13f, topEnd = size / 2, bottomEnd = size / 2, bottomStart = size / 2))
-            .background(color ?: c.accent)
+            .background(color ?: c.acc)
     )
 }
 
@@ -441,7 +440,7 @@ fun GlassIcon(
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
                 .height(height * fillFraction.coerceIn(0f, 1f))
-                .background((fill ?: c.accent).copy(alpha = 0.55f))
+                .background((fill ?: c.acc).copy(alpha = 0.55f))
         )
     }
 }

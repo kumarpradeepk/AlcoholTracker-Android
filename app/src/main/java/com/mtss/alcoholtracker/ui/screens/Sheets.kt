@@ -73,7 +73,7 @@ import com.mtss.alcoholtracker.ui.components.pressable
 import com.mtss.alcoholtracker.ui.components.riseIn
 import com.mtss.alcoholtracker.ui.theme.LocalAppColors
 import com.mtss.alcoholtracker.ui.theme.Motion
-import com.mtss.alcoholtracker.ui.theme.display
+import com.mtss.alcoholtracker.ui.theme.figure
 import com.mtss.alcoholtracker.ui.theme.text
 import com.mtss.alcoholtracker.util.Formatters
 import com.mtss.alcoholtracker.util.LocaleText
@@ -90,8 +90,8 @@ fun SheetHost(vm: AppViewModel) {
     ModalBottomSheet(
         onDismissRequest = { vm.closeSheet() },
         sheetState = state,
-        containerColor = c.bg,
-        contentColor = c.text,
+        containerColor = c.page,
+        contentColor = c.ink,
         shape = RoundedCornerShape(topStart = 26.dp, topEnd = 26.dp),
         dragHandle = {
             Box(Modifier.padding(top = 9.dp, bottom = 2.dp)) {
@@ -128,10 +128,10 @@ private fun LogSheet(vm: AppViewModel) {
         ) {
             if (vm.logStep > 0) {
                 Box(
-                    Modifier.size(32.dp).clip(CircleShape).background(c.surface2)
+                    Modifier.size(32.dp).clip(CircleShape).background(c.elev)
                         .pressable(pressedScale = 0.88f) { vm.logBack() },
                     contentAlignment = Alignment.Center
-                ) { Chevron(ChevronDirection.LEFT, c.muted, 12.dp) }
+                ) { Chevron(ChevronDirection.LEFT, c.sub, 12.dp) }
             } else Spacer(Modifier.size(32.dp))
             Text(
                 listOf(
@@ -139,15 +139,15 @@ private fun LogSheet(vm: AppViewModel) {
                     stringResource(R.string.log_title_tune),
                     stringResource(R.string.log_title_review)
                 )[vm.logStep],
-                style = text(16.5.sp, FontWeight.SemiBold), color = c.text,
+                style = text(16.5.sp, FontWeight.SemiBold), color = c.ink,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.weight(1f)
             )
             Box(
-                Modifier.size(32.dp).clip(CircleShape).background(c.surface2)
+                Modifier.size(32.dp).clip(CircleShape).background(c.elev)
                     .pressable(pressedScale = 0.88f) { vm.closeSheet() },
                 contentAlignment = Alignment.Center
-            ) { CloseGlyph(c.muted) }
+            ) { CloseGlyph(c.sub) }
         }
 
         // Sliding pages
@@ -198,7 +198,7 @@ private fun LogStepPick(vm: AppViewModel) {
     ) {
         Text(
             stringResource(R.string.log_pick_intro),
-            style = text(14.5.sp), color = c.muted, lineHeight = 21.sp
+            style = text(14.5.sp), color = c.sub, lineHeight = 21.sp
         )
         AppTextField(
             value = q, onValueChange = { vm.query = it },
@@ -211,21 +211,21 @@ private fun LogStepPick(vm: AppViewModel) {
                 .padding(top = 12.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(16.dp))
-                .background(c.surface)
+                .background(c.card)
                 .pressable(pressedScale = 0.97f) { vm.openCustomDrink() }
                 .padding(horizontal = 14.dp, vertical = 13.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
-                Modifier.size(34.dp).clip(RoundedCornerShape(11.dp)).background(c.surface2),
+                Modifier.size(34.dp).clip(RoundedCornerShape(11.dp)).background(c.elev),
                 contentAlignment = Alignment.Center
-            ) { Text("+", style = text(20.sp), color = c.accent) }
+            ) { Text("+", style = text(20.sp), color = c.acc) }
             Column {
-                Text(stringResource(R.string.log_custom_title), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                Text(stringResource(R.string.log_custom_title), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
                 Text(
                     stringResource(R.string.log_custom_sub),
-                    style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 1.dp)
+                    style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 1.dp)
                 )
             }
         }
@@ -234,23 +234,23 @@ private fun LogStepPick(vm: AppViewModel) {
         if (savedFiltered.isNotEmpty()) {
             Text(
                 stringResource(R.string.log_section_your_drinks), style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp),
-                color = c.faint, modifier = Modifier.padding(top = 16.dp)
+                color = c.sub, modifier = Modifier.padding(top = 16.dp)
             )
             DrinkGrid(
                 items = savedFiltered.map { PickedDrink(it.name, it.abv, it.ml, null) },
-                picked = vm.pick, fill = c.b1, onPick = { vm.pickDrink(it) }
+                picked = vm.pick, fill = c.moss, onPick = { vm.pickDrink(it) }
             )
         }
 
         Text(
             stringResource(R.string.log_section_popular), style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp),
-            color = c.faint, modifier = Modifier.padding(top = 16.dp)
+            color = c.sub, modifier = Modifier.padding(top = 16.dp)
         )
         DrinkGrid(
             items = DrinkPresets.ALL
                 .filter { it.name.contains(q, ignoreCase = true) }
                 .map { PickedDrink(it.name, it.abv, it.ml, it.cost) },
-            picked = vm.pick, fill = c.accent, onPick = { vm.pickDrink(it) }
+            picked = vm.pick, fill = c.acc, onPick = { vm.pickDrink(it) }
         )
     }
 }
@@ -273,8 +273,8 @@ private fun DrinkGrid(
                             .weight(1f)
                             .riseIn(delayMillis = (rowIdx * 2 + colIdx) * 28, durationMillis = 450)
                             .clip(RoundedCornerShape(18.dp))
-                            .background(if (sel) c.surface2 else c.surface)
-                            .border(1.5.dp, if (sel) c.accent else Color.Transparent, RoundedCornerShape(18.dp))
+                            .background(if (sel) c.elev else c.card)
+                            .border(1.5.dp, if (sel) c.acc else Color.Transparent, RoundedCornerShape(18.dp))
                             .pressable(pressedScale = 0.96f) { onPick(p) }
                             .padding(12.dp)
                     ) {
@@ -282,10 +282,10 @@ private fun DrinkGrid(
                             fillFraction = min(0.85f, (p.abv * 2.6f + 18f).toFloat() / 100f),
                             width = 26.dp, height = 33.dp, fill = fill
                         )
-                        Text(p.name, style = text(14.sp, FontWeight.SemiBold), color = c.text, modifier = Modifier.padding(top = 8.dp))
+                        Text(p.name, style = text(14.sp, FontWeight.SemiBold), color = c.ink, modifier = Modifier.padding(top = 8.dp))
                         Text(
                             stringResource(R.string.log_grid_meta, trimAbv(p.abv), p.ml.toInt()),
-                            style = text(12.sp), color = c.muted, modifier = Modifier.padding(top = 2.dp)
+                            style = text(12.sp), color = c.sub, modifier = Modifier.padding(top = 2.dp)
                         )
                     }
                 }
@@ -310,14 +310,14 @@ private fun LogStepTune(vm: AppViewModel) {
     ) {
         Text(
             stringResource(R.string.log_tune_intro),
-            style = text(14.5.sp), color = c.muted, lineHeight = 21.sp
+            style = text(14.5.sp), color = c.sub, lineHeight = 21.sp
         )
         SheetCard(top = 14.dp) {
-            Text(stringResource(R.string.log_abv_label), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
+            Text(stringResource(R.string.log_abv_label), style = text(13.sp, FontWeight.SemiBold), color = c.sub)
             Box(Modifier.padding(top = 10.dp)) {
                 StepperRow(
                     valueText = {
-                        Text(stringResource(R.string.log_abv_value, vm.dAbv), style = display(30.sp), color = c.text)
+                        Text(stringResource(R.string.log_abv_value, vm.dAbv), style = figure(30.sp, tabular = true), color = c.ink)
                     },
                     onMinus = { vm.dAbv = ((vm.dAbv - 0.5).coerceAtLeast(0.5) * 10).roundToInt() / 10.0 },
                     onPlus = { vm.dAbv = ((vm.dAbv + 0.5).coerceAtMost(96.0) * 10).roundToInt() / 10.0 }
@@ -331,7 +331,7 @@ private fun LogStepTune(vm: AppViewModel) {
         }
         SheetCard(top = 12.dp) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                Text(stringResource(R.string.log_serving_label), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
+                Text(stringResource(R.string.log_serving_label), style = text(13.sp, FontWeight.SemiBold), color = c.sub)
                 Segmented(
                     options = listOf(
                         stringResource(R.string.log_unit_ml),
@@ -350,7 +350,7 @@ private fun LogStepTune(vm: AppViewModel) {
                         Text(
                             if (vm.servMl) stringResource(R.string.log_serving_ml_value, vm.dMl.toInt())
                             else stringResource(R.string.log_serving_oz_value, AlcoholMath.mlToOz(vm.dMl)),
-                            style = display(30.sp), color = c.text
+                            style = figure(30.sp, tabular = true), color = c.ink
                         )
                     },
                     onMinus = { vm.dMl = (vm.dMl - 10).coerceAtLeast(10.0) },
@@ -368,7 +368,7 @@ private fun LogStepTune(vm: AppViewModel) {
             }
         }
         SheetCard(top = 12.dp) {
-            Text(stringResource(R.string.log_quantity_label), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
+            Text(stringResource(R.string.log_quantity_label), style = text(13.sp, FontWeight.SemiBold), color = c.sub)
             Row(Modifier.padding(top = 10.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 listOf(0.5 to "½", 1.0 to "1", 2.0 to "2").forEach { (v, label) ->
                     val sel = vm.qty == v
@@ -377,11 +377,11 @@ private fun LogStepTune(vm: AppViewModel) {
                             .weight(1f)
                             .height(36.dp)
                             .clip(RoundedCornerShape(18.dp))
-                            .background(if (sel) c.accent else c.surface2)
+                            .background(if (sel) c.acc else c.elev)
                             .pressable(pressedScale = 0.93f) { vm.qty = v },
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(label, style = text(14.sp, FontWeight.SemiBold), color = if (sel) Color.White else c.muted)
+                        Text(label, style = text(14.sp, FontWeight.SemiBold), color = if (sel) Color.White else c.sub)
                     }
                 }
             }
@@ -390,7 +390,7 @@ private fun LogStepTune(vm: AppViewModel) {
         val kc = AlcoholMath.kcal(vm.dMl * vm.qty, vm.dAbv)
         Text(
             stringResource(R.string.log_result_line, u, kc, units.noun.plural),
-            style = text(14.sp), color = c.muted, textAlign = TextAlign.Center,
+            style = text(14.sp), color = c.sub, textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(top = 14.dp)
         )
         Text(
@@ -408,7 +408,7 @@ private fun LogStepTune(vm: AppViewModel) {
                     vm.qty.toInt(), vm.dMl.toInt(), trimAbv(vm.dAbv), u, units.noun.plural
                 )
             },
-            style = text(11.5.sp, tabular = true), color = c.faint, textAlign = TextAlign.Center,
+            style = text(11.5.sp, tabular = true), color = c.sub, textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(top = 5.dp)
         )
     }
@@ -437,7 +437,7 @@ private fun LogStepReview(vm: AppViewModel) {
                     width = 42.dp, height = 54.dp
                 )
                 Column(Modifier.weight(1f)) {
-                    Text(p?.name ?: "", style = display(18.sp, tabular = false), color = c.text)
+                    Text(p?.name ?: "", style = figure(18.sp, tabular = false), color = c.ink)
                     Text(
                         when (vm.qty) {
                             1.0 -> stringResource(R.string.log_review_meta, vm.dMl.toInt(), trimAbv(vm.dAbv))
@@ -447,17 +447,17 @@ private fun LogStepReview(vm: AppViewModel) {
                                 vm.qty.toInt(), vm.dMl.toInt(), trimAbv(vm.dAbv)
                             )
                         },
-                        style = text(13.5.sp), color = c.muted, modifier = Modifier.padding(top = 3.dp)
+                        style = text(13.5.sp), color = c.sub, modifier = Modifier.padding(top = 3.dp)
                     )
                 }
                 Column(horizontalAlignment = Alignment.End) {
-                    Text(Formatters.one(u), style = display(22.sp), color = c.accent)
-                    Text(units.noun.plural, style = text(11.5.sp), color = c.muted)
+                    Text(Formatters.one(u), style = figure(22.sp, tabular = true), color = c.acc)
+                    Text(units.noun.plural, style = text(11.5.sp), color = c.sub)
                 }
             }
         }
         SheetCard(top = 12.dp) {
-            Text(stringResource(R.string.log_when_label), style = text(13.sp, FontWeight.SemiBold), color = c.muted)
+            Text(stringResource(R.string.log_when_label), style = text(13.sp, FontWeight.SemiBold), color = c.sub)
             Row(Modifier.padding(top = 10.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 listOf(
                     stringResource(R.string.log_when_now),
@@ -470,11 +470,11 @@ private fun LogStepReview(vm: AppViewModel) {
                             .weight(1f)
                             .height(36.dp)
                             .clip(RoundedCornerShape(18.dp))
-                            .background(if (sel) c.accent else c.surface2)
+                            .background(if (sel) c.acc else c.elev)
                             .pressable(pressedScale = 0.94f) { vm.dWhen = i },
                         contentAlignment = Alignment.Center
                     ) {
-                        Text(label, style = text(13.5.sp, FontWeight.SemiBold), color = if (sel) Color.White else c.muted)
+                        Text(label, style = text(13.5.sp, FontWeight.SemiBold), color = if (sel) Color.White else c.sub)
                     }
                 }
             }
@@ -486,9 +486,9 @@ private fun LogStepReview(vm: AppViewModel) {
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(stringResource(R.string.log_cost_label), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+                    Text(stringResource(R.string.log_cost_label), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                        Text(stringResource(R.string.log_cost_currency, currency.symbol), style = display(18.sp, tabular = false), color = c.muted)
+                        Text(stringResource(R.string.log_cost_currency, currency.symbol), style = figure(18.sp, tabular = false), color = c.sub)
                         AppTextField(
                             value = vm.dCost,
                             onValueChange = { vm.dCost = it.filter { ch -> ch.isDigit() || ch == '.' } },
@@ -508,8 +508,8 @@ private fun LogStepReview(vm: AppViewModel) {
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(stringResource(R.string.log_calories_label), style = text(15.sp, FontWeight.SemiBold), color = c.text)
-                    Text(stringResource(R.string.log_calories_kcal, kc), style = text(15.sp, tabular = true), color = c.muted)
+                    Text(stringResource(R.string.log_calories_label), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
+                    Text(stringResource(R.string.log_calories_kcal, kc), style = text(15.sp, tabular = true), color = c.sub)
                 }
             }
         }
@@ -520,7 +520,7 @@ private fun LogStepReview(vm: AppViewModel) {
                 R.string.log_saved_to_day,
                 Formatters.dayTitle(context, vm.selectedDay(), today)
             ),
-            style = text(12.5.sp), color = c.faint, textAlign = TextAlign.Center, lineHeight = 18.sp,
+            style = text(12.5.sp), color = c.sub, textAlign = TextAlign.Center, lineHeight = 18.sp,
             modifier = Modifier.fillMaxWidth().padding(top = 14.dp)
         )
     }
@@ -546,18 +546,18 @@ private fun CalendarSheet(vm: AppViewModel, mode: CalMode) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
-                Modifier.size(34.dp).clip(CircleShape).background(c.surface2)
+                Modifier.size(34.dp).clip(CircleShape).background(c.elev)
                     .pressable(pressedScale = 0.88f) { vm.calMonthOffset-- },
                 contentAlignment = Alignment.Center
-            ) { Chevron(ChevronDirection.LEFT, c.muted, 12.dp) }
-            Text(Formatters.monthYear(base), style = text(16.5.sp, FontWeight.SemiBold), color = c.text)
+            ) { Chevron(ChevronDirection.LEFT, c.sub, 12.dp) }
+            Text(Formatters.monthYear(base), style = text(16.5.sp, FontWeight.SemiBold), color = c.ink)
             Box(
-                Modifier.size(34.dp).clip(CircleShape).background(c.surface2)
+                Modifier.size(34.dp).clip(CircleShape).background(c.elev)
                     .pressable(pressedScale = 0.88f) { if (vm.calMonthOffset < 0) vm.calMonthOffset++ }
                     .padding(0.dp),
                 contentAlignment = Alignment.Center
             ) {
-                Box(Modifier.alpha2(vm.calMonthOffset < 0)) { Chevron(ChevronDirection.RIGHT, c.muted, 12.dp) }
+                Box(Modifier.alpha2(vm.calMonthOffset < 0)) { Chevron(ChevronDirection.RIGHT, c.sub, 12.dp) }
             }
         }
         // punch-list B4 + A7. Two letters, not one: German Mo/Mi both collapse to
@@ -570,7 +570,7 @@ private fun CalendarSheet(vm: AppViewModel, mode: CalMode) {
         Row(Modifier.fillMaxWidth().padding(top = 14.dp)) {
             headers.forEach {
                 Text(
-                    it, style = text(11.sp, FontWeight.SemiBold), color = c.faint,
+                    it, style = text(11.sp, FontWeight.SemiBold), color = c.sub,
                     textAlign = TextAlign.Center, maxLines = 1, modifier = Modifier.weight(1f)
                 )
             }
@@ -590,8 +590,8 @@ private fun CalendarSheet(vm: AppViewModel, mode: CalMode) {
                             val future = epoch > today
                             val isSel = epoch == vm.selectedDay() && mode == CalMode.SELECT
                             val dotColor = when {
-                                loggedDays.contains(epoch) -> c.accent
-                                dry.contains(epoch) -> c.b1
+                                loggedDays.contains(epoch) -> c.acc
+                                dry.contains(epoch) -> c.moss
                                 else -> Color.Transparent
                             }
                             Column(
@@ -599,8 +599,8 @@ private fun CalendarSheet(vm: AppViewModel, mode: CalMode) {
                                     .weight(1f)
                                     .height(44.dp)
                                     .clip(RoundedCornerShape(12.dp))
-                                    .background(if (isSel) c.surface2 else Color.Transparent)
-                                    .border(1.5.dp, if (epoch == today) c.accent else Color.Transparent, RoundedCornerShape(12.dp))
+                                    .background(if (isSel) c.elev else Color.Transparent)
+                                    .border(1.5.dp, if (epoch == today) c.acc else Color.Transparent, RoundedCornerShape(12.dp))
                                     .alpha2(!future)
                                     .pressable(pressedScale = 0.92f, enabled = !future) {
                                         vm.calendarDayTapped(epoch, mode)
@@ -608,7 +608,7 @@ private fun CalendarSheet(vm: AppViewModel, mode: CalMode) {
                                 horizontalAlignment = Alignment.CenterHorizontally,
                                 verticalArrangement = Arrangement.Center
                             ) {
-                                Text("$dayNum", style = text(14.5.sp, FontWeight.Medium), color = c.text)
+                                Text("$dayNum", style = text(14.5.sp, FontWeight.Medium), color = c.ink)
                                 Box(Modifier.padding(top = 3.dp).size(5.dp).clip(CircleShape).background(dotColor))
                             }
                         } else {
@@ -623,7 +623,7 @@ private fun CalendarSheet(vm: AppViewModel, mode: CalMode) {
                 stringResource(R.string.sheet_cal_hint_dry)
             else
                 stringResource(R.string.sheet_cal_hint_select),
-            style = text(13.sp), color = c.muted, textAlign = TextAlign.Center, lineHeight = 19.sp,
+            style = text(13.sp), color = c.sub, textAlign = TextAlign.Center, lineHeight = 19.sp,
             modifier = Modifier.fillMaxWidth().padding(top = 14.dp)
         )
         Box(
@@ -632,10 +632,10 @@ private fun CalendarSheet(vm: AppViewModel, mode: CalMode) {
                 .fillMaxWidth()
                 .height(48.dp)
                 .clip(RoundedCornerShape(24.dp))
-                .background(c.surface2)
+                .background(c.elev)
                 .pressable(pressedScale = 0.97f) { vm.closeSheet() },
             contentAlignment = Alignment.Center
-        ) { Text(stringResource(R.string.action_done), style = text(16.sp, FontWeight.SemiBold), color = c.text) }
+        ) { Text(stringResource(R.string.action_done), style = text(16.sp, FontWeight.SemiBold), color = c.ink) }
     }
 }
 
@@ -659,13 +659,13 @@ private fun EntrySheet(vm: AppViewModel, log: DrinkLog) {
                 width = 46.dp, height = 58.dp
             )
             Column {
-                Text(log.name, style = display(21.sp, tabular = false), color = c.text)
+                Text(log.name, style = figure(21.sp, tabular = false), color = c.ink)
                 Text(
                     stringResource(
                         R.string.sheet_entry_meta,
                         log.ml.toInt(), trimAbv(log.abv), Formatters.time(mins)
                     ),
-                    style = text(14.sp), color = c.muted, modifier = Modifier.padding(top = 3.dp)
+                    style = text(14.sp), color = c.sub, modifier = Modifier.padding(top = 3.dp)
                 )
             }
         }
@@ -673,10 +673,10 @@ private fun EntrySheet(vm: AppViewModel, log: DrinkLog) {
             val entryUnits = AlcoholMath.units(log.ml, log.abv)
             StatTile(
                 unitsPlural(R.plurals.stat_label_units, entryUnits.roundToInt(), units.noun.short),
-                Formatters.one(entryUnits), c.accent, Modifier.weight(1f)
+                Formatters.one(entryUnits), c.acc, Modifier.weight(1f)
             )
-            StatTile(stringResource(R.string.stat_label_kcal), "${log.kcal}", c.text, Modifier.weight(1f))
-            StatTile(stringResource(R.string.stat_label_spent), Formatters.money(log.cost), c.text, Modifier.weight(1f))
+            StatTile(stringResource(R.string.stat_label_kcal), "${log.kcal}", c.ink, Modifier.weight(1f))
+            StatTile(stringResource(R.string.stat_label_spent), Formatters.money(log.cost), c.ink, Modifier.weight(1f))
         }
         SoftButton(
             stringResource(R.string.sheet_entry_relog),
@@ -692,7 +692,7 @@ private fun EntrySheet(vm: AppViewModel, log: DrinkLog) {
                 .pressable(pressedScale = 0.97f) { vm.askDelete(log) },
             contentAlignment = Alignment.Center
         ) {
-            Text(stringResource(R.string.sheet_entry_remove), style = text(16.sp, FontWeight.SemiBold), color = c.b3)
+            Text(stringResource(R.string.sheet_entry_remove), style = text(16.sp, FontWeight.SemiBold), color = c.danger)
         }
     }
 }
@@ -703,12 +703,12 @@ private fun StatTile(label: String, value: String, valueColor: Color, modifier: 
     Column(
         modifier
             .clip(RoundedCornerShape(16.dp))
-            .background(c.surface)
+            .background(c.card)
             .padding(12.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(value, style = display(17.sp), color = valueColor)
-        Text(label, style = text(11.5.sp), color = c.muted, modifier = Modifier.padding(top = 2.dp))
+        Text(value, style = figure(17.sp, tabular = true), color = valueColor)
+        Text(label, style = text(11.5.sp), color = c.sub, modifier = Modifier.padding(top = 2.dp))
     }
 }
 
@@ -724,11 +724,11 @@ private fun UnitsInfoSheet(vm: AppViewModel) {
             Column {
                 Text(
                     unitsString(R.string.sheet_units_title, units.noun.indefinite),
-                    style = display(20.sp, tabular = false, letterSpacing = (-0.2).sp), color = c.text
+                    style = figure(20.sp, tabular = false), color = c.ink
                 )
                 Text(
                     stringResource(R.string.sheet_units_body),
-                    style = text(13.5.sp), color = c.muted, lineHeight = 20.sp,
+                    style = text(13.5.sp), color = c.sub, lineHeight = 20.sp,
                     modifier = Modifier.padding(top = 5.dp)
                 )
             }
@@ -739,23 +739,23 @@ private fun UnitsInfoSheet(vm: AppViewModel) {
             horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            FormulaChip(stringResource(R.string.sheet_units_chip_pour), c.surface2, c.accent, 50)
-            Text("×", style = text(15.sp), color = c.faint)
-            FormulaChip(stringResource(R.string.sheet_units_chip_abv), c.surface2, c.b2, 150)
+            FormulaChip(stringResource(R.string.sheet_units_chip_pour), c.elev, c.acc, 50)
+            Text("×", style = text(15.sp), color = c.sub)
+            FormulaChip(stringResource(R.string.sheet_units_chip_abv), c.elev, c.amber, 150)
         }
         Row(
             Modifier.padding(top = 6.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            FormulaChip(stringResource(R.string.sheet_units_chip_density), c.surface2, c.muted, 250)
-            Text("=", style = text(15.sp), color = c.faint)
-            FormulaChip(unitsString(R.string.sheet_units_chip_result, units.noun.plural), c.surface2, c.b1, 400)
+            FormulaChip(stringResource(R.string.sheet_units_chip_density), c.elev, c.sub, 250)
+            Text("=", style = text(15.sp), color = c.sub)
+            FormulaChip(unitsString(R.string.sheet_units_chip_result, units.noun.plural), c.elev, c.moss, 400)
         }
-        Text(stringResource(R.string.sheet_units_density_note), style = text(12.sp), color = c.faint, modifier = Modifier.padding(top = 8.dp))
+        Text(stringResource(R.string.sheet_units_density_note), style = text(12.sp), color = c.sub, modifier = Modifier.padding(top = 8.dp))
         Text(
             unitsString(R.string.sheet_units_targets, units.noun.indefinite),
-            style = text(14.sp), color = c.muted, lineHeight = 22.sp,
+            style = text(14.sp), color = c.sub, lineHeight = 22.sp,
             modifier = Modifier.padding(top = 14.dp)
         )
         Box(
@@ -764,12 +764,12 @@ private fun UnitsInfoSheet(vm: AppViewModel) {
                 .fillMaxWidth()
                 .height(48.dp)
                 .clip(RoundedCornerShape(24.dp))
-                .background(c.surface2)
+                .background(c.elev)
                 .pressable(pressedScale = 0.97f) {
                     vm.closeSheet(); vm.openPush(PushScreen.GUIDE)
                 },
             contentAlignment = Alignment.Center
-        ) { Text(stringResource(R.string.diary_adjust_guideline), style = text(15.5.sp, FontWeight.SemiBold), color = c.text) }
+        ) { Text(stringResource(R.string.diary_adjust_guideline), style = text(15.5.sp, FontWeight.SemiBold), color = c.ink) }
     }
 }
 
@@ -792,26 +792,26 @@ private fun FormulaChip(label: String, bg: Color, fg: Color, delay: Int) {
 private fun BacInfoSheet() {
     val c = LocalAppColors.current
     Column(Modifier.padding(horizontal = 22.dp).padding(top = 10.dp, bottom = 28.dp)) {
-        Text(stringResource(R.string.bac_how_estimated), style = display(20.sp, tabular = false), color = c.text)
+        Text(stringResource(R.string.bac_how_estimated), style = figure(20.sp, tabular = false), color = c.ink)
         Text(
             stringResource(R.string.sheet_bac_widmark),
-            style = text(14.5.sp), color = c.muted, lineHeight = 22.sp, modifier = Modifier.padding(top = 10.dp)
+            style = text(14.5.sp), color = c.sub, lineHeight = 22.sp, modifier = Modifier.padding(top = 10.dp)
         )
         Text(
             stringResource(R.string.sheet_bac_not_measurement),
-            style = text(14.5.sp), color = c.muted, lineHeight = 22.sp, modifier = Modifier.padding(top = 10.dp)
+            style = text(14.5.sp), color = c.sub, lineHeight = 22.sp, modifier = Modifier.padding(top = 10.dp)
         )
         Box(
             Modifier
                 .padding(top = 14.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(16.dp))
-                .background(c.surface2)
+                .background(c.elev)
                 .padding(horizontal = 16.dp, vertical = 14.dp)
         ) {
             Text(
                 stringResource(R.string.sheet_bac_never_drive),
-                style = text(13.5.sp, FontWeight.Medium), color = c.b2, lineHeight = 20.sp
+                style = text(13.5.sp, FontWeight.Medium), color = c.amber, lineHeight = 20.sp
             )
         }
     }
@@ -825,7 +825,7 @@ private fun RangeSheet(vm: AppViewModel) {
     val context = LocalContext.current
     val today = vm.todayKey()
     Column(Modifier.padding(horizontal = 22.dp).padding(top = 8.dp, bottom = 26.dp)) {
-        Text(stringResource(R.string.sheet_range_title), style = display(20.sp, tabular = false), color = c.text)
+        Text(stringResource(R.string.sheet_range_title), style = figure(20.sp, tabular = false), color = c.ink)
         Row(Modifier.padding(top = 14.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             DateField(stringResource(R.string.sheet_range_from), vm.customFrom ?: (today - 13), Modifier.weight(1f)) { picked ->
                 vm.customFrom = picked
@@ -854,7 +854,7 @@ private fun RangeSheet(vm: AppViewModel) {
                 .height(46.dp)
                 .pressable { vm.closeSheet() },
             contentAlignment = Alignment.Center
-        ) { Text(stringResource(R.string.action_cancel), style = text(15.5.sp, FontWeight.SemiBold), color = c.muted) }
+        ) { Text(stringResource(R.string.action_cancel), style = text(15.5.sp, FontWeight.SemiBold), color = c.sub) }
     }
 }
 
@@ -865,7 +865,7 @@ private fun DateField(label: String, epochDay: Long, modifier: Modifier = Modifi
     Column(
         modifier
             .clip(RoundedCornerShape(16.dp))
-            .background(c.surface)
+            .background(c.card)
             .pressable(pressedScale = 0.97f) {
                 val d = LocalDate.ofEpochDay(epochDay)
                 android.app.DatePickerDialog(
@@ -876,10 +876,10 @@ private fun DateField(label: String, epochDay: Long, modifier: Modifier = Modifi
             }
             .padding(horizontal = 14.dp, vertical = 12.dp)
     ) {
-        Text(label, style = text(12.sp, FontWeight.SemiBold), color = c.muted)
+        Text(label, style = text(12.sp, FontWeight.SemiBold), color = c.sub)
         Text(
             Formatters.shortDate(epochDay),
-            style = text(15.sp, FontWeight.SemiBold), color = c.text,
+            style = text(15.sp, FontWeight.SemiBold), color = c.ink,
             modifier = Modifier.padding(top = 6.dp)
         )
     }
@@ -892,7 +892,7 @@ private fun NewNotifSheet(vm: AppViewModel) {
     val c = LocalAppColors.current
     val context = LocalContext.current
     Column(Modifier.padding(horizontal = 22.dp).padding(top = 8.dp, bottom = 26.dp)) {
-        Text(stringResource(R.string.notif_create_cta), style = display(20.sp, tabular = false), color = c.text)
+        Text(stringResource(R.string.notif_create_cta), style = figure(20.sp, tabular = false), color = c.ink)
         AppTextField(
             value = vm.ndTitle, onValueChange = { vm.ndTitle = it },
             placeholder = stringResource(R.string.sheet_notif_title_placeholder),
@@ -903,16 +903,16 @@ private fun NewNotifSheet(vm: AppViewModel) {
                 .padding(top = 10.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(16.dp))
-                .background(c.surface)
+                .background(c.card)
                 .padding(horizontal = 16.dp, vertical = 13.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text(stringResource(R.string.sheet_notif_time_label), style = text(15.sp, FontWeight.SemiBold), color = c.text)
+            Text(stringResource(R.string.sheet_notif_time_label), style = text(15.sp, FontWeight.SemiBold), color = c.ink)
             Box(
                 Modifier
                     .clip(RoundedCornerShape(10.dp))
-                    .background(c.surface2)
+                    .background(c.elev)
                     .pressable(pressedScale = 0.95f) {
                         android.app.TimePickerDialog(
                             context,
@@ -922,7 +922,7 @@ private fun NewNotifSheet(vm: AppViewModel) {
                     }
                     .padding(horizontal = 14.dp, vertical = 8.dp)
             ) {
-                Text(Formatters.time(vm.ndTime), style = text(15.sp, FontWeight.SemiBold, tabular = true), color = c.text)
+                Text(Formatters.time(vm.ndTime), style = text(15.sp, FontWeight.SemiBold, tabular = true), color = c.ink)
             }
         }
         AppTextField(
@@ -932,7 +932,7 @@ private fun NewNotifSheet(vm: AppViewModel) {
         )
         Text(
             stringResource(R.string.sheet_notif_repeat_note),
-            style = text(12.5.sp), color = c.faint, modifier = Modifier.padding(top = 10.dp)
+            style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 10.dp)
         )
         PrimaryButton(
             stringResource(R.string.sheet_notif_cta), height = 50.dp, enabled = vm.ndTitle.isNotBlank(),
@@ -948,10 +948,10 @@ private fun NewNotifSheet(vm: AppViewModel) {
 private fun LivePreviewSheet(vm: AppViewModel) {
     val c = LocalAppColors.current
     Column(Modifier.padding(horizontal = 22.dp).padding(top = 8.dp, bottom = 28.dp)) {
-        Text(stringResource(R.string.sheet_live_title), style = display(20.sp, tabular = false), color = c.text)
+        Text(stringResource(R.string.sheet_live_title), style = figure(20.sp, tabular = false), color = c.ink)
         Text(
             stringResource(R.string.sheet_live_body),
-            style = text(14.sp), color = c.muted, lineHeight = 21.sp, modifier = Modifier.padding(top = 6.dp)
+            style = text(14.sp), color = c.sub, lineHeight = 21.sp, modifier = Modifier.padding(top = 6.dp)
         )
         Column(
             Modifier
@@ -962,14 +962,14 @@ private fun LivePreviewSheet(vm: AppViewModel) {
                 .padding(16.dp)
         ) {
             Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
-                DropletMark(28.dp, color = c.accent, breathing = false)
+                DropletMark(28.dp, color = c.acc, breathing = false)
                 Column(Modifier.weight(1f)) {
                     Text(stringResource(R.string.app_name), style = text(13.sp, FontWeight.SemiBold), color = Color.White)
                     Text(stringResource(R.string.sheet_live_mock_status), style = text(11.5.sp), color = Color.White.copy(alpha = 0.55f), modifier = Modifier.padding(top = 1.dp))
                 }
                 Column(horizontalAlignment = Alignment.End) {
-                    Text(stringResource(R.string.sheet_live_mock_value), style = display(19.sp), color = Color.White)
-                    Text(stringResource(R.string.sheet_live_mock_tozero), style = text(11.sp), color = c.b1, modifier = Modifier.padding(top = 1.dp))
+                    Text(stringResource(R.string.sheet_live_mock_value), style = figure(19.sp, tabular = true), color = Color.White)
+                    Text(stringResource(R.string.sheet_live_mock_tozero), style = text(11.sp), color = c.moss, modifier = Modifier.padding(top = 1.dp))
                 }
             }
             Box(
@@ -985,13 +985,13 @@ private fun LivePreviewSheet(vm: AppViewModel) {
                         .fillMaxWidth(0.46f)
                         .height(5.dp)
                         .clip(RoundedCornerShape(3.dp))
-                        .background(c.accent)
+                        .background(c.acc)
                 )
             }
         }
         Text(
             stringResource(R.string.sheet_live_note),
-            style = text(12.5.sp), color = c.faint, textAlign = TextAlign.Center,
+            style = text(12.5.sp), color = c.sub, textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth().padding(top = 12.dp)
         )
         Box(
@@ -1000,10 +1000,10 @@ private fun LivePreviewSheet(vm: AppViewModel) {
                 .fillMaxWidth()
                 .height(48.dp)
                 .clip(RoundedCornerShape(24.dp))
-                .background(c.surface2)
+                .background(c.elev)
                 .pressable(pressedScale = 0.97f) { vm.closeSheet() },
             contentAlignment = Alignment.Center
-        ) { Text(stringResource(R.string.action_done), style = text(15.5.sp, FontWeight.SemiBold), color = c.text) }
+        ) { Text(stringResource(R.string.action_done), style = text(15.5.sp, FontWeight.SemiBold), color = c.ink) }
     }
 }
 
@@ -1018,14 +1018,14 @@ private fun CustomDrinkSheet(vm: AppViewModel) {
             .padding(horizontal = 22.dp)
             .padding(top = 8.dp, bottom = 26.dp)
     ) {
-        Text(stringResource(R.string.sheet_custom_title), style = display(20.sp, tabular = false), color = c.text)
+        Text(stringResource(R.string.sheet_custom_title), style = figure(20.sp, tabular = false), color = c.ink)
         AppTextField(
             value = vm.cuName, onValueChange = { vm.cuName = it },
             placeholder = stringResource(R.string.sheet_custom_name_placeholder),
             modifier = Modifier.padding(top = 14.dp)
         )
         Text(
-            stringResource(R.string.sheet_custom_base_caption), style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.faint,
+            stringResource(R.string.sheet_custom_base_caption), style = text(12.sp, FontWeight.SemiBold, letterSpacing = 0.6.sp), color = c.sub,
             modifier = Modifier.padding(top = 12.dp)
         )
         Row(Modifier.padding(top = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -1043,9 +1043,9 @@ private fun CustomDrinkSheet(vm: AppViewModel) {
         }
         Row(Modifier.padding(top = 14.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             Column(
-                Modifier.weight(1f).clip(RoundedCornerShape(16.dp)).background(c.surface).padding(horizontal = 14.dp, vertical = 12.dp)
+                Modifier.weight(1f).clip(RoundedCornerShape(16.dp)).background(c.card).padding(horizontal = 14.dp, vertical = 12.dp)
             ) {
-                Text(stringResource(R.string.sheet_custom_abv_label), style = text(12.sp, FontWeight.SemiBold), color = c.muted)
+                Text(stringResource(R.string.sheet_custom_abv_label), style = text(12.sp, FontWeight.SemiBold), color = c.sub)
                 AppTextField(
                     value = vm.cuAbv, onValueChange = { vm.cuAbv = it.filter { ch -> ch.isDigit() || ch == '.' } },
                     placeholder = "5", keyboardType = KeyboardType.Decimal, bare = true,
@@ -1053,9 +1053,9 @@ private fun CustomDrinkSheet(vm: AppViewModel) {
                 )
             }
             Column(
-                Modifier.weight(1f).clip(RoundedCornerShape(16.dp)).background(c.surface).padding(horizontal = 14.dp, vertical = 12.dp)
+                Modifier.weight(1f).clip(RoundedCornerShape(16.dp)).background(c.card).padding(horizontal = 14.dp, vertical = 12.dp)
             ) {
-                Text(stringResource(R.string.sheet_custom_ml_label), style = text(12.sp, FontWeight.SemiBold), color = c.muted)
+                Text(stringResource(R.string.sheet_custom_ml_label), style = text(12.sp, FontWeight.SemiBold), color = c.sub)
                 AppTextField(
                     value = vm.cuMl, onValueChange = { vm.cuMl = it.filter { ch -> ch.isDigit() } },
                     placeholder = "355", keyboardType = KeyboardType.Number, bare = true,
@@ -1077,7 +1077,7 @@ private fun CustomDrinkSheet(vm: AppViewModel) {
         Box(
             Modifier.padding(top = 8.dp).fillMaxWidth().height(44.dp).pressable { vm.closeSheet() },
             contentAlignment = Alignment.Center
-        ) { Text(stringResource(R.string.action_cancel), style = text(15.sp, FontWeight.SemiBold), color = c.muted) }
+        ) { Text(stringResource(R.string.action_cancel), style = text(15.sp, FontWeight.SemiBold), color = c.sub) }
     }
 }
 
@@ -1089,12 +1089,12 @@ private fun BaseChip(vm: AppViewModel, base: String, label: String) {
         Modifier
             .height(34.dp)
             .clip(RoundedCornerShape(17.dp))
-            .background(if (sel) c.accent else c.surface2)
+            .background(if (sel) c.acc else c.elev)
             .pressable(pressedScale = 0.93f) { vm.cuBase = base }
             .padding(horizontal = 15.dp),
         contentAlignment = Alignment.Center
     ) {
-        Text(label, style = text(13.5.sp, FontWeight.SemiBold), color = if (sel) Color.White else c.muted)
+        Text(label, style = text(13.5.sp, FontWeight.SemiBold), color = if (sel) Color.White else c.sub)
     }
 }
 
@@ -1111,26 +1111,26 @@ private fun ExportSheet(vm: AppViewModel) {
     )
     val fileName = stringResource(R.string.sheet_export_filename, range.label)
     Column(Modifier.padding(horizontal = 22.dp).padding(top = 8.dp, bottom = 26.dp)) {
-        Text(stringResource(R.string.sheet_export_title), style = display(20.sp, tabular = false), color = c.text)
+        Text(stringResource(R.string.sheet_export_title), style = figure(20.sp, tabular = false), color = c.ink)
         Row(
             Modifier
                 .padding(top = 14.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(18.dp))
-                .background(c.surface)
+                .background(c.card)
                 .padding(16.dp),
             horizontalArrangement = Arrangement.spacedBy(14.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
-                Modifier.size(42.dp, 52.dp).clip(RoundedCornerShape(8.dp)).background(c.surface2),
+                Modifier.size(42.dp, 52.dp).clip(RoundedCornerShape(8.dp)).background(c.elev),
                 contentAlignment = Alignment.Center
-            ) { Text(stringResource(R.string.sheet_export_format), style = text(10.sp, FontWeight.Bold), color = c.accent) }
+            ) { Text(stringResource(R.string.sheet_export_format), style = text(10.sp, FontWeight.Bold), color = c.acc) }
             Column {
-                Text(fileName, style = text(14.5.sp, FontWeight.SemiBold), color = c.text)
+                Text(fileName, style = text(14.5.sp, FontWeight.SemiBold), color = c.ink)
                 Text(
                     stringResource(R.string.sheet_export_desc),
-                    style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 2.dp)
+                    style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 2.dp)
                 )
             }
         }
@@ -1142,7 +1142,7 @@ private fun ExportSheet(vm: AppViewModel) {
         Box(
             Modifier.padding(top = 8.dp).fillMaxWidth().height(46.dp).pressable { vm.closeSheet() },
             contentAlignment = Alignment.Center
-        ) { Text(stringResource(R.string.action_cancel), style = text(15.5.sp, FontWeight.SemiBold), color = c.muted) }
+        ) { Text(stringResource(R.string.action_cancel), style = text(15.5.sp, FontWeight.SemiBold), color = c.sub) }
     }
 }
 
@@ -1162,30 +1162,30 @@ private const val HEALTH_SETTINGS_PATH = "Settings › Apps › Health Connect"
 private fun HealthSheet(vm: AppViewModel) {
     val c = LocalAppColors.current
     Column(Modifier.padding(horizontal = 22.dp).padding(top = 8.dp, bottom = 26.dp)) {
-        Text(stringResource(R.string.sheet_health_title), style = display(20.sp, tabular = false), color = c.text)
+        Text(stringResource(R.string.sheet_health_title), style = figure(20.sp, tabular = false), color = c.ink)
         Text(
             stringResource(R.string.sheet_health_body, HEALTH_PLATFORM),
-            style = text(14.sp), color = c.muted, lineHeight = 22.sp, modifier = Modifier.padding(top = 8.dp)
+            style = text(14.sp), color = c.sub, lineHeight = 22.sp, modifier = Modifier.padding(top = 8.dp)
         )
         Row(
             Modifier
                 .padding(top = 14.dp)
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(18.dp))
-                .background(c.surface)
+                .background(c.card)
                 .padding(horizontal = 16.dp, vertical = 14.dp),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
-                Modifier.size(30.dp).clip(RoundedCornerShape(8.dp)).background(c.surface2),
+                Modifier.size(30.dp).clip(RoundedCornerShape(8.dp)).background(c.elev),
                 contentAlignment = Alignment.Center
-            ) { Box(Modifier.size(11.dp).clip(CircleShape).background(c.b1)) }
+            ) { Box(Modifier.size(11.dp).clip(CircleShape).background(c.moss)) }
             Column {
-                Text(stringResource(R.string.sheet_health_data_title), style = text(14.5.sp, FontWeight.SemiBold), color = c.text)
+                Text(stringResource(R.string.sheet_health_data_title), style = text(14.5.sp, FontWeight.SemiBold), color = c.ink)
                 Text(
                     stringResource(R.string.sheet_health_data_sub),
-                    style = text(12.5.sp), color = c.muted, modifier = Modifier.padding(top = 1.dp)
+                    style = text(12.5.sp), color = c.sub, modifier = Modifier.padding(top = 1.dp)
                 )
             }
         }
@@ -1197,10 +1197,10 @@ private fun HealthSheet(vm: AppViewModel) {
         Box(
             Modifier.padding(top = 8.dp).fillMaxWidth().height(46.dp).pressable { vm.closeSheet() },
             contentAlignment = Alignment.Center
-        ) { Text(stringResource(R.string.action_cancel), style = text(15.5.sp, FontWeight.SemiBold), color = c.muted) }
+        ) { Text(stringResource(R.string.action_cancel), style = text(15.5.sp, FontWeight.SemiBold), color = c.sub) }
         Text(
             stringResource(R.string.sheet_health_change_access, HEALTH_SETTINGS_PATH),
-            style = text(12.sp), color = c.faint, textAlign = TextAlign.Center, lineHeight = 18.sp,
+            style = text(12.sp), color = c.sub, textAlign = TextAlign.Center, lineHeight = 18.sp,
             modifier = Modifier.fillMaxWidth().padding(top = 10.dp)
         )
     }
@@ -1216,7 +1216,7 @@ fun SheetCard(top: androidx.compose.ui.unit.Dp, content: @Composable androidx.co
             .padding(top = top)
             .fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
-            .background(c.surface)
+            .background(c.card)
             .padding(16.dp),
         content = content
     )
@@ -1229,11 +1229,11 @@ fun ChipButton(label: String, modifier: Modifier = Modifier, onClick: () -> Unit
         modifier
             .height(34.dp)
             .clip(RoundedCornerShape(17.dp))
-            .background(c.surface2)
+            .background(c.elev)
             .pressable(pressedScale = 0.92f, onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
-        Text(label, style = text(13.5.sp, FontWeight.SemiBold), color = c.muted, maxLines = 1)
+        Text(label, style = text(13.5.sp, FontWeight.SemiBold), color = c.sub, maxLines = 1)
     }
 }
 
@@ -1259,8 +1259,8 @@ fun AppTextField(
             if (bare) 19.sp else 15.5.sp,
             if (bare || centered) FontWeight.SemiBold else FontWeight.Normal,
             tabular = bare || centered
-        ).copy(color = c.text, textAlign = if (centered) TextAlign.Center else TextAlign.Start),
-        cursorBrush = androidx.compose.ui.graphics.SolidColor(c.accent),
+        ).copy(color = c.ink, textAlign = if (centered) TextAlign.Center else TextAlign.Start),
+        cursorBrush = androidx.compose.ui.graphics.SolidColor(c.acc),
         modifier = modifier.fillMaxWidth(),
         decorationBox = { inner ->
             Box(
@@ -1271,13 +1271,13 @@ fun AppTextField(
                         if (bare) Modifier
                         else Modifier
                             .clip(RoundedCornerShape(14.dp))
-                            .background(c.surface2)
+                            .background(c.elev)
                             .padding(horizontal = 16.dp, vertical = if (singleLine) 0.dp else 12.dp)
                     ),
                 contentAlignment = if (centered) Alignment.Center else Alignment.CenterStart
             ) {
                 if (value.isEmpty()) {
-                    Text(placeholder, style = text(if (bare) 19.sp else 15.5.sp), color = c.faint, maxLines = 1)
+                    Text(placeholder, style = text(if (bare) 19.sp else 15.5.sp), color = c.sub, maxLines = 1)
                 }
                 inner()
             }

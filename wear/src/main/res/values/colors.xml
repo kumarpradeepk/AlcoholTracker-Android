@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The watch canvas is dark-only: a black screen is the design, and on an
+         OLED watch it is also the battery budget. -->
+    <color name="w_screen">#FF000000</color>
+    <color name="ic_launcher_bg">#FFE0643C</color>
+</resources>

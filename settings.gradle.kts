@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Alcohol Tracker"
 include(":app")
+include(":wear")

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Alcohol Tracker</string>
+
+    <!-- Glance -->
+    <string name="w_of_goal">of %1$s</string>
+    <string name="w_log_drink">Log a drink</string>
+    <string name="w_dry_day">Dry day</string>
+    <string name="w_bac">BAC</string>
+
+    <!-- Quick log -->
+    <string name="w_the_usual">The usual?</string>
+    <string name="w_custom_drink">Custom drink</string>
+    <string name="w_log_it">Log it</string>
+    <string name="w_abv">ABV</string>
+    <string name="w_serving">Serving</string>
+    <string name="w_standard_drinks">standard drinks</string>
+    <string name="w_name_later">Name it later on your phone</string>
+    <string name="w_tune_on_phone">Tune servings on your phone</string>
+    <string name="w_no_history">Log a few drinks on your phone and they will show up here.</string>
+
+    <!-- Dry day -->
+    <string name="w_dry_marked">Dry day banked</string>
+    <string name="w_dry_marked_sub">You marked this one yourself.</string>
+    <string name="w_dry_unmarked">Mark today dry?</string>
+    <string name="w_dry_unmarked_sub">Banked, never guessed.</string>
+    <string name="w_dry_has_drinks">Today already has drinks</string>
+    <string name="w_dry_has_drinks_sub">Remove them on your phone first.</string>
+    <string name="w_mark_dry">Mark dry</string>
+    <string name="w_unmark">Unmark</string>
+
+    <!-- Toast -->
+    <string name="w_logged">Logged %1$s</string>
+    <string name="w_undo">UNDO</string>
+
+    <!-- Accessibility -->
+    <string name="w_page_glance">Glance</string>
+    <string name="w_page_log">Quick log</string>
+    <string name="w_page_dry">Dry day</string>
+</resources>

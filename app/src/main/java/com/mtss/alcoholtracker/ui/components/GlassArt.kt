@@ -44,8 +44,8 @@ fun SwirlingGlass(
 ) {
     val c = LocalAppColors.current
     val reduced = LocalReducedMotion.current
-    val liquidColor = liquid ?: c.accent
-    val border = borderColor ?: c.text.copy(alpha = 0.22f)
+    val liquidColor = liquid ?: c.acc
+    val border = borderColor ?: c.ink.copy(alpha = 0.22f)
 
     val transition = rememberInfiniteTransition(label = "swirl")
     val angle by transition.animateFloat(

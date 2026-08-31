@@ -50,14 +50,14 @@ fun ProgressRing(
     val anim = remember { Animatable(0f) }
     LaunchedEffect(progress) {
         if (reduced) anim.snapTo(progress.coerceIn(0f, 1f))
-        else anim.animateTo(progress.coerceIn(0f, 1f), tween(850, easing = Motion.BarGrow))
+        else anim.animateTo(progress.coerceIn(0f, 1f), tween(850, easing = Motion.Sweep))
     }
     Box(modifier.size(diameter), contentAlignment = Alignment.Center) {
         Canvas(Modifier.size(diameter)) {
             val sw = strokeWidth.toPx()
             val inset = sw / 2f
             drawArc(
-                color = c.surface2,
+                color = c.elev,
                 startAngle = 0f, sweepAngle = 360f, useCenter = false,
                 topLeft = Offset(inset, inset),
                 size = Size(size.width - sw, size.height - sw),
@@ -93,7 +93,7 @@ fun BarChart(
     LaunchedEffect(bars) {
         grow.snapTo(0f)
         if (reduced) grow.snapTo(1f)
-        else grow.animateTo(1f, tween(700, easing = Motion.BarGrow))
+        else grow.animateTo(1f, tween(700, easing = Motion.Sweep))
     }
     Column(modifier.fillMaxWidth()) {
         Box(Modifier.fillMaxWidth().height(chartHeight)) {
@@ -117,7 +117,7 @@ fun BarChart(
                 if (averageFraction != null) {
                     val y = size.height * (1f - averageFraction.coerceIn(0f, 0.96f))
                     drawLine(
-                        c.faint, Offset(0f, y), Offset(size.width, y),
+                        c.sub, Offset(0f, y), Offset(size.width, y),
                         strokeWidth = 1.5.dp.toPx(),
                         pathEffect = PathEffect.dashPathEffect(floatArrayOf(10f, 8f))
                     )
@@ -133,7 +133,7 @@ fun BarChart(
                     Text(
                         bar.label,
                         style = text(9.sp),
-                        color = c.faint,
+                        color = c.sub,
                         textAlign = TextAlign.Center,
                         maxLines = 1,
                         modifier = Modifier.weight(1f)
@@ -165,12 +165,12 @@ fun TrendChart(
             lineTo(pts.last().x, size.height)
             close()
         }
-        drawPath(area, c.accent.copy(alpha = 0.18f))
+        drawPath(area, c.acc.copy(alpha = 0.18f))
         val line = Path().apply {
             moveTo(pts.first().x, pts.first().y)
             pts.drop(1).forEach { lineTo(it.x, it.y) }
         }
-        drawPath(line, c.accent, style = Stroke(2.5.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round))
+        drawPath(line, c.acc, style = Stroke(2.5.dp.toPx(), cap = StrokeCap.Round, join = StrokeJoin.Round))
     }
 }
 
@@ -181,12 +181,12 @@ fun ShareBar(fraction: Float, modifier: Modifier = Modifier) {
     val reduced = LocalReducedMotion.current
     val anim = remember { Animatable(0f) }
     LaunchedEffect(fraction) {
-        if (reduced) anim.snapTo(fraction) else anim.animateTo(fraction, tween(800, easing = Motion.BarGrow))
+        if (reduced) anim.snapTo(fraction) else anim.animateTo(fraction, tween(800, easing = Motion.Sweep))
     }
     Canvas(modifier.fillMaxWidth().height(6.dp)) {
-        drawRoundRect(c.surface2, cornerRadius = androidx.compose.ui.geometry.CornerRadius(3.dp.toPx()))
+        drawRoundRect(c.elev, cornerRadius = androidx.compose.ui.geometry.CornerRadius(3.dp.toPx()))
         drawRoundRect(
-            c.accent,
+            c.acc,
             size = Size(size.width * anim.value.coerceIn(0.04f, 1f), size.height),
             cornerRadius = androidx.compose.ui.geometry.CornerRadius(3.dp.toPx())
         )
